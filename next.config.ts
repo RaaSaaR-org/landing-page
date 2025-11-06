@@ -5,6 +5,8 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 const nextConfig: NextConfig = {
   output: 'export',
+  basePath: '/landing-page',
+  assetPrefix: '/landing-page',
   images: {
     unoptimized: true,
     remotePatterns: [

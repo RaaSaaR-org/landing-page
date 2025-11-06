@@ -1,0 +1,93 @@
+{
+	"meta": {
+		"generatedAt": "2025-10-07T21:09:13.278Z",
+		"tasksAnalyzed": 10,
+		"totalTasks": 10,
+		"analysisCount": 10,
+		"thresholdScore": 5,
+		"projectName": "Taskmaster",
+		"usedResearch": false
+	},
+	"complexityAnalysis": [
+		{
+			"taskId": 1,
+			"taskTitle": "Configure project infrastructure and design system",
+			"complexityScore": 6,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "Break down into: 1) Next.js configuration and security headers setup, 2) SEO metadata and layout configuration, 3) Design system and Tailwind setup with custom tokens, 4) Dependencies installation and analytics setup (GA4, Hotjar), 5) Base layout components and responsive structure",
+			"reasoning": "This is a foundational task requiring multiple configuration files, dependency management, and design system setup. The Next.js app already exists with basic structure, reducing complexity. Main effort is in configuration, design tokens, and analytics integration."
+		},
+		{
+			"taskId": 2,
+			"taskTitle": "Implement Hero section with video background and CTAs",
+			"complexityScore": 7,
+			"recommendedSubtasks": 6,
+			"expansionPrompt": "Break down into: 1) HeroSection component structure and responsive layout, 2) Video background implementation with fallback system, 3) Typography and headline component with animations, 4) Dual CTA buttons with tracking and animations, 5) Trust indicators carousel component, 6) Accessibility and performance optimization",
+			"reasoning": "Complex due to video handling, multiple interactive elements, responsive design requirements, and performance considerations. Requires careful optimization for Core Web Vitals while maintaining visual impact."
+		},
+		{
+			"taskId": 3,
+			"taskTitle": "Build interactive ROI calculator with real-time results",
+			"complexityScore": 8,
+			"recommendedSubtasks": 7,
+			"expansionPrompt": "Break down into: 1) Calculator UI component with form inputs, 2) Calculation engine and business logic, 3) Real-time updates and number animations, 4) Results display and visualization components, 5) Lead capture integration for downloads, 6) State persistence with localStorage, 7) Input validation and error handling",
+			"reasoning": "High complexity due to complex business logic, real-time calculations, state management, form validation, and lead capture integration. Requires careful UX design for mobile usability and performance optimization."
+		},
+		{
+			"taskId": 4,
+			"taskTitle": "Create Problem Statement and Solution Overview sections",
+			"complexityScore": 5,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "Break down into: 1) ProblemSection component with statistics grid, 2) SolutionSection with value proposition cards, 3) Interactive capabilities showcase with tabs/accordion, 4) Media integration (videos/GIFs) and technical specs",
+			"reasoning": "Moderate complexity with straightforward component structure. Main challenges are responsive grid layouts, interactive elements, and media optimization. Content-heavy but architecturally simple."
+		},
+		{
+			"taskId": 5,
+			"taskTitle": "Implement How It Works process timeline",
+			"complexityScore": 5,
+			"recommendedSubtasks": 4,
+			"expansionPrompt": "Break down into: 1) Timeline component with responsive layout logic, 2) Individual step components with expandable content, 3) Progress indicator and visual connections, 4) Scroll-triggered animations with Framer Motion",
+			"reasoning": "Moderate complexity focusing on responsive design and animations. The timeline visualization and expandable content are common patterns with good library support in Framer Motion."
+		},
+		{
+			"taskId": 6,
+			"taskTitle": "Build Case Studies section with social proof",
+			"complexityScore": 6,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "Break down into: 1) CaseStudyCard component with structured data, 2) Three detailed case study implementations, 3) Customer logos carousel component, 4) Aggregate statistics display component, 5) Media optimization and lazy loading",
+			"reasoning": "Moderate-high complexity due to multiple media elements, carousel implementation, and performance considerations. Requires careful optimization for images and videos while maintaining engagement."
+		},
+		{
+			"taskId": 7,
+			"taskTitle": "Create Pricing Plans and Fleet Management sections",
+			"complexityScore": 6,
+			"recommendedSubtasks": 5,
+			"expansionPrompt": "Break down into: 1) PricingTier components with comparison logic, 2) Pricing toggle and calculator functionality, 3) FleetManagement section with dashboard preview, 4) Feature showcase components, 5) Video embed or interactive demo integration",
+			"reasoning": "Moderate-high complexity with pricing logic, comparison tables, and dashboard visualization. Requires careful responsive design for complex tables and potential interactive elements."
+		},
+		{
+			"taskId": 8,
+			"taskTitle": "Implement FAQ and Technology/Safety sections",
+			"complexityScore": 4,
+			"recommendedSubtasks": 3,
+			"expansionPrompt": "Break down into: 1) FAQ accordion component with accessibility features, 2) Technology section with certification displays, 3) Integration capabilities and specs grid",
+			"reasoning": "Lower complexity with standard accordion patterns and content display. Main focus is on accessibility and proper ARIA implementation. Well-established patterns available."
+		},
+		{
+			"taskId": 9,
+			"taskTitle": "Develop lead capture forms and CRM integration",
+			"complexityScore": 9,
+			"recommendedSubtasks": 8,
+			"expansionPrompt": "Break down into: 1) Reusable form components with react-hook-form setup, 2) Zod validation schemas for all forms, 3) Server-side API routes with rate limiting, 4) reCAPTCHA integration, 5) CRM API integration (HubSpot/Salesforce), 6) Lead scoring algorithm implementation, 7) Email verification system, 8) Thank you pages and confirmation flows",
+			"reasoning": "Highest complexity due to backend integration, security considerations, third-party APIs, rate limiting, and GDPR compliance. Requires both frontend and backend work with external service integration."
+		},
+		{
+			"taskId": 10,
+			"taskTitle": "Optimize performance, SEO, and launch preparation",
+			"complexityScore": 8,
+			"recommendedSubtasks": 8,
+			"expansionPrompt": "Break down into: 1) Image optimization pipeline (WebP/AVIF conversion), 2) SEO configuration and schema markup, 3) Sitemap and robots.txt setup, 4) Google Analytics 4 implementation, 5) Hotjar integration, 6) CDN configuration and caching, 7) Performance and accessibility audits, 8) Error tracking and monitoring setup",
+			"reasoning": "High complexity due to comprehensive optimization requirements, multiple tool integrations, and production readiness criteria. Requires deep performance analysis and extensive testing across multiple dimensions."
+		}
+	]
+}

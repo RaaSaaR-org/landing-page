@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "features": "Features",
+    "useCases": "Use Cases",
+    "about": "About",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Robotics Solutions for Saarland",
+    "subtitle": "We bring cutting-edge robotics technology to businesses, municipalities, and communities in Saarland – without capital investment through Robots as a Service.",
+    "description": "Saarland faces challenges: skilled labor shortage, demographic change, and automotive industry transformation. RaaSaaR makes robotics solutions accessible to everyone.",
+    "cta": "Learn More",
+    "ctaSecondary": "Get in Touch"
+  },
+  "problem": {
+    "title": "The Challenge",
+    "description": "Saarland – with over 200 industrial companies and 40,000 jobs in the automotive sector – stands at a turning point.",
+    "challenges": {
+      "labor": {
+        "title": "Labor Shortage",
+        "description": "Aging population and shrinking workforce threaten competitiveness"
+      },
+      "transition": {
+        "title": "Industry Transformation",
+        "description": "The automotive sector is in transition – new solutions are required"
+      },
+      "costs": {
+        "title": "High Investment Costs",
+        "description": "Robotics technology was previously only affordable for large corporations"
+      },
+      "municipal": {
+        "title": "Municipal Services",
+        "description": "Cities need efficient solutions for cleaning, waste management, and infrastructure"
+      }
+    }
+  },
+  "solution": {
+    "title": "The Solution: Robots as a Service",
+    "description": "RaaSaaR brings cutting-edge robotics to Saarland – without capital investment. Pay only for usage, not for ownership.",
+    "benefits": {
+      "accessible": {
+        "title": "Accessible",
+        "description": "No high acquisition costs – ideal for SMEs and municipalities"
+      },
+      "flexible": {
+        "title": "Flexible",
+        "description": "Scale according to your needs – from individual projects to continuous deployment"
+      },
+      "expertise": {
+        "title": "Regional Expertise",
+        "description": "Building on DFKI, ZeMA, and Saarland University"
+      },
+      "supported": {
+        "title": "Full Service",
+        "description": "Maintenance, updates, and support included"
+      }
+    }
+  },
+  "concept": {
+    "title": "What is RaaSaaR?",
+    "subtitle": "Robots as a Service meets Saarland",
+    "description": "RaaSaaR combines the proven Software-as-a-Service model with cutting-edge robotics technology – specifically developed for Saarland's needs.",
+    "model": {
+      "title": "The Business Model",
+      "traditional": "Traditional: High investment, maintenance costs, obsolescence",
+      "raas": "RaaSaaR: Monthly fee, all-inclusive, always up-to-date"
+    },
+    "why": {
+      "title": "Why Saarland?",
+      "reasons": {
+        "research": {
+          "title": "Birthplace of Industry 4.0",
+          "description": "DFKI coined the term Industry 4.0 in 2011 – Saarland is a pioneer in robotics research"
+        },
+        "compact": {
+          "title": "Ideal Test Region",
+          "description": "At 2,570 km², Saarland is the perfect region for comprehensive robotics services"
+        },
+        "need": {
+          "title": "Real Demand",
+          "description": "Labor shortage and industry transformation create concrete use cases"
+        },
+        "ecosystem": {
+          "title": "Research Ecosystem",
+          "description": "Direct collaboration with DFKI, ZeMA, and over 900 AI researchers"
+        }
+      }
+    }
+  },
+  "useCases": {
+    "title": "Use Cases",
+    "subtitle": "Robotics for Industry and Communities",
+    "industrial": {
+      "title": "Industrial Applications",
+      "description": "For Saarland's 200+ industrial companies",
+      "cases": {
+        "manufacturing": {
+          "title": "Manufacturing & Assembly",
+          "description": "Automated production lines, quality control, material handling"
+        },
+        "logistics": {
+          "title": "Logistics & Warehousing",
+          "description": "Autonomous transport systems, order picking, inventory management"
+        },
+        "inspection": {
+          "title": "Inspection & Maintenance",
+          "description": "Automated quality inspection, facility monitoring, safety inspections"
+        }
+      }
+    },
+    "municipal": {
+      "title": "Municipal Services",
+      "description": "For cities and municipalities in Saarland",
+      "cases": {
+        "cleaning": {
+          "title": "Street Cleaning",
+          "description": "Autonomous sweepers for public spaces and sidewalks"
+        },
+        "waste": {
+          "title": "Waste Management",
+          "description": "Smart waste collection with fill-level sensors and optimized routes"
+        },
+        "infrastructure": {
+          "title": "Infrastructure Inspection",
+          "description": "Automated monitoring of roads, bridges, and public facilities"
+        }
+      }
+    }
+  },
+  "regional": {
+    "title": "Saarland's Robotics Advantage",
+    "description": "Saarland offers a unique combination of research excellence and industrial demand",
+    "partners": {
+      "dfki": {
+        "title": "DFKI Saarbrücken",
+        "description": "World-leading AI research, humanoid robots (RH5), originators of Industry 4.0"
+      },
+      "zema": {
+        "title": "ZeMA",
+        "description": "Center for Mechatronics and Automation Technology with partners like Bosch, BMW, VW"
+      },
+      "university": {
+        "title": "Saarland University",
+        "description": "900+ scientists in AI and robotics, leading in Germany"
+      },
+      "edih": {
+        "title": "EDIH Saarland",
+        "description": "European Digital Innovation Hub for digital twins and human-robot collaboration"
+      }
+    }
+  },
+  "stats": {
+    "businesses": {
+      "value": "200+",
+      "label": "Industrial companies in Saarland"
+    },
+    "jobs": {
+      "value": "40,000",
+      "label": "Jobs in the automotive sector"
+    },
+    "researchers": {
+      "value": "900+",
+      "label": "AI researchers in Saarland"
+    },
+    "area": {
+      "value": "2,570 km²",
+      "label": "Ideal size for robotics services"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": {
+      "what": {
+        "q": "What exactly is Robots as a Service?",
+        "a": "Robots as a Service (RaaS) is a business model where you rent robotic solutions as a service instead of purchasing them. You pay a monthly fee and receive the robots including maintenance, updates, support, and insurance. Similar to Software-as-a-Service (SaaS), you have no capital investment and always stay technologically up-to-date."
+      },
+      "why": {
+        "q": "Why does RaaSaaR focus on Saarland?",
+        "a": "Saarland offers the perfect combination: As the birthplace of Industry 4.0 (DFKI), the region has world-class research in robotics and AI. At the same time, local companies and municipalities face concrete challenges (labor shortage, industry transformation) that can be solved through robotics. At 2,570 km², Saarland is also an ideal test region for comprehensive robotics services."
+      },
+      "cost": {
+        "q": "How does the cost model work?",
+        "a": "You pay a monthly service fee based on the type and number of robots and the scope of deployment. There are no acquisition costs. The fee includes: the robots themselves, regular maintenance, software updates, technical support, insurance, and training for your employees if needed. The exact terms are individually tailored to your use case."
+      },
+      "timeline": {
+        "q": "How quickly can I use RaaSaaR?",
+        "a": "After an initial needs analysis (1-2 weeks), we create an individual implementation plan. Depending on complexity, simple applications can start within 4-8 weeks. More complex industrial integrations require 2-4 months. We accompany you through the entire process – from planning through installation to training your teams."
+      },
+      "jobs": {
+        "q": "Doesn't robotics lead to job losses?",
+        "a": "On the contrary: Given demographic change and the skilled labor shortage in Saarland, robots fill gaps that can no longer be filled by people. They take over repetitive, dangerous, or physically demanding tasks and enable employees to focus on more qualified activities. Our goal is to augment the workforce, not replace it – especially in a region with a shrinking working population."
+      },
+      "target": {
+        "q": "Who is RaaSaaR suitable for?",
+        "a": "RaaSaaR targets two main groups: (1) Industrial companies in Saarland – from SMEs to large operations in sectors like automotive, manufacturing, logistics, and metal processing. (2) Municipalities and communities – for applications like street cleaning, waste management, infrastructure monitoring, and public safety. The RaaS model makes robotics particularly accessible for smaller organizations that cannot afford high investments."
+      },
+      "technology": {
+        "q": "What robotic technologies does RaaSaaR use?",
+        "a": "We work with leading robotics platforms and develop our own solutions in cooperation with DFKI, ZeMA, and Saarland University. Depending on the use case, we deploy: humanoid robots for complex human-robot interaction, mobile autonomous robots (AMR) for logistics and transport, industrial robot arms for manufacturing and assembly, and specialized robots for cleaning and inspection. The technology is individually tailored to your needs."
+      },
+      "support": {
+        "q": "What support do I receive?",
+        "a": "The RaaSaaR service includes comprehensive support: Initial needs analysis and concept development, installation and integration into existing processes, training for your employees, ongoing technical maintenance, 24/7 support for problems, regular software updates, and optimization of robot performance based on collected data. You have a dedicated contact person and benefit from our regional network."
+      }
+    }
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Interested in robotics solutions for your company or municipality? Let's talk.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "john@example.com",
+      "organization": "Organization",
+      "organizationPlaceholder": "Your company or municipality",
+      "orgType": "Organization Type",
+      "orgTypes": {
+        "industrial": "Industrial Company",
+        "municipal": "Municipality/Community",
+        "research": "Research Institution",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Describe your use case or ask your question...",
+      "submit": "Send Inquiry",
+      "submitting": "Sending...",
+      "success": "Thank you! We'll get back to you shortly.",
+      "error": "An error occurred. Please try again."
+    },
+    "validation": {
+      "nameRequired": "Please enter your name",
+      "emailRequired": "Please enter your email address",
+      "emailInvalid": "Please enter a valid email address",
+      "messageRequired": "Please enter a message",
+      "messageMin": "Message must be at least 10 characters long"
+    }
+  },
+  "footer": {
+    "tagline": "Robotics Solutions for Saarland",
+    "description": "RaaSaaR makes cutting-edge robotics technology accessible to businesses and municipalities in Saarland – without capital investment.",
+    "links": {
+      "company": "Company",
+      "about": "About",
+      "partners": "Partners",
+      "careers": "Careers",
+      "resources": "Resources",
+      "blog": "Blog",
+      "documentation": "Documentation",
+      "support": "Support",
+      "legal": "Legal",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "imprint": "Imprint"
+    },
+    "copyright": "© 2025 RaaSaaR. All rights reserved.",
+    "madeIn": "Made in Saarland"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact",
+    "readMore": "Read More"
+  }
+}

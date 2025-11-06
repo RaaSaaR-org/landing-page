@@ -1,0 +1,266 @@
+{
+  "nav": {
+    "features": "Leistungen",
+    "useCases": "Anwendungsfälle",
+    "about": "Über uns",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title": "Robotik-Lösungen für das Saarland",
+    "subtitle": "Wir bringen zukunftsweisende Robotik-Technologie zu Unternehmen, Kommunen und Gemeinden im Saarland – ohne Investitionskosten durch Robots as a Service.",
+    "description": "Das Saarland steht vor Herausforderungen: Fachkräftemangel, demografischer Wandel und die Transformation der Automobilindustrie. RaaSaaR macht Robotik-Lösungen für jeden zugänglich.",
+    "cta": "Mehr erfahren",
+    "ctaSecondary": "Kontakt aufnehmen"
+  },
+  "problem": {
+    "title": "Die Herausforderung",
+    "description": "Das Saarland – mit über 200 Industriebetrieben und 40.000 Arbeitsplätzen im Automobilsektor – steht vor einem Wendepunkt.",
+    "challenges": {
+      "labor": {
+        "title": "Fachkräftemangel",
+        "description": "Alternde Bevölkerung und schrumpfende Erwerbsbevölkerung gefährden die Wettbewerbsfähigkeit"
+      },
+      "transition": {
+        "title": "Industrie-Transformation",
+        "description": "Der Automobilsektor befindet sich im Umbruch – neue Lösungen sind erforderlich"
+      },
+      "costs": {
+        "title": "Hohe Investitionskosten",
+        "description": "Robotik-Technologie war bisher nur für Großunternehmen erschwinglich"
+      },
+      "municipal": {
+        "title": "Kommunale Dienste",
+        "description": "Städte benötigen effiziente Lösungen für Reinigung, Abfallmanagement und Infrastruktur"
+      }
+    }
+  },
+  "solution": {
+    "title": "Die Lösung: Robots as a Service",
+    "description": "RaaSaaR bringt modernste Robotik ins Saarland – ohne Kapitalinvestitionen. Bezahlen Sie nur für die Nutzung, nicht für den Besitz.",
+    "benefits": {
+      "accessible": {
+        "title": "Zugänglich",
+        "description": "Keine hohen Anschaffungskosten – ideal für KMUs und Kommunen"
+      },
+      "flexible": {
+        "title": "Flexibel",
+        "description": "Skalieren Sie je nach Bedarf – von einzelnen Projekten bis zum Dauereinsatz"
+      },
+      "expertise": {
+        "title": "Regionale Expertise",
+        "description": "Aufbauend auf DFKI, ZeMA und der Universität des Saarlandes"
+      },
+      "supported": {
+        "title": "Rundum-Service",
+        "description": "Wartung, Updates und Support inklusive"
+      }
+    }
+  },
+  "concept": {
+    "title": "Was ist RaaSaaR?",
+    "subtitle": "Robots as a Service trifft Saarland",
+    "description": "RaaSaaR verbindet das bewährte Software-as-a-Service-Modell mit modernster Robotik-Technologie – speziell für die Bedürfnisse des Saarlandes entwickelt.",
+    "model": {
+      "title": "Das Geschäftsmodell",
+      "traditional": "Traditionell: Hohe Investition, Wartungskosten, Veralterung",
+      "raas": "RaaSaaR: Monatliche Gebühr, alles inklusive, immer aktuell"
+    },
+    "why": {
+      "title": "Warum Saarland?",
+      "reasons": {
+        "research": {
+          "title": "Geburtsort von Industrie 4.0",
+          "description": "Das DFKI prägte 2011 den Begriff Industrie 4.0 – Saarland ist Vorreiter der Robotik-Forschung"
+        },
+        "compact": {
+          "title": "Ideales Testgebiet",
+          "description": "Mit 2.570 km² ist das Saarland die perfekte Region für flächendeckende Robotik-Dienste"
+        },
+        "need": {
+          "title": "Echter Bedarf",
+          "description": "Fachkräftemangel und Industrie-Transformation schaffen konkrete Anwendungsfälle"
+        },
+        "ecosystem": {
+          "title": "Forschungs-Ökosystem",
+          "description": "Direkte Zusammenarbeit mit DFKI, ZeMA und über 900 KI-Forschern"
+        }
+      }
+    }
+  },
+  "useCases": {
+    "title": "Anwendungsfälle",
+    "subtitle": "Robotik für Industrie und Gemeinden",
+    "industrial": {
+      "title": "Industrielle Anwendungen",
+      "description": "Für Saarlandes 200+ Industriebetriebe",
+      "cases": {
+        "manufacturing": {
+          "title": "Fertigung & Montage",
+          "description": "Automatisierte Produktionslinien, Qualitätskontrolle, Materialhandhabung"
+        },
+        "logistics": {
+          "title": "Logistik & Lager",
+          "description": "Autonome Transportsysteme, Kommissionierung, Bestandsverwaltung"
+        },
+        "inspection": {
+          "title": "Inspektion & Wartung",
+          "description": "Automatisierte Qualitätsprüfung, Anlagenüberwachung, Sicherheitsinspektionen"
+        }
+      }
+    },
+    "municipal": {
+      "title": "Kommunale Dienste",
+      "description": "Für Städte und Gemeinden im Saarland",
+      "cases": {
+        "cleaning": {
+          "title": "Straßenreinigung",
+          "description": "Autonome Kehrmaschinen für öffentliche Räume und Gehwege"
+        },
+        "waste": {
+          "title": "Abfallmanagement",
+          "description": "Intelligente Müllsammlung mit Füllstandsensoren und optimierten Routen"
+        },
+        "infrastructure": {
+          "title": "Infrastruktur-Inspektion",
+          "description": "Automatisierte Überwachung von Straßen, Brücken und öffentlichen Einrichtungen"
+        }
+      }
+    }
+  },
+  "regional": {
+    "title": "Saarlands Robotik-Vorteil",
+    "description": "Das Saarland verfügt über eine einzigartige Kombination aus Forschungsexzellenz und industriellem Bedarf",
+    "partners": {
+      "dfki": {
+        "title": "DFKI Saarbrücken",
+        "description": "Weltführende KI-Forschung, humanoide Roboter (RH5), Entwickler von Industrie 4.0"
+      },
+      "zema": {
+        "title": "ZeMA",
+        "description": "Zentrum für Mechatronik und Automatisierungstechnik mit Partnern wie Bosch, BMW, VW"
+      },
+      "university": {
+        "title": "Universität des Saarlandes",
+        "description": "900+ Wissenschaftler im Bereich KI und Robotik, führend in Deutschland"
+      },
+      "edih": {
+        "title": "EDIH Saarland",
+        "description": "European Digital Innovation Hub für digitale Zwillinge und Mensch-Roboter-Kollaboration"
+      }
+    }
+  },
+  "stats": {
+    "businesses": {
+      "value": "200+",
+      "label": "Industriebetriebe im Saarland"
+    },
+    "jobs": {
+      "value": "40.000",
+      "label": "Arbeitsplätze im Automobilsektor"
+    },
+    "researchers": {
+      "value": "900+",
+      "label": "KI-Forscher im Saarland"
+    },
+    "area": {
+      "value": "2.570 km²",
+      "label": "Ideale Größe für Robotik-Services"
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "questions": {
+      "what": {
+        "q": "Was ist Robots as a Service genau?",
+        "a": "Robots as a Service (RaaS) ist ein Geschäftsmodell, bei dem Sie Roboter-Lösungen als Dienstleistung mieten, anstatt sie zu kaufen. Sie zahlen eine monatliche Gebühr und erhalten die Roboter inklusive Wartung, Updates, Support und Versicherung. Ähnlich wie bei Software-as-a-Service (SaaS) haben Sie keine Investitionskosten und bleiben technologisch immer auf dem neuesten Stand."
+      },
+      "why": {
+        "q": "Warum konzentriert sich RaaSaaR auf das Saarland?",
+        "a": "Das Saarland bietet die perfekte Kombination: Als Geburtsort von Industrie 4.0 (DFKI) verfügt die Region über Weltklasse-Forschung in Robotik und KI. Gleichzeitig stehen lokale Unternehmen und Kommunen vor konkreten Herausforderungen (Fachkräftemangel, Industrie-Transformation), die durch Robotik gelöst werden können. Mit 2.570 km² ist das Saarland zudem eine ideale Testregion für flächendeckende Robotik-Services."
+      },
+      "cost": {
+        "q": "Wie funktioniert das Kostenmodell?",
+        "a": "Sie zahlen eine monatliche Service-Gebühr basierend auf der Art und Anzahl der Roboter sowie dem Einsatzumfang. Es fallen keine Anschaffungskosten an. In der Gebühr enthalten sind: die Roboter selbst, regelmäßige Wartung, Software-Updates, technischer Support, Versicherung und bei Bedarf auch Schulungen für Ihre Mitarbeiter. Die genauen Konditionen werden individuell auf Ihren Anwendungsfall abgestimmt."
+      },
+      "timeline": {
+        "q": "Wie schnell kann ich RaaSaaR nutzen?",
+        "a": "Nach einer initialen Bedarfsanalyse (1-2 Wochen) erstellen wir einen individuellen Implementierungsplan. Je nach Komplexität können einfache Anwendungen innerhalb von 4-8 Wochen starten. Komplexere industrielle Integrationen benötigen 2-4 Monate. Wir begleiten Sie durch den gesamten Prozess – von der Planung über die Installation bis zur Schulung Ihrer Teams."
+      },
+      "jobs": {
+        "q": "Führt Robotik nicht zu Arbeitsplatzverlusten?",
+        "a": "Im Gegenteil: Angesichts des demografischen Wandels und des Fachkräftemangels im Saarland füllen Roboter Lücken, die nicht mehr durch Menschen besetzt werden können. Sie übernehmen repetitive, gefährliche oder körperlich belastende Aufgaben und ermöglichen es Mitarbeitern, sich auf qualifiziertere Tätigkeiten zu konzentrieren. Unser Ziel ist die Ergänzung der Arbeitskraft, nicht deren Ersatz – insbesondere in einer Region mit schrumpfender Erwerbsbevölkerung."
+      },
+      "target": {
+        "q": "Für wen ist RaaSaaR geeignet?",
+        "a": "RaaSaaR richtet sich an zwei Hauptzielgruppen: (1) Industrielle Unternehmen im Saarland – von KMUs bis zu großen Betrieben in Branchen wie Automotive, Fertigung, Logistik und Metallverarbeitung. (2) Kommunen und Gemeinden – für Anwendungen wie Straßenreinigung, Abfallmanagement, Infrastruktur-Überwachung und öffentliche Sicherheit. Das RaaS-Modell macht Robotik besonders für kleinere Organisationen zugänglich, die sich keine hohen Investitionen leisten können."
+      },
+      "technology": {
+        "q": "Welche Roboter-Technologien nutzt RaaSaaR?",
+        "a": "Wir arbeiten mit führenden Robotik-Plattformen und entwickeln eigene Lösungen in Kooperation mit dem DFKI, ZeMA und der Universität des Saarlandes. Je nach Anwendungsfall setzen wir ein: humanoide Roboter für komplexe Mensch-Roboter-Interaktion, mobile autonome Roboter (AMR) für Logistik und Transport, Industrie-Roboterarme für Fertigung und Montage, sowie spezialisierte Roboter für Reinigung und Inspektion. Die Technologie wird individuell auf Ihren Bedarf abgestimmt."
+      },
+      "support": {
+        "q": "Welche Unterstützung erhalte ich?",
+        "a": "Der RaaSaaR-Service umfasst umfassende Betreuung: Initiale Bedarfsanalyse und Konzeption, Installation und Integration in bestehende Prozesse, Schulung Ihrer Mitarbeiter, laufende technische Wartung, 24/7 Support bei Problemen, regelmäßige Software-Updates und Optimierung der Roboter-Performance basierend auf gesammelten Daten. Sie haben einen festen Ansprechpartner und profitieren von unserem regionalen Netzwerk."
+      }
+    }
+  },
+  "contact": {
+    "title": "Kontakt aufnehmen",
+    "subtitle": "Interessiert an Robotik-Lösungen für Ihr Unternehmen oder Ihre Kommune? Lassen Sie uns sprechen.",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "Max Mustermann",
+      "email": "E-Mail",
+      "emailPlaceholder": "max@beispiel.de",
+      "organization": "Organisation",
+      "organizationPlaceholder": "Ihr Unternehmen oder Kommune",
+      "orgType": "Organisations-Typ",
+      "orgTypes": {
+        "industrial": "Industrieunternehmen",
+        "municipal": "Kommune/Gemeinde",
+        "research": "Forschungseinrichtung",
+        "other": "Sonstiges"
+      },
+      "message": "Nachricht",
+      "messagePlaceholder": "Beschreiben Sie Ihren Anwendungsfall oder stellen Sie Ihre Frage...",
+      "submit": "Anfrage senden",
+      "submitting": "Wird gesendet...",
+      "success": "Vielen Dank! Wir melden uns in Kürze bei Ihnen.",
+      "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+    },
+    "validation": {
+      "nameRequired": "Bitte geben Sie Ihren Namen ein",
+      "emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse ein",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "messageRequired": "Bitte geben Sie eine Nachricht ein",
+      "messageMin": "Die Nachricht muss mindestens 10 Zeichen lang sein"
+    }
+  },
+  "footer": {
+    "tagline": "Robotik-Lösungen für das Saarland",
+    "description": "RaaSaaR macht modernste Robotik-Technologie für Unternehmen und Kommunen im Saarland zugänglich – ohne Investitionskosten.",
+    "links": {
+      "company": "Unternehmen",
+      "about": "Über uns",
+      "partners": "Partner",
+      "careers": "Karriere",
+      "resources": "Ressourcen",
+      "blog": "Blog",
+      "documentation": "Dokumentation",
+      "support": "Support",
+      "legal": "Rechtliches",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "imprint": "Impressum"
+    },
+    "copyright": "© 2025 RaaSaaR. Alle Rechte vorbehalten.",
+    "madeIn": "Made in Saarland"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Jetzt starten",
+    "contactUs": "Kontakt",
+    "readMore": "Weiterlesen"
+  }
+}

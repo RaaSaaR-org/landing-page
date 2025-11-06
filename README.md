@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RaaSaaR Landing Page
 
-## Getting Started
+A modern, professional landing page bringing Robots as a Service to Saarland, Germany. Built with Next.js 15 and full bilingual support (German/English).
 
-First, run the development server:
+## 🚀 About RaaSaaR
+
+RaaSaaR (Robots as a Service + Saarland) is a regional robotics platform bringing cutting-edge automation to businesses and municipalities in Saarland. We focus on making robotics accessible without capital investment, addressing the region's labor shortage and supporting industrial transformation.
+
+## ✨ Features
+
+- **Bilingual Support** - Full German/English i18n with language switcher
+- **Hero Section** - Compelling introduction to RaaSaaR's regional mission
+- **Problem/Solution** - Addressing Saarland's labor shortage and industry challenges
+- **Regional Advantage** - Showcasing DFKI, ZeMA, and Saarland's research ecosystem
+- **Use Cases** - Industrial automation and municipal services applications
+- **FAQ** - Answers to practical questions about RaaS implementation
+- **Contact Form** - Inquiry capture with organization type selection (industrial/municipal)
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15.5.4 (App Router)
+- **i18n**: next-intl (German/English)
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Forms**: React Hook Form + Zod
+- **Analytics**: Google Analytics 4, Hotjar, Vercel Analytics
+- **Language**: TypeScript
+
+## 📦 Installation
+
+```bash
+npm install
+```
+
+## 🏃 Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🔧 Configuration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Create `.env.local`:
 
-## Learn More
+```env
+NEXT_PUBLIC_SITE_URL=https://raasaar.de
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
+NEXT_PUBLIC_HOTJAR_ID=
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 🌍 Internationalization
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The site supports German (default) and English:
+- Routes: `/` or `/de` (German), `/en` (English)
+- Language switcher in header
+- All content translated in `/src/i18n/locales/`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🏗️ Build
 
-## Deploy on Vercel
+```bash
+npm run build
+npm start
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Design System
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Primary Color**: #0066FF
+- **Secondary Color**: #00CC66
+- **Font**: Inter
+- **Breakpoints**: Mobile (320-767px), Tablet (768-1023px), Desktop (1024px+)
+
+## 📄 License
+
+MIT

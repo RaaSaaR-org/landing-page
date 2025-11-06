@@ -1,0 +1,690 @@
+{
+  "master": {
+    "tasks": [
+      {
+        "id": 1,
+        "title": "Configure project infrastructure and design system",
+        "description": "Set up core project infrastructure including SEO metadata, analytics, performance monitoring, design tokens and Tailwind configuration for the B2B humanoid robot leasing landing page",
+        "details": "1. Update next.config.ts with image optimization, security headers (CSP, CORS), and performance settings\n2. Configure metadata in layout.tsx with proper SEO tags, Open Graph, and Twitter cards\n3. Set up design system with brand colors (#0066FF primary, #00CC66 secondary), typography (Inter font), spacing, and component tokens\n4. Install and configure required dependencies: framer-motion for animations, react-hook-form with zod for forms, Google Analytics 4, and Hotjar\n5. Set up Tailwind CSS configuration with custom colors, fonts, breakpoints (mobile: 320-767px, tablet: 768-1023px, desktop: 1024px+)\n6. Create base layout structure with responsive navigation and footer components",
+        "testStrategy": "Verify Lighthouse scores >90 on all metrics, test responsive breakpoints, validate SEO meta tags with Google's Rich Results Test, ensure analytics events fire correctly, test CSP headers don't block required resources",
+        "priority": "high",
+        "dependencies": [],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Install dependencies and configure Next.js with security headers",
+            "description": "Install required npm packages including framer-motion, react-hook-form, zod, and analytics packages. Update next.config.ts with image optimization settings, security headers (CSP, CORS, X-Frame-Options), and performance optimizations.",
+            "dependencies": [],
+            "details": "Run npm install for framer-motion @5.20.x, react-hook-form @7.x, zod @3.x, @vercel/analytics, and their type definitions. Configure next.config.ts with images.domains for robot images, security headers middleware including CSP for analytics scripts, CORS for API endpoints, and cache control headers. Enable experimental features for optimized builds.",
+            "status": "done",
+            "testStrategy": "Verify all packages install without peer dependency warnings, test security headers with curl commands, ensure CSP allows Google Analytics and Hotjar scripts"
+          },
+          {
+            "id": 2,
+            "title": "Set up SEO metadata and Open Graph tags in layout.tsx",
+            "description": "Configure comprehensive SEO metadata in the root layout including Open Graph tags, Twitter cards, canonical URLs, and structured data for B2B humanoid robot leasing service.",
+            "dependencies": [
+              1
+            ],
+            "details": "Update layout.tsx metadata with title 'Humanoid Robot Leasing - Deploy in Weeks | RobotDeploy', description focused on B2B value proposition, Open Graph tags with proper image dimensions (1200x630), Twitter card configuration, viewport settings for responsive design, and robots.txt directives. Add JSON-LD structured data for Organization and Service schema types.",
+            "status": "done",
+            "testStrategy": "Validate with Google's Rich Results Test, check Open Graph debugger, verify Twitter card validator passes, test meta tags render correctly in view-source"
+          },
+          {
+            "id": 3,
+            "title": "Configure Tailwind CSS with custom design tokens",
+            "description": "Create Tailwind configuration file with brand colors, typography system using Inter font, responsive breakpoints, and component-level design tokens for consistent styling.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create tailwind.config.ts with custom color palette (primary: #0066FF, secondary: #00CC66, grays, error/success states), configure Inter font with font-display swap, set breakpoints (mobile: 320-767px, tablet: 768-1023px, desktop: 1024px+), add spacing scale and shadow utilities. Update globals.css with CSS custom properties for dynamic theming.",
+            "status": "done",
+            "testStrategy": "Build CSS and verify custom classes generate correctly, test color contrast ratios meet WCAG AA standards, validate responsive utilities work at all breakpoints"
+          },
+          {
+            "id": 4,
+            "title": "Implement analytics tracking with Google Analytics 4 and Hotjar",
+            "description": "Set up Google Analytics 4 with custom events for ROI calculator usage, demo bookings, and user interactions. Configure Hotjar for heatmaps and session recordings with privacy compliance.",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Create analytics utility module with GA4 gtag implementation, configure custom events for CTA clicks, calculator interactions, video plays, and form submissions. Set up Hotjar tracking code with proper consent management. Implement analytics context provider for centralized event tracking. Add environment variables for GA_MEASUREMENT_ID and HOTJAR_ID in .env.local.",
+            "status": "done",
+            "testStrategy": "Use GA4 DebugView to verify events fire correctly, test Hotjar recording triggers, ensure analytics scripts don't block page load, verify GDPR consent flow works"
+          },
+          {
+            "id": 5,
+            "title": "Create responsive layout components with navigation and footer",
+            "description": "Build reusable layout components including sticky navigation header with mobile menu, footer with company links and trust badges, and responsive container components for consistent page structure.",
+            "dependencies": [
+              3
+            ],
+            "details": "Create Header component with logo, navigation links (Solutions, ROI Calculator, About, Contact), mobile hamburger menu with slide-out drawer, and sticky scroll behavior. Build Footer component with company info, legal links, certification badges, and newsletter signup. Implement Container and Section wrapper components with proper max-widths and padding for responsive layouts.",
+            "status": "done",
+            "testStrategy": "Test mobile menu functionality on touch devices, verify sticky header performance, check accessibility with keyboard navigation, validate footer links and form submissions"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Implement Hero section with video background and CTAs",
+        "description": "Create the above-fold Hero section with autoplay video background, compelling headline/subheadline, dual CTAs (ROI Calculator and Book Demo), and trust indicators",
+        "details": "1. Create HeroSection component with 100vh height and responsive layout\n2. Implement video background with muted autoplay (15-30 sec loop), fallback image for mobile/slow connections\n3. Add headline 'Deploy Humanoid Robots in Weeks, Not Years—No Capital Required' with proper typography hierarchy\n4. Create dual CTA buttons with hover animations: 'Calculate Your ROI' (primary) and 'Book Live Demo' (secondary)\n5. Add trust indicators: customer logos carousel (4-6 brands), certification badges, '47 facilities across 8 countries' social proof\n6. Ensure contrast ratio 4.5:1 minimum, optimize video file size <5MB, implement lazy loading",
+        "testStrategy": "Test video autoplay on mobile browsers, verify CTA click tracking, validate accessibility with screen readers, test fallback image loading, ensure 3-second comprehension of value proposition, A/B test headline variations",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create HeroSection component structure with responsive layout",
+            "description": "Build the main HeroSection React component with 100vh height, responsive grid layout, and proper container structure for video background and content overlay",
+            "dependencies": [],
+            "details": "Create src/components/sections/HeroSection.tsx with a main container using Tailwind classes for full viewport height (min-h-screen), relative positioning for video layering, and responsive breakpoints. Set up the component structure with sections for video background layer, content overlay layer with proper z-index management, and container for headline, CTAs, and trust indicators",
+            "status": "done",
+            "testStrategy": "Test component renders at 100vh on desktop and mobile viewports, verify responsive breakpoints at sm/md/lg/xl, ensure proper z-index stacking of video and content layers"
+          },
+          {
+            "id": 2,
+            "title": "Implement video background with fallback image support",
+            "description": "Add autoplay video background functionality with muted loop playback, mobile detection, and fallback image for slow connections or unsupported browsers",
+            "dependencies": [
+              1
+            ],
+            "details": "Add video element with autoplay, muted, loop, and playsinline attributes in HeroSection. Implement useEffect hook to detect mobile/slow connections and conditionally render video or static image. Create VideoBackground component that handles video loading states, error handling, and automatic fallback to poster image. Ensure video file is optimized to under 5MB and implements lazy loading with Intersection Observer API",
+            "status": "done",
+            "testStrategy": "Verify video autoplay works on Chrome, Safari, Firefox desktop and mobile, test fallback image loads on mobile devices, measure video file size and loading performance, validate muted autoplay policy compliance"
+          },
+          {
+            "id": 3,
+            "title": "Add headline, subheadline and typography hierarchy",
+            "description": "Implement the main headline 'Deploy Humanoid Robots in Weeks, Not Years—No Capital Required' with proper typography scale, responsive text sizes, and semantic HTML structure",
+            "dependencies": [
+              1
+            ],
+            "details": "Add h1 element with the main headline using Tailwind typography classes for proper font sizes (text-4xl md:text-5xl lg:text-6xl). Implement subheadline as h2 with supporting text. Use font-bold for headline, appropriate line-height and letter-spacing. Ensure text has sufficient contrast against video background using text-white with background overlay or text shadow. Apply the Geist font family from layout.tsx",
+            "status": "done",
+            "testStrategy": "Validate WCAG AAA contrast ratio of 4.5:1 minimum using Chrome DevTools, test text readability at different viewport sizes, verify semantic HTML structure with screen readers"
+          },
+          {
+            "id": 4,
+            "title": "Create dual CTA buttons with animations",
+            "description": "Build primary 'Calculate Your ROI' and secondary 'Book Live Demo' call-to-action buttons with hover animations, proper styling hierarchy, and click tracking setup",
+            "dependencies": [
+              1,
+              3
+            ],
+            "details": "Create CTAButton component accepting variant prop (primary/secondary). Primary button uses solid background with hover scale and shadow effects, secondary uses outline style. Implement smooth transitions using Tailwind's transition classes and transform on hover. Add onClick handlers with console tracking for analytics integration. Position buttons using flex gap-4 layout, ensure touch-friendly sizes (min 44px height) and proper focus states for accessibility",
+            "status": "done",
+            "testStrategy": "Test hover animations on desktop, verify touch interactions on mobile, validate button click tracking logs, ensure keyboard navigation and focus states work properly"
+          },
+          {
+            "id": 5,
+            "title": "Add trust indicators section with logos and social proof",
+            "description": "Implement customer logos carousel, certification badges, and the '47 facilities across 8 countries' social proof text with proper layout and animations",
+            "dependencies": [
+              1,
+              3,
+              4
+            ],
+            "details": "Create TrustIndicators component with three sections: customer logos (4-6 placeholder brand images in horizontal scroll/carousel), certification badges row, and social proof text. Use CSS Grid or Flexbox for responsive layout. Add subtle fade-in animations using Tailwind animate classes or Framer Motion if needed. Include placeholder images in public/images/logos/ and public/images/certifications/. Ensure logos are optimized SVGs or WebP format",
+            "status": "done",
+            "testStrategy": "Verify carousel functionality on mobile swipe and desktop, test image lazy loading and format optimization, validate accessibility of carousel controls, measure total section load time"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Build interactive ROI calculator with real-time results",
+        "description": "Develop the client-side ROI calculator that enables self-qualification and demonstrates value with industry-specific inputs and real-time calculation outputs",
+        "details": "1. Create ROICalculator component with sticky sidebar/modal behavior\n2. Implement inputs: industry dropdown, workers slider (1-50), hourly wage input ($15-$50), shift structure radio, overtime percentage slider\n3. Build calculation logic: annual labor cost, robot leasing cost (€2,500/month base), net savings projections (1, 3, 5 years), payback period\n4. Add real-time result updates with smooth number animations\n5. Implement result actions: 'Download Full ROI Report' with lead capture, 'Discuss Your Results' CTA\n6. Store calculator state in localStorage for persistence, add input validation and error handling\n7. Display assumptions clearly (98% uptime, 15% productivity gain)",
+        "testStrategy": "Validate calculation accuracy against spreadsheet model, test edge cases and input validation, verify localStorage persistence, test mobile slider usability, track calculator completion rate >70%, ensure <100ms calculation response time",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create ROICalculator component structure with TypeScript interfaces",
+            "description": "Design and implement the main ROICalculator React component with proper TypeScript types for calculator inputs, outputs, and state management. Set up the component hierarchy with clear separation between UI and logic.",
+            "dependencies": [],
+            "details": "Create src/components/roi-calculator/ROICalculator.tsx with TypeScript interfaces for CalculatorInputs (industry, workers, hourlyWage, shiftStructure, overtimePercentage) and CalculatorResults (annualLaborCost, robotLeasingCost, netSavings1Year, netSavings3Years, netSavings5Years, paybackPeriod). Implement useState hooks for form state and useEffect for localStorage persistence. Structure component with clear sections for inputs panel and results display.",
+            "status": "done",
+            "testStrategy": "Unit test TypeScript types compilation, verify component renders without errors, test prop passing and state management hooks"
+          },
+          {
+            "id": 2,
+            "title": "Build calculator input controls with validation",
+            "description": "Implement all interactive input controls including industry dropdown, workers slider, hourly wage input, shift structure radio buttons, and overtime percentage slider with proper validation and error handling.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create reusable input components: IndustryDropdown with options (Manufacturing, Warehousing, Logistics, Automotive, Food Processing), WorkersSlider (range 1-50 with visual markers), HourlyWageInput ($15-$50 with currency formatting), ShiftStructureRadio (1-shift, 2-shift, 3-shift options), OvertimeSlider (0-40% range). Add input validation with error messages, implement debounced onChange handlers to prevent excessive recalculation, use Tailwind CSS for styling consistent with Next.js defaults.",
+            "status": "done",
+            "testStrategy": "Test input validation boundaries, verify error message display, test keyboard navigation and accessibility, validate debounce timing"
+          },
+          {
+            "id": 3,
+            "title": "Implement ROI calculation engine with business logic",
+            "description": "Create the core calculation logic that computes annual labor costs, robot leasing costs, net savings projections for multiple timeframes, and payback period based on industry-specific parameters and assumptions.",
+            "dependencies": [
+              2
+            ],
+            "details": "Implement calculateROI function with formulas: annualLaborCost = workers * hourlyWage * hoursPerYear * (1 + overtimeMultiplier), robotLeasingCost = €2,500/month * 12 * robotsNeeded, productivity gain = 15%, uptime = 98%. Calculate net savings for 1/3/5 year periods accounting for compounding benefits. Determine payback period using cumulative savings vs initial investment. Add industry-specific multipliers for different sectors. Export calculation functions for testing.",
+            "status": "done",
+            "testStrategy": "Validate calculations against spreadsheet model, test edge cases (0 workers, max values), verify currency conversions EUR/USD, test industry multipliers"
+          },
+          {
+            "id": 4,
+            "title": "Create animated results display with smooth transitions",
+            "description": "Build the results panel that displays calculated ROI metrics with smooth number animations, visual charts, and clear presentation of assumptions to build trust and transparency.",
+            "dependencies": [
+              3
+            ],
+            "details": "Implement ResultsDisplay component with animated number counters using requestAnimationFrame for smooth transitions. Display metrics: Total Annual Savings, 1/3/5 Year Net Savings, Payback Period (in months), ROI Percentage. Add visual progress bars or simple charts for savings over time. Include AssumptionsPanel showing 98% uptime, 15% productivity gain, maintenance included. Use CSS transitions for panel appearance, implement loading state during calculation. Format large numbers with thousand separators and currency symbols.",
+            "status": "done",
+            "testStrategy": "Test animation performance on mobile devices, verify number formatting accuracy, test smooth transitions between calculations, validate accessibility of animated content"
+          },
+          {
+            "id": 5,
+            "title": "Add lead capture CTAs and modal behavior",
+            "description": "Implement sticky/modal positioning for the calculator, add download ROI report and contact sales CTAs with proper tracking, and integrate with localStorage for state persistence across sessions.",
+            "dependencies": [
+              4
+            ],
+            "details": "Implement sticky sidebar behavior on desktop (position: sticky) and modal overlay on mobile with proper z-index management. Add 'Download Full ROI Report' button that triggers lead capture modal before PDF generation. Add 'Discuss Your Results' CTA button linking to contact form with pre-filled calculator data. Implement localStorage persistence to save/restore calculator state on page reload. Add analytics event tracking for calculator interactions (inputs changed, results viewed, CTAs clicked). Handle modal accessibility with focus trap and ESC key handling.",
+            "status": "done",
+            "testStrategy": "Test sticky positioning across viewport sizes, verify localStorage data persistence and retrieval, test modal accessibility and keyboard navigation, validate analytics events fire correctly"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Create Problem Statement and Solution Overview sections",
+        "description": "Build sections that articulate customer pain points (labor shortage, rising costs, safety) and introduce humanoid robots as the solution with capabilities showcase",
+        "details": "1. Create ProblemSection with 3-column grid layout: Labor Shortage (73% hiring difficulty stat), Rising Costs (22% wage increase), Safety (2.7M injuries/year)\n2. Add icons, statistics with sources (Bureau of Labor Statistics, OSHA), and descriptive text for each problem\n3. Build SolutionSection with value proposition grid: Deploy Fast (2-4 weeks), Zero CapEx (€2,500/month), Human-Compatible, 24/7 Operations\n4. Create interactive tabs/cards for robot capabilities: Material Handling, Assembly, Quality Control, Machine Tending\n5. Add video/GIF demos (5-10 sec) for each use case with ROI timeline and specs\n6. Implement expandable technical specs accordion: payload 10-25kg, reach 1.8m, ±1mm precision, ISO 10218 compliant",
+        "testStrategy": "Track engagement with capability tabs, test accordion accessibility, verify video loading performance, validate statistics sources, A/B test problem/solution messaging order, ensure mobile-friendly grid layout",
+        "priority": "medium",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create ProblemSection component with 3-column grid layout",
+            "description": "Build the ProblemSection component in src/components/sections/ProblemSection.tsx with a responsive 3-column grid layout displaying labor shortage, rising costs, and safety statistics",
+            "dependencies": [],
+            "details": "Create ProblemSection.tsx component using Tailwind's grid system. Implement responsive design with grid-cols-1 on mobile, grid-cols-3 on desktop. Each column should display: Labor Shortage (73% hiring difficulty), Rising Costs (22% wage increase), Safety (2.7M injuries/year). Include proper TypeScript types and ensure component follows Next.js 15 patterns with proper imports from the existing codebase structure.",
+            "status": "done",
+            "testStrategy": "Verify responsive grid layout on different screen sizes, validate statistics display correctly, test accessibility with screen readers, ensure proper semantic HTML structure"
+          },
+          {
+            "id": 2,
+            "title": "Add icons, statistics, and source citations to ProblemSection",
+            "description": "Enhance ProblemSection with visual icons, formatted statistics with source citations from Bureau of Labor Statistics and OSHA, and descriptive text for each problem",
+            "dependencies": [
+              1
+            ],
+            "details": "Install and configure an icon library (lucide-react or heroicons). Add appropriate icons for each problem category. Format statistics with proper typography using Tailwind classes. Include small citation text linking to Bureau of Labor Statistics for labor/cost data and OSHA for safety statistics. Add descriptive paragraphs explaining each pain point with proper text hierarchy and spacing.",
+            "status": "done",
+            "testStrategy": "Verify icon rendering and accessibility attributes, validate external links to citation sources work correctly, test text readability and contrast ratios"
+          },
+          {
+            "id": 3,
+            "title": "Build SolutionSection with value proposition grid",
+            "description": "Create SolutionSection component displaying four key value propositions: Deploy Fast, Zero CapEx, Human-Compatible, and 24/7 Operations in an engaging grid layout",
+            "dependencies": [],
+            "details": "Create src/components/sections/SolutionSection.tsx with a 2x2 grid on desktop, single column on mobile. Each value prop card should include: Deploy Fast (2-4 weeks timeline), Zero CapEx (€2,500/month leasing), Human-Compatible (no infrastructure changes), 24/7 Operations (continuous productivity). Use consistent card styling with hover effects and proper spacing. Implement with TypeScript and ensure proper component composition.",
+            "status": "done",
+            "testStrategy": "Test grid responsiveness across breakpoints, verify card hover interactions, validate content hierarchy and readability, ensure consistent spacing and alignment"
+          },
+          {
+            "id": 4,
+            "title": "Create interactive capability tabs with demos",
+            "description": "Implement interactive tabs/cards showcasing robot capabilities for Material Handling, Assembly, Quality Control, and Machine Tending with video/GIF demonstrations",
+            "dependencies": [
+              3
+            ],
+            "details": "Build a tabs component using React state management for tab switching. Each tab should display: capability title, 5-10 second video/GIF demo (use Next.js Image component for GIFs or video tag for mp4), description of the use case, ROI timeline, and key specifications. Implement smooth transitions between tabs using CSS transitions. Create placeholder content for demos initially. Ensure keyboard navigation support for accessibility.",
+            "status": "done",
+            "testStrategy": "Test tab switching functionality and keyboard navigation, verify video/GIF loading performance, measure interaction metrics, validate mobile touch interactions"
+          },
+          {
+            "id": 5,
+            "title": "Implement expandable technical specifications accordion",
+            "description": "Add an expandable accordion component displaying detailed technical specifications including payload capacity, reach, precision, and compliance certifications",
+            "dependencies": [
+              3,
+              4
+            ],
+            "details": "Create an accordion component within SolutionSection showing technical specs: Payload (10-25kg), Reach (1.8m), Precision (±1mm), ISO 10218 compliance, and other relevant specifications. Use React state for expand/collapse functionality with smooth height transitions. Include proper ARIA attributes for accessibility. Style with consistent design tokens and ensure smooth animations. Position below the capability tabs for logical information hierarchy.",
+            "status": "done",
+            "testStrategy": "Test accordion expand/collapse functionality, verify smooth animations performance, validate keyboard accessibility, ensure content remains readable when expanded on mobile devices"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Implement How It Works process timeline",
+        "description": "Create the 4-step deployment process visualization showing the journey from inquiry to production with clear timelines and deliverables",
+        "details": "1. Build ProcessTimeline component with horizontal layout (desktop) and vertical (mobile)\n2. Create 4 steps: Discovery Call (Week 1), Proof of Concept (Week 2-3), Deployment (Week 4-6), Optimization & Support (Ongoing)\n3. Add icons, descriptions, and deliverables for each step\n4. Implement progress indicator showing 6-week typical timeline\n5. Make each step expandable for detailed information\n6. Add 'Start Your Journey' CTA at section end\n7. Use Framer Motion for smooth step-by-step reveal animations on scroll",
+        "testStrategy": "Test timeline responsiveness across devices, verify expandable content accessibility, track CTA conversion from this section, test animation performance, ensure clear visual progression flow",
+        "priority": "medium",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create ProcessTimeline component structure with responsive layout",
+            "description": "Build the base ProcessTimeline component with responsive container that switches between horizontal (desktop) and vertical (mobile) layouts using CSS Grid or Flexbox",
+            "dependencies": [],
+            "details": "Create components/ProcessTimeline.tsx with responsive breakpoints at 768px. Use CSS Grid for desktop horizontal layout and switch to vertical stack on mobile. Set up container with proper padding and max-width constraints. Import and configure Framer Motion for animations.",
+            "status": "done",
+            "testStrategy": "Test responsive behavior at multiple breakpoints (320px, 768px, 1024px, 1440px). Verify layout switches correctly between horizontal and vertical. Test container padding and spacing on different screen sizes."
+          },
+          {
+            "id": 2,
+            "title": "Design and implement the 4-step process cards with icons",
+            "description": "Create individual step cards for Discovery Call, Proof of Concept, Deployment, and Optimization & Support with custom icons, titles, week ranges, and descriptions",
+            "dependencies": [
+              1
+            ],
+            "details": "Build ProcessStep component accepting step data (title, weekRange, description, deliverables, icon). Use Heroicons or custom SVGs for step icons. Structure each card with consistent styling including borders, shadows, and hover states. Implement color coding or numbering system for visual progression.",
+            "status": "done",
+            "testStrategy": "Verify all 4 cards render with correct content. Test icon loading and fallbacks. Check card hover states and interactions. Validate text truncation and overflow handling."
+          },
+          {
+            "id": 3,
+            "title": "Add expandable details and deliverables for each step",
+            "description": "Implement accordion-style expandable sections within each process step card to show detailed information and deliverables list when clicked",
+            "dependencies": [
+              2
+            ],
+            "details": "Use Radix UI Accordion or build custom expandable component with useState. Add smooth height transitions for expand/collapse. Include deliverables as bulleted lists in expanded view. Implement chevron icons that rotate on expand. Ensure only one step can be expanded at a time for clarity.",
+            "status": "done",
+            "testStrategy": "Test accordion keyboard navigation (Space/Enter to toggle). Verify smooth expand/collapse animations. Check accessibility with screen readers. Test single vs multiple expansion behavior."
+          },
+          {
+            "id": 4,
+            "title": "Build visual progress indicator showing 6-week timeline",
+            "description": "Create a horizontal progress bar or timeline visualization that displays the 6-week typical deployment timeline with week markers and current phase highlighting",
+            "dependencies": [
+              2
+            ],
+            "details": "Implement ProgressIndicator component with SVG or CSS for the timeline bar. Add week markers at positions corresponding to each phase duration. Use different colors or patterns to distinguish phases. Add animated fill effect on scroll using Intersection Observer. Include total duration label '6 weeks typical timeline'.",
+            "status": "done",
+            "testStrategy": "Verify timeline displays correct week ranges for each phase. Test progress animation triggers on scroll. Check visual clarity of phase distinctions. Validate responsive scaling of timeline."
+          },
+          {
+            "id": 5,
+            "title": "Implement scroll-triggered animations and Start Journey CTA",
+            "description": "Add Framer Motion scroll animations for step-by-step reveal and create prominent Call-to-Action button at section end linking to contact or demo booking",
+            "dependencies": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "details": "Configure Framer Motion's whileInView for staggered step animations with 0.2s delays between cards. Set up viewport detection with threshold of 0.3. Create StartJourneyCTA component with primary button styling matching site theme. Position CTA below timeline with proper spacing. Add hover and click animations to CTA button.",
+            "status": "done",
+            "testStrategy": "Test animation performance on low-end devices. Verify animations trigger at correct scroll positions. Track CTA click events and conversion rate. Check animation accessibility settings respect prefers-reduced-motion."
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "title": "Build Case Studies section with social proof",
+        "description": "Create detailed case studies showcase featuring 3 customer success stories with metrics, quotes, and aggregate statistics to build credibility",
+        "details": "1. Create CaseStudyCard component with company, challenge, solution, results, quote, and visual elements\n2. Implement 3 featured case studies: Automotive (35% throughput, $640K savings), E-commerce (99.7% accuracy, 50% cost reduction), Electronics (0.3% defects, 40% faster ramp-up)\n3. Add before/after photos, video clips, and ROI graphs for each case\n4. Create rotating customer logos section (15-20 companies) with smooth carousel\n5. Display aggregate statistics: 47 facilities, 180+ robots, 99.2% uptime, $24M savings\n6. Add industry awards/recognition badges and link to full case study library\n7. Implement lazy loading for media content",
+        "testStrategy": "Test carousel performance and accessibility, verify video loading optimization, track case study engagement metrics, validate customer testimonial permissions, A/B test case study order and format",
+        "priority": "high",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create CaseStudyCard component with responsive layout and rich media support",
+            "description": "Build a reusable CaseStudyCard component that displays company name, challenge, solution, results metrics, customer quotes, and supports before/after photos, video clips, and ROI graphs with proper TypeScript interfaces and Tailwind CSS styling",
+            "dependencies": [],
+            "details": "Create src/components/CaseStudyCard.tsx with TypeScript interfaces for company, challenge, solution, results (with metrics), quote, mediaAssets (before/after photos, video URLs), and ROI data. Implement responsive layout using Tailwind CSS with proper image optimization using Next.js Image component, lazy loading for media, and accessible markup. Add hover effects and smooth transitions for interactive elements",
+            "status": "done",
+            "testStrategy": "Test component with various media types, verify responsive behavior at different breakpoints, validate accessibility with screen readers, test lazy loading performance"
+          },
+          {
+            "id": 2,
+            "title": "Implement 3 featured case studies with real customer success data",
+            "description": "Create the three featured case studies (Automotive, E-commerce, Electronics) with their specific metrics, challenges, solutions, and visual assets integrated into the CaseStudyCard components",
+            "dependencies": [
+              1
+            ],
+            "details": "Implement automotive case study with 35% throughput increase and $640K savings, e-commerce with 99.7% accuracy and 50% cost reduction, electronics with 0.3% defects and 40% faster ramp-up. Create data structures in src/data/caseStudies.ts with complete details for each case. Add placeholder images for before/after photos, embed video URLs, and create ROI graph data for each case study with realistic metrics visualization",
+            "status": "done",
+            "testStrategy": "Verify all metrics display correctly, test image and video loading, validate data accuracy against requirements, ensure proper formatting of financial figures"
+          },
+          {
+            "id": 3,
+            "title": "Build rotating customer logos carousel with smooth animations",
+            "description": "Create a smooth, accessible carousel component that displays 15-20 customer company logos with automatic rotation and manual navigation controls",
+            "dependencies": [],
+            "details": "Build src/components/CustomerLogosCarousel.tsx using Framer Motion for smooth animations. Implement auto-play with pause on hover, manual navigation arrows, keyboard navigation support, and touch/swipe gestures for mobile. Display 4-5 logos at a time on desktop, 2-3 on tablet, 1-2 on mobile. Add proper ARIA labels and ensure logos are optimized SVGs or WebP images. Include continuous loop functionality with seamless transitions",
+            "status": "done",
+            "testStrategy": "Test carousel on various devices and screen sizes, verify keyboard navigation, test auto-play pause/resume, validate touch gestures on mobile, check performance with 20 logos"
+          },
+          {
+            "id": 4,
+            "title": "Create aggregate statistics component with animated number counters",
+            "description": "Build a visually impressive statistics display showing 47 facilities, 180+ robots deployed, 99.2% uptime, and $24M in total savings with animated number counting effects",
+            "dependencies": [],
+            "details": "Create src/components/AggregateStats.tsx with animated number counters using Framer Motion or React CountUp. Implement intersection observer to trigger animations when component enters viewport. Design responsive grid layout with large, bold numbers and descriptive labels. Add subtle icons for each metric and use brand colors for emphasis. Ensure numbers animate smoothly from 0 to final value over 2-3 seconds with easing functions",
+            "status": "done",
+            "testStrategy": "Verify animation triggers on scroll, test number formatting with large values, validate performance with multiple animations, ensure accessibility for screen readers"
+          },
+          {
+            "id": 5,
+            "title": "Assemble complete CaseStudies section with awards badges and library link",
+            "description": "Integrate all case study components into a cohesive section on the landing page, add industry awards/recognition badges, implement section-level lazy loading, and add navigation to full case study library",
+            "dependencies": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "details": "Create src/components/CaseStudiesSection.tsx that combines CaseStudyCards in a responsive grid, positions the CustomerLogosCarousel prominently, displays AggregateStats as a highlight bar, and includes awards/certification badges. Add 'View All Case Studies' CTA button linking to expanded library. Implement Intersection Observer for section-level lazy loading. Style with consistent spacing, typography hierarchy, and ensure smooth scroll behavior with proper section anchoring",
+            "status": "done",
+            "testStrategy": "Test complete section integration, verify lazy loading triggers correctly, validate responsive layout across devices, track engagement metrics with analytics events, test all CTAs and navigation links"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "title": "Create Pricing Plans and Fleet Management sections",
+        "description": "Build transparent 3-tier pricing structure and showcase the fleet management platform with dashboard preview and technical differentiation",
+        "details": "1. Create PricingTier component with Starter (€2,500/mo), Professional (€2,200/mo), Enterprise (custom) plans\n2. Build comparison table with features, commitments, and use cases for each tier\n3. Add toggle for monthly/annual pricing (10% discount), volume discount information\n4. Create FleetManagement section with dashboard preview mockup/screenshot\n5. Showcase features: real-time monitoring, performance analytics, predictive maintenance, task management\n6. Embed platform walkthrough video (2-3 min) or interactive demo\n7. Highlight AI-powered optimization (40% downtime reduction, 25% utilization improvement)",
+        "testStrategy": "Test pricing calculator accuracy, verify comparison table responsiveness, track video engagement rates, test toggle functionality, validate pricing with business stakeholders, A/B test pricing display format",
+        "priority": "medium",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create PricingSection component with pricing tier cards structure",
+            "description": "Build the main PricingSection component with a responsive grid layout for displaying 3 pricing tiers (Starter, Professional, Enterprise) using Tailwind CSS styling consistent with Next.js patterns",
+            "dependencies": [],
+            "details": "Create src/app/components/PricingSection.tsx with a responsive grid layout that displays pricing cards in a row on desktop and stacks on mobile. Include heading, subheading, and container for pricing toggle and cards. Follow Next.js App Router patterns using server components where appropriate.",
+            "status": "done",
+            "testStrategy": "Verify responsive grid layout at different breakpoints, ensure proper component rendering, test accessibility with screen readers"
+          },
+          {
+            "id": 2,
+            "title": "Implement PricingCard component with monthly/annual toggle functionality",
+            "description": "Build individual pricing card components with monthly/annual pricing toggle, price calculation logic (10% annual discount), and feature lists for each tier",
+            "dependencies": [
+              1
+            ],
+            "details": "Create src/app/components/PricingCard.tsx component that accepts tier data (name, monthly price, features, commitments). Implement useState for monthly/annual toggle with 10% discount calculation. Style cards with borders, shadows, and hover effects. Highlight Professional tier as most popular.",
+            "status": "done",
+            "testStrategy": "Test pricing toggle functionality, verify 10% discount calculation accuracy, ensure feature list displays correctly for each tier"
+          },
+          {
+            "id": 3,
+            "title": "Build pricing comparison table with feature matrix",
+            "description": "Create a detailed comparison table component showing features, commitments, and use cases across all three pricing tiers with clear visual differentiation",
+            "dependencies": [
+              1,
+              2
+            ],
+            "details": "Create src/app/components/PricingComparison.tsx with a responsive table showing feature availability across tiers. Include checkmarks/crosses for feature availability, commitment periods, ideal use cases, and volume discount information. Make table scrollable on mobile while keeping tier names sticky.",
+            "status": "done",
+            "testStrategy": "Test table responsiveness and scroll behavior on mobile, verify sticky headers work correctly, validate feature matrix data accuracy"
+          },
+          {
+            "id": 4,
+            "title": "Create FleetManagement section with dashboard preview",
+            "description": "Build the fleet management showcase section featuring a dashboard mockup/screenshot, key features grid, and performance metrics highlighting AI optimization benefits",
+            "dependencies": [],
+            "details": "Create src/app/components/FleetManagement.tsx with a hero section containing dashboard preview image/mockup. Add feature cards for real-time monitoring, performance analytics, predictive maintenance, and task management. Include statistics showing 40% downtime reduction and 25% utilization improvement with visual indicators.",
+            "status": "done",
+            "testStrategy": "Test image loading and optimization, verify feature cards are accessible, ensure statistics are prominently displayed with proper formatting"
+          },
+          {
+            "id": 5,
+            "title": "Integrate video walkthrough and interactive demo elements",
+            "description": "Add video embed component for platform walkthrough and create interactive demo elements or call-to-action buttons for deeper engagement with the fleet management platform",
+            "dependencies": [
+              4
+            ],
+            "details": "Create src/app/components/VideoWalkthrough.tsx for embedding a 2-3 minute platform walkthrough video with proper loading states and controls. Add interactive demo CTAs with hover effects and animations. Implement lazy loading for video to optimize page performance. Include fallback for users who cannot view video.",
+            "status": "done",
+            "testStrategy": "Test video loading performance, verify fallback content displays when video unavailable, track engagement metrics with demo CTAs"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "title": "Implement FAQ and Technology/Safety sections",
+        "description": "Build expandable FAQ accordion addressing common objections and create technology section showcasing safety certifications and integration capabilities",
+        "details": "1. Create FAQ component with 12 expandable questions using accessible accordion pattern\n2. Cover topics: deployment time, facility requirements, leasing vs buying, safety, training, scaling, data security\n3. Build TechnologySection with safety certifications (ISO 10218, CE, OSHA), technical specs grid\n4. Display integration capabilities: pre-built connectors (SAP, Oracle, WMS), supported protocols (REST, MQTT)\n5. Add reliability metrics: 99.2% uptime, predictive maintenance benefits\n6. Include certification badges, architecture diagrams, sensor visualizations\n7. Implement smooth expand/collapse animations with proper ARIA attributes",
+        "testStrategy": "Test accordion keyboard navigation, verify all FAQ links work, validate technical specifications accuracy, ensure certification badges are current, track FAQ engagement metrics, test mobile accordion usability",
+        "priority": "low",
+        "dependencies": [
+          1
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Create FAQ data structure and Accordion base component",
+            "description": "Set up the FAQ data model with 12 questions covering deployment, requirements, leasing, safety, training, scaling, and security topics. Create a reusable Accordion component with accessibility features.",
+            "dependencies": [],
+            "details": "Create src/data/faqData.ts with typed FAQ structure including categories like deployment (time, process), facility requirements, financial (leasing vs buying, ROI), safety concerns, training needs, scaling options, and data security. Build src/components/ui/Accordion.tsx with proper ARIA attributes, keyboard navigation (arrow keys, enter/space), and smooth expand/collapse animations using CSS transitions. Ensure the component is fully accessible with screen readers and follows WAI-ARIA accordion pattern.",
+            "status": "done",
+            "testStrategy": "Test keyboard navigation with arrow keys and enter/space. Verify screen reader announces expanded/collapsed state. Test focus management and tab order. Validate ARIA attributes are correctly applied."
+          },
+          {
+            "id": 2,
+            "title": "Build FAQ section component with styled accordion implementation",
+            "description": "Create the main FAQ section component that renders the accordion with all 12 questions, implements category grouping if needed, and adds section styling with proper spacing and typography.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create src/components/sections/FAQSection.tsx that imports FAQ data and Accordion component. Implement responsive grid layout for FAQ items with proper spacing. Add section heading 'Frequently Asked Questions' with subtitle about addressing common concerns. Style accordion items with hover states, active states, and smooth transitions. Implement expand all/collapse all functionality if beneficial for UX. Use Tailwind classes for consistent styling matching the landing page design system.",
+            "status": "done",
+            "testStrategy": "Test accordion expand/collapse functionality across all questions. Verify mobile responsiveness with touch interactions. Test expand all/collapse all if implemented. Track engagement metrics for most clicked questions."
+          },
+          {
+            "id": 3,
+            "title": "Create Technology section with safety certifications display",
+            "description": "Build the technology section showcasing safety certifications (ISO 10218, CE, OSHA) with certification badges, technical specifications grid, and reliability metrics visualization.",
+            "dependencies": [],
+            "details": "Create src/components/sections/TechnologySection.tsx with certification badges area displaying ISO 10218-1/2, CE marking, and OSHA compliance badges. Build technical specifications grid showing robot specs, sensor capabilities, payload capacity, and operational parameters. Add reliability metrics cards showing 99.2% uptime, MTBF statistics, and predictive maintenance benefits. Create visual hierarchy with proper typography and spacing. Use icon libraries or SVGs for certification badges and ensure they link to relevant documentation.",
+            "status": "done",
+            "testStrategy": "Verify all certification badges display correctly and links work. Test responsive grid layout on mobile devices. Validate technical specifications accuracy against documentation. Ensure metrics are clearly visible and understandable."
+          },
+          {
+            "id": 4,
+            "title": "Implement integration capabilities and architecture visualization",
+            "description": "Create components showing pre-built connectors (SAP, Oracle, WMS), supported protocols (REST, MQTT, OPC-UA), and system architecture diagrams with interactive elements.",
+            "dependencies": [
+              3
+            ],
+            "details": "Extend TechnologySection with integration capabilities subsection. Create cards or tiles for pre-built connectors including SAP S/4HANA, Oracle NetSuite, WMS systems, and major ERPs. Display supported protocols grid showing REST APIs, MQTT for IoT, OPC-UA for industrial systems, and webhook support. Add interactive architecture diagram showing how robots integrate with existing infrastructure. Include code snippets or API examples if appropriate. Create hover states showing integration details and implementation timeframes.",
+            "status": "done",
+            "testStrategy": "Test all interactive elements and hover states work correctly. Verify architecture diagram is clear and informative. Test mobile interactions for complex visualizations. Ensure protocol information is technically accurate."
+          },
+          {
+            "id": 5,
+            "title": "Add sensor visualizations and integrate sections into main page",
+            "description": "Create sensor capability visualizations, finalize all animations with Framer Motion, and integrate both FAQ and Technology sections into the main landing page with proper scroll triggers.",
+            "dependencies": [
+              2,
+              4
+            ],
+            "details": "Create sensor visualization components showing 3D perception, obstacle detection, force feedback, and environmental sensing capabilities. Implement smooth Framer Motion animations for section reveals, accordion transitions, and metric counters. Update src/app/page.tsx to import and render both FAQSection and TechnologySection in the correct order. Add scroll-triggered animations for progressive reveal. Ensure consistent spacing between sections and proper responsive behavior. Add section anchors for navigation if needed.",
+            "status": "done",
+            "testStrategy": "Test all animations perform smoothly without lag. Verify scroll triggers work correctly at different scroll speeds. Test page performance with all sections loaded. Validate mobile experience with reduced animations."
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "title": "Develop lead capture forms and CRM integration",
+        "description": "Create conversion-optimized forms for demo requests, ROI report downloads, and contact inquiries with proper validation and CRM integration",
+        "details": "1. Build reusable Form components using react-hook-form and zod validation\n2. Create forms: Demo Request (calendar integration), ROI Report Download, Contact Sales, Newsletter Signup\n3. Implement server-side form handling with rate limiting (5 submissions/hour per IP)\n4. Add reCAPTCHA v3 for spam prevention (invisible)\n5. Integrate with HubSpot/Salesforce CRM API for automatic lead sync within 5 minutes\n6. Implement lead scoring algorithm (0-100) based on company size, industry, engagement\n7. Add email verification for downloads and confirmation messaging\n8. Create thank you pages with next steps and additional resources",
+        "testStrategy": "Test form validation rules, verify CRM data sync accuracy, test CAPTCHA integration, validate rate limiting, track form conversion rates >10%, test email delivery and formatting, ensure GDPR compliance",
+        "priority": "high",
+        "dependencies": [
+          3,
+          7
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Set up form infrastructure with react-hook-form and zod validation",
+            "description": "Install and configure react-hook-form, zod, and @hookform/resolvers for form validation. Create reusable form components including Input, Select, and Textarea with proper TypeScript types and error handling.",
+            "dependencies": [],
+            "details": "Install dependencies: npm install react-hook-form zod @hookform/resolvers. Create components/forms directory structure with BaseInput.tsx, BaseSelect.tsx, BaseTextarea.tsx components that integrate with react-hook-form's Controller. Set up common validation schemas in lib/validations/forms.ts including email, phone, and company validation rules. Create FormProvider wrapper component for shared form context.",
+            "status": "done",
+            "testStrategy": "Unit tests for each form component validating error states, accessibility attributes, and form control registration. Test validation schemas with valid and invalid inputs."
+          },
+          {
+            "id": 2,
+            "title": "Build lead capture forms UI components",
+            "description": "Create four specific form components: Demo Request Form with calendar integration, ROI Report Download Form, Contact Sales Form, and Newsletter Signup Form with appropriate fields and layouts.",
+            "dependencies": [
+              1
+            ],
+            "details": "Create components/forms/DemoRequestForm.tsx with fields: name, email, company, phone, preferred date/time (using react-datepicker). Create ROIReportForm.tsx with fields: name, email, company, industry, company size. Create ContactSalesForm.tsx with comprehensive fields including budget range and timeline. Create NewsletterForm.tsx with minimal email-only signup. Each form should use the base components and validation schemas from subtask 1.",
+            "status": "done",
+            "testStrategy": "Test form submission flow, field validation on blur and submit, proper error message display, and accessibility compliance with screen readers."
+          },
+          {
+            "id": 3,
+            "title": "Implement server-side form handling with rate limiting",
+            "description": "Create API routes for form submissions with rate limiting middleware to prevent spam (5 submissions per hour per IP) and proper error handling.",
+            "dependencies": [
+              2
+            ],
+            "details": "Create app/api/forms/[formType]/route.ts to handle different form types. Implement rate limiting using upstash/ratelimit or custom Redis-based solution tracking IP addresses. Add form submission logging to a database or file system. Implement server-side validation matching client-side rules. Return appropriate HTTP status codes and error messages. Store submissions temporarily before CRM sync.",
+            "status": "done",
+            "testStrategy": "Test rate limiting with multiple rapid submissions from same IP, verify proper error responses, test server-side validation independently, ensure data persistence before CRM sync."
+          },
+          {
+            "id": 4,
+            "title": "Integrate reCAPTCHA v3 and CRM API connections",
+            "description": "Add invisible reCAPTCHA v3 for spam prevention and implement HubSpot/Salesforce CRM integration with automatic lead sync within 5 minutes of submission.",
+            "dependencies": [
+              3
+            ],
+            "details": "Install @google/recaptcha-enterprise or react-google-recaptcha-v3. Configure reCAPTCHA in forms with score threshold validation (0.5 minimum). Create lib/crm/hubspot.ts and lib/crm/salesforce.ts with API client setup. Implement lead creation/update logic with proper field mapping. Add background job using Next.js API routes or Vercel Cron for syncing leads every 5 minutes. Handle API failures with retry logic and error notifications.",
+            "status": "done",
+            "testStrategy": "Mock CRM API responses for testing, verify lead data mapping accuracy, test retry logic for failed API calls, validate reCAPTCHA score filtering."
+          },
+          {
+            "id": 5,
+            "title": "Create lead scoring system and thank you pages",
+            "description": "Implement lead scoring algorithm (0-100) based on company size, industry, and engagement. Build dynamic thank you pages with next steps and email confirmation system.",
+            "dependencies": [
+              4
+            ],
+            "details": "Create lib/scoring/leadScoring.ts with algorithm weighing: company size (30%), industry match (25%), budget (25%), timeline (20%). Score leads immediately upon submission. Create app/thank-you/[formType]/page.tsx with dynamic content based on form type and lead score. Implement email verification using SendGrid or Resend API for download links. Create email templates for confirmations with personalized content. Add tracking pixels for email open rates.",
+            "status": "done",
+            "testStrategy": "Test lead scoring with various input combinations, verify score ranges (0-100), test email delivery and formatting, validate thank you page routing and content display."
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title": "Optimize performance, SEO, and launch preparation",
+        "description": "Implement comprehensive performance optimizations, SEO enhancements, analytics setup, and conduct thorough testing for production launch",
+        "details": "1. Optimize images: convert to WebP/AVIF, implement responsive images, lazy loading with intersection observer\n2. Configure SEO: meta tags, Open Graph, Twitter cards, schema.org markup (Organization, Product, FAQPage)\n3. Generate XML sitemap, configure robots.txt, submit to Google Search Console\n4. Set up Google Analytics 4 with custom events: ROI calculator usage, video engagement, form submissions\n5. Implement Hotjar for heatmaps and session recordings\n6. Configure CDN (CloudFront/Cloudflare) with proper cache headers\n7. Run Lighthouse audits and optimize for >90 scores on all metrics\n8. Conduct accessibility audit (WCAG 2.1 AA) and cross-browser testing\n9. Set up error tracking with Sentry, implement 404 and error pages\n10. Create staging environment for final UAT and prepare deployment pipeline",
+        "testStrategy": "Run automated Lighthouse tests, conduct manual accessibility testing with screen readers, test on real devices (iOS, Android), verify analytics event tracking, load test with 1000+ concurrent users, validate all SEO tags with testing tools",
+        "priority": "high",
+        "dependencies": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "status": "done",
+        "subtasks": [
+          {
+            "id": 1,
+            "title": "Configure Next.js image optimization and implement responsive media handling",
+            "description": "Set up Next.js image optimization with WebP/AVIF format support, implement responsive images using next/image component, and configure lazy loading with intersection observer for all media assets throughout the application",
+            "dependencies": [],
+            "details": "Configure next.config.ts to support WebP and AVIF image formats with proper quality settings. Replace all img tags with Next.js Image component, implement responsive srcsets for different viewport sizes. Add blur placeholder generation for above-fold images. Configure intersection observer for lazy loading below-fold images and videos. Set up image optimization API routes if needed for dynamic image transformation",
+            "status": "done",
+            "testStrategy": "Run Lighthouse performance audits to verify image optimization improvements, test lazy loading behavior by scrolling through pages, verify WebP/AVIF fallbacks work correctly, measure Core Web Vitals improvements"
+          },
+          {
+            "id": 2,
+            "title": "Implement comprehensive SEO metadata and structured data markup",
+            "description": "Configure all SEO metadata including meta tags, Open Graph, Twitter Cards, and implement schema.org structured data for Organization, Product, and FAQPage schemas with proper JSON-LD formatting",
+            "dependencies": [],
+            "details": "Update layout.tsx and create generateMetadata functions for dynamic pages with title, description, canonical URLs. Implement Open Graph tags for social media sharing with proper image specifications. Add Twitter Card metadata for enhanced Twitter sharing. Create JSON-LD structured data components for Organization schema with company details, Product schema for robot offerings, and FAQPage schema for the FAQ section. Ensure all metadata is dynamically generated based on page content",
+            "status": "done",
+            "testStrategy": "Validate structured data using Google's Rich Results Test tool, test social media previews using Facebook and Twitter debuggers, verify meta tags using SEO testing tools, ensure proper rendering in search results preview"
+          },
+          {
+            "id": 3,
+            "title": "Set up analytics tracking with Google Analytics 4 and user behavior monitoring",
+            "description": "Implement Google Analytics 4 with custom event tracking for ROI calculator usage, video engagement, and form submissions, plus integrate Hotjar for heatmaps and session recordings to understand user behavior",
+            "dependencies": [],
+            "details": "Install and configure Google Analytics 4 using gtag or next/third-parties package. Create custom events for ROI calculator interactions (start, complete, download), video engagement metrics (play, pause, completion percentage), form submissions and CTA clicks. Set up conversion goals for demo bookings and ROI report downloads. Integrate Hotjar script for heatmap generation and session recording. Configure privacy-compliant cookie consent banner with opt-in analytics tracking",
+            "status": "done",
+            "testStrategy": "Verify GA4 events fire correctly using Google Analytics DebugView, test Hotjar recording triggers and heatmap data collection, validate cookie consent functionality, ensure GDPR compliance for EU visitors"
+          },
+          {
+            "id": 4,
+            "title": "Generate sitemap, configure robots.txt, and set up search console integration",
+            "description": "Create dynamic XML sitemap generation for all pages, configure robots.txt with proper crawl directives, implement 404 and error pages, and prepare for Google Search Console submission",
+            "dependencies": [
+              2
+            ],
+            "details": "Implement next-sitemap package for automatic sitemap.xml generation with proper priority and changefreq values. Configure robots.txt in public folder with crawl directives and sitemap reference. Create custom 404.tsx and error.tsx pages with helpful navigation and branding. Generate and verify site ownership files for Google Search Console. Set up automatic sitemap submission on build. Configure URL structure for clean, SEO-friendly paths",
+            "status": "done",
+            "testStrategy": "Validate sitemap XML format and all URLs return 200 status, test robots.txt serves correctly and follows directives, verify 404 page displays for invalid routes, confirm Search Console ownership verification"
+          },
+          {
+            "id": 5,
+            "title": "Configure CDN, implement performance monitoring, and prepare production deployment",
+            "description": "Set up CDN with CloudFront or Cloudflare for optimal content delivery, implement Sentry error tracking, configure staging environment, optimize build output, and ensure all performance targets are met for production launch",
+            "dependencies": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "details": "Configure CDN with proper cache headers for static assets, implement cache-control strategies for different resource types. Install and configure Sentry for production error tracking with source maps. Set up staging environment variables and deployment pipeline. Run comprehensive Lighthouse audits targeting 90+ scores on all metrics. Conduct WCAG 2.1 AA accessibility audit using axe-core. Perform cross-browser testing on Chrome, Safari, Firefox, Edge. Configure security headers (CSP, HSTS, X-Frame-Options). Optimize bundle size with code splitting and tree shaking",
+            "status": "done",
+            "testStrategy": "Run load tests with 1000+ concurrent users to verify CDN performance, validate Sentry error reporting in staging environment, achieve Lighthouse scores >90 on all metrics, pass automated accessibility tests, verify cross-browser compatibility"
+          }
+        ]
+      }
+    ],
+    "metadata": {
+      "created": "2025-10-07T21:04:36.165Z",
+      "updated": "2025-10-07T21:32:12.485Z",
+      "description": "Tasks for master context"
+    }
+  }
+}

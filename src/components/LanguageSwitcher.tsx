@@ -1,43 +1,45 @@
 'use client';
 
-import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
-import { useTransition } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function LanguageSwitcher() {
-  const locale = useLocale();
-  const router = useRouter();
-  const pathname = usePathname();
-  const [isPending, startTransition] = useTransition();
+  const [locale, setLocale] = useState<'de' | 'en'>('de');
+
+  useEffect(() => {
+    // Get locale from URL path
+    const path = window.location.pathname;
+    if (path.startsWith('/en')) {
+      setLocale('en');
+    } else {
+      setLocale('de');
+    }
+  }, []);
 
   const handleLanguageChange = (newLocale: 'de' | 'en') => {
-    startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
-    });
+    // Direct navigation to ensure proper locale switching
+    window.location.href = `/${newLocale}`;
   };
 
   return (
-    <div className="flex items-center gap-2 bg-white/5 backdrop-blur-sm rounded-lg p-1 border border-white/10">
+    <div className="flex items-center gap-2 bg-gray-100 rounded-lg p-1 border border-gray-200">
       <button
         onClick={() => handleLanguageChange('de')}
-        disabled={isPending}
         className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
           locale === 'de'
             ? 'bg-blue-600 text-white'
-            : 'text-gray-300 hover:text-white hover:bg-white/5'
-        } ${isPending ? 'opacity-50 cursor-not-allowed' : ''}`}
+            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
+        }`}
         aria-label="Switch to German"
       >
         DE
       </button>
       <button
         onClick={() => handleLanguageChange('en')}
-        disabled={isPending}
         className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
           locale === 'en'
             ? 'bg-blue-600 text-white'
-            : 'text-gray-300 hover:text-white hover:bg-white/5'
-        } ${isPending ? 'opacity-50 cursor-not-allowed' : ''}`}
+            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
+        }`}
         aria-label="Switch to English"
       >
         EN

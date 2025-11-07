@@ -11,6 +11,7 @@ export function Header() {
   const t = useTranslations('nav');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [locale, setLocale] = useState<'de' | 'en'>('de');
 
   const navLinks = [
     { name: t('features'), href: '#features' },
@@ -27,6 +28,16 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Get locale from URL path
+    const path = window.location.pathname;
+    if (path.startsWith('/en')) {
+      setLocale('en');
+    } else {
+      setLocale('de');
+    }
+  }, []);
+
   const handleNavClick = (linkName: string) => {
     trackCTAClick(linkName, 'header_navigation');
     setIsMobileMenuOpen(false);
@@ -41,12 +52,12 @@ export function Header() {
       <nav className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <a href={`/${locale}`} className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-xl">R</span>
             </div>
             <span className="font-bold text-xl text-gray-900">RaaSaaR</span>
-          </Link>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6">

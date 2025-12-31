@@ -21,13 +21,13 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center gap-2 bg-gray-100 rounded-lg p-1 border border-gray-200">
+    <div className="flex items-center gap-2 bg-surface-elevated rounded-lg p-1 border border-border-subtle">
       <button
         onClick={() => handleLanguageChange('de')}
         className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
           locale === 'de'
-            ? 'bg-blue-600 text-white'
-            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
+            ? 'bg-primary-500 text-white'
+            : 'text-text-secondary hover:text-text-primary hover:bg-surface'
         }`}
         aria-label="Switch to German"
       >
@@ -37,8 +37,8 @@ export default function LanguageSwitcher() {
         onClick={() => handleLanguageChange('en')}
         className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
           locale === 'en'
-            ? 'bg-blue-600 text-white'
-            : 'text-gray-600 hover:text-gray-900 hover:bg-gray-200'
+            ? 'bg-primary-500 text-white'
+            : 'text-text-secondary hover:text-text-primary hover:bg-surface'
         }`}
         aria-label="Switch to English"
       >

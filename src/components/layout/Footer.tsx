@@ -8,21 +8,21 @@ export function Footer() {
   const t = useTranslations('footer');
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-surface text-text-secondary border-t border-border-subtle">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center space-x-2 mb-4">
               <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">R</span>
+                <span className="text-white font-bold text-lg">Em</span>
               </div>
-              <span className="font-bold text-xl text-white">RaaSaaR</span>
+              <span className="font-bold text-xl text-text-primary">EmAI</span>
             </Link>
-            <p className="text-sm text-gray-400 mb-4">
+            <p className="text-sm text-text-secondary mb-4">
               {t('tagline')}
             </p>
-            <p className="text-xs text-gray-500 mb-6">
+            <p className="text-xs text-text-muted mb-6">
               {t('description')}
             </p>
             {/* Social Links */}
@@ -31,7 +31,7 @@ export function Footer() {
                 href="https://linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-500 transition-colors"
+                className="text-text-muted hover:text-primary-500 transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -42,7 +42,7 @@ export function Footer() {
                 href="https://twitter.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-primary-500 transition-colors"
+                className="text-text-muted hover:text-primary-500 transition-colors"
                 aria-label="Twitter"
               >
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -54,7 +54,7 @@ export function Footer() {
 
           {/* Company Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">{t('links.company')}</h3>
+            <h3 className="text-text-primary font-semibold mb-4">{t('links.company')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -88,7 +88,7 @@ export function Footer() {
 
           {/* Resources Links */}
           <div>
-            <h3 className="text-white font-semibold mb-4">{t('links.resources')}</h3>
+            <h3 className="text-text-primary font-semibold mb-4">{t('links.resources')}</h3>
             <ul className="space-y-3">
               <li>
                 <a
@@ -122,45 +122,45 @@ export function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-white font-semibold mb-4">Kontakt</h3>
+            <h3 className="text-text-primary font-semibold mb-4">{t('links.contact')}</h3>
             <ul className="space-y-3 text-sm mb-6">
               <li>
-                <a href="mailto:kontakt@raasaar.de" className="hover:text-primary-500 transition-colors">
-                  kontakt@raasaar.de
+                <a href="mailto:contact@emai.de" className="hover:text-primary-500 transition-colors">
+                  contact@emai.de
                 </a>
               </li>
-              <li className="text-gray-400">
-                Saarland, Deutschland
+              <li className="text-text-muted">
+                Deutschland
               </li>
             </ul>
-            <p className="text-xs text-primary-400 font-semibold">
+            <p className="text-xs text-primary-500 font-semibold">
               {t('madeIn')}
             </p>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 pt-8 border-t border-gray-800">
+        <div className="mt-12 pt-8 border-t border-border-subtle">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-gray-400">
+            <p className="text-sm text-text-muted">
               {t('copyright')}
             </p>
             <div className="flex space-x-6">
               <Link
                 href="/privacy"
-                className="text-sm text-gray-400 hover:text-primary-500 transition-colors"
+                className="text-sm text-text-muted hover:text-primary-500 transition-colors"
               >
                 {t('links.privacy')}
               </Link>
               <Link
                 href="/terms"
-                className="text-sm text-gray-400 hover:text-primary-500 transition-colors"
+                className="text-sm text-text-muted hover:text-primary-500 transition-colors"
               >
                 {t('links.terms')}
               </Link>
               <Link
                 href="/imprint"
-                className="text-sm text-gray-400 hover:text-primary-500 transition-colors"
+                className="text-sm text-text-muted hover:text-primary-500 transition-colors"
               >
                 {t('links.imprint')}
               </Link>

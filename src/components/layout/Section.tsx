@@ -4,19 +4,18 @@ interface SectionProps {
   children: ReactNode;
   className?: string;
   id?: string;
-  background?: 'white' | 'gray' | 'primary' | 'secondary' | 'primary-dark' | 'primary-gradient';
+  background?: 'base' | 'surface' | 'surface-elevated' | 'primary-dark' | 'primary-gradient';
 }
 
 const backgroundClasses = {
-  white: 'bg-white',
-  gray: 'bg-gray-50',
-  primary: 'bg-primary-50',
-  secondary: 'bg-secondary-50',
+  base: 'bg-base',
+  surface: 'bg-surface',
+  'surface-elevated': 'bg-surface-elevated',
   'primary-dark': 'bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900',
   'primary-gradient': 'bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900',
 };
 
-export function Section({ children, className = '', id, background = 'white' }: SectionProps) {
+export function Section({ children, className = '', id, background = 'base' }: SectionProps) {
   return (
     <section
       id={id}

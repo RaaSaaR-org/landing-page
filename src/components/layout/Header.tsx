@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { trackCTAClick } from '@/lib/analytics';
 import { useTranslations } from 'next-intl';
-import { Link } from '@/i18n/routing';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 
 export function Header() {
@@ -46,7 +45,9 @@ export function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-lg' : 'bg-white/98 backdrop-blur-md shadow-sm'
+        isScrolled
+          ? 'bg-surface shadow-lg border-b border-border-subtle'
+          : 'bg-base/98 backdrop-blur-md border-b border-border-subtle'
       }`}
     >
       <nav className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
@@ -54,9 +55,9 @@ export function Header() {
           {/* Logo */}
           <a href={`/${locale}`} className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-xl">R</span>
+              <span className="text-white font-bold text-lg">Em</span>
             </div>
-            <span className="font-bold text-xl text-gray-900">RaaSaaR</span>
+            <span className="font-bold text-xl text-text-primary">EmAI</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -66,7 +67,7 @@ export function Header() {
                 key={link.name}
                 href={link.href}
                 onClick={() => handleNavClick(link.name)}
-                className="text-gray-700 hover:text-primary-500 font-medium transition-colors whitespace-nowrap"
+                className="text-text-secondary hover:text-primary-500 font-medium transition-colors whitespace-nowrap"
               >
                 {link.name}
               </a>
@@ -75,7 +76,7 @@ export function Header() {
             <a
               href="#contact"
               onClick={() => trackCTAClick(t('contact'), 'header')}
-              className="ml-2 px-6 py-2.5 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-medium shadow-md hover:shadow-lg whitespace-nowrap"
+              className="ml-2 px-6 py-2.5 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-all font-medium shadow-md hover:shadow-orange whitespace-nowrap"
             >
               {t('contact')}
             </a>
@@ -84,7 +85,7 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-gray-700 hover:text-primary-500"
+            className="md:hidden p-2 text-text-secondary hover:text-primary-500"
             aria-label="Toggle menu"
           >
             <svg
@@ -113,7 +114,7 @@ export function Header() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200"
+            className="md:hidden bg-surface border-t border-border-subtle"
           >
             <div className="px-4 py-6 space-y-4">
               {navLinks.map((link) => (
@@ -121,7 +122,7 @@ export function Header() {
                   key={link.name}
                   href={link.href}
                   onClick={() => handleNavClick(link.name)}
-                  className="block text-gray-700 hover:text-primary-500 font-medium py-2"
+                  className="block text-text-secondary hover:text-primary-500 font-medium py-2"
                 >
                   {link.name}
                 </a>
@@ -135,7 +136,7 @@ export function Header() {
                   trackCTAClick(t('contact'), 'mobile_header');
                   setIsMobileMenuOpen(false);
                 }}
-                className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors font-medium text-center"
+                className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-colors font-medium text-center"
               >
                 {t('contact')}
               </a>

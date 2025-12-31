@@ -9,22 +9,22 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-base">
-      {/* Animated Gradient Orbs */}
+      {/* Animated Gradient Orbs - Enhanced */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Large primary orb - orange (top right) */}
-        <div className="absolute -top-40 -right-40 w-[500px] h-[500px] bg-gradient-to-br from-primary-500/30 to-primary-600/10 rounded-full blur-3xl animate-float-slow" />
+        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] bg-gradient-to-br from-primary-500/50 to-primary-600/20 rounded-full blur-3xl animate-float-slow" />
 
         {/* Secondary orb - teal (bottom left) */}
-        <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] bg-gradient-to-tr from-secondary-400/25 to-secondary-500/5 rounded-full blur-3xl animate-float-medium" />
+        <div className="absolute -bottom-24 -left-24 w-[500px] h-[500px] bg-gradient-to-tr from-secondary-400/40 to-secondary-500/10 rounded-full blur-3xl animate-float-medium" />
 
         {/* Tertiary orb - orange (center right) */}
-        <div className="absolute top-1/3 right-1/4 w-72 h-72 bg-gradient-to-bl from-primary-400/20 to-transparent rounded-full blur-2xl animate-float-fast" />
+        <div className="absolute top-1/3 right-1/5 w-80 h-80 bg-gradient-to-bl from-primary-400/35 to-transparent rounded-full blur-2xl animate-float-fast" />
 
         {/* Accent orb - mixed (center left) */}
-        <div className="absolute bottom-1/3 left-1/4 w-56 h-56 bg-gradient-to-r from-secondary-300/15 to-primary-300/10 rounded-full blur-2xl animate-float-reverse" />
+        <div className="absolute bottom-1/3 left-1/5 w-64 h-64 bg-gradient-to-r from-secondary-300/25 to-primary-300/15 rounded-full blur-2xl animate-float-reverse" />
 
         {/* Small accent orb */}
-        <div className="absolute top-1/4 left-1/3 w-32 h-32 bg-primary-500/15 rounded-full blur-xl animate-float-medium" />
+        <div className="absolute top-1/4 left-1/3 w-40 h-40 bg-primary-500/25 rounded-full blur-xl animate-float-medium" />
       </div>
 
       {/* Content */}
@@ -35,7 +35,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-text-primary mb-8 leading-[1.1] tracking-tight"
+            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-text-primary mb-6 leading-[1.1] tracking-tight"
           >
             {t('title')}
           </motion.h1>
@@ -45,26 +45,16 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
-            className="text-xl sm:text-2xl md:text-3xl text-primary-400 mb-6 max-w-4xl mx-auto font-light leading-relaxed"
+            className="text-xl sm:text-2xl md:text-3xl text-primary-400 mb-10 max-w-3xl mx-auto font-light"
           >
             {t('subtitle')}
-          </motion.p>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
-            className="text-base sm:text-lg md:text-xl text-text-secondary mb-14 max-w-3xl mx-auto leading-relaxed"
-          >
-            {t('description')}
           </motion.p>
 
           {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.45, ease: 'easeOut' }}
+            transition={{ duration: 0.8, delay: 0.3, ease: 'easeOut' }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center"
           >
             <a
@@ -87,14 +77,13 @@ export function HeroSection() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1 }}
-            className="mt-20"
+            transition={{ duration: 1, delay: 0.8 }}
+            className="mt-16"
           >
             <a
               href="#problem"
               className="inline-flex flex-col items-center text-text-muted hover:text-primary-500 transition-colors"
             >
-              <span className="text-sm mb-2 tracking-wide uppercase">Scroll</span>
               <svg
                 className="w-5 h-5 animate-bounce"
                 fill="none"

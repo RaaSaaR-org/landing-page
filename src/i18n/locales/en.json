@@ -7,8 +7,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Humanoid Robotics. Accessible to All.",
-    "subtitle": "Robots as a Service for manufacturing, logistics, and warehousing.",
+    "title": "Ready for the Robot Revolution?",
+    "subtitle": "EU-compliant humanoid robotics. Accessible. Safe. Scalable.",
+    "description": "EmAI is your robotic fleet management cloud platform — deploy humanoid robots without capital investment, scale on demand.",
     "cta": "Learn More",
     "ctaSecondary": "Get in Touch"
   },

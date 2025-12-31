@@ -7,8 +7,9 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Humanoide Robotik. Zugänglich für alle.",
-    "subtitle": "Robots as a Service für Fertigung, Logistik und Lagerhaltung.",
+    "title": "Bereit für die Roboter-Revolution?",
+    "subtitle": "EU-konforme humanoide Robotik. Zugänglich. Sicher. Skalierbar.",
+    "description": "EmAI ist Ihre Cloud-Plattform für Roboter-Flottenmanagement — humanoide Roboter ohne Kapitalinvestitionen, skalierbar nach Bedarf.",
     "cta": "Mehr erfahren",
     "ctaSecondary": "Kontakt aufnehmen"
   },

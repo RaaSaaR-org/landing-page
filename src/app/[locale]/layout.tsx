@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "../globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { AnalyticsProvider } from '@/components/providers/AnalyticsProvider';
@@ -8,13 +7,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: 'swap',
-  variable: '--font-inter',
-});
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://raasaar.de';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.de';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -24,19 +17,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: {
       default: isGerman
-        ? 'RaaSaaR - Robotik-Lösungen für das Saarland | Robots as a Service'
-        : 'RaaSaaR - Robotics Solutions for Saarland | Robots as a Service',
-      template: '%s | RaaSaaR'
+        ? 'EmAI - Humanoide Robotik für die deutsche Industrie | Robots as a Service'
+        : 'EmAI - Humanoid Robotics for German Industry | Robots as a Service',
+      template: '%s | EmAI'
     },
     description: isGerman
-      ? 'RaaSaaR bringt modernste Robotik-Technologie zu Unternehmen und Kommunen im Saarland. Robots as a Service ohne Investitionskosten für Industrie, Fertigung, Logistik und kommunale Dienste.'
-      : 'RaaSaaR brings cutting-edge robotics technology to businesses and municipalities in Saarland. Robots as a Service without capital investment for industry, manufacturing, logistics, and municipal services.',
+      ? 'EmAI demokratisiert den Zugang zu humanoider Robotik für deutsche Fertigung, Logistik und Lagerhaltung. Intelligentes Flottenmanagement und flexible Mietmodelle ohne Investitionskosten.'
+      : 'EmAI democratizes access to humanoid robotics for German manufacturing, logistics, and warehouse operations. Intelligent fleet management and flexible rental models without capital investment.',
     keywords: isGerman
-      ? ['Robotik Saarland', 'Robots as a Service', 'RaaS', 'Industrie 4.0', 'Automatisierung', 'DFKI', 'Fachkräftemangel', 'Kommunale Dienste', 'Straßenreinigung', 'Fertigung']
-      : ['Robotics Saarland', 'Robots as a Service', 'RaaS', 'Industry 4.0', 'Automation', 'DFKI', 'Labor shortage', 'Municipal services', 'Street cleaning', 'Manufacturing'],
-    authors: [{ name: 'RaaSaaR' }],
-    creator: 'RaaSaaR',
-    publisher: 'RaaSaaR',
+      ? ['Humanoide Robotik', 'Robots as a Service', 'RaaS', 'Industrie 4.0', 'Automatisierung', 'Flottenmanagement', 'Fertigung', 'Logistik', 'Lager', 'Deutsche Industrie']
+      : ['Humanoid Robotics', 'Robots as a Service', 'RaaS', 'Industry 4.0', 'Automation', 'Fleet Management', 'Manufacturing', 'Logistics', 'Warehouse', 'German Industry'],
+    authors: [{ name: 'EmAI' }],
+    creator: 'EmAI',
+    publisher: 'EmAI',
     robots: {
       index: true,
       follow: true,
@@ -52,32 +45,32 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: 'website',
       locale: isGerman ? 'de_DE' : 'en_US',
       url: siteUrl,
-      siteName: 'RaaSaaR',
+      siteName: 'EmAI',
       title: isGerman
-        ? 'RaaSaaR - Robotik-Lösungen für das Saarland'
-        : 'RaaSaaR - Robotics Solutions for Saarland',
+        ? 'EmAI - Humanoide Robotik. Zugänglich für alle.'
+        : 'EmAI - Humanoid Robotics. Accessible to All.',
       description: isGerman
-        ? 'Robots as a Service für Unternehmen und Kommunen im Saarland. Modernste Robotik ohne Investitionskosten.'
-        : 'Robots as a Service for businesses and municipalities in Saarland. Cutting-edge robotics without capital investment.',
+        ? 'Intelligentes Flottenmanagement und flexible Robotik-Mietmodelle für deutsche Fertigung, Logistik und Lagerhaltung.'
+        : 'Intelligent fleet management and flexible robotics rental models for German manufacturing, logistics, and warehouses.',
       images: [
         {
           url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: 'RaaSaaR - Robotics Solutions for Saarland',
+          alt: 'EmAI - Humanoid Robotics. Accessible to All.',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title: isGerman
-        ? 'RaaSaaR - Robotik-Lösungen für das Saarland'
-        : 'RaaSaaR - Robotics Solutions for Saarland',
+        ? 'EmAI - Humanoide Robotik. Zugänglich für alle.'
+        : 'EmAI - Humanoid Robotics. Accessible to All.',
       description: isGerman
-        ? 'Robots as a Service für das Saarland. Praktische Robotik-Lösungen ohne Investitionskosten.'
-        : 'Robots as a Service for Saarland. Practical robotics solutions without capital investment.',
+        ? 'Robots as a Service für deutsche Industrie. Humanoide Robotik ohne Investitionskosten.'
+        : 'Robots as a Service for German industry. Humanoid robotics without capital investment.',
       images: ['/og-image.jpg'],
-      creator: '@raasaar',
+      creator: '@emai_robotics',
     },
     alternates: {
       canonical: siteUrl,
@@ -116,44 +109,44 @@ export default async function LocaleLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'RaaSaaR',
+    name: 'EmAI',
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     description: locale === 'de'
-      ? 'Robotik-Lösungen für Unternehmen und Kommunen im Saarland - Robots as a Service'
-      : 'Robotics solutions for businesses and municipalities in Saarland - Robots as a Service',
+      ? 'EmAI demokratisiert den Zugang zu humanoider Robotik für deutsche Fertigung, Logistik und Lagerhaltung.'
+      : 'EmAI democratizes access to humanoid robotics for German manufacturing, logistics, and warehouse operations.',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Inquiries',
-      email: 'kontakt@raasaar.de',
+      email: 'contact@emai.de',
     },
     areaServed: {
-      '@type': 'State',
-      name: 'Saarland',
+      '@type': 'Country',
+      name: 'Germany',
       addressCountry: 'DE'
     },
     service: {
       '@type': 'Service',
       name: 'Robots as a Service',
       description: locale === 'de'
-        ? 'Robotik-Lösungen für Industrie und Kommunen ohne Investitionskosten'
-        : 'Robotics solutions for industry and municipalities without capital investment',
+        ? 'Humanoide Robotik für Fertigung, Logistik und Lager ohne Investitionskosten'
+        : 'Humanoid robotics for manufacturing, logistics, and warehouses without capital investment',
       provider: {
         '@type': 'Organization',
-        name: 'RaaSaaR',
+        name: 'EmAI',
       },
     },
   };
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="dark">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body className="font-sans antialiased bg-base text-text-primary">
         <NextIntlClientProvider messages={messages}>
           <AnalyticsProvider>
             {children}

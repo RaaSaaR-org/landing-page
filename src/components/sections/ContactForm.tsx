@@ -35,111 +35,111 @@ export function ContactForm() {
   const onSubmit = async (data: ContactFormData) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
     console.log('Form data:', data);
-    trackFormSubmission('contact_form', 'raasaar_inquiry');
+    trackFormSubmission('contact_form', 'emai_inquiry');
     setSubmitted(true);
     reset();
     setTimeout(() => setSubmitted(false), 5000);
   };
 
   return (
-    <Section id="contact" className="bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900 text-white">
+    <Section id="contact" background="surface-elevated">
       <Container>
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
               {t('title')}
             </h2>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-text-secondary">
               {t('subtitle')}
             </p>
           </div>
 
-          <div className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 border border-white/20">
+          <div className="bg-surface rounded-2xl shadow-2xl p-8 border border-border-subtle hover:border-primary-500/30 transition-all">
             {submitted ? (
               <div className="text-center py-12">
-                <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                  <svg className="w-12 h-12 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-20 h-20 bg-success/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <svg className="w-12 h-12 text-success" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <p className="text-white text-lg">{t('form.success')}</p>
+                <p className="text-text-primary text-lg">{t('form.success')}</p>
               </div>
             ) : (
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold mb-3 text-white">
+                  <label className="block text-sm font-semibold mb-3 text-text-primary">
                     {t('form.name')} *
                   </label>
                   <input
                     {...register('name')}
-                    className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/50 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white/30 transition-all"
+                    className="w-full px-4 py-3 bg-surface-elevated border border-border-subtle rounded-xl text-text-primary placeholder-text-muted focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder={t('form.namePlaceholder')}
                   />
                   {errors.name && (
-                    <p className="text-red-400 text-sm mt-2">{errors.name.message}</p>
+                    <p className="text-error text-sm mt-2">{errors.name.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-3 text-white">
+                  <label className="block text-sm font-semibold mb-3 text-text-primary">
                     {t('form.email')} *
                   </label>
                   <input
                     {...register('email')}
                     type="email"
-                    className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/50 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white/30 transition-all"
+                    className="w-full px-4 py-3 bg-surface-elevated border border-border-subtle rounded-xl text-text-primary placeholder-text-muted focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder={t('form.emailPlaceholder')}
                   />
                   {errors.email && (
-                    <p className="text-red-400 text-sm mt-2">{errors.email.message}</p>
+                    <p className="text-error text-sm mt-2">{errors.email.message}</p>
                   )}
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-3 text-white">
+                  <label className="block text-sm font-semibold mb-3 text-text-primary">
                     {t('form.organization')}
                   </label>
                   <input
                     {...register('organization')}
-                    className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/50 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white/30 transition-all"
+                    className="w-full px-4 py-3 bg-surface-elevated border border-border-subtle rounded-xl text-text-primary placeholder-text-muted focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                     placeholder={t('form.organizationPlaceholder')}
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-3 text-white">
+                  <label className="block text-sm font-semibold mb-3 text-text-primary">
                     {t('form.orgType')}
                   </label>
                   <select
                     {...register('orgType')}
-                    className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white/30 transition-all"
+                    className="w-full px-4 py-3 bg-surface-elevated border border-border-subtle rounded-xl text-text-primary focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
                   >
-                    <option value="" className="bg-gray-900">{t('form.orgTypes.other')}</option>
-                    <option value="industrial" className="bg-gray-900">{t('form.orgTypes.industrial')}</option>
-                    <option value="municipal" className="bg-gray-900">{t('form.orgTypes.municipal')}</option>
-                    <option value="research" className="bg-gray-900">{t('form.orgTypes.research')}</option>
+                    <option value="" className="bg-surface">{t('form.orgTypes.other')}</option>
+                    <option value="industrial" className="bg-surface">{t('form.orgTypes.industrial')}</option>
+                    <option value="municipal" className="bg-surface">{t('form.orgTypes.municipal')}</option>
+                    <option value="research" className="bg-surface">{t('form.orgTypes.research')}</option>
                   </select>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold mb-3 text-white">
+                  <label className="block text-sm font-semibold mb-3 text-text-primary">
                     {t('form.message')} *
                   </label>
                   <textarea
                     {...register('message')}
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/20 backdrop-blur-sm border border-white/30 rounded-xl text-white placeholder-white/50 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 focus:bg-white/30 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-surface-elevated border border-border-subtle rounded-xl text-text-primary placeholder-text-muted focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-none"
                     placeholder={t('form.messagePlaceholder')}
                   />
                   {errors.message && (
-                    <p className="text-red-400 text-sm mt-2">{errors.message.message}</p>
+                    <p className="text-error text-sm mt-2">{errors.message.message}</p>
                   )}
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-primary-500 text-white rounded-xl font-semibold hover:bg-primary-600 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-xl"
+                  className="w-full px-8 py-4 bg-primary-500 text-white rounded-xl font-semibold hover:bg-primary-400 disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-lg hover:shadow-orange"
                 >
                   {isSubmitting ? t('form.submitting') : t('form.submit')}
                 </button>

@@ -7,101 +7,101 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Robotik-Lösungen für das Saarland",
-    "subtitle": "Wir bringen zukunftsweisende Robotik-Technologie zu Unternehmen, Kommunen und Gemeinden im Saarland – ohne Investitionskosten durch Robots as a Service.",
-    "description": "Das Saarland steht vor Herausforderungen: Fachkräftemangel, demografischer Wandel und die Transformation der Automobilindustrie. RaaSaaR macht Robotik-Lösungen für jeden zugänglich.",
+    "title": "Humanoide Robotik. Zugänglich für alle.",
+    "subtitle": "EmAI macht humanoide Robotik für Fertigung, Logistik und Lagerhaltung zugänglich – mit intelligentem Flottenmanagement und flexiblen Mietmodellen.",
+    "description": "Fortschrittliche Automatisierung war bisher nur für Großkonzerne erschwinglich. Mit EmAI nutzen auch mittelständische Unternehmen humanoide Robotik – ohne hohe Anfangsinvestitionen.",
     "cta": "Mehr erfahren",
     "ctaSecondary": "Kontakt aufnehmen"
   },
   "problem": {
     "title": "Die Herausforderung",
-    "description": "Das Saarland – mit über 200 Industriebetrieben und 40.000 Arbeitsplätzen im Automobilsektor – steht vor einem Wendepunkt.",
+    "description": "Unternehmen in Fertigung, Logistik und Lagerhaltung stehen vor großen Veränderungen.",
     "challenges": {
       "labor": {
         "title": "Fachkräftemangel",
-        "description": "Alternde Bevölkerung und schrumpfende Erwerbsbevölkerung gefährden die Wettbewerbsfähigkeit"
+        "description": "Die Belegschaft schrumpft, qualifizierte Mitarbeiter sind schwer zu finden"
       },
       "transition": {
-        "title": "Industrie-Transformation",
-        "description": "Der Automobilsektor befindet sich im Umbruch – neue Lösungen sind erforderlich"
+        "title": "Wettbewerbsdruck",
+        "description": "Automatisierung wird zum entscheidenden Faktor – aber der Einstieg ist komplex"
       },
       "costs": {
         "title": "Hohe Investitionskosten",
-        "description": "Robotik-Technologie war bisher nur für Großunternehmen erschwinglich"
+        "description": "Humanoide Roboter kosten 150.000€+ pro Einheit – zu viel für viele Unternehmen"
       },
-      "municipal": {
-        "title": "Kommunale Dienste",
-        "description": "Städte benötigen effiziente Lösungen für Reinigung, Abfallmanagement und Infrastruktur"
+      "complexity": {
+        "title": "Aufwändiger Betrieb",
+        "description": "Roboter-Flotten brauchen Spezialwissen für Betrieb und Wartung"
       }
     }
   },
   "solution": {
     "title": "Die Lösung: Robots as a Service",
-    "description": "RaaSaaR bringt modernste Robotik ins Saarland – ohne Kapitalinvestitionen. Bezahlen Sie nur für die Nutzung, nicht für den Besitz.",
+    "description": "EmAI macht humanoide Robotik erschwinglich – ohne Kapitalinvestitionen. Vollständiger Service inklusive.",
     "benefits": {
       "accessible": {
-        "title": "Zugänglich",
-        "description": "Keine hohen Anschaffungskosten – ideal für KMUs und Kommunen"
+        "title": "Keine Anschaffungskosten",
+        "description": "Sparen Sie 150.000€+ pro Roboter durch unser Mietmodell"
       },
       "flexible": {
-        "title": "Flexibel",
-        "description": "Skalieren Sie je nach Bedarf – von einzelnen Projekten bis zum Dauereinsatz"
+        "title": "Flexibel skalierbar",
+        "description": "Von 1 bis 1.000+ Roboter – wachsen Sie nach Bedarf"
       },
       "expertise": {
-        "title": "Regionale Expertise",
-        "description": "Aufbauend auf DFKI, ZeMA und der Universität des Saarlandes"
+        "title": "Schnelle Inbetriebnahme",
+        "description": "In 2-4 Wochen einsatzbereit in Ihrem Betrieb"
       },
       "supported": {
         "title": "Rundum-Service",
-        "description": "Wartung, Updates und Support inklusive"
+        "description": "Wartung, Schulung, Updates – alles inklusive"
       }
     }
   },
   "concept": {
-    "title": "Was ist RaaSaaR?",
-    "subtitle": "Robots as a Service trifft Saarland",
-    "description": "RaaSaaR verbindet das bewährte Software-as-a-Service-Modell mit modernster Robotik-Technologie – speziell für die Bedürfnisse des Saarlandes entwickelt.",
+    "title": "Was ist EmAI?",
+    "subtitle": "Robotik-Management leicht gemacht",
+    "description": "EmAI kombiniert moderne humanoide Robotik mit einer einfachen Verwaltungsplattform – für Unternehmen jeder Größe.",
     "model": {
       "title": "Das Geschäftsmodell",
       "traditional": "Traditionell: Hohe Investition, Wartungskosten, Veralterung",
-      "raas": "RaaSaaR: Monatliche Gebühr, alles inklusive, immer aktuell"
+      "raas": "EmAI: Monatliche Gebühr, voller Service, immer aktuell"
     },
     "why": {
-      "title": "Warum Saarland?",
+      "title": "Warum EmAI?",
       "reasons": {
         "research": {
-          "title": "Geburtsort von Industrie 4.0",
-          "description": "Das DFKI prägte 2011 den Begriff Industrie 4.0 – Saarland ist Vorreiter der Robotik-Forschung"
+          "title": "Europäische Qualität",
+          "description": "Entwickelt nach höchsten Qualitätsstandards für industrielle Anforderungen"
         },
         "compact": {
-          "title": "Ideales Testgebiet",
-          "description": "Mit 2.570 km² ist das Saarland die perfekte Region für flächendeckende Robotik-Dienste"
+          "title": "EU-konform ab Tag 1",
+          "description": "Vollständige Einhaltung aller EU-Vorschriften und Standards"
         },
         "need": {
           "title": "Echter Bedarf",
-          "description": "Fachkräftemangel und Industrie-Transformation schaffen konkrete Anwendungsfälle"
+          "description": "Der Fachkräftemangel schafft konkrete Einsatzfälle in Fertigung und Logistik"
         },
         "ecosystem": {
-          "title": "Forschungs-Ökosystem",
-          "description": "Direkte Zusammenarbeit mit DFKI, ZeMA und über 900 KI-Forschern"
+          "title": "Einfache Verwaltung",
+          "description": "Eine Plattform für Ihren gesamten Roboter-Park"
         }
       }
     }
   },
   "useCases": {
     "title": "Anwendungsfälle",
-    "subtitle": "Robotik für Industrie und Gemeinden",
+    "subtitle": "Humanoide Robotik für Ihre Branche",
     "industrial": {
-      "title": "Industrielle Anwendungen",
-      "description": "Für Saarlandes 200+ Industriebetriebe",
+      "title": "Fertigung",
+      "description": "Für produzierende Unternehmen",
       "cases": {
         "manufacturing": {
-          "title": "Fertigung & Montage",
+          "title": "Montage & Produktion",
           "description": "Automatisierte Produktionslinien, Qualitätskontrolle, Materialhandhabung"
         },
         "logistics": {
-          "title": "Logistik & Lager",
-          "description": "Autonome Transportsysteme, Kommissionierung, Bestandsverwaltung"
+          "title": "Interne Logistik",
+          "description": "Materialfluss, innerbetrieblicher Transport, Produktionsversorgung"
         },
         "inspection": {
           "title": "Inspektion & Wartung",
@@ -110,116 +110,116 @@
       }
     },
     "municipal": {
-      "title": "Kommunale Dienste",
-      "description": "Für Städte und Gemeinden im Saarland",
+      "title": "Logistik & Lager",
+      "description": "Für Logistikzentren und Lagerhäuser",
       "cases": {
         "cleaning": {
-          "title": "Straßenreinigung",
-          "description": "Autonome Kehrmaschinen für öffentliche Räume und Gehwege"
+          "title": "Kommissionierung",
+          "description": "Autonome Auftragsbearbeitung, Pick-and-Pack, Bestellabwicklung"
         },
         "waste": {
-          "title": "Abfallmanagement",
-          "description": "Intelligente Müllsammlung mit Füllstandsensoren und optimierten Routen"
+          "title": "Warenhandhabung",
+          "description": "Intelligente Lagerung, Bestandsverwaltung, optimierte Lagerprozesse"
         },
         "infrastructure": {
-          "title": "Infrastruktur-Inspektion",
-          "description": "Automatisierte Überwachung von Straßen, Brücken und öffentlichen Einrichtungen"
+          "title": "Versand & Verpackung",
+          "description": "Automatisierte Verpackung, Etikettierung und Versandvorbereitung"
         }
       }
     }
   },
   "regional": {
-    "title": "Saarlands Robotik-Vorteil",
-    "description": "Das Saarland verfügt über eine einzigartige Kombination aus Forschungsexzellenz und industriellem Bedarf",
+    "title": "Europäische Technologie",
+    "description": "EmAI setzt auf europäische Werte: Qualität, Datenschutz und lokalen Service",
     "partners": {
       "dfki": {
-        "title": "DFKI Saarbrücken",
-        "description": "Weltführende KI-Forschung, humanoide Roboter (RH5), Entwickler von Industrie 4.0"
+        "title": "EU-Konformität",
+        "description": "Vollständige Einhaltung aller europäischen Vorschriften und Sicherheitsstandards"
       },
       "zema": {
-        "title": "ZeMA",
-        "description": "Zentrum für Mechatronik und Automatisierungstechnik mit Partnern wie Bosch, BMW, VW"
+        "title": "Datensouveränität",
+        "description": "Ihre Daten bleiben in Europa – sichere, DSGVO-konforme Infrastruktur"
       },
       "university": {
-        "title": "Universität des Saarlandes",
-        "description": "900+ Wissenschaftler im Bereich KI und Robotik, führend in Deutschland"
+        "title": "Lokaler Service",
+        "description": "Persönliche Betreuung vor Ort, schnelle Reaktionszeiten, direkter Ansprechpartner"
       },
       "edih": {
-        "title": "EDIH Saarland",
-        "description": "European Digital Innovation Hub für digitale Zwillinge und Mensch-Roboter-Kollaboration"
+        "title": "EU-Binnenmarkt",
+        "description": "Zugang zu 450 Millionen Verbrauchern mit einheitlichen Standards"
       }
     }
   },
   "stats": {
     "businesses": {
-      "value": "200+",
-      "label": "Industriebetriebe im Saarland"
+      "value": "150.000€+",
+      "label": "Einsparpotential pro Roboter"
     },
     "jobs": {
-      "value": "40.000",
-      "label": "Arbeitsplätze im Automobilsektor"
+      "value": "2-4",
+      "label": "Wochen bis zur Inbetriebnahme"
     },
     "researchers": {
-      "value": "900+",
-      "label": "KI-Forscher im Saarland"
+      "value": "1-1.000+",
+      "label": "Roboter skalierbar"
     },
     "area": {
-      "value": "2.570 km²",
-      "label": "Ideale Größe für Robotik-Services"
+      "value": "100%",
+      "label": "Service inklusive"
     }
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "questions": {
       "what": {
-        "q": "Was ist Robots as a Service genau?",
-        "a": "Robots as a Service (RaaS) ist ein Geschäftsmodell, bei dem Sie Roboter-Lösungen als Dienstleistung mieten, anstatt sie zu kaufen. Sie zahlen eine monatliche Gebühr und erhalten die Roboter inklusive Wartung, Updates, Support und Versicherung. Ähnlich wie bei Software-as-a-Service (SaaS) haben Sie keine Investitionskosten und bleiben technologisch immer auf dem neuesten Stand."
+        "q": "Was ist EmAI genau?",
+        "a": "EmAI ist eine Plattform für humanoide Robotik, die fortschrittliche Automatisierung für Unternehmen jeder Größe zugänglich macht. Wir kombinieren eine einfache Verwaltungsplattform mit einem flexiblen Mietmodell: Sie zahlen eine monatliche Gebühr und erhalten humanoide Roboter inklusive Wartung, Updates und Support – ohne Anschaffungskosten von 150.000€+ pro Einheit."
       },
       "why": {
-        "q": "Warum konzentriert sich RaaSaaR auf das Saarland?",
-        "a": "Das Saarland bietet die perfekte Kombination: Als Geburtsort von Industrie 4.0 (DFKI) verfügt die Region über Weltklasse-Forschung in Robotik und KI. Gleichzeitig stehen lokale Unternehmen und Kommunen vor konkreten Herausforderungen (Fachkräftemangel, Industrie-Transformation), die durch Robotik gelöst werden können. Mit 2.570 km² ist das Saarland zudem eine ideale Testregion für flächendeckende Robotik-Services."
+        "q": "Warum humanoide Roboter?",
+        "a": "Humanoide Roboter übernehmen Aufgaben, die bisher nur Menschen erledigen konnten. Sie arbeiten in bestehenden Umgebungen ohne Umbau, nutzen vorhandene Werkzeuge und können flexibel eingesetzt werden. Für Fertigung, Logistik und Lagerhaltung bieten sie maximale Flexibilität bei minimaler Anpassung Ihrer Prozesse."
       },
       "cost": {
         "q": "Wie funktioniert das Kostenmodell?",
-        "a": "Sie zahlen eine monatliche Service-Gebühr basierend auf der Art und Anzahl der Roboter sowie dem Einsatzumfang. Es fallen keine Anschaffungskosten an. In der Gebühr enthalten sind: die Roboter selbst, regelmäßige Wartung, Software-Updates, technischer Support, Versicherung und bei Bedarf auch Schulungen für Ihre Mitarbeiter. Die genauen Konditionen werden individuell auf Ihren Anwendungsfall abgestimmt."
+        "a": "Sie zahlen eine monatliche Gebühr basierend auf der Anzahl der Roboter und dem Einsatzumfang. Enthalten sind: die Roboter selbst, regelmäßige Wartung, Software-Updates, technischer Support, Versicherung und Schulungen. Keine versteckten Kosten, keine Anfangsinvestition. Die genauen Konditionen stimmen wir individuell auf Ihren Bedarf ab."
       },
       "timeline": {
-        "q": "Wie schnell kann ich RaaSaaR nutzen?",
-        "a": "Nach einer initialen Bedarfsanalyse (1-2 Wochen) erstellen wir einen individuellen Implementierungsplan. Je nach Komplexität können einfache Anwendungen innerhalb von 4-8 Wochen starten. Komplexere industrielle Integrationen benötigen 2-4 Monate. Wir begleiten Sie durch den gesamten Prozess – von der Planung über die Installation bis zur Schulung Ihrer Teams."
+        "q": "Wie schnell kann ich EmAI nutzen?",
+        "a": "Nach einer Bedarfsanalyse erstellen wir einen individuellen Plan. Typische Zeiten bis zur Inbetriebnahme liegen bei 2-4 Wochen. Wir begleiten Sie durch den gesamten Prozess – von der Planung über die Installation bis zur Schulung Ihrer Teams."
       },
       "jobs": {
         "q": "Führt Robotik nicht zu Arbeitsplatzverlusten?",
-        "a": "Im Gegenteil: Angesichts des demografischen Wandels und des Fachkräftemangels im Saarland füllen Roboter Lücken, die nicht mehr durch Menschen besetzt werden können. Sie übernehmen repetitive, gefährliche oder körperlich belastende Aufgaben und ermöglichen es Mitarbeitern, sich auf qualifiziertere Tätigkeiten zu konzentrieren. Unser Ziel ist die Ergänzung der Arbeitskraft, nicht deren Ersatz – insbesondere in einer Region mit schrumpfender Erwerbsbevölkerung."
+        "a": "Angesichts des Fachkräftemangels füllen Roboter Lücken, die nicht mehr durch Menschen besetzt werden können. Sie übernehmen repetitive, gefährliche oder körperlich belastende Aufgaben und ermöglichen es Mitarbeitern, sich auf qualifiziertere Tätigkeiten zu konzentrieren. Unser Ziel ist die Ergänzung der Arbeitskraft, nicht deren Ersatz."
       },
       "target": {
-        "q": "Für wen ist RaaSaaR geeignet?",
-        "a": "RaaSaaR richtet sich an zwei Hauptzielgruppen: (1) Industrielle Unternehmen im Saarland – von KMUs bis zu großen Betrieben in Branchen wie Automotive, Fertigung, Logistik und Metallverarbeitung. (2) Kommunen und Gemeinden – für Anwendungen wie Straßenreinigung, Abfallmanagement, Infrastruktur-Überwachung und öffentliche Sicherheit. Das RaaS-Modell macht Robotik besonders für kleinere Organisationen zugänglich, die sich keine hohen Investitionen leisten können."
+        "q": "Für wen ist EmAI geeignet?",
+        "a": "EmAI richtet sich an Unternehmen in drei Hauptbereichen: (1) Fertigung – von KMUs bis zu großen Produktionsbetrieben für Montage, Qualitätskontrolle und Materialhandhabung. (2) Logistik – für Distributionszentren und Fulfillment-Center. (3) Lagerhaltung – für Kommissionierung, Bestandsmanagement und Warenhandhabung. Das Mietmodell macht Robotik besonders für mittelständische Unternehmen zugänglich."
       },
       "technology": {
-        "q": "Welche Roboter-Technologien nutzt RaaSaaR?",
-        "a": "Wir arbeiten mit führenden Robotik-Plattformen und entwickeln eigene Lösungen in Kooperation mit dem DFKI, ZeMA und der Universität des Saarlandes. Je nach Anwendungsfall setzen wir ein: humanoide Roboter für komplexe Mensch-Roboter-Interaktion, mobile autonome Roboter (AMR) für Logistik und Transport, Industrie-Roboterarme für Fertigung und Montage, sowie spezialisierte Roboter für Reinigung und Inspektion. Die Technologie wird individuell auf Ihren Bedarf abgestimmt."
+        "q": "Welche Roboter-Technologien nutzt EmAI?",
+        "a": "Wir setzen auf humanoide Roboter der neuesten Generation, die für die Zusammenarbeit mit Menschen entwickelt wurden. Diese Roboter navigieren selbstständig, erkennen und greifen verschiedene Objekte und lernen neue Aufgaben schnell. Unsere Plattform koordiniert den Einsatz, überwacht die Leistung und optimiert kontinuierlich die Abläufe."
       },
       "support": {
         "q": "Welche Unterstützung erhalte ich?",
-        "a": "Der RaaSaaR-Service umfasst umfassende Betreuung: Initiale Bedarfsanalyse und Konzeption, Installation und Integration in bestehende Prozesse, Schulung Ihrer Mitarbeiter, laufende technische Wartung, 24/7 Support bei Problemen, regelmäßige Software-Updates und Optimierung der Roboter-Performance basierend auf gesammelten Daten. Sie haben einen festen Ansprechpartner und profitieren von unserem regionalen Netzwerk."
+        "a": "Der EmAI-Service umfasst Rundum-Betreuung: Bedarfsanalyse und Konzeption, Installation und Integration, Schulung Ihrer Mitarbeiter, laufende Wartung, Support bei Problemen, regelmäßige Updates und kontinuierliche Optimierung. Sie haben einen festen Ansprechpartner für alle Anliegen."
       }
     }
   },
   "contact": {
     "title": "Kontakt aufnehmen",
-    "subtitle": "Interessiert an Robotik-Lösungen für Ihr Unternehmen oder Ihre Kommune? Lassen Sie uns sprechen.",
+    "subtitle": "Interessiert an humanoider Robotik für Ihr Unternehmen? Lassen Sie uns über Ihre Anforderungen sprechen.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Max Mustermann",
       "email": "E-Mail",
       "emailPlaceholder": "max@beispiel.de",
       "organization": "Organisation",
-      "organizationPlaceholder": "Ihr Unternehmen oder Kommune",
-      "orgType": "Organisations-Typ",
+      "organizationPlaceholder": "Ihr Unternehmen",
+      "orgType": "Branche",
       "orgTypes": {
-        "industrial": "Industrieunternehmen",
-        "municipal": "Kommune/Gemeinde",
-        "research": "Forschungseinrichtung",
+        "industrial": "Fertigung",
+        "municipal": "Logistik",
+        "research": "Lagerhaltung",
         "other": "Sonstiges"
       },
       "message": "Nachricht",
@@ -238,8 +238,8 @@
     }
   },
   "footer": {
-    "tagline": "Robotik-Lösungen für das Saarland",
-    "description": "RaaSaaR macht modernste Robotik-Technologie für Unternehmen und Kommunen im Saarland zugänglich – ohne Investitionskosten.",
+    "tagline": "Humanoide Robotik. Zugänglich für alle.",
+    "description": "EmAI macht humanoide Robotik für Fertigung, Logistik und Lagerhaltung zugänglich.",
     "links": {
       "company": "Unternehmen",
       "about": "Über uns",
@@ -249,13 +249,14 @@
       "blog": "Blog",
       "documentation": "Dokumentation",
       "support": "Support",
+      "contact": "Kontakt",
       "legal": "Rechtliches",
       "privacy": "Datenschutz",
       "terms": "AGB",
       "imprint": "Impressum"
     },
-    "copyright": "© 2025 RaaSaaR. Alle Rechte vorbehalten.",
-    "madeIn": "Made in Saarland"
+    "copyright": "© 2025 EmAI. Alle Rechte vorbehalten.",
+    "madeIn": "Made in Europe"
   },
   "common": {
     "learnMore": "Mehr erfahren",

@@ -7,101 +7,101 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Robotics Solutions for Saarland",
-    "subtitle": "We bring cutting-edge robotics technology to businesses, municipalities, and communities in Saarland – without capital investment through Robots as a Service.",
-    "description": "Saarland faces challenges: skilled labor shortage, demographic change, and automotive industry transformation. RaaSaaR makes robotics solutions accessible to everyone.",
+    "title": "Humanoid Robotics. Accessible to All.",
+    "subtitle": "EmAI makes humanoid robotics accessible for manufacturing, logistics, and warehousing — with intelligent fleet management and flexible rental models.",
+    "description": "Advanced automation was previously only affordable for large corporations. With EmAI, mid-sized companies can also use humanoid robotics — without large upfront investments.",
     "cta": "Learn More",
     "ctaSecondary": "Get in Touch"
   },
   "problem": {
     "title": "The Challenge",
-    "description": "Saarland – with over 200 industrial companies and 40,000 jobs in the automotive sector – stands at a turning point.",
+    "description": "Companies in manufacturing, logistics, and warehousing face significant changes.",
     "challenges": {
       "labor": {
         "title": "Labor Shortage",
-        "description": "Aging population and shrinking workforce threaten competitiveness"
+        "description": "The workforce is shrinking, qualified employees are hard to find"
       },
       "transition": {
-        "title": "Industry Transformation",
-        "description": "The automotive sector is in transition – new solutions are required"
+        "title": "Competitive Pressure",
+        "description": "Automation becomes a decisive factor — but getting started is complex"
       },
       "costs": {
         "title": "High Investment Costs",
-        "description": "Robotics technology was previously only affordable for large corporations"
+        "description": "Humanoid robots cost €150,000+ per unit — too much for many companies"
       },
-      "municipal": {
-        "title": "Municipal Services",
-        "description": "Cities need efficient solutions for cleaning, waste management, and infrastructure"
+      "complexity": {
+        "title": "Complex Operations",
+        "description": "Robot fleets require specialized knowledge for operation and maintenance"
       }
     }
   },
   "solution": {
     "title": "The Solution: Robots as a Service",
-    "description": "RaaSaaR brings cutting-edge robotics to Saarland – without capital investment. Pay only for usage, not for ownership.",
+    "description": "EmAI makes humanoid robotics affordable — without capital investment. Full service included.",
     "benefits": {
       "accessible": {
-        "title": "Accessible",
-        "description": "No high acquisition costs – ideal for SMEs and municipalities"
+        "title": "No Acquisition Costs",
+        "description": "Save €150,000+ per robot with our rental model"
       },
       "flexible": {
-        "title": "Flexible",
-        "description": "Scale according to your needs – from individual projects to continuous deployment"
+        "title": "Flexibly Scalable",
+        "description": "From 1 to 1,000+ robots — grow as needed"
       },
       "expertise": {
-        "title": "Regional Expertise",
-        "description": "Building on DFKI, ZeMA, and Saarland University"
+        "title": "Quick Setup",
+        "description": "Operational in your facility within 2-4 weeks"
       },
       "supported": {
         "title": "Full Service",
-        "description": "Maintenance, updates, and support included"
+        "description": "Maintenance, training, updates — all included"
       }
     }
   },
   "concept": {
-    "title": "What is RaaSaaR?",
-    "subtitle": "Robots as a Service meets Saarland",
-    "description": "RaaSaaR combines the proven Software-as-a-Service model with cutting-edge robotics technology – specifically developed for Saarland's needs.",
+    "title": "What is EmAI?",
+    "subtitle": "Robotics management made simple",
+    "description": "EmAI combines modern humanoid robotics with a simple management platform — for companies of all sizes.",
     "model": {
       "title": "The Business Model",
       "traditional": "Traditional: High investment, maintenance costs, obsolescence",
-      "raas": "RaaSaaR: Monthly fee, all-inclusive, always up-to-date"
+      "raas": "EmAI: Monthly fee, full service, always up-to-date"
     },
     "why": {
-      "title": "Why Saarland?",
+      "title": "Why EmAI?",
       "reasons": {
         "research": {
-          "title": "Birthplace of Industry 4.0",
-          "description": "DFKI coined the term Industry 4.0 in 2011 – Saarland is a pioneer in robotics research"
+          "title": "European Quality",
+          "description": "Developed to the highest quality standards for industrial requirements"
         },
         "compact": {
-          "title": "Ideal Test Region",
-          "description": "At 2,570 km², Saarland is the perfect region for comprehensive robotics services"
+          "title": "EU-Compliant from Day 1",
+          "description": "Full compliance with all EU regulations and standards"
         },
         "need": {
           "title": "Real Demand",
-          "description": "Labor shortage and industry transformation create concrete use cases"
+          "description": "Labor shortage creates concrete use cases in manufacturing and logistics"
         },
         "ecosystem": {
-          "title": "Research Ecosystem",
-          "description": "Direct collaboration with DFKI, ZeMA, and over 900 AI researchers"
+          "title": "Simple Management",
+          "description": "One platform for your entire robot fleet"
         }
       }
     }
   },
   "useCases": {
     "title": "Use Cases",
-    "subtitle": "Robotics for Industry and Communities",
+    "subtitle": "Humanoid Robotics for Your Industry",
     "industrial": {
-      "title": "Industrial Applications",
-      "description": "For Saarland's 200+ industrial companies",
+      "title": "Manufacturing",
+      "description": "For manufacturing companies",
       "cases": {
         "manufacturing": {
-          "title": "Manufacturing & Assembly",
+          "title": "Assembly & Production",
           "description": "Automated production lines, quality control, material handling"
         },
         "logistics": {
-          "title": "Logistics & Warehousing",
-          "description": "Autonomous transport systems, order picking, inventory management"
+          "title": "Internal Logistics",
+          "description": "Material flow, internal transport, production supply"
         },
         "inspection": {
           "title": "Inspection & Maintenance",
@@ -110,123 +110,123 @@
       }
     },
     "municipal": {
-      "title": "Municipal Services",
-      "description": "For cities and municipalities in Saarland",
+      "title": "Logistics & Warehouse",
+      "description": "For logistics centers and warehouses",
       "cases": {
         "cleaning": {
-          "title": "Street Cleaning",
-          "description": "Autonomous sweepers for public spaces and sidewalks"
+          "title": "Order Picking",
+          "description": "Autonomous order processing, pick-and-pack, order fulfillment"
         },
         "waste": {
-          "title": "Waste Management",
-          "description": "Smart waste collection with fill-level sensors and optimized routes"
+          "title": "Goods Handling",
+          "description": "Intelligent storage, inventory management, optimized warehouse processes"
         },
         "infrastructure": {
-          "title": "Infrastructure Inspection",
-          "description": "Automated monitoring of roads, bridges, and public facilities"
+          "title": "Shipping & Packaging",
+          "description": "Automated packaging, labeling, and shipping preparation"
         }
       }
     }
   },
   "regional": {
-    "title": "Saarland's Robotics Advantage",
-    "description": "Saarland offers a unique combination of research excellence and industrial demand",
+    "title": "European Technology",
+    "description": "EmAI is built on European values: quality, privacy, and local service",
     "partners": {
       "dfki": {
-        "title": "DFKI Saarbrücken",
-        "description": "World-leading AI research, humanoid robots (RH5), originators of Industry 4.0"
+        "title": "EU Compliance",
+        "description": "Full compliance with all European regulations and safety standards"
       },
       "zema": {
-        "title": "ZeMA",
-        "description": "Center for Mechatronics and Automation Technology with partners like Bosch, BMW, VW"
+        "title": "Data Sovereignty",
+        "description": "Your data stays in Europe — secure, GDPR-compliant infrastructure"
       },
       "university": {
-        "title": "Saarland University",
-        "description": "900+ scientists in AI and robotics, leading in Germany"
+        "title": "Local Service",
+        "description": "Personal on-site support, fast response times, dedicated contact person"
       },
       "edih": {
-        "title": "EDIH Saarland",
-        "description": "European Digital Innovation Hub for digital twins and human-robot collaboration"
+        "title": "EU Single Market",
+        "description": "Access to 450 million consumers with unified standards"
       }
     }
   },
   "stats": {
     "businesses": {
-      "value": "200+",
-      "label": "Industrial companies in Saarland"
+      "value": "€150,000+",
+      "label": "Savings potential per robot"
     },
     "jobs": {
-      "value": "40,000",
-      "label": "Jobs in the automotive sector"
+      "value": "2-4",
+      "label": "Weeks to setup"
     },
     "researchers": {
-      "value": "900+",
-      "label": "AI researchers in Saarland"
+      "value": "1-1,000+",
+      "label": "Robots scalable"
     },
     "area": {
-      "value": "2,570 km²",
-      "label": "Ideal size for robotics services"
+      "value": "100%",
+      "label": "Service included"
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "questions": {
       "what": {
-        "q": "What exactly is Robots as a Service?",
-        "a": "Robots as a Service (RaaS) is a business model where you rent robotic solutions as a service instead of purchasing them. You pay a monthly fee and receive the robots including maintenance, updates, support, and insurance. Similar to Software-as-a-Service (SaaS), you have no capital investment and always stay technologically up-to-date."
+        "q": "What exactly is EmAI?",
+        "a": "EmAI is a platform for humanoid robotics that makes advanced automation accessible to companies of all sizes. We combine a simple management platform with a flexible rental model: you pay a monthly fee and receive humanoid robots including maintenance, updates, and support — without acquisition costs of €150,000+ per unit."
       },
       "why": {
-        "q": "Why does RaaSaaR focus on Saarland?",
-        "a": "Saarland offers the perfect combination: As the birthplace of Industry 4.0 (DFKI), the region has world-class research in robotics and AI. At the same time, local companies and municipalities face concrete challenges (labor shortage, industry transformation) that can be solved through robotics. At 2,570 km², Saarland is also an ideal test region for comprehensive robotics services."
+        "q": "Why humanoid robots?",
+        "a": "Humanoid robots take on tasks that previously only humans could perform. They work in existing environments without modification, use existing tools, and can be flexibly deployed. For manufacturing, logistics, and warehousing, they offer maximum flexibility with minimal adaptation of your processes."
       },
       "cost": {
         "q": "How does the cost model work?",
-        "a": "You pay a monthly service fee based on the type and number of robots and the scope of deployment. There are no acquisition costs. The fee includes: the robots themselves, regular maintenance, software updates, technical support, insurance, and training for your employees if needed. The exact terms are individually tailored to your use case."
+        "a": "You pay a monthly fee based on the number of robots and scope of deployment. Included are: the robots themselves, regular maintenance, software updates, technical support, insurance, and training. No hidden costs, no upfront investment. Exact terms are individually tailored to your needs."
       },
       "timeline": {
-        "q": "How quickly can I use RaaSaaR?",
-        "a": "After an initial needs analysis (1-2 weeks), we create an individual implementation plan. Depending on complexity, simple applications can start within 4-8 weeks. More complex industrial integrations require 2-4 months. We accompany you through the entire process – from planning through installation to training your teams."
+        "q": "How quickly can I use EmAI?",
+        "a": "After a needs analysis, we create an individual plan. Typical setup times are 2-4 weeks. We accompany you through the entire process — from planning through installation to training your teams."
       },
       "jobs": {
         "q": "Doesn't robotics lead to job losses?",
-        "a": "On the contrary: Given demographic change and the skilled labor shortage in Saarland, robots fill gaps that can no longer be filled by people. They take over repetitive, dangerous, or physically demanding tasks and enable employees to focus on more qualified activities. Our goal is to augment the workforce, not replace it – especially in a region with a shrinking working population."
+        "a": "Given the labor shortage, robots fill gaps that can no longer be filled by humans. They take over repetitive, dangerous, or physically demanding tasks and enable employees to focus on more qualified activities. Our goal is to augment the workforce, not replace it."
       },
       "target": {
-        "q": "Who is RaaSaaR suitable for?",
-        "a": "RaaSaaR targets two main groups: (1) Industrial companies in Saarland – from SMEs to large operations in sectors like automotive, manufacturing, logistics, and metal processing. (2) Municipalities and communities – for applications like street cleaning, waste management, infrastructure monitoring, and public safety. The RaaS model makes robotics particularly accessible for smaller organizations that cannot afford high investments."
+        "q": "Who is EmAI suitable for?",
+        "a": "EmAI targets companies in three main areas: (1) Manufacturing — from SMEs to large production facilities for assembly, quality control, and material handling. (2) Logistics — for distribution centers and fulfillment centers. (3) Warehousing — for order picking, inventory management, and goods handling. The rental model makes robotics particularly accessible to mid-sized companies."
       },
       "technology": {
-        "q": "What robotic technologies does RaaSaaR use?",
-        "a": "We work with leading robotics platforms and develop our own solutions in cooperation with DFKI, ZeMA, and Saarland University. Depending on the use case, we deploy: humanoid robots for complex human-robot interaction, mobile autonomous robots (AMR) for logistics and transport, industrial robot arms for manufacturing and assembly, and specialized robots for cleaning and inspection. The technology is individually tailored to your needs."
+        "q": "What robot technologies does EmAI use?",
+        "a": "We deploy the latest generation of humanoid robots developed for human collaboration. These robots navigate autonomously, recognize and grasp various objects, and learn new tasks quickly. Our platform coordinates deployment, monitors performance, and continuously optimizes operations."
       },
       "support": {
         "q": "What support do I receive?",
-        "a": "The RaaSaaR service includes comprehensive support: Initial needs analysis and concept development, installation and integration into existing processes, training for your employees, ongoing technical maintenance, 24/7 support for problems, regular software updates, and optimization of robot performance based on collected data. You have a dedicated contact person and benefit from our regional network."
+        "a": "EmAI service includes full support: needs analysis and conception, installation and integration, employee training, ongoing maintenance, problem support, regular updates, and continuous optimization. You have a dedicated contact person for all matters."
       }
     }
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "Interested in robotics solutions for your company or municipality? Let's talk.",
+    "subtitle": "Interested in humanoid robotics for your company? Let's discuss your requirements.",
     "form": {
       "name": "Name",
-      "namePlaceholder": "John Doe",
+      "namePlaceholder": "John Smith",
       "email": "Email",
       "emailPlaceholder": "john@example.com",
       "organization": "Organization",
-      "organizationPlaceholder": "Your company or municipality",
-      "orgType": "Organization Type",
+      "organizationPlaceholder": "Your Company",
+      "orgType": "Industry",
       "orgTypes": {
-        "industrial": "Industrial Company",
-        "municipal": "Municipality/Community",
-        "research": "Research Institution",
+        "industrial": "Manufacturing",
+        "municipal": "Logistics",
+        "research": "Warehousing",
         "other": "Other"
       },
       "message": "Message",
       "messagePlaceholder": "Describe your use case or ask your question...",
-      "submit": "Send Inquiry",
+      "submit": "Send Request",
       "submitting": "Sending...",
-      "success": "Thank you! We'll get back to you shortly.",
+      "success": "Thank you! We'll be in touch shortly.",
       "error": "An error occurred. Please try again."
     },
     "validation": {
@@ -234,33 +234,34 @@
       "emailRequired": "Please enter your email address",
       "emailInvalid": "Please enter a valid email address",
       "messageRequired": "Please enter a message",
-      "messageMin": "Message must be at least 10 characters long"
+      "messageMin": "The message must be at least 10 characters long"
     }
   },
   "footer": {
-    "tagline": "Robotics Solutions for Saarland",
-    "description": "RaaSaaR makes cutting-edge robotics technology accessible to businesses and municipalities in Saarland – without capital investment.",
+    "tagline": "Humanoid Robotics. Accessible to All.",
+    "description": "EmAI makes humanoid robotics accessible for manufacturing, logistics, and warehousing.",
     "links": {
       "company": "Company",
-      "about": "About",
+      "about": "About Us",
       "partners": "Partners",
       "careers": "Careers",
       "resources": "Resources",
       "blog": "Blog",
       "documentation": "Documentation",
       "support": "Support",
+      "contact": "Contact",
       "legal": "Legal",
-      "privacy": "Privacy",
-      "terms": "Terms",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
       "imprint": "Imprint"
     },
-    "copyright": "© 2025 RaaSaaR. All rights reserved.",
-    "madeIn": "Made in Saarland"
+    "copyright": "© 2025 EmAI. All rights reserved.",
+    "madeIn": "Made in Europe"
   },
   "common": {
     "learnMore": "Learn More",
     "getStarted": "Get Started",
-    "contactUs": "Contact",
+    "contactUs": "Contact Us",
     "readMore": "Read More"
   }
 }

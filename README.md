@@ -1,22 +1,22 @@
-# RaaSaaR Landing Page
+# EmAI Landing Page
 
-A modern, professional landing page bringing Robots as a Service to Saarland, Germany. Built with Next.js 15 and full bilingual support (German/English).
+A modern, professional landing page for EmAI - democratizing access to humanoid robotics for German manufacturing, logistics, and warehouse operations. Built with Next.js 15 and full bilingual support (German/English).
 
-## 🚀 About RaaSaaR
+## About EmAI
 
-RaaSaaR (Robots as a Service + Saarland) is a regional robotics platform bringing cutting-edge automation to businesses and municipalities in Saarland. We focus on making robotics accessible without capital investment, addressing the region's labor shortage and supporting industrial transformation.
+EmAI is a humanoid robotics platform bringing advanced automation to German businesses through intelligent fleet management and flexible rental models. We make humanoid robotics accessible without capital investment, addressing labor shortages and supporting industrial transformation.
 
-## ✨ Features
+## Features
 
 - **Bilingual Support** - Full German/English i18n with language switcher
-- **Hero Section** - Compelling introduction to RaaSaaR's regional mission
-- **Problem/Solution** - Addressing Saarland's labor shortage and industry challenges
-- **Regional Advantage** - Showcasing DFKI, ZeMA, and Saarland's research ecosystem
-- **Use Cases** - Industrial automation and municipal services applications
+- **Dark Theme** - Professional dark UI with orange accents
+- **Hero Section** - Compelling introduction to EmAI's mission
+- **Problem/Solution** - Addressing German industry challenges
+- **Use Cases** - Manufacturing, logistics, and warehouse applications
 - **FAQ** - Answers to practical questions about RaaS implementation
-- **Contact Form** - Inquiry capture with organization type selection (industrial/municipal)
+- **Contact Form** - Inquiry capture with industry type selection
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: Next.js 15.5.4 (App Router)
 - **i18n**: next-intl (German/English)
@@ -26,13 +26,13 @@ RaaSaaR (Robots as a Service + Saarland) is a regional robotics platform bringin
 - **Analytics**: Google Analytics 4, Hotjar, Vercel Analytics
 - **Language**: TypeScript
 
-## 📦 Installation
+## Installation
 
 ```bash
 npm install
 ```
 
-## 🏃 Development
+## Development
 
 ```bash
 npm run dev
@@ -40,38 +40,39 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000)
 
-## 🔧 Configuration
+## Configuration
 
 Create `.env.local`:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://raasaar.de
+NEXT_PUBLIC_SITE_URL=https://emai.de
 NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
 NEXT_PUBLIC_HOTJAR_ID=
 NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=
 ```
 
-## 🌍 Internationalization
+## Internationalization
 
 The site supports German (default) and English:
 - Routes: `/` or `/de` (German), `/en` (English)
 - Language switcher in header
 - All content translated in `/src/i18n/locales/`
 
-## 🏗️ Build
+## Build
 
 ```bash
 npm run build
 npm start
 ```
 
-## 🎨 Design System
+## Design System
 
-- **Primary Color**: #0066FF
-- **Secondary Color**: #00CC66
-- **Font**: Inter
-- **Breakpoints**: Mobile (320-767px), Tablet (768-1023px), Desktop (1024px+)
+- **Primary Color**: #FF6700 (Caltrans Orange)
+- **Secondary Color**: #2DD4BF (Teal)
+- **Background**: #141414 (Dark base)
+- **Font**: System UI
+- **Theme**: Dark only
 
-## 📄 License
+## License
 
 MIT

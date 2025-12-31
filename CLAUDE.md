@@ -1,25 +1,33 @@
-# Claude Code Instructions for RaaSaaR
+# Claude Code Instructions for EmAI
 
 @README.md
 
 ## Project Overview
-This is the RaaSaaR landing page - a professional platform bringing Robots as a Service to Saarland, Germany. The focus is on practical solutions for businesses and municipalities, addressing regional challenges.
+This is the EmAI landing page - a platform democratizing access to humanoid robotics for German manufacturing, logistics, and warehouse operations through intelligent fleet management and flexible rental models.
 
 ## Key Principles
-- **Professional and practical**: Content should be solution-oriented, not overly promotional
-- **Regional focus**: Emphasize Saarland-specific advantages (DFKI, ZeMA, research ecosystem)
+- **Professional and industrial**: Content should be solution-oriented for enterprise customers
+- **German engineering focus**: Emphasize quality, precision, and EU compliance
+- **Dark theme only**: All UI uses dark backgrounds with orange (#FF6700) accents
 - **Bilingual**: German is primary language, English for international reach
-- **Problem-solver positioning**: Address labor shortage, industry transformation, and municipal needs
-- **Dual market**: Balance industrial (manufacturing, logistics) and municipal (cleaning, infrastructure) applications
 - **RaaS accessibility**: Emphasize no capital investment, flexible scaling, full service model
 
 ## Target Audience
-1. **Industrial companies**: 200+ businesses in Saarland (automotive, manufacturing, logistics)
-2. **Municipalities**: Cities and communities needing automation for services
+1. **Manufacturing companies**: Assembly, production, quality control, material handling
+2. **Logistics operations**: Distribution centers, fulfillment, intralogistics
+3. **Warehousing**: Order picking, inventory management, goods handling
+
+## Brand Guidelines
+- **Primary Color**: #FF6700 (Caltrans Orange)
+- **Secondary Color**: #2DD4BF (Teal)
+- **Background**: #141414 (Base dark)
+- **Surface**: #1F1F1F (Cards, modals)
+- **Text Primary**: #F5F5F4
+- **Text Secondary**: #A8A29E
 
 ## Content Guidelines
-- Use concrete, regional statistics (40,000 automotive jobs, 900+ AI researchers)
-- Reference DFKI as birthplace of Industry 4.0
-- Highlight Saarland's compact size (2,570 km²) as advantage
-- Focus on workforce augmentation, not replacement
-- Maintain professional tone - visionary but grounded in reality
+- Focus on German market (nationwide, not regional)
+- Key value props: €150,000+ savings per robot, 2-4 week deployment, 1-1000+ robots scalable
+- Emphasize humanoid robotics and fleet management
+- Maintain professional tone - industrial but approachable
+- Safety-first messaging, EU compliance

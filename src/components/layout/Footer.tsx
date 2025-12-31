@@ -3,6 +3,7 @@
 import { Link } from '@/i18n/routing';
 import { trackCTAClick } from '@/lib/analytics';
 import { useTranslations } from 'next-intl';
+import { Logo } from '@/components/ui/Logo';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -13,11 +14,8 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">Em</span>
-              </div>
-              <span className="font-bold text-xl text-text-primary">EmAI</span>
+            <Link href="/" className="inline-block mb-4">
+              <Logo size={32} showText={true} />
             </Link>
             <p className="text-sm text-text-secondary mb-4">
               {t('tagline')}

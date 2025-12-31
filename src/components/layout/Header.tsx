@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { trackCTAClick } from '@/lib/analytics';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+import { Logo } from '@/components/ui/Logo';
 
 export function Header() {
   const t = useTranslations('nav');
@@ -53,11 +54,8 @@ export function Header() {
       <nav className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
-          <a href={`/${locale}`} className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">Em</span>
-            </div>
-            <span className="font-bold text-xl text-text-primary">EmAI</span>
+          <a href={`/${locale}`}>
+            <Logo size={32} showText={true} />
           </a>
 
           {/* Desktop Navigation */}

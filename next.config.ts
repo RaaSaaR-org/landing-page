@@ -10,7 +10,7 @@ console.log("isProduction:", isProduction);
 const basePath = isProduction ? "/landing-page" : "";
 
 const nextConfig: NextConfig = {
-  output: "export",
+  ...(isProduction && { output: "export" }),
   basePath: basePath,
   assetPrefix: basePath,
   images: {

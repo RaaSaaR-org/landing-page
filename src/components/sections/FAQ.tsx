@@ -25,8 +25,8 @@ export function FAQ() {
                 key={key}
                 className={`border rounded-xl overflow-hidden bg-surface shadow-lg transition-all ${
                   openIndex === index
-                    ? 'border-primary-500 shadow-xl'
-                    : 'border-border-subtle hover:border-primary-500/50'
+                    ? 'border-secondary-400 shadow-xl'
+                    : 'border-border-subtle hover:border-secondary-400/50'
                 }`}
               >
                 <button
@@ -39,8 +39,8 @@ export function FAQ() {
                   <svg
                     className={`w-5 h-5 flex-shrink-0 transition-all ${
                       openIndex === index
-                        ? 'rotate-180 text-primary-500'
-                        : 'text-text-muted group-hover:text-primary-500'
+                        ? 'rotate-180 text-secondary-400'
+                        : 'text-text-muted group-hover:text-secondary-400'
                     }`}
                     fill="none"
                     viewBox="0 0 24 24"

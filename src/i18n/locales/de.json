@@ -9,7 +9,7 @@
   "hero": {
     "title": "Humanoide Robotik für die Industrie",
     "subtitle": "EU-konforme Automatisierung. Skalierbar. Sicher. Servicebasiert.",
-    "description": "EmAI ist die Plattform für Roboter-Flottenmanagement. Humanoide Roboter als Service – ohne Kapitalinvestition.",
+    "description": "Robots as a Service – inklusive Flottenmanagement-Software. Einfach. Skalierbar. EU-konform.",
     "cta": "Mehr erfahren",
     "ctaSecondary": "Kontakt aufnehmen"
   },
@@ -60,7 +60,7 @@
   "concept": {
     "title": "Was ist EmAI?",
     "subtitle": "Robotik-Management für Unternehmen",
-    "description": "EmAI verbindet humanoide Robotik mit einer zentralen Verwaltungsplattform für Unternehmen und öffentliche Einrichtungen.",
+    "description": "EmAI verbindet humanoide Robotik mit einer zentralen Software-Plattform für Flottenmanagement, Schulung und Wartung.",
     "model": {
       "title": "Das Geschäftsmodell",
       "traditional": "Traditionell: Hohe Investition, Wartungskosten, Veralterung",
@@ -83,7 +83,7 @@
         },
         "ecosystem": {
           "title": "Zentrale Verwaltung",
-          "description": "Eine Plattform für die gesamte Roboter-Flotte"
+          "description": "Eine Software-Plattform für die komplette Steuerung"
         }
       }
     }
@@ -173,7 +173,7 @@
     "questions": {
       "what": {
         "q": "Was ist EmAI?",
-        "a": "EmAI ist eine Plattform für humanoide Robotik. Wir bieten eine zentrale Verwaltungsplattform mit einem servicebasierten Modell: monatliche Gebühr inklusive Roboter, Wartung, Updates und Support – ohne Anschaffungskosten."
+        "a": "EmAI bietet Robots as a Service: humanoide Roboter zur Miete mit monatlicher Gebühr inklusive Roboter, Wartung, Updates und Support – ohne Anschaffungskosten. Unsere Software-Plattform steuert alles zentral."
       },
       "why": {
         "q": "Warum humanoide Roboter?",
@@ -197,7 +197,7 @@
       },
       "technology": {
         "q": "Welche Roboter-Technologie wird eingesetzt?",
-        "a": "Wir setzen humanoide Roboter der neuesten Generation ein, die für die Zusammenarbeit mit Menschen entwickelt wurden. Die Plattform koordiniert den Einsatz, überwacht die Leistung und optimiert kontinuierlich die Abläufe."
+        "a": "Wir setzen humanoide Roboter der neuesten Generation ein, die für die Zusammenarbeit mit Menschen entwickelt wurden. Unsere Software koordiniert den Einsatz, überwacht die Leistung und optimiert kontinuierlich die Abläufe."
       },
       "support": {
         "q": "Welche Unterstützung ist enthalten?",

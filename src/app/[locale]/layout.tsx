@@ -29,8 +29,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       template: '%s | EmAI'
     },
     description: isGerman
-      ? 'EmAI demokratisiert den Zugang zu humanoider Robotik für deutsche Fertigung, Logistik und Lagerhaltung. Intelligentes Flottenmanagement und flexible Mietmodelle ohne Investitionskosten.'
-      : 'EmAI democratizes access to humanoid robotics for German manufacturing, logistics, and warehouse operations. Intelligent fleet management and flexible rental models without capital investment.',
+      ? 'EmAI bietet Robots as a Service für deutsche Fertigung, Logistik und Lagerhaltung. Humanoide Roboter zur Miete mit eigener Software-Plattform – einfach, skalierbar, EU-konform.'
+      : 'EmAI offers Robots as a Service for German manufacturing, logistics, and warehouse operations. Humanoid robots for rent with proprietary software platform – simple, scalable, EU-compliant.',
     keywords: isGerman
       ? ['Humanoide Robotik', 'Robots as a Service', 'RaaS', 'Industrie 4.0', 'Automatisierung', 'Flottenmanagement', 'Fertigung', 'Logistik', 'Lager', 'Deutsche Industrie']
       : ['Humanoid Robotics', 'Robots as a Service', 'RaaS', 'Industry 4.0', 'Automation', 'Fleet Management', 'Manufacturing', 'Logistics', 'Warehouse', 'German Industry'],
@@ -57,8 +57,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         ? 'EmAI - Humanoide Robotik. Zugänglich für alle.'
         : 'EmAI - Humanoid Robotics. Accessible to All.',
       description: isGerman
-        ? 'Intelligentes Flottenmanagement und flexible Robotik-Mietmodelle für deutsche Fertigung, Logistik und Lagerhaltung.'
-        : 'Intelligent fleet management and flexible robotics rental models for German manufacturing, logistics, and warehouses.',
+        ? 'Humanoide Roboter zur Miete mit Software-Plattform für Flottenmanagement. Einfach. Skalierbar. EU-konform.'
+        : 'Humanoid robots for rent with software platform for fleet management. Simple. Scalable. EU-compliant.',
       images: [
         {
           url: '/og-image.jpg',
@@ -120,8 +120,8 @@ export default async function LocaleLayout({
     url: siteUrl,
     logo: `${siteUrl}/logo.png`,
     description: locale === 'de'
-      ? 'EmAI demokratisiert den Zugang zu humanoider Robotik für deutsche Fertigung, Logistik und Lagerhaltung.'
-      : 'EmAI democratizes access to humanoid robotics for German manufacturing, logistics, and warehouse operations.',
+      ? 'EmAI bietet Robots as a Service: humanoide Roboter zur Miete mit eigener Software-Plattform für deutsche Industrie.'
+      : 'EmAI offers Robots as a Service: humanoid robots for rent with proprietary software platform for German industry.',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Inquiries',

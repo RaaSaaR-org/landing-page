@@ -3,7 +3,7 @@
 @README.md
 
 ## Project Overview
-This is the EmAI landing page - a platform democratizing access to humanoid robotics for German manufacturing, logistics, and warehouse operations through intelligent fleet management and flexible rental models.
+This is the EmAI landing page - a Robots as a Service (RaaS) company that rents humanoid robots to German manufacturing, logistics, and warehouse operations. EmAI provides a complete service with proprietary software for fleet management, training, reporting, security, and maintenance.
 
 ## Key Principles
 - **Professional and industrial**: Content should be solution-oriented for enterprise customers
@@ -28,6 +28,7 @@ This is the EmAI landing page - a platform democratizing access to humanoid robo
 ## Content Guidelines
 - Focus on German market (nationwide, not regional)
 - Key value props: €150,000+ savings per robot, 2-4 week deployment, 1-1000+ robots scalable
-- Emphasize humanoid robotics and fleet management
+- EmAI is a RaaS company (not a "platform") - we rent robots with software included
+- Emphasize: Simple, Scalable, EU-compliant
 - Maintain professional tone - industrial but approachable
 - Safety-first messaging, EU compliance

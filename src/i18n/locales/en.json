@@ -9,7 +9,7 @@
   "hero": {
     "title": "Humanoid Robotics for Industry",
     "subtitle": "EU-compliant automation. Scalable. Secure. Service-based.",
-    "description": "EmAI is the platform for robotic fleet management. Humanoid robots as a service – without capital investment.",
+    "description": "Robots as a Service – complete with fleet management software. Simple. Scalable. EU-compliant.",
     "cta": "Learn More",
     "ctaSecondary": "Get in Touch"
   },
@@ -60,7 +60,7 @@
   "concept": {
     "title": "What is EmAI?",
     "subtitle": "Robotics management for enterprises",
-    "description": "EmAI combines humanoid robotics with a central management platform for companies and public sector organizations.",
+    "description": "EmAI combines humanoid robotics with a central software platform for fleet management, training, and maintenance.",
     "model": {
       "title": "The Business Model",
       "traditional": "Traditional: High investment, maintenance costs, obsolescence",
@@ -83,7 +83,7 @@
         },
         "ecosystem": {
           "title": "Central Management",
-          "description": "One platform for the entire robot fleet"
+          "description": "One software platform for complete control"
         }
       }
     }
@@ -173,7 +173,7 @@
     "questions": {
       "what": {
         "q": "What is EmAI?",
-        "a": "EmAI is a platform for humanoid robotics. We offer a central management platform with a service-based model: monthly fee including robots, maintenance, updates, and support – without acquisition costs."
+        "a": "EmAI offers Robots as a Service: humanoid robots for rent with a monthly fee including robots, maintenance, updates, and support – without acquisition costs. Our software platform controls everything centrally."
       },
       "why": {
         "q": "Why humanoid robots?",
@@ -197,7 +197,7 @@
       },
       "technology": {
         "q": "What robot technology is used?",
-        "a": "We deploy the latest generation of humanoid robots developed for human collaboration. The platform coordinates deployment, monitors performance, and continuously optimizes operations."
+        "a": "We deploy the latest generation of humanoid robots developed for human collaboration. Our software coordinates deployment, monitors performance, and continuously optimizes operations."
       },
       "support": {
         "q": "What support is included?",

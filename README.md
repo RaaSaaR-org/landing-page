@@ -4,7 +4,7 @@ A modern, professional landing page for EmAI - democratizing access to humanoid 
 
 ## About EmAI
 
-EmAI is a humanoid robotics platform bringing advanced automation to German businesses through intelligent fleet management and flexible rental models. We make humanoid robotics accessible without capital investment, addressing labor shortages and supporting industrial transformation.
+EmAI offers Robots as a Service (RaaS) for German manufacturing, logistics, and warehouse operations. We rent humanoid robots to businesses with a complete service package including our proprietary software platform for fleet management, training, reporting, security, and maintenance. Simple. Scalable. EU-compliant.
 
 ## Features
 

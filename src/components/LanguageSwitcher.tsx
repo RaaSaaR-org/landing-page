@@ -9,13 +9,14 @@ export default function LanguageSwitcher() {
   useEffect(() => {
     const path = window.location.pathname;
 
-    // Detect basePath by finding everything before /en or /de (or end of path)
-    const match = path.match(/^(.*?)(?:\/(?:en|de)(?:\/|$)|$)/);
+    // Handle static export .html extensions
+    // Patterns: /basePath/de.html, /basePath/de, /basePath/de/page.html, /basePath/de/page
+    const match = path.match(/^(.*?)\/(?:en|de)(?:\.html|\/|$)/);
     const detectedBasePath = match?.[1] || '';
     setBasePath(detectedBasePath);
 
-    // Check if path contains /en
-    if (path.includes('/en')) {
+    // Check if path contains /en (with or without .html)
+    if (path.match(/\/en(?:\.html|\/|$)/)) {
       setLocale('en');
     } else {
       setLocale('de');
@@ -23,8 +24,18 @@ export default function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (newLocale: 'de' | 'en') => {
-    // Navigate to basePath + locale
-    window.location.href = `${basePath}/${newLocale}`;
+    const path = window.location.pathname;
+
+    // Get current page path after locale (e.g., /impressum from /de/impressum)
+    const pageMatch = path.match(/\/(?:en|de)(?:\.html)?(\/.*?)(?:\.html)?$/);
+    const pagePath = pageMatch?.[1] || '';
+
+    // Build new URL - for root pages, just use locale
+    if (pagePath && pagePath !== '/') {
+      window.location.href = `${basePath}/${newLocale}${pagePath}`;
+    } else {
+      window.location.href = `${basePath}/${newLocale}`;
+    }
   };
 
   return (

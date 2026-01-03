@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Space_Grotesk } from 'next/font/google';
 import "../globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { AnalyticsProvider } from '@/components/providers/AnalyticsProvider';
@@ -6,6 +7,12 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-space-grotesk',
+});
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.de';
 
@@ -146,7 +153,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased bg-base text-text-primary">
+      <body className={`${spaceGrotesk.variable} font-sans antialiased bg-base text-text-primary`}>
         <NextIntlClientProvider messages={messages}>
           <AnalyticsProvider>
             {children}

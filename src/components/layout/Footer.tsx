@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/ui/Logo';
+import { Link } from '@/i18n/routing';
 
 export function Footer() {
   const t = useTranslations('footer');
@@ -26,8 +27,31 @@ export function Footer() {
             </p>
           </div>
 
+          {/* Legal Links */}
+          <div>
+            <h3 className="text-text-primary font-semibold mb-4">{t('links.legal')}</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link
+                  href="/impressum"
+                  className="text-sm hover:text-primary-500 transition-colors"
+                >
+                  {t('links.imprint')}
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/datenschutz"
+                  className="text-sm hover:text-primary-500 transition-colors"
+                >
+                  {t('links.privacy')}
+                </Link>
+              </li>
+            </ul>
+          </div>
+
           {/* Contact */}
-          <div className="text-right">
+          <div className="md:text-right">
             <h3 className="text-text-primary font-semibold mb-4">{t('links.contact')}</h3>
             <a
               href="mailto:contact@emai.de"

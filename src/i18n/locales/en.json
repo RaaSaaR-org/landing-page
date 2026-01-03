@@ -239,6 +239,7 @@
     }
   },
   "footer": {
+    "philosophy": "Am I? We are.",
     "tagline": "Humanoid robotics for companies and public sector organizations.",
     "description": "EmAI provides humanoid robotics for manufacturing, logistics, and warehousing.",
     "links": {

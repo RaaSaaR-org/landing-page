@@ -12,9 +12,12 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
           <div className="max-w-sm">
-            <div className="mb-4">
+            <div className="mb-3">
               <Logo size={32} showText={true} />
             </div>
+            <p className="text-sm italic text-text-muted mb-4">
+              {t('philosophy')}
+            </p>
             <p className="text-sm text-text-secondary mb-4">
               {t('tagline')}
             </p>

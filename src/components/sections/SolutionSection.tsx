@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container, Section } from '@/components/layout';
+import { motion } from 'framer-motion';
 
 const icons = {
   accessible: (
@@ -29,38 +30,76 @@ const icons = {
 export function SolutionSection() {
   const t = useTranslations('solution');
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <Section id="features" background="base">
       <Container>
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-4xl mx-auto text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
             {t('title')}
           </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-400 mx-auto rounded-full mb-6" />
           <p className="text-xl text-text-secondary">
             {t('description')}
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {(['accessible', 'flexible', 'expertise', 'supported'] as const).map((key) => (
-            <div
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-100px' }}
+        >
+          {(['accessible', 'flexible', 'expertise', 'supported'] as const).map((key, index) => (
+            <motion.div
               key={key}
-              className="text-center p-8 bg-surface rounded-xl border border-border-subtle shadow-lg hover:shadow-xl hover:border-primary-500 transition-all"
+              variants={itemVariants}
+              className="group text-center p-8 glass rounded-xl corner-brackets hover:shadow-[0_0_40px_rgba(255,103,0,0.15)] transition-all duration-300"
+              whileHover={{ y: -5 }}
             >
-              <div className="w-16 h-16 bg-primary-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <div className="text-primary-500">
-                  {icons[key]}
+              {/* Icon with animated background */}
+              <div className="relative w-20 h-20 mx-auto mb-6">
+                <div className="absolute inset-0 bg-primary-500/20 rounded-2xl rotate-6 group-hover:rotate-12 transition-transform" />
+                <div className="absolute inset-0 bg-primary-500/10 rounded-2xl -rotate-6 group-hover:-rotate-12 transition-transform" />
+                <div className="relative w-full h-full bg-surface-elevated rounded-2xl flex items-center justify-center border border-border-subtle group-hover:border-primary-500/50 transition-colors">
+                  <div className="text-primary-500 group-hover:scale-110 transition-transform">
+                    {icons[key]}
+                  </div>
                 </div>
               </div>
+
               <h3 className="text-xl font-bold text-text-primary mb-3">
                 {t(`benefits.${key}.title`)}
               </h3>
-              <p className="text-text-secondary">
+              <p className="text-text-secondary text-sm">
                 {t(`benefits.${key}.description`)}
               </p>
-            </div>
+
+              {/* Number indicator */}
+              <div className="mt-4 text-xs font-mono text-text-muted">
+                0{index + 1}
+              </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
     </Section>
   );

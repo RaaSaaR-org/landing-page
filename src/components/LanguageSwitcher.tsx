@@ -4,11 +4,18 @@ import { useState, useEffect } from 'react';
 
 export default function LanguageSwitcher() {
   const [locale, setLocale] = useState<'de' | 'en'>('de');
+  const [basePath, setBasePath] = useState('');
 
   useEffect(() => {
-    // Get locale from URL path
     const path = window.location.pathname;
-    if (path.startsWith('/en')) {
+
+    // Detect basePath by finding everything before /en or /de (or end of path)
+    const match = path.match(/^(.*?)(?:\/(?:en|de)(?:\/|$)|$)/);
+    const detectedBasePath = match?.[1] || '';
+    setBasePath(detectedBasePath);
+
+    // Check if path contains /en
+    if (path.includes('/en')) {
       setLocale('en');
     } else {
       setLocale('de');
@@ -16,8 +23,8 @@ export default function LanguageSwitcher() {
   }, []);
 
   const handleLanguageChange = (newLocale: 'de' | 'en') => {
-    // Direct navigation to ensure proper locale switching
-    window.location.href = `/${newLocale}`;
+    // Navigate to basePath + locale
+    window.location.href = `${basePath}/${newLocale}`;
   };
 
   return (

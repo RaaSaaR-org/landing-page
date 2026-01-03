@@ -12,6 +12,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [locale, setLocale] = useState<'de' | 'en'>('de');
+  const [basePath, setBasePath] = useState('');
 
   const navLinks = [
     { name: t('features'), href: '#features' },
@@ -29,9 +30,15 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    // Get locale from URL path
     const path = window.location.pathname;
-    if (path.startsWith('/en')) {
+
+    // Detect basePath by finding everything before /en or /de
+    const match = path.match(/^(.*?)(?:\/(?:en|de)(?:\/|$)|$)/);
+    const detectedBasePath = match?.[1] || '';
+    setBasePath(detectedBasePath);
+
+    // Check if path contains /en
+    if (path.includes('/en')) {
       setLocale('en');
     } else {
       setLocale('de');
@@ -54,7 +61,7 @@ export function Header() {
       <nav className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
-          <a href={`/${locale}`}>
+          <a href={`${basePath}/${locale}`}>
             <Logo size={32} showText={true} />
           </a>
 

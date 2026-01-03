@@ -7,105 +7,105 @@
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Bereit für die Roboter-Revolution?",
-    "subtitle": "EU-konforme humanoide Robotik. Zugänglich. Sicher. Skalierbar.",
-    "description": "EmAI ist Ihre Cloud-Plattform für Roboter-Flottenmanagement — humanoide Roboter ohne Kapitalinvestitionen, skalierbar nach Bedarf.",
+    "title": "Humanoide Robotik für die Industrie",
+    "subtitle": "EU-konforme Automatisierung. Skalierbar. Sicher. Servicebasiert.",
+    "description": "EmAI ist die Plattform für Roboter-Flottenmanagement. Humanoide Roboter als Service – ohne Kapitalinvestition.",
     "cta": "Mehr erfahren",
     "ctaSecondary": "Kontakt aufnehmen"
   },
   "problem": {
     "title": "Die Herausforderung",
-    "description": "Unternehmen in Fertigung, Logistik und Lagerhaltung stehen vor großen Veränderungen.",
+    "description": "Unternehmen und öffentliche Einrichtungen stehen vor strukturellen Veränderungen.",
     "challenges": {
       "labor": {
         "title": "Fachkräftemangel",
-        "description": "Die Belegschaft schrumpft, qualifizierte Mitarbeiter sind schwer zu finden"
+        "description": "Qualifiziertes Personal wird zunehmend schwer verfügbar"
       },
       "transition": {
         "title": "Wettbewerbsdruck",
-        "description": "Automatisierung wird zum entscheidenden Faktor – aber der Einstieg ist komplex"
+        "description": "Automatisierung wird zum strategischen Erfolgsfaktor"
       },
       "costs": {
         "title": "Hohe Investitionskosten",
-        "description": "Humanoide Roboter kosten 150.000€+ pro Einheit – zu viel für viele Unternehmen"
+        "description": "Humanoide Roboter erfordern signifikante Kapitalinvestitionen"
       },
       "complexity": {
-        "title": "Aufwändiger Betrieb",
-        "description": "Roboter-Flotten brauchen Spezialwissen für Betrieb und Wartung"
+        "title": "Betriebskomplexität",
+        "description": "Roboter-Flotten erfordern spezialisiertes Know-how"
       }
     }
   },
   "solution": {
     "title": "Die Lösung: Robots as a Service",
-    "description": "EmAI macht humanoide Robotik erschwinglich – ohne Kapitalinvestitionen. Vollständiger Service inklusive.",
+    "description": "EmAI ermöglicht humanoide Robotik ohne Kapitalinvestition. Vollständiger Service inklusive.",
     "benefits": {
       "accessible": {
         "title": "Keine Anschaffungskosten",
-        "description": "Sparen Sie 150.000€+ pro Roboter durch unser Mietmodell"
+        "description": "Servicemodell statt Kapitalinvestition"
       },
       "flexible": {
         "title": "Flexibel skalierbar",
-        "description": "Von 1 bis 1.000+ Roboter – wachsen Sie nach Bedarf"
+        "description": "Von 1 bis 1.000+ Roboter nach Bedarf"
       },
       "expertise": {
         "title": "Schnelle Inbetriebnahme",
-        "description": "In 2-4 Wochen einsatzbereit in Ihrem Betrieb"
+        "description": "Einsatzbereit in 2-4 Wochen"
       },
       "supported": {
         "title": "Rundum-Service",
-        "description": "Wartung, Schulung, Updates – alles inklusive"
+        "description": "Wartung, Schulung und Updates inklusive"
       }
     }
   },
   "concept": {
     "title": "Was ist EmAI?",
-    "subtitle": "Robotik-Management leicht gemacht",
-    "description": "EmAI kombiniert moderne humanoide Robotik mit einer einfachen Verwaltungsplattform – für Unternehmen jeder Größe.",
+    "subtitle": "Robotik-Management für Unternehmen",
+    "description": "EmAI verbindet humanoide Robotik mit einer zentralen Verwaltungsplattform für Unternehmen und öffentliche Einrichtungen.",
     "model": {
       "title": "Das Geschäftsmodell",
       "traditional": "Traditionell: Hohe Investition, Wartungskosten, Veralterung",
-      "raas": "EmAI: Monatliche Gebühr, voller Service, immer aktuell"
+      "raas": "EmAI: Monatliche Gebühr, voller Service, aktuelle Technologie"
     },
     "why": {
       "title": "Warum EmAI?",
       "reasons": {
         "research": {
           "title": "Europäische Qualität",
-          "description": "Entwickelt nach höchsten Qualitätsstandards für industrielle Anforderungen"
+          "description": "Entwickelt nach industriellen Qualitätsstandards"
         },
         "compact": {
-          "title": "EU-konform ab Tag 1",
-          "description": "Vollständige Einhaltung aller EU-Vorschriften und Standards"
+          "title": "EU-konform",
+          "description": "Vollständige Einhaltung europäischer Vorschriften"
         },
         "need": {
-          "title": "Echter Bedarf",
-          "description": "Der Fachkräftemangel schafft konkrete Einsatzfälle in Fertigung und Logistik"
+          "title": "Konkreter Bedarf",
+          "description": "Lösungen für den strukturellen Fachkräftemangel"
         },
         "ecosystem": {
-          "title": "Einfache Verwaltung",
-          "description": "Eine Plattform für Ihren gesamten Roboter-Park"
+          "title": "Zentrale Verwaltung",
+          "description": "Eine Plattform für die gesamte Roboter-Flotte"
         }
       }
     }
   },
   "useCases": {
     "title": "Anwendungsfälle",
-    "subtitle": "Humanoide Robotik für Ihre Branche",
+    "subtitle": "Humanoide Robotik für Ihre Organisation",
     "industrial": {
       "title": "Fertigung",
       "description": "Für produzierende Unternehmen",
       "cases": {
         "manufacturing": {
           "title": "Montage & Produktion",
-          "description": "Automatisierte Produktionslinien, Qualitätskontrolle, Materialhandhabung"
+          "description": "Produktionslinien, Qualitätskontrolle, Materialhandhabung"
         },
         "logistics": {
           "title": "Interne Logistik",
-          "description": "Materialfluss, innerbetrieblicher Transport, Produktionsversorgung"
+          "description": "Materialfluss, Transport, Produktionsversorgung"
         },
         "inspection": {
           "title": "Inspektion & Wartung",
-          "description": "Automatisierte Qualitätsprüfung, Anlagenüberwachung, Sicherheitsinspektionen"
+          "description": "Qualitätsprüfung, Anlagenüberwachung, Sicherheitsinspektionen"
         }
       }
     },
@@ -115,38 +115,38 @@
       "cases": {
         "cleaning": {
           "title": "Kommissionierung",
-          "description": "Autonome Auftragsbearbeitung, Pick-and-Pack, Bestellabwicklung"
+          "description": "Auftragsbearbeitung, Pick-and-Pack, Bestellabwicklung"
         },
         "waste": {
           "title": "Warenhandhabung",
-          "description": "Intelligente Lagerung, Bestandsverwaltung, optimierte Lagerprozesse"
+          "description": "Lagerung, Bestandsverwaltung, Lagerprozesse"
         },
         "infrastructure": {
           "title": "Versand & Verpackung",
-          "description": "Automatisierte Verpackung, Etikettierung und Versandvorbereitung"
+          "description": "Verpackung, Etikettierung, Versandvorbereitung"
         }
       }
     }
   },
   "regional": {
     "title": "Europäische Technologie",
-    "description": "EmAI setzt auf europäische Werte: Qualität, Datenschutz und lokalen Service",
+    "description": "EmAI basiert auf europäischen Standards: Qualität, Datenschutz und lokaler Service.",
     "partners": {
       "dfki": {
         "title": "EU-Konformität",
-        "description": "Vollständige Einhaltung aller europäischen Vorschriften und Sicherheitsstandards"
+        "description": "Einhaltung aller europäischen Vorschriften und Sicherheitsstandards"
       },
       "zema": {
         "title": "Datensouveränität",
-        "description": "Ihre Daten bleiben in Europa – sichere, DSGVO-konforme Infrastruktur"
+        "description": "DSGVO-konforme Infrastruktur in Europa"
       },
       "university": {
         "title": "Lokaler Service",
-        "description": "Persönliche Betreuung vor Ort, schnelle Reaktionszeiten, direkter Ansprechpartner"
+        "description": "Persönliche Betreuung vor Ort mit direktem Ansprechpartner"
       },
       "edih": {
         "title": "EU-Binnenmarkt",
-        "description": "Zugang zu 450 Millionen Verbrauchern mit einheitlichen Standards"
+        "description": "Einheitliche Standards im europäischen Wirtschaftsraum"
       }
     }
   },
@@ -172,61 +172,62 @@
     "title": "Häufig gestellte Fragen",
     "questions": {
       "what": {
-        "q": "Was ist EmAI genau?",
-        "a": "EmAI ist eine Plattform für humanoide Robotik, die fortschrittliche Automatisierung für Unternehmen jeder Größe zugänglich macht. Wir kombinieren eine einfache Verwaltungsplattform mit einem flexiblen Mietmodell: Sie zahlen eine monatliche Gebühr und erhalten humanoide Roboter inklusive Wartung, Updates und Support – ohne Anschaffungskosten von 150.000€+ pro Einheit."
+        "q": "Was ist EmAI?",
+        "a": "EmAI ist eine Plattform für humanoide Robotik. Wir bieten eine zentrale Verwaltungsplattform mit einem servicebasierten Modell: monatliche Gebühr inklusive Roboter, Wartung, Updates und Support – ohne Anschaffungskosten."
       },
       "why": {
         "q": "Warum humanoide Roboter?",
-        "a": "Humanoide Roboter übernehmen Aufgaben, die bisher nur Menschen erledigen konnten. Sie arbeiten in bestehenden Umgebungen ohne Umbau, nutzen vorhandene Werkzeuge und können flexibel eingesetzt werden. Für Fertigung, Logistik und Lagerhaltung bieten sie maximale Flexibilität bei minimaler Anpassung Ihrer Prozesse."
+        "a": "Humanoide Roboter arbeiten in bestehenden Umgebungen ohne Umbau, nutzen vorhandene Werkzeuge und können flexibel eingesetzt werden. Sie bieten maximale Flexibilität bei minimaler Anpassung bestehender Prozesse."
       },
       "cost": {
         "q": "Wie funktioniert das Kostenmodell?",
-        "a": "Sie zahlen eine monatliche Gebühr basierend auf der Anzahl der Roboter und dem Einsatzumfang. Enthalten sind: die Roboter selbst, regelmäßige Wartung, Software-Updates, technischer Support, Versicherung und Schulungen. Keine versteckten Kosten, keine Anfangsinvestition. Die genauen Konditionen stimmen wir individuell auf Ihren Bedarf ab."
+        "a": "Sie zahlen eine monatliche Gebühr basierend auf Anzahl und Einsatzumfang der Roboter. Enthalten sind: Roboter, Wartung, Software-Updates, technischer Support, Versicherung und Schulungen. Die Konditionen werden individuell abgestimmt."
       },
       "timeline": {
-        "q": "Wie schnell kann ich EmAI nutzen?",
-        "a": "Nach einer Bedarfsanalyse erstellen wir einen individuellen Plan. Typische Zeiten bis zur Inbetriebnahme liegen bei 2-4 Wochen. Wir begleiten Sie durch den gesamten Prozess – von der Planung über die Installation bis zur Schulung Ihrer Teams."
+        "q": "Wie schnell ist die Inbetriebnahme?",
+        "a": "Nach der Bedarfsanalyse erstellen wir einen individuellen Plan. Die Inbetriebnahme erfolgt typischerweise in 2-4 Wochen – von der Planung über die Installation bis zur Schulung."
       },
       "jobs": {
-        "q": "Führt Robotik nicht zu Arbeitsplatzverlusten?",
-        "a": "Angesichts des Fachkräftemangels füllen Roboter Lücken, die nicht mehr durch Menschen besetzt werden können. Sie übernehmen repetitive, gefährliche oder körperlich belastende Aufgaben und ermöglichen es Mitarbeitern, sich auf qualifiziertere Tätigkeiten zu konzentrieren. Unser Ziel ist die Ergänzung der Arbeitskraft, nicht deren Ersatz."
+        "q": "Wie wirkt sich Robotik auf Arbeitsplätze aus?",
+        "a": "Roboter füllen Lücken, die durch den Fachkräftemangel entstehen. Sie übernehmen repetitive oder körperlich belastende Aufgaben und ermöglichen es Mitarbeitern, sich auf qualifiziertere Tätigkeiten zu konzentrieren."
       },
       "target": {
-        "q": "Für wen ist EmAI geeignet?",
-        "a": "EmAI richtet sich an Unternehmen in drei Hauptbereichen: (1) Fertigung – von KMUs bis zu großen Produktionsbetrieben für Montage, Qualitätskontrolle und Materialhandhabung. (2) Logistik – für Distributionszentren und Fulfillment-Center. (3) Lagerhaltung – für Kommissionierung, Bestandsmanagement und Warenhandhabung. Das Mietmodell macht Robotik besonders für mittelständische Unternehmen zugänglich."
+        "q": "Für welche Organisationen ist EmAI geeignet?",
+        "a": "EmAI richtet sich an Unternehmen und öffentliche Einrichtungen in drei Bereichen: Fertigung, Logistik und Lagerhaltung. Das Servicemodell eignet sich besonders für Organisationen, die ohne Kapitalinvestition automatisieren möchten."
       },
       "technology": {
-        "q": "Welche Roboter-Technologien nutzt EmAI?",
-        "a": "Wir setzen auf humanoide Roboter der neuesten Generation, die für die Zusammenarbeit mit Menschen entwickelt wurden. Diese Roboter navigieren selbstständig, erkennen und greifen verschiedene Objekte und lernen neue Aufgaben schnell. Unsere Plattform koordiniert den Einsatz, überwacht die Leistung und optimiert kontinuierlich die Abläufe."
+        "q": "Welche Roboter-Technologie wird eingesetzt?",
+        "a": "Wir setzen humanoide Roboter der neuesten Generation ein, die für die Zusammenarbeit mit Menschen entwickelt wurden. Die Plattform koordiniert den Einsatz, überwacht die Leistung und optimiert kontinuierlich die Abläufe."
       },
       "support": {
-        "q": "Welche Unterstützung erhalte ich?",
-        "a": "Der EmAI-Service umfasst Rundum-Betreuung: Bedarfsanalyse und Konzeption, Installation und Integration, Schulung Ihrer Mitarbeiter, laufende Wartung, Support bei Problemen, regelmäßige Updates und kontinuierliche Optimierung. Sie haben einen festen Ansprechpartner für alle Anliegen."
+        "q": "Welche Unterstützung ist enthalten?",
+        "a": "Der Service umfasst: Bedarfsanalyse, Installation, Mitarbeiterschulung, laufende Wartung, technischen Support, Updates und Optimierung. Sie haben einen festen Ansprechpartner."
       }
     }
   },
   "contact": {
     "title": "Kontakt aufnehmen",
-    "subtitle": "Interessiert an humanoider Robotik für Ihr Unternehmen? Lassen Sie uns über Ihre Anforderungen sprechen.",
+    "subtitle": "Sprechen Sie mit uns über Ihre Anforderungen.",
     "form": {
       "name": "Name",
-      "namePlaceholder": "Max Mustermann",
+      "namePlaceholder": "Ihr Name",
       "email": "E-Mail",
-      "emailPlaceholder": "max@beispiel.de",
+      "emailPlaceholder": "ihre.email@organisation.de",
       "organization": "Organisation",
-      "organizationPlaceholder": "Ihr Unternehmen",
-      "orgType": "Branche",
+      "organizationPlaceholder": "Ihre Organisation",
+      "orgType": "Bereich",
       "orgTypes": {
         "industrial": "Fertigung",
         "municipal": "Logistik",
         "research": "Lagerhaltung",
+        "public": "Öffentlicher Sektor",
         "other": "Sonstiges"
       },
       "message": "Nachricht",
-      "messagePlaceholder": "Beschreiben Sie Ihren Anwendungsfall oder stellen Sie Ihre Frage...",
+      "messagePlaceholder": "Beschreiben Sie Ihren Anwendungsfall...",
       "submit": "Anfrage senden",
       "submitting": "Wird gesendet...",
-      "success": "Vielen Dank! Wir melden uns in Kürze bei Ihnen.",
+      "success": "Vielen Dank. Wir melden uns in Kürze.",
       "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
     },
     "validation": {
@@ -238,8 +239,8 @@
     }
   },
   "footer": {
-    "tagline": "Humanoide Robotik. Zugänglich für alle.",
-    "description": "EmAI macht humanoide Robotik für Fertigung, Logistik und Lagerhaltung zugänglich.",
+    "tagline": "Humanoide Robotik für Unternehmen und öffentliche Einrichtungen.",
+    "description": "EmAI bietet humanoide Robotik für Fertigung, Logistik und Lagerhaltung.",
     "links": {
       "company": "Unternehmen",
       "about": "Über uns",

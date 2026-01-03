@@ -7,105 +7,105 @@
     "contact": "Contact"
   },
   "hero": {
-    "title": "Ready for the Robot Revolution?",
-    "subtitle": "EU-compliant humanoid robotics. Accessible. Safe. Scalable.",
-    "description": "EmAI is your robotic fleet management cloud platform — deploy humanoid robots without capital investment, scale on demand.",
+    "title": "Humanoid Robotics for Industry",
+    "subtitle": "EU-compliant automation. Scalable. Secure. Service-based.",
+    "description": "EmAI is the platform for robotic fleet management. Humanoid robots as a service – without capital investment.",
     "cta": "Learn More",
     "ctaSecondary": "Get in Touch"
   },
   "problem": {
     "title": "The Challenge",
-    "description": "Companies in manufacturing, logistics, and warehousing face significant changes.",
+    "description": "Companies and public sector organizations face structural changes.",
     "challenges": {
       "labor": {
         "title": "Labor Shortage",
-        "description": "The workforce is shrinking, qualified employees are hard to find"
+        "description": "Qualified personnel is increasingly difficult to find"
       },
       "transition": {
         "title": "Competitive Pressure",
-        "description": "Automation becomes a decisive factor — but getting started is complex"
+        "description": "Automation becomes a strategic success factor"
       },
       "costs": {
         "title": "High Investment Costs",
-        "description": "Humanoid robots cost €150,000+ per unit — too much for many companies"
+        "description": "Humanoid robots require significant capital investment"
       },
       "complexity": {
-        "title": "Complex Operations",
-        "description": "Robot fleets require specialized knowledge for operation and maintenance"
+        "title": "Operational Complexity",
+        "description": "Robot fleets require specialized expertise"
       }
     }
   },
   "solution": {
     "title": "The Solution: Robots as a Service",
-    "description": "EmAI makes humanoid robotics affordable — without capital investment. Full service included.",
+    "description": "EmAI enables humanoid robotics without capital investment. Full service included.",
     "benefits": {
       "accessible": {
         "title": "No Acquisition Costs",
-        "description": "Save €150,000+ per robot with our rental model"
+        "description": "Service model instead of capital investment"
       },
       "flexible": {
         "title": "Flexibly Scalable",
-        "description": "From 1 to 1,000+ robots — grow as needed"
+        "description": "From 1 to 1,000+ robots as needed"
       },
       "expertise": {
         "title": "Quick Setup",
-        "description": "Operational in your facility within 2-4 weeks"
+        "description": "Operational within 2-4 weeks"
       },
       "supported": {
         "title": "Full Service",
-        "description": "Maintenance, training, updates — all included"
+        "description": "Maintenance, training, and updates included"
       }
     }
   },
   "concept": {
     "title": "What is EmAI?",
-    "subtitle": "Robotics management made simple",
-    "description": "EmAI combines modern humanoid robotics with a simple management platform — for companies of all sizes.",
+    "subtitle": "Robotics management for enterprises",
+    "description": "EmAI combines humanoid robotics with a central management platform for companies and public sector organizations.",
     "model": {
       "title": "The Business Model",
       "traditional": "Traditional: High investment, maintenance costs, obsolescence",
-      "raas": "EmAI: Monthly fee, full service, always up-to-date"
+      "raas": "EmAI: Monthly fee, full service, current technology"
     },
     "why": {
       "title": "Why EmAI?",
       "reasons": {
         "research": {
           "title": "European Quality",
-          "description": "Developed to the highest quality standards for industrial requirements"
+          "description": "Developed to industrial quality standards"
         },
         "compact": {
-          "title": "EU-Compliant from Day 1",
-          "description": "Full compliance with all EU regulations and standards"
+          "title": "EU-Compliant",
+          "description": "Full compliance with European regulations"
         },
         "need": {
-          "title": "Real Demand",
-          "description": "Labor shortage creates concrete use cases in manufacturing and logistics"
+          "title": "Concrete Demand",
+          "description": "Solutions for structural labor shortages"
         },
         "ecosystem": {
-          "title": "Simple Management",
-          "description": "One platform for your entire robot fleet"
+          "title": "Central Management",
+          "description": "One platform for the entire robot fleet"
         }
       }
     }
   },
   "useCases": {
     "title": "Use Cases",
-    "subtitle": "Humanoid Robotics for Your Industry",
+    "subtitle": "Humanoid Robotics for Your Organization",
     "industrial": {
       "title": "Manufacturing",
       "description": "For manufacturing companies",
       "cases": {
         "manufacturing": {
           "title": "Assembly & Production",
-          "description": "Automated production lines, quality control, material handling"
+          "description": "Production lines, quality control, material handling"
         },
         "logistics": {
           "title": "Internal Logistics",
-          "description": "Material flow, internal transport, production supply"
+          "description": "Material flow, transport, production supply"
         },
         "inspection": {
           "title": "Inspection & Maintenance",
-          "description": "Automated quality inspection, facility monitoring, safety inspections"
+          "description": "Quality inspection, facility monitoring, safety inspections"
         }
       }
     },
@@ -115,38 +115,38 @@
       "cases": {
         "cleaning": {
           "title": "Order Picking",
-          "description": "Autonomous order processing, pick-and-pack, order fulfillment"
+          "description": "Order processing, pick-and-pack, order fulfillment"
         },
         "waste": {
           "title": "Goods Handling",
-          "description": "Intelligent storage, inventory management, optimized warehouse processes"
+          "description": "Storage, inventory management, warehouse processes"
         },
         "infrastructure": {
           "title": "Shipping & Packaging",
-          "description": "Automated packaging, labeling, and shipping preparation"
+          "description": "Packaging, labeling, shipping preparation"
         }
       }
     }
   },
   "regional": {
     "title": "European Technology",
-    "description": "EmAI is built on European values: quality, privacy, and local service",
+    "description": "EmAI is built on European standards: quality, privacy, and local service.",
     "partners": {
       "dfki": {
         "title": "EU Compliance",
-        "description": "Full compliance with all European regulations and safety standards"
+        "description": "Compliance with all European regulations and safety standards"
       },
       "zema": {
         "title": "Data Sovereignty",
-        "description": "Your data stays in Europe — secure, GDPR-compliant infrastructure"
+        "description": "GDPR-compliant infrastructure in Europe"
       },
       "university": {
         "title": "Local Service",
-        "description": "Personal on-site support, fast response times, dedicated contact person"
+        "description": "Personal on-site support with dedicated contact person"
       },
       "edih": {
         "title": "EU Single Market",
-        "description": "Access to 450 million consumers with unified standards"
+        "description": "Unified standards across the European Economic Area"
       }
     }
   },
@@ -172,61 +172,62 @@
     "title": "Frequently Asked Questions",
     "questions": {
       "what": {
-        "q": "What exactly is EmAI?",
-        "a": "EmAI is a platform for humanoid robotics that makes advanced automation accessible to companies of all sizes. We combine a simple management platform with a flexible rental model: you pay a monthly fee and receive humanoid robots including maintenance, updates, and support — without acquisition costs of €150,000+ per unit."
+        "q": "What is EmAI?",
+        "a": "EmAI is a platform for humanoid robotics. We offer a central management platform with a service-based model: monthly fee including robots, maintenance, updates, and support – without acquisition costs."
       },
       "why": {
         "q": "Why humanoid robots?",
-        "a": "Humanoid robots take on tasks that previously only humans could perform. They work in existing environments without modification, use existing tools, and can be flexibly deployed. For manufacturing, logistics, and warehousing, they offer maximum flexibility with minimal adaptation of your processes."
+        "a": "Humanoid robots work in existing environments without modification, use existing tools, and can be flexibly deployed. They offer maximum flexibility with minimal adaptation of existing processes."
       },
       "cost": {
         "q": "How does the cost model work?",
-        "a": "You pay a monthly fee based on the number of robots and scope of deployment. Included are: the robots themselves, regular maintenance, software updates, technical support, insurance, and training. No hidden costs, no upfront investment. Exact terms are individually tailored to your needs."
+        "a": "You pay a monthly fee based on number and scope of robot deployment. Included are: robots, maintenance, software updates, technical support, insurance, and training. Terms are individually tailored."
       },
       "timeline": {
-        "q": "How quickly can I use EmAI?",
-        "a": "After a needs analysis, we create an individual plan. Typical setup times are 2-4 weeks. We accompany you through the entire process — from planning through installation to training your teams."
+        "q": "How quickly can deployment happen?",
+        "a": "After needs analysis, we create an individual plan. Deployment typically occurs within 2-4 weeks – from planning through installation to training."
       },
       "jobs": {
-        "q": "Doesn't robotics lead to job losses?",
-        "a": "Given the labor shortage, robots fill gaps that can no longer be filled by humans. They take over repetitive, dangerous, or physically demanding tasks and enable employees to focus on more qualified activities. Our goal is to augment the workforce, not replace it."
+        "q": "How does robotics affect jobs?",
+        "a": "Robots fill gaps created by labor shortages. They take over repetitive or physically demanding tasks and enable employees to focus on more qualified activities."
       },
       "target": {
-        "q": "Who is EmAI suitable for?",
-        "a": "EmAI targets companies in three main areas: (1) Manufacturing — from SMEs to large production facilities for assembly, quality control, and material handling. (2) Logistics — for distribution centers and fulfillment centers. (3) Warehousing — for order picking, inventory management, and goods handling. The rental model makes robotics particularly accessible to mid-sized companies."
+        "q": "Which organizations is EmAI suitable for?",
+        "a": "EmAI targets companies and public sector organizations in three areas: manufacturing, logistics, and warehousing. The service model is particularly suitable for organizations wanting to automate without capital investment."
       },
       "technology": {
-        "q": "What robot technologies does EmAI use?",
-        "a": "We deploy the latest generation of humanoid robots developed for human collaboration. These robots navigate autonomously, recognize and grasp various objects, and learn new tasks quickly. Our platform coordinates deployment, monitors performance, and continuously optimizes operations."
+        "q": "What robot technology is used?",
+        "a": "We deploy the latest generation of humanoid robots developed for human collaboration. The platform coordinates deployment, monitors performance, and continuously optimizes operations."
       },
       "support": {
-        "q": "What support do I receive?",
-        "a": "EmAI service includes full support: needs analysis and conception, installation and integration, employee training, ongoing maintenance, problem support, regular updates, and continuous optimization. You have a dedicated contact person for all matters."
+        "q": "What support is included?",
+        "a": "The service includes: needs analysis, installation, employee training, ongoing maintenance, technical support, updates, and optimization. You have a dedicated contact person."
       }
     }
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "Interested in humanoid robotics for your company? Let's discuss your requirements.",
+    "subtitle": "Discuss your requirements with us.",
     "form": {
       "name": "Name",
-      "namePlaceholder": "John Smith",
+      "namePlaceholder": "Your name",
       "email": "Email",
-      "emailPlaceholder": "john@example.com",
+      "emailPlaceholder": "your.email@organization.com",
       "organization": "Organization",
-      "organizationPlaceholder": "Your Company",
-      "orgType": "Industry",
+      "organizationPlaceholder": "Your Organization",
+      "orgType": "Sector",
       "orgTypes": {
         "industrial": "Manufacturing",
         "municipal": "Logistics",
         "research": "Warehousing",
+        "public": "Public Sector",
         "other": "Other"
       },
       "message": "Message",
-      "messagePlaceholder": "Describe your use case or ask your question...",
+      "messagePlaceholder": "Describe your use case...",
       "submit": "Send Request",
       "submitting": "Sending...",
-      "success": "Thank you! We'll be in touch shortly.",
+      "success": "Thank you. We will be in touch shortly.",
       "error": "An error occurred. Please try again."
     },
     "validation": {
@@ -238,8 +239,8 @@
     }
   },
   "footer": {
-    "tagline": "Humanoid Robotics. Accessible to All.",
-    "description": "EmAI makes humanoid robotics accessible for manufacturing, logistics, and warehousing.",
+    "tagline": "Humanoid robotics for companies and public sector organizations.",
+    "description": "EmAI provides humanoid robotics for manufacturing, logistics, and warehousing.",
     "links": {
       "company": "Company",
       "about": "About Us",

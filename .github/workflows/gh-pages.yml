@@ -37,6 +37,22 @@ jobs:
       - name: Add CNAME for custom domain
         run: echo "emai.dev" > ./out/CNAME
 
+      - name: Add root redirect to German locale
+        run: |
+          cat > ./out/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="de">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=/de">
+            <link rel="canonical" href="/de">
+          </head>
+          <body>
+            <script>window.location.href = "/de";</script>
+          </body>
+          </html>
+          EOF
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

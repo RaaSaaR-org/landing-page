@@ -3,15 +3,10 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
-// Use basePath only in production (GitHub Pages)
-// In development, run at root for easier testing
 const isProduction = process.env.NODE_ENV === "production";
-const basePath = isProduction ? "/landing-page" : "";
 
 const nextConfig: NextConfig = {
   ...(isProduction && { output: "export" }),
-  basePath: basePath,
-  assetPrefix: basePath,
   images: {
     unoptimized: true,
     remotePatterns: [

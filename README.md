@@ -1,6 +1,6 @@
 # EmAI Landing Page
 
-A modern, professional landing page for EmAI - democratizing access to humanoid robotics for German manufacturing, logistics, and warehouse operations. Built with Next.js 15 and full bilingual support (German/English).
+A modern, professional landing page for EmAI - Robots as a Service for German manufacturing, logistics, and warehouse operations. Built with Next.js 15 and full bilingual support (German/English).
 
 ## About EmAI
 
@@ -23,7 +23,6 @@ EmAI offers Robots as a Service (RaaS) for German manufacturing, logistics, and 
 - **Styling**: Tailwind CSS 4
 - **Animations**: Framer Motion
 - **Forms**: React Hook Form + Zod
-- **Analytics**: Google Analytics 4, Hotjar, Vercel Analytics
 - **Language**: TypeScript
 
 ## Installation
@@ -45,10 +44,7 @@ Open [http://localhost:3000](http://localhost:3000)
 Create `.env.local`:
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://emai.de
-NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX
-NEXT_PUBLIC_HOTJAR_ID=
-NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=
+NEXT_PUBLIC_SITE_URL=https://emai.dev
 ```
 
 ## Internationalization

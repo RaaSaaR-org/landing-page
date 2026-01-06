@@ -125,7 +125,7 @@ export default async function LocaleLayout({
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Inquiries',
-      email: 'contact@emai.de',
+      email: 'info@EmAI.dev',
     },
     areaServed: {
       '@type': 'Country',

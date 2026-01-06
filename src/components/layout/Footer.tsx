@@ -54,10 +54,10 @@ export function Footer() {
           <div className="md:text-right">
             <h3 className="text-text-primary font-semibold mb-4">{t('links.contact')}</h3>
             <a
-              href="mailto:contact@emai.de"
+              href="mailto:info@EmAI.dev"
               className="text-sm hover:text-primary-500 transition-colors"
             >
-              contact@emai.de
+              info@EmAI.dev
             </a>
             <p className="text-xs text-primary-500 font-semibold mt-4">
               {t('madeIn')}

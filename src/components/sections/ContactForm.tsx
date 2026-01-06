@@ -27,7 +27,7 @@ export function ContactForm() {
                 </svg>
               </div>
               <p className="text-2xl font-semibold text-text-primary mb-2">
-                contact@emai.de
+                info@EmAI.dev
               </p>
               <p className="text-text-secondary">
                 {t('subtitle')}
@@ -35,7 +35,7 @@ export function ContactForm() {
             </div>
 
             <a
-              href="mailto:contact@emai.de"
+              href="mailto:info@EmAI.dev"
               className="inline-block px-8 py-4 bg-primary-500 text-white rounded-xl font-semibold hover:bg-primary-400 transition-all shadow-lg hover:shadow-orange"
             >
               {t('form.submit')}

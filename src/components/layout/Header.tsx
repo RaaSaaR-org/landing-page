@@ -74,7 +74,7 @@ export function Header() {
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
           <a href={`${basePath}/${locale}`}>
-            <Logo size={32} showText={true} />
+            <Logo size={42} showText={true} />
           </a>
 
           {/* Desktop Navigation */}

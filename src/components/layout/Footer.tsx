@@ -14,7 +14,7 @@ export function Footer() {
           {/* Brand */}
           <div className="max-w-sm">
             <div className="mb-3">
-              <Logo size={32} showText={true} />
+              <Logo size={42} showText={true} />
             </div>
             <p className="text-sm italic text-text-muted mb-4">
               {t('philosophy')}

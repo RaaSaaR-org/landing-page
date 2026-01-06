@@ -150,19 +150,9 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-xl sm:text-2xl md:text-3xl text-text-secondary mb-6 max-w-3xl mx-auto font-light"
+            className="text-xl sm:text-2xl md:text-3xl text-white mb-10 max-w-3xl mx-auto font-light"
           >
             {t('subtitle')}
-          </motion.p>
-
-          {/* Description */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="text-base sm:text-lg text-text-muted mb-10 max-w-2xl mx-auto"
-          >
-            {t('description')}
           </motion.p>
 
           {/* Quick Stats */}

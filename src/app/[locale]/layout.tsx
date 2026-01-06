@@ -118,7 +118,7 @@ export default async function LocaleLayout({
     '@type': 'Organization',
     name: 'EmAI',
     url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
+    logo: `${siteUrl}/logo.svg`,
     description: locale === 'de'
       ? 'EmAI bietet Robots as a Service: humanoide Roboter zur Miete mit eigener Software-Plattform für deutsche Industrie.'
       : 'EmAI offers Robots as a Service: humanoid robots for rent with proprietary software platform for German industry.',

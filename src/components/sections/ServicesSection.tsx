@@ -76,7 +76,7 @@ export function ServicesSection() {
                   href="#contact"
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary-400 hover:text-primary-300 transition-colors"
                 >
-                  <span>{key === 'workshops' ? 'Workshop anfragen' : 'Mehr erfahren'}</span>
+                  <span>{key === 'workshops' ? t('requestWorkshop') : t('learnMore')}</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>

@@ -56,7 +56,9 @@
         "title": "Beratung",
         "description": "Wir helfen Unternehmen einzuschätzen, was heute realistisch ist und was morgen kommt. Strategische Roadmaps, individuelle Bewertungen -- unabhängig und praxisnah."
       }
-    }
+    },
+    "learnMore": "Mehr erfahren",
+    "requestWorkshop": "Workshop anfragen"
   },
   "whyEmai": {
     "title": "Warum EmAI",

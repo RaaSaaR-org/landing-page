@@ -56,7 +56,9 @@
         "title": "Consulting",
         "description": "We help companies figure out what's realistic today and what's coming tomorrow. Strategic roadmaps, individual assessments -- independent and practice-oriented."
       }
-    }
+    },
+    "learnMore": "Learn More",
+    "requestWorkshop": "Request Workshop"
   },
   "whyEmai": {
     "title": "Why EmAI",

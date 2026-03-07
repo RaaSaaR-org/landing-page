@@ -15,9 +15,8 @@ export function Header() {
   const [basePath, setBasePath] = useState('');
 
   const navLinks = [
-    { name: t('features'), href: '#features' },
-    { name: t('useCases'), href: '#use-cases' },
-    { name: t('about'), href: '#about' },
+    { name: t('services'), href: '#services' },
+    { name: t('whyEmai'), href: '#why-emai' },
     { name: t('faq'), href: '#faq' },
   ];
 

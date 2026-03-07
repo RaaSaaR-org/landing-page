@@ -1,213 +1,125 @@
 {
   "nav": {
-    "features": "Features",
-    "useCases": "Use Cases",
-    "about": "About",
+    "services": "What We Do",
+    "whyEmai": "Why EmAI",
     "faq": "FAQ",
     "contact": "Contact"
   },
   "hero": {
-    "title": "Humanoid Robotics for Industry",
-    "subtitle": "EU-compliant automation with our all-in-one platform. Simple. Scalable. Service-based.",
-    "description": "",
-    "cta": "Learn More",
-    "ctaSecondary": "Get in Touch"
+    "badge": "Embodied AI",
+    "title": "Understand Cognitive Robots.",
+    "titleAccent": "Deploy Them Right.",
+    "subtitle": "EmAI helps companies evaluate, test, and productively deploy cognitive robots -- with open knowledge, real data, and a focus on people.",
+    "cta": "Our Services",
+    "ctaSecondary": "Schedule a Call",
+    "pillars": {
+      "openSource": "Open-Source AI",
+      "european": "Made in Europe",
+      "learning": "Learn by Doing"
+    }
   },
   "problem": {
     "title": "The Challenge",
-    "description": "Companies and public sector organizations face structural changes.",
+    "description": "Cognitive robots are becoming more capable and affordable. But most companies have no idea how to evaluate them or what they can realistically do today.",
     "challenges": {
-      "labor": {
-        "title": "Labor Shortage",
-        "description": "Qualified personnel is increasingly difficult to find"
+      "evaluation": {
+        "title": "No Evaluation Framework",
+        "description": "Which robot can do what? Without real-world experience, decisions are a shot in the dark."
       },
-      "transition": {
-        "title": "Competitive Pressure",
-        "description": "Automation becomes a strategic success factor"
+      "access": {
+        "title": "Technology Feels Out of Reach",
+        "description": "AI and robotics seem like topics only for large corporations -- not for mid-sized companies."
       },
-      "costs": {
-        "title": "High Investment Costs",
-        "description": "Humanoid robots require significant capital investment"
-      },
-      "complexity": {
-        "title": "Operational Complexity",
-        "description": "Robot fleets require specialized expertise"
+      "trust": {
+        "title": "No Independent Knowledge",
+        "description": "Manufacturers sell their own solutions. Independent, hands-on data and neutral advice are missing."
       }
     }
   },
-  "solution": {
-    "title": "The Solution: Robots as a Service",
-    "description": "EmAI enables humanoid robotics without capital investment. Full service included.",
-    "benefits": {
-      "accessible": {
-        "title": "No Acquisition Costs",
-        "description": "Service model instead of capital investment"
+  "services": {
+    "title": "What We Do",
+    "subtitle": "We make cognitive robotics tangible -- through practice, data, and knowledge. Robots should assist people, not replace them.",
+    "items": {
+      "testing": {
+        "title": "Real-World Testing",
+        "description": "We test cognitive robots in real industrial environments and systematically evaluate their capabilities: walking, picking, placing, carrying, assembling. What works, what doesn't -- and why."
       },
-      "flexible": {
-        "title": "Flexibly Scalable",
-        "description": "From 1 to 1,000+ robots as needed"
+      "data": {
+        "title": "Data Collection",
+        "description": "Every test builds our knowledge base. Performance data, error rates, energy consumption, practical limits -- we turn hands-on experience into actionable insights. Vendor-independent."
       },
-      "expertise": {
-        "title": "Quick Setup",
-        "description": "Operational within 2-4 weeks"
+      "workshops": {
+        "title": "Workshops & Training",
+        "description": "Hands-on workshops for companies: How do robots learn? How are AI models trained? How do you assess whether automation makes sense for your business?"
       },
-      "supported": {
-        "title": "Full Service",
-        "description": "Maintenance, training, and updates included"
+      "consulting": {
+        "title": "Consulting",
+        "description": "We help companies figure out what's realistic today and what's coming tomorrow. Strategic roadmaps, individual assessments -- independent and practice-oriented."
       }
     }
   },
-  "concept": {
-    "title": "What is EmAI?",
-    "subtitle": "Robotics management for enterprises",
-    "description": "EmAI combines humanoid robotics with a central software platform for fleet management, training, and maintenance.",
-    "model": {
-      "title": "The Business Model",
-      "traditional": "Traditional: High investment, maintenance costs, obsolescence",
-      "raas": "EmAI: Monthly fee, full service, current technology"
-    },
-    "why": {
-      "title": "Why EmAI?",
-      "reasons": {
-        "research": {
-          "title": "European Quality",
-          "description": "Developed to industrial quality standards"
-        },
-        "compact": {
-          "title": "EU-Compliant",
-          "description": "Full compliance with European regulations"
-        },
-        "need": {
-          "title": "Concrete Demand",
-          "description": "Solutions for structural labor shortages"
-        },
-        "ecosystem": {
-          "title": "Central Management",
-          "description": "One software platform for complete control"
-        }
-      }
-    }
-  },
-  "useCases": {
-    "title": "Use Cases",
-    "subtitle": "Humanoid Robotics for Your Organization",
-    "industrial": {
-      "title": "Manufacturing",
-      "description": "For manufacturing companies",
-      "cases": {
-        "manufacturing": {
-          "title": "Assembly & Production",
-          "description": "Production lines, quality control, material handling"
-        },
-        "logistics": {
-          "title": "Internal Logistics",
-          "description": "Material flow, transport, production supply"
-        },
-        "inspection": {
-          "title": "Inspection & Maintenance",
-          "description": "Quality inspection, facility monitoring, safety inspections"
-        }
-      }
-    },
-    "municipal": {
-      "title": "Logistics & Warehouse",
-      "description": "For logistics centers and warehouses",
-      "cases": {
-        "cleaning": {
-          "title": "Order Picking",
-          "description": "Order processing, pick-and-pack, order fulfillment"
-        },
-        "waste": {
-          "title": "Goods Handling",
-          "description": "Storage, inventory management, warehouse processes"
-        },
-        "infrastructure": {
-          "title": "Shipping & Packaging",
-          "description": "Packaging, labeling, shipping preparation"
-        }
-      }
-    }
-  },
-  "regional": {
-    "title": "European Technology",
-    "description": "EmAI is built on European standards: quality, privacy, and local service.",
-    "partners": {
-      "dfki": {
-        "title": "EU Compliance",
-        "description": "Compliance with all European regulations and safety standards"
+  "whyEmai": {
+    "title": "Why EmAI",
+    "subtitle": "Independent. European. Practice-oriented.",
+    "items": {
+      "openSource": {
+        "title": "Open-Source AI",
+        "description": "No vendor lock-in. We rely on open models and share our knowledge. Transparency over dependency."
       },
-      "zema": {
-        "title": "Data Sovereignty",
-        "description": "GDPR-compliant infrastructure in Europe"
+      "sovereignty": {
+        "title": "European Sovereignty",
+        "description": "Data stays in Europe. GDPR-compliant. European values that we share and live by."
       },
-      "university": {
-        "title": "Local Service",
-        "description": "Personal on-site support with dedicated contact person"
+      "learning": {
+        "title": "Learn by Doing",
+        "description": "Every deployment makes us smarter and the next one easier. We learn in practice -- and share that knowledge."
       },
-      "edih": {
-        "title": "EU Single Market",
-        "description": "Unified standards across the European Economic Area"
+      "humanFirst": {
+        "title": "People First",
+        "description": "Robots fill gaps left by labor shortages. They assist people -- they don't replace them."
       }
-    }
-  },
-  "stats": {
-    "businesses": {
-      "value": "€150,000+",
-      "label": "Savings potential per robot"
-    },
-    "jobs": {
-      "value": "2-4",
-      "label": "Weeks to setup"
-    },
-    "researchers": {
-      "value": "1-1,000+",
-      "label": "Robots scalable"
-    },
-    "area": {
-      "value": "100%",
-      "label": "Service included"
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
     "questions": {
-      "what": {
-        "q": "What is EmAI?",
-        "a": "EmAI offers Robots as a Service: humanoid robots for rent with a monthly fee including robots, maintenance, updates, and support – without acquisition costs. Our software platform controls everything centrally."
+      "embodiedAi": {
+        "q": "What is Embodied AI?",
+        "a": "Embodied AI (EmAI) means: artificial intelligence that operates in a physical body -- cognitive robots. Unlike pure software AI, these systems interact directly with the physical world. We help companies understand this technology and use it meaningfully."
       },
-      "why": {
-        "q": "Why humanoid robots?",
-        "a": "Humanoid robots work in existing environments without modification, use existing tools, and can be flexibly deployed. They offer maximum flexibility with minimal adaptation of existing processes."
+      "cognitiveRobots": {
+        "q": "What are cognitive robots?",
+        "a": "Cognitive robots are robots that can learn through AI models, adapt, and work in unstructured environments. They can grasp, carry, assemble, and collaborate with humans -- and are becoming more capable through open AI models."
       },
-      "cost": {
-        "q": "How does the cost model work?",
-        "a": "You pay a monthly fee based on number and scope of robot deployment. Included are: robots, maintenance, software updates, technical support, insurance, and training. Terms are individually tailored."
+      "workshops": {
+        "q": "How do the workshops work?",
+        "a": "Our workshops are hands-on: participants experience cognitive robots in action, understand how AI models are trained, and assess whether automation makes sense for their company. We offer on-site and virtual formats."
       },
-      "timeline": {
-        "q": "How quickly can deployment happen?",
-        "a": "After needs analysis, we create an individual plan. Deployment typically occurs within 2-4 weeks – from planning through installation to training."
+      "dataCollection": {
+        "q": "What data does EmAI collect?",
+        "a": "We collect performance data from real deployments: success rates, error types, energy consumption, cycle times, and practical limits. This data is vendor-independent and helps companies make informed decisions."
       },
-      "jobs": {
-        "q": "How does robotics affect jobs?",
-        "a": "Robots fill gaps created by labor shortages. They take over repetitive or physically demanding tasks and enable employees to focus on more qualified activities."
+      "openSource": {
+        "q": "Why open-source AI?",
+        "a": "Open AI models provide transparency, independence, and community-driven innovation. No vendor lock-in, no proprietary black boxes. Companies keep control over their technology decisions."
       },
-      "target": {
-        "q": "Which organizations is EmAI suitable for?",
-        "a": "EmAI targets companies and public sector organizations in three areas: manufacturing, logistics, and warehousing. The service model is particularly suitable for organizations wanting to automate without capital investment."
+      "humanAssist": {
+        "q": "Do robots replace human jobs?",
+        "a": "No -- cognitive robots fill gaps created by labor shortages. They take over repetitive, physically demanding, or dangerous tasks and enable employees to focus on more qualified, value-adding work. People remain at the center."
       },
-      "technology": {
-        "q": "What robot technology is used?",
-        "a": "We deploy the latest generation of humanoid robots developed for human collaboration. Our software coordinates deployment, monitors performance, and continuously optimizes operations."
+      "consulting": {
+        "q": "What does consulting look like?",
+        "a": "We analyze your processes, evaluate automation needs, and create a realistic roadmap. What's possible today? What's coming in 1-2 years? How do you prepare your company? Independent and vendor-neutral."
       },
-      "support": {
-        "q": "What support is included?",
-        "a": "The service includes: needs analysis, installation, employee training, ongoing maintenance, technical support, updates, and optimization. You have a dedicated contact person."
+      "getStarted": {
+        "q": "How do I get started with EmAI?",
+        "a": "Contact us for a no-obligation conversation. We'll clarify your situation, identify potential, and recommend next steps -- whether that's a workshop, real-world test, or strategic consulting."
       }
     }
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "Discuss your requirements with us.",
+    "subtitle": "Let's talk about cognitive robotics in your organization. Workshop, consulting, or real-world test -- we'll find the right starting point.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Your name",
@@ -217,14 +129,14 @@
       "organizationPlaceholder": "Your Organization",
       "orgType": "Sector",
       "orgTypes": {
-        "industrial": "Manufacturing",
-        "municipal": "Logistics",
-        "research": "Warehousing",
+        "manufacturing": "Manufacturing",
+        "logistics": "Logistics",
+        "research": "Research",
         "public": "Public Sector",
         "other": "Other"
       },
       "message": "Message",
-      "messagePlaceholder": "Describe your use case...",
+      "messagePlaceholder": "Describe your interest in cognitive robotics...",
       "submit": "Send Request",
       "submitting": "Sending...",
       "success": "Thank you. We will be in touch shortly.",
@@ -240,8 +152,8 @@
   },
   "footer": {
     "philosophy": "Am I? We are.",
-    "tagline": "Humanoid robotics for companies and public sector organizations.",
-    "description": "EmAI provides humanoid robotics for manufacturing, logistics, and warehousing.",
+    "tagline": "Understand and deploy cognitive robotics.",
+    "description": "EmAI helps companies understand, evaluate, and productively deploy cognitive robots.",
     "links": {
       "company": "Company",
       "about": "About Us",
@@ -257,7 +169,7 @@
       "terms": "Terms of Service",
       "imprint": "Imprint"
     },
-    "copyright": "© 2025 EmAI. All rights reserved.",
+    "copyright": "© 2026 EmAI. All rights reserved.",
     "madeIn": "Made in Europe"
   },
   "common": {
@@ -426,13 +338,13 @@
         "title": "Contact Form",
         "text": "If you send us inquiries via the contact form, your information from the inquiry form, including the contact data you provide there, will be stored by us for the purpose of processing the inquiry and in case of follow-up questions. We do not pass on this data without your consent.",
         "basis": "The processing of this data is based on Art. 6 para. 1 lit. b GDPR if your request is related to the performance of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of inquiries addressed to us (Art. 6 para. 1 lit. f GDPR) or on your consent (Art. 6 para. 1 lit. a GDPR) if this was requested.",
-        "retention": "The data you enter in the contact form will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions – in particular retention periods – remain unaffected."
+        "retention": "The data you enter in the contact form will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions -- in particular retention periods -- remain unaffected."
       },
       "email": {
         "title": "Inquiry by Email",
         "text": "If you contact us by email, your inquiry, including all resulting personal data (name, inquiry), will be stored and processed by us for the purpose of processing your request. We do not pass on this data without your consent.",
         "basis": "The processing of this data is based on Art. 6 para. 1 lit. b GDPR if your request is related to the performance of a contract or is necessary for the implementation of pre-contractual measures. In all other cases, the processing is based on our legitimate interest in the effective processing of inquiries addressed to us (Art. 6 para. 1 lit. f GDPR) or on your consent (Art. 6 para. 1 lit. a GDPR) if this was requested.",
-        "retention": "The data you send us by email will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions – in particular retention periods – remain unaffected."
+        "retention": "The data you send us by email will remain with us until you request deletion, revoke your consent to storage, or the purpose for data storage no longer applies (e.g., after your request has been processed). Mandatory statutory provisions -- in particular retention periods -- remain unaffected."
       }
     }
   }

@@ -24,16 +24,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: {
       default: isGerman
-        ? 'EmAI - Humanoide Robotik für die deutsche Industrie | Robots as a Service'
-        : 'EmAI - Humanoid Robotics for German Industry | Robots as a Service',
+        ? 'EmAI - Kognitive Robotik verstehen und einsetzen | Embodied AI'
+        : 'EmAI - Understand and Deploy Cognitive Robots | Embodied AI',
       template: '%s | EmAI'
     },
     description: isGerman
-      ? 'EmAI bietet Robots as a Service für deutsche Fertigung, Logistik und Lagerhaltung. Humanoide Roboter zur Miete mit eigener Software-Plattform – einfach, skalierbar, EU-konform.'
-      : 'EmAI offers Robots as a Service for German manufacturing, logistics, and warehouse operations. Humanoid robots for rent with proprietary software platform – simple, scalable, EU-compliant.',
+      ? 'EmAI (Embodied AI) hilft Unternehmen, kognitive Roboter zu verstehen, zu bewerten und produktiv einzusetzen. Praxis-Tests, Datenerhebung, Workshops und Beratung -- unabhängig, europäisch, praxisorientiert.'
+      : 'EmAI (Embodied AI) helps companies understand, evaluate, and productively deploy cognitive robots. Real-world testing, data collection, workshops, and consulting -- independent, European, practice-oriented.',
     keywords: isGerman
-      ? ['Humanoide Robotik', 'Robots as a Service', 'RaaS', 'Industrie 4.0', 'Automatisierung', 'Flottenmanagement', 'Fertigung', 'Logistik', 'Lager', 'Deutsche Industrie']
-      : ['Humanoid Robotics', 'Robots as a Service', 'RaaS', 'Industry 4.0', 'Automation', 'Fleet Management', 'Manufacturing', 'Logistics', 'Warehouse', 'German Industry'],
+      ? ['Kognitive Robotik', 'Embodied AI', 'Open-Source KI', 'Robotik-Beratung', 'Workshops', 'Industrie 4.0', 'Automatisierung', 'Fertigung', 'Logistik', 'Deutsche Industrie', 'Europäische Souveränität']
+      : ['Cognitive Robotics', 'Embodied AI', 'Open-Source AI', 'Robotics Consulting', 'Workshops', 'Industry 4.0', 'Automation', 'Manufacturing', 'Logistics', 'German Industry', 'European Sovereignty'],
     authors: [{ name: 'EmAI' }],
     creator: 'EmAI',
     publisher: 'EmAI',
@@ -54,28 +54,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: siteUrl,
       siteName: 'EmAI',
       title: isGerman
-        ? 'EmAI - Humanoide Robotik. Zugänglich für alle.'
-        : 'EmAI - Humanoid Robotics. Accessible to All.',
+        ? 'EmAI - Kognitive Roboter verstehen. Richtig einsetzen.'
+        : 'EmAI - Understand Cognitive Robots. Deploy Them Right.',
       description: isGerman
-        ? 'Humanoide Roboter zur Miete mit Software-Plattform für Flottenmanagement. Einfach. Skalierbar. EU-konform.'
-        : 'Humanoid robots for rent with software platform for fleet management. Simple. Scalable. EU-compliant.',
+        ? 'Embodied AI für die Industrie. Praxis-Tests, Datenerhebung, Workshops und Beratung für kognitive Robotik.'
+        : 'Embodied AI for industry. Real-world testing, data collection, workshops, and consulting for cognitive robotics.',
       images: [
         {
           url: '/og-image.jpg',
           width: 1200,
           height: 630,
-          alt: 'EmAI - Humanoid Robotics. Accessible to All.',
+          alt: 'EmAI - Embodied AI',
         },
       ],
     },
     twitter: {
       card: 'summary_large_image',
       title: isGerman
-        ? 'EmAI - Humanoide Robotik. Zugänglich für alle.'
-        : 'EmAI - Humanoid Robotics. Accessible to All.',
+        ? 'EmAI - Kognitive Roboter verstehen. Richtig einsetzen.'
+        : 'EmAI - Understand Cognitive Robots. Deploy Them Right.',
       description: isGerman
-        ? 'Robots as a Service für deutsche Industrie. Humanoide Robotik ohne Investitionskosten.'
-        : 'Robots as a Service for German industry. Humanoid robotics without capital investment.',
+        ? 'Embodied AI: Praxis-Tests, Workshops und Beratung für kognitive Robotik in der Industrie.'
+        : 'Embodied AI: Real-world testing, workshops, and consulting for cognitive robotics in industry.',
       images: ['/og-image.jpg'],
       creator: '@emai_robotics',
     },
@@ -120,8 +120,8 @@ export default async function LocaleLayout({
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
     description: locale === 'de'
-      ? 'EmAI bietet Robots as a Service: humanoide Roboter zur Miete mit eigener Software-Plattform für deutsche Industrie.'
-      : 'EmAI offers Robots as a Service: humanoid robots for rent with proprietary software platform for German industry.',
+      ? 'EmAI (Embodied AI) hilft Unternehmen, kognitive Roboter zu verstehen, zu bewerten und einzusetzen -- mit Praxis-Tests, Daten und Workshops.'
+      : 'EmAI (Embodied AI) helps companies understand, evaluate, and deploy cognitive robots -- through real-world testing, data, and workshops.',
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Inquiries',
@@ -132,17 +132,29 @@ export default async function LocaleLayout({
       name: 'Germany',
       addressCountry: 'DE'
     },
-    service: {
-      '@type': 'Service',
-      name: 'Robots as a Service',
-      description: locale === 'de'
-        ? 'Humanoide Robotik für Fertigung, Logistik und Lager ohne Investitionskosten'
-        : 'Humanoid robotics for manufacturing, logistics, and warehouses without capital investment',
-      provider: {
-        '@type': 'Organization',
-        name: 'EmAI',
+    service: [
+      {
+        '@type': 'Service',
+        name: locale === 'de' ? 'Praxis-Tests' : 'Real-World Testing',
+        description: locale === 'de'
+          ? 'Kognitive Roboter in realen Industrieumgebungen testen und bewerten'
+          : 'Testing and evaluating cognitive robots in real industrial environments',
       },
-    },
+      {
+        '@type': 'Service',
+        name: 'Workshops',
+        description: locale === 'de'
+          ? 'Hands-on Workshops zu kognitiver Robotik und KI für Unternehmen'
+          : 'Hands-on workshops on cognitive robotics and AI for companies',
+      },
+      {
+        '@type': 'Service',
+        name: locale === 'de' ? 'Beratung' : 'Consulting',
+        description: locale === 'de'
+          ? 'Strategische Beratung für den Einsatz kognitiver Roboter'
+          : 'Strategic consulting for deploying cognitive robots',
+      },
+    ],
   };
 
   return (

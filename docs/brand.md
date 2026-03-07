@@ -1,33 +1,33 @@
-# **EmAI – Brand Guide**
+# **EmAI -- Brand Guide**
 
-A complete, professional brand identity system for the EmAI platform and RoboFleet ecosystem.
+A complete, professional brand identity system for EmAI (Embodied AI).
 
 ---
 
-# 🤖 **1. Brand Essence**
+# 1. Brand Essence
 
-## **Brand Mission**
+## Brand Mission
 
-EmAI democratizes access to humanoid robotics for German manufacturing, logistics, and warehouse operations — making advanced automation accessible through intelligent fleet management and flexible rental models.
+EmAI (Embodied AI) helps companies understand and use cognitive robots powered by open-source AI. We bring robots into real environments, collect real-world data on what works, and share that knowledge -- through testing, workshops, and consulting.
 
-## **Brand Personality**
+## Brand Personality
 
 - Industrial and dependable
 - Intelligent, but approachable
-- Safety-conscious and trustworthy
+- Knowledge-sharing and transparent
 - Professional and enterprise-ready
 - Warm and human-centric
 - Bold yet grounded
 
-## **Brand Keywords**
+## Brand Keywords
 
-Humanoid Robotics · Fleet Management · RaaS · Manufacturing · Logistics · Safety · Automation · Intelligence · Accessibility · German Engineering · Connected · Cooperative
+Cognitive Robotics -- Embodied AI -- Open-Source AI -- Workshops -- Consulting -- Real-World Testing -- Data Collection -- Manufacturing -- Logistics -- European Sovereignty -- Human-Assist -- Knowledge Sharing
 
 ---
 
-# 🎨 **2. Logo System**
+# 2. Logo System
 
-## **Logo Concept**
+## Logo Concept
 
 The EmAI logo combines:
 
@@ -35,26 +35,25 @@ The EmAI logo combines:
 - **Neural/circuit elements** (representing AI intelligence)
 - **Industrial precision** (representing manufacturing reliability)
 
-## **Logo Variations**
+## Logo Variations
 
 - **Primary Logo:** Icon + Wordmark ("EmAI")
 - **Secondary Logo:** Icon only
 - **Monochrome Version:** White for dark backgrounds, dark for light contexts
 - **App Icon:** Square format, simplified symbol
-- **Sub-brands:** RoboFleet, RoboRent, SaaRaaR — each with consistent styling
 
-## **Logo Usage Rules**
+## Logo Usage Rules
 
 - Minimum clear space: height of the letter "E"
 - Avoid distortion, rotations, filters, and busy backgrounds
-- Use brand colors only — Orange accent on dark backgrounds preferred
+- Use brand colors only -- Orange accent on dark backgrounds preferred
 - The orange glow effect may be applied subtly to digital logo variants
 
 ---
 
-# 🎨 **3. Colors**
+# 3. Colors
 
-## **Primary Palette — Orange Range**
+## Primary Palette -- Orange Range
 
 | Name                | Hex       | RGB                | Usage                                 |
 | ------------------- | --------- | ------------------ | ------------------------------------- |
@@ -63,7 +62,7 @@ The EmAI logo combines:
 | Orange Light        | `#FF8534` | `rgb(255,133,52)`  | Hover states, links                   |
 | Orange Lighter      | `#FFA366` | `rgb(255,163,102)` | Subtle accents, disabled states       |
 
-## **Background Palette — Neutral Dark**
+## Background Palette -- Neutral Dark
 
 | Name          | Hex       | Usage                                 |
 | ------------- | --------- | ------------------------------------- |
@@ -73,7 +72,7 @@ The EmAI logo combines:
 | Border        | `#3D3D3D` | Visible borders, dividers             |
 | Border Subtle | `#2A2A2A` | Subtle separators, card outlines      |
 
-## **Text Palette — Warm Grays**
+## Text Palette -- Warm Grays
 
 | Name             | Hex       | Usage                          |
 | ---------------- | --------- | ------------------------------ |
@@ -81,40 +80,40 @@ The EmAI logo combines:
 | Text Secondary   | `#A8A29E` | Body text, descriptions        |
 | Text Muted       | `#78716C` | Captions, labels, placeholders |
 
-## **Secondary Accent — Teal**
+## Secondary Accent -- Teal
 
 | Name            | Hex       | Usage                                   |
 | --------------- | --------- | --------------------------------------- |
 | **Teal Accent** | `#2DD4BF` | Secondary actions, AI elements, variety |
 
-## **Status Colors**
+## Status Colors
 
 | Name    | Hex       | Background                  | Usage             |
 | ------- | --------- | --------------------------- | ----------------- |
 | Success | `#4ADE80` | `rgba(74, 222, 128, 0.15)`  | Confirmations, OK |
-| Error   | `#F87171` | `rgba(248, 113, 113, 0.15)` | Errors, E-Stop    |
+| Error   | `#F87171` | `rgba(248, 113, 113, 0.15)` | Errors, alerts    |
 | Warning | `#FBBF24` | `rgba(251, 191, 36, 0.15)`  | Warnings, caution |
 
-## **Usage Ratios**
+## Usage Ratios
 
-- Dark neutrals (60%) — backgrounds, surfaces
-- Orange (20%) — brand moments, CTAs, key metrics
-- Warm grays (15%) — text, subtle elements
-- Teal + Status (5%) — accents, feedback states
+- Dark neutrals (60%) -- backgrounds, surfaces
+- Orange (20%) -- brand moments, CTAs, key metrics
+- Warm grays (15%) -- text, subtle elements
+- Teal + Status (5%) -- accents, feedback states
 
 ---
 
-# ✍️ **4. Typography**
+# 4. Typography
 
-## **Primary Typefaces**
+## Primary Typefaces
 
-**Headline Font:** System UI / -apple-system, BlinkMacSystemFont, 'Segoe UI' — SemiBold/Bold
+**Headline Font:** Space Grotesk -- SemiBold/Bold
 
-**Body Font:** System UI — Regular
+**Body Font:** Space Grotesk -- Regular
 
 **Monospace (Technical UI):** JetBrains Mono, 'SF Mono', Consolas
 
-## **Hierarchy**
+## Hierarchy
 
 | Element | Size       | Weight | Color              | Line Height |
 | ------- | ---------- | ------ | ------------------ | ----------- |
@@ -126,35 +125,34 @@ The EmAI logo combines:
 | Caption | `0.875rem` | 400    | `--text-muted`     | 1.5         |
 | Label   | `0.8rem`   | 500    | `--text-muted`     | 1.4         |
 
-## **Tone**
+## Tone
 
 Professional, clear, concise. Technical but human-readable. Warm and supportive, never cold or corporate.
 
 ---
 
-# 🧩 **5. Iconography**
+# 5. Iconography
 
-## **Style**
+## Style
 
-- Line-based with 2px stroke weight
+- Line-based with 1.5-2px stroke weight
 - Rounded corners (2-4px radius on corners)
 - Orange glow for active/selected states
 - Centered, minimal, functional
 
-## **Key Icons**
+## Key Icons
 
-- Humanoid robot silhouette
-- Fleet/group indicator
-- Battery status
-- Alert/warning bell
-- Task list/checklist
-- Map/location pin
-- Telemetry/sensor data
-- Emergency stop
-- Maintenance wrench
-- Connection status
+- Neural network / brain
+- Microscope / testing
+- Database / data collection
+- People group / workshops
+- Compass / consulting roadmap
+- Shield / European sovereignty
+- Code brackets / open-source
+- Circular arrows / learning loop
+- Human-robot collaboration
 
-## **Icon Containers**
+## Icon Containers
 
 ```css
 /* Standard icon container */
@@ -174,83 +172,84 @@ color: var(--accent-secondary);
 
 ---
 
-# 📸 **6. Imagery Style**
+# 6. Imagery Style
 
-## **Photography**
+## Photography
 
 - Clean manufacturing floors, warehouses, logistics centers
-- Humanoid robots in motion or collaborative poses with workers
-- Technicians and operators using tablets/interfaces
-- German industrial settings — precision, cleanliness, order
-- Warm, professional lighting — never cold or sterile
+- Cognitive robots working alongside humans -- collaborative, not threatening
+- Technicians and operators learning with robots
+- German/European industrial settings -- precision, cleanliness, order
+- Warm, professional lighting -- never cold or sterile
 
-## **Illustrations**
+## Illustrations
 
-- Simplified humanoid robot silhouettes
-- Fleet visualization maps with orange path indicators
-- Dashboard mockups and telemetry widgets
-- Safety zone overlays and simulation previews
-- Isometric warehouse/factory layouts
+- Neural network visualizations
+- Data flow and knowledge graphs
+- Workshop/training scenarios
+- Human-robot collaboration diagrams
+- Circuit-board and AI-themed patterns
 
-## **Do / Don't**
+## Do / Don't
 
-- ✔ Use warm lighting, clean industrial environments
-- ✔ Show robots as collaborative tools, not replacements
-- ✔ Include human operators in scenes
-- ✔ Use orange accents to highlight key elements
-- ✘ Avoid cold, blue-tinted "sci-fi" aesthetics
-- ✘ Avoid threatening or intimidating robot poses
-- ✘ Avoid cluttered or chaotic environments
-- ✘ Avoid stock photos that feel generic or American
+- Use warm lighting, clean industrial environments
+- Show robots as collaborative tools assisting humans
+- Include human operators in scenes -- humans are central
+- Use orange accents to highlight key elements
+- Avoid cold, blue-tinted "sci-fi" aesthetics
+- Avoid threatening or intimidating robot poses
+- Avoid imagery suggesting robots replace human workers
+- Avoid stock photos that feel generic or American
 
 ---
 
-# 🧠 **7. Brand Voice**
+# 7. Brand Voice
 
-## **Voice Attributes**
+## Voice Attributes
 
-- **Confident** — but never arrogant
-- **Clear and helpful** — direct communication
-- **Intelligent** — but not overly technical
-- **Safety-first** — always reassuring
-- **Warm** — human-centric, supportive
-- **German precision** — reliable, thorough
+- **Knowledgeable** -- we share what we learn
+- **Clear and helpful** -- direct communication
+- **Independent** -- not selling a specific product
+- **Human-first** -- robots assist, they don't replace
+- **Warm** -- human-centric, supportive
+- **European** -- reliable, thorough, sovereign
 
-## **Examples**
+## Examples
 
 **Good:**
 
-- "Robot G1-04 is ready. Battery at 92%. No maintenance required."
-- "Fleet deployment complete. All 5 units operational."
-- "Safety check passed. Robot cleared for Zone A operations."
+- "We tested three robots in a real warehouse. Here's what actually works."
+- "Our workshops help you understand what cognitive robots can do -- and what they can't."
+- "Every deployment teaches us something new. We share that knowledge with you."
 
 **Not good:**
 
-- "CRITICAL: Robot battery depleted. Initiate immediate corrective action protocol."
-- "Unit offline. Error code 0x4F2A. Contact support."
+- "Our AI-powered robots will replace your workforce and cut costs by 80%."
+- "Proprietary technology that only we can maintain and support."
 
-## **Messaging Principles**
+## Messaging Principles
 
-- Lead with status, not problems
+- Lead with knowledge, not sales
 - Use plain language, avoid jargon
-- Be specific — include numbers and details
-- Acknowledge the human in the loop
+- Be specific -- include real data and practical insights
+- Always emphasize the human in the loop
+- Stress independence and transparency
 
 ---
 
-# 🖥️ **8. UI / UX System**
+# 8. UI / UX System
 
-## **Core UI Style**
+## Core UI Style
 
-- Dark theme only — designed for industrial environments
-- Generous spacing for touch-friendly interfaces
-- Rounded corners (8–16px)
+- Dark theme only -- designed for professional environments
+- Generous spacing for readability
+- Rounded corners (8-16px)
 - Subtle surface elevation through border and shadow
 - Orange accents used sparingly for maximum impact
 
-## **Key UI Components**
+## Key UI Components
 
-### **Robot Cards**
+### Cards
 
 ```css
 background: var(--surface);
@@ -264,7 +263,7 @@ transform: translateY(-4px);
 box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
 ```
 
-### **Primary Buttons**
+### Primary Buttons
 
 ```css
 background: var(--caltrans-orange);
@@ -280,7 +279,7 @@ transform: translateY(-2px);
 box-shadow: 0 4px 12px rgba(255, 103, 0, 0.3);
 ```
 
-### **Form Inputs**
+### Form Inputs
 
 ```css
 background: var(--surface);
@@ -294,38 +293,7 @@ border-color: var(--caltrans-orange);
 box-shadow: 0 0 0 3px var(--orange-bg);
 ```
 
-### **Stat Cards**
-
-```css
-background: var(--surface);
-padding: 1.5rem;
-border-radius: 12px;
-border: 1px solid var(--border-subtle);
-
-/* Value */
-font-size: 2.5rem;
-font-weight: 700;
-color: var(--caltrans-orange);
-```
-
-### **Progress Bars**
-
-```css
-/* Track */
-height: 8px;
-background: var(--surface-elevated);
-border-radius: 4px;
-
-/* Fill */
-background: linear-gradient(
-  90deg,
-  var(--orange-dark),
-  var(--caltrans-orange),
-  var(--orange-light)
-);
-```
-
-### **Alerts**
+### Alerts
 
 ```css
 padding: 1rem 1.25rem;
@@ -338,120 +306,64 @@ gap: 0.75rem;
 
 ---
 
-# ⚠️ **9. Safety Design Rules**
+# 9. Taglines & Messaging
 
-## **Color-Coded Safety System**
+## Primary Tagline
 
-| Level     | Color        | Hex       | Usage                         |
-| --------- | ------------ | --------- | ----------------------------- |
-| Emergency | Red          | `#F87171` | E-Stop, critical alerts       |
-| Warning   | Yellow/Amber | `#FBBF24` | Caution, maintenance needed   |
-| Info      | Orange       | `#FF6700` | Informational, status updates |
-| Success   | Green        | `#4ADE80` | All clear, operation complete |
+**"Kognitive Robotik. Verstehen. Einsetzen."**
+**"Cognitive Robotics. Understand. Deploy."**
 
-## **Emergency Stop Design**
+## Alternative Taglines
 
-```css
-/* E-Stop Button */
-background: #f87171;
-color: white;
-padding: 1rem 2rem;
-border-radius: 8px;
-font-weight: 700;
-text-transform: uppercase;
-box-shadow: 0 4px 12px rgba(248, 113, 113, 0.4);
+- "We learn by doing -- real environments, real data."
+- "Making cognitive robotics accessible through knowledge."
+- "Open-source AI, no vendor lock-in, European sovereignty."
+- "Every deployment makes us smarter and the next one easier."
+- "Robots assist humans -- they don't replace them."
 
-/* Always visible, never hidden */
-/* Label: "EMERGENCY STOP" or "NOT-AUS" (German) */
-```
+## Value Propositions
 
-## **Safety UI Principles**
-
-- Emergency controls always visible and accessible
-- Status indicators use consistent color coding
-- Critical alerts interrupt workflow appropriately
-- Safety zones visualized clearly on maps
-- Human oversight indicators always present
-- Audit trail and logging visualized for compliance
+- Independent, vendor-neutral knowledge about cognitive robots
+- Real-world testing data from actual industrial deployments
+- Hands-on workshops that demystify AI and robotics
+- Strategic consulting for realistic automation roadmaps
+- Open-source AI -- no vendor lock-in
+- European data sovereignty and GDPR compliance
 
 ---
 
-# ✨ **10. Taglines & Messaging**
+# 10. Brand Applications
 
-## **Primary Tagline**
+## Digital Applications
 
-**"Humanoid Robotics. Accessible to All."**
-
-## **Product-Specific Taglines**
-
-**RoboFleet:**
-"Your entire robot fleet. One intelligent platform."
-
-**RoboRent:**
-"Enterprise robotics without the capital investment."
-
-**SaaRaaR:**
-"Cooperative robotics for the Saarland region."
-
-## **Alternative Taglines**
-
-- "Industrial automation, human control."
-- "From warehouse to factory floor — your robots, your way."
-- "The intelligent platform for embodied AI."
-- "German engineering meets accessible robotics."
-- "Rent. Deploy. Scale. Repeat."
-
-## **Value Propositions**
-
-- Eliminate €150K+ upfront robot investments
-- 2-4 week deployment cycles
-- All-inclusive service: maintenance, training, compliance
-- EU-compliant from day one
-- Scale from 1 to 1000+ robots
-
----
-
-# 🧩 **11. Brand Applications**
-
-## **Digital Applications**
-
-- RoboFleet web dashboard
-- Mobile fleet management app
-- Robot status displays (on-device UI)
 - Marketing website and landing pages
-- Product demo environments
+- Workshop presentation materials
+- Data reports and insights dashboards
+- Newsletter and thought leadership content
 
-## **Print & Physical**
+## Print & Physical
 
 - Trade show materials (Automatica, LogiMAT)
-- Technical documentation
-- Safety signage and labels
-- Robot identification badges
-- Cooperative membership materials
+- Workshop handouts and training materials
+- Technical documentation and reports
+- Business cards and corporate stationery
 
-## **Presentation Templates**
-
-- Investor pitch decks
-- Customer proposals
-- Training materials
-- Regulatory compliance documentation
-
-## **Visual Consistency Checklist**
+## Visual Consistency Checklist
 
 Always maintain:
 
-- ✔ Dark backgrounds with warm neutrals
-- ✔ Orange accents used strategically (CTAs, metrics, highlights)
-- ✔ Clean, industrial aesthetic
-- ✔ Human-robot collaboration imagery
-- ✔ Safety-first visual hierarchy
-- ✔ German/EU context awareness
+- Dark backgrounds with warm neutrals
+- Orange accents used strategically (CTAs, highlights)
+- Clean, industrial aesthetic
+- Human-robot collaboration imagery (humans central)
+- European context awareness
+- Knowledge-sharing and transparency tone
 
 ---
 
-# 📐 **12. Spacing & Layout**
+# 11. Spacing & Layout
 
-## **Spacing Scale (4px base)**
+## Spacing Scale (4px base)
 
 | Token | Value           | Usage           |
 | ----- | --------------- | --------------- |
@@ -462,7 +374,7 @@ Always maintain:
 | xl    | `2rem` (32px)   | Large gaps      |
 | 2xl   | `4rem` (64px)   | Section margins |
 
-## **Border Radius**
+## Border Radius
 
 | Token | Value   | Usage                         |
 | ----- | ------- | ----------------------------- |
@@ -472,7 +384,7 @@ Always maintain:
 | xl    | `16px`  | Large cards, modals           |
 | full  | `999px` | Pills, badges, avatars        |
 
-## **Container**
+## Container
 
 ```css
 max-width: 1200px;
@@ -480,7 +392,7 @@ margin: 0 auto;
 padding: 2rem;
 ```
 
-## **Grid System**
+## Grid System
 
 ```css
 display: grid;
@@ -490,7 +402,7 @@ gap: 1.5rem;
 
 ---
 
-# 🔧 **13. Complete CSS Variables**
+# 12. Complete CSS Variables
 
 ```css
 :root {
@@ -541,34 +453,37 @@ gap: 1.5rem;
 
 ---
 
-# 🏁 **14. Brand Summary**
+# 13. Brand Summary
 
-EmAI represents **accessible, intelligent, trustworthy humanoid robotics** for German industry.
+EmAI represents **accessible, independent, knowledge-driven cognitive robotics** for European industry.
 
 The brand combines:
 
-- **Industrial warmth** — Caltrans Orange signals safety, visibility, and action
-- **Professional reliability** — Dark, neutral foundations convey enterprise readiness
-- **Human-centric design** — Warm grays and clear typography prioritize the operator
-- **German engineering values** — Precision, thoroughness, compliance-first approach
+- **Industrial warmth** -- Caltrans Orange signals visibility and action
+- **Professional reliability** -- Dark, neutral foundations convey enterprise readiness
+- **Human-centric design** -- Warm grays and clear typography prioritize the operator
+- **European values** -- Sovereignty, transparency, open-source, GDPR compliance
+- **Knowledge sharing** -- Every deployment builds knowledge we share openly
 
 Every touchpoint should reinforce:
 
-> "We make advanced robotics accessible, safe, and manageable — so you can focus on what matters."
+> "We help you understand cognitive robots and deploy them right -- so your people can focus on what matters."
 
 ---
 
-# 📋 **15. Usage Notes for AI Agents**
+# 14. Usage Notes for AI Agents
 
 When generating UI components or design assets for EmAI:
 
-1. **Always use CSS variables** — Never hardcode hex values
-2. **Orange is the hero** — Use sparingly for CTAs, highlights, key metrics
-3. **Teal is secondary** — Use for variety without competing with orange
-4. **Respect the hierarchy** — Primary text for headings, secondary for body, muted for labels
-5. **Transitions matter** — All interactive elements need smooth transitions
-6. **Dark theme only** — This palette is designed for dark backgrounds
-7. **Warm neutrals** — Grays are stone-based, not blue-based
-8. **Focus accessibility** — Always include visible focus states with orange glow
-9. **Safety first** — Status colors must be used consistently
-10. **German context** — Consider bilingual labels (EN/DE) where appropriate
+1. **Always use CSS variables** -- Never hardcode hex values
+2. **Orange is the hero** -- Use sparingly for CTAs, highlights, key metrics
+3. **Teal is secondary** -- Use for variety without competing with orange
+4. **Respect the hierarchy** -- Primary text for headings, secondary for body, muted for labels
+5. **Transitions matter** -- All interactive elements need smooth transitions
+6. **Dark theme only** -- This palette is designed for dark backgrounds
+7. **Warm neutrals** -- Grays are stone-based, not blue-based
+8. **Focus accessibility** -- Always include visible focus states with orange glow
+9. **Human-first messaging** -- Robots assist and fill gaps, never replace
+10. **Use "kognitive Roboter"** -- Not "humanoide Roboter"
+11. **German context** -- Consider bilingual labels (DE/EN) where appropriate
+12. **Knowledge-first** -- Lead with what we know, not what we sell

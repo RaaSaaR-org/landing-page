@@ -1,20 +1,21 @@
 # EmAI Landing Page
 
-A modern, professional landing page for EmAI - Robots as a Service for German manufacturing, logistics, and warehouse operations. Built with Next.js 15 and full bilingual support (German/English).
+A modern, professional landing page for EmAI (Embodied AI) -- helping companies understand and deploy cognitive robots. Built with Next.js 15 and full bilingual support (German/English).
 
 ## About EmAI
 
-EmAI offers Robots as a Service (RaaS) for German manufacturing, logistics, and warehouse operations. We rent humanoid robots to businesses with a complete service package including our proprietary software platform for fleet management, training, reporting, security, and maintenance. Simple. Scalable. EU-compliant.
+EmAI (Embodied AI) helps companies understand and use cognitive robots powered by open-source AI. We bring robots into real environments, collect real-world data on what works (and what doesn't), and share that knowledge through testing, workshops, and consulting. Independent. European. Practice-oriented.
 
 ## Features
 
 - **Bilingual Support** - Full German/English i18n with language switcher
 - **Dark Theme** - Professional dark UI with orange accents
-- **Hero Section** - Compelling introduction to EmAI's mission
-- **Problem/Solution** - Addressing German industry challenges
-- **Use Cases** - Manufacturing, logistics, and warehouse applications
-- **FAQ** - Answers to practical questions about RaaS implementation
-- **Contact Form** - Inquiry capture with industry type selection
+- **Hero Section** - Compelling introduction to Embodied AI
+- **Problem Section** - Why companies struggle to evaluate cognitive robots
+- **Services** - Real-world testing, data collection, workshops, consulting
+- **Why EmAI** - Open-source AI, European sovereignty, human-first approach
+- **FAQ** - Answers to questions about cognitive robotics and our services
+- **Contact** - Inquiry capture for workshops, consulting, and testing
 
 ## Tech Stack
 
@@ -22,7 +23,6 @@ EmAI offers Robots as a Service (RaaS) for German manufacturing, logistics, and 
 - **i18n**: next-intl (German/English)
 - **Styling**: Tailwind CSS 4
 - **Animations**: Framer Motion
-- **Forms**: React Hook Form + Zod
 - **Language**: TypeScript
 
 ## Installation
@@ -66,7 +66,7 @@ npm start
 - **Primary Color**: #FF6700 (Caltrans Orange)
 - **Secondary Color**: #2DD4BF (Teal)
 - **Background**: #141414 (Dark base)
-- **Font**: System UI
+- **Font**: Space Grotesk
 - **Theme**: Dark only
 
 ## License

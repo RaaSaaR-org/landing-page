@@ -401,3 +401,47 @@ input[type="range"]:focus::-moz-range-thumb {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+/* ============================================
+   Neural Network Animations (Hero)
+   ============================================ */
+
+@keyframes neural-pulse {
+  0%, 100% {
+    stroke-dashoffset: 24;
+    opacity: 0.1;
+  }
+  50% {
+    stroke-dashoffset: 0;
+    opacity: 0.5;
+  }
+}
+
+.animate-neural-pulse {
+  animation: neural-pulse 4s ease-in-out infinite;
+}
+
+@keyframes node-glow {
+  0%, 100% {
+    r: 2;
+    opacity: 0.2;
+  }
+  50% {
+    r: 5;
+    opacity: 0.7;
+  }
+}
+
+.animate-node-glow {
+  animation: node-glow 3s ease-in-out infinite;
+}
+
+/* Shield border animation for Why EmAI section */
+@keyframes shield-dash {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 200; }
+}
+
+.animate-shield-dash {
+  animation: shield-dash 20s linear infinite;
+}

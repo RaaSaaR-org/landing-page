@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Container, Section } from '@/components/layout';
 import { useTranslations } from 'next-intl';
 
-const faqKeys = ['what', 'why', 'cost', 'timeline', 'jobs', 'target', 'technology', 'support'];
+const faqKeys = ['embodiedAi', 'cognitiveRobots', 'workshops', 'dataCollection', 'openSource', 'humanAssist', 'consulting', 'getStarted'];
 
 export function FAQ() {
   const t = useTranslations('faq');
@@ -15,27 +15,18 @@ export function FAQ() {
     <Section id="faq" background="base">
       <Container>
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-16"
-          >
+          <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
               {t('title')}
             </h2>
             <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-400 mx-auto rounded-full" />
-          </motion.div>
+          </div>
 
           <div className="space-y-4">
             {faqKeys.map((key, index) => (
-              <motion.div
+              <div
                 key={key}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.05 }}
-                className={`rounded-xl overflow-hidden glass transition-all ${
+                className={`rounded-xl overflow-hidden glass transition-shadow ${
                   openIndex === index
                     ? 'shadow-[0_0_30px_rgba(255,103,0,0.15)]'
                     : ''
@@ -99,7 +90,7 @@ export function FAQ() {
                     </motion.div>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

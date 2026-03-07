@@ -1,213 +1,125 @@
 {
   "nav": {
-    "features": "Leistungen",
-    "useCases": "Anwendungsfälle",
-    "about": "Über uns",
+    "services": "Was wir tun",
+    "whyEmai": "Warum EmAI",
     "faq": "FAQ",
     "contact": "Kontakt"
   },
   "hero": {
-    "title": "Humanoide Robotik für die Industrie",
-    "subtitle": "EU-konforme Automatisierung mit unserer All-in-One Plattform. Einfach. Skalierbar. Servicebasiert.",
-    "description": "",
-    "cta": "Mehr erfahren",
-    "ctaSecondary": "Kontakt aufnehmen"
+    "badge": "Embodied AI",
+    "title": "Kognitive Roboter verstehen.",
+    "titleAccent": "Richtig einsetzen.",
+    "subtitle": "EmAI hilft Unternehmen, die Fähigkeiten kognitiver Roboter zu bewerten, zu testen und produktiv einzusetzen -- mit offenem Wissen, echten Daten und dem Fokus auf den Menschen.",
+    "cta": "Unsere Leistungen",
+    "ctaSecondary": "Gespräch vereinbaren",
+    "pillars": {
+      "openSource": "Open-Source KI",
+      "european": "Made in Europe",
+      "learning": "Learning by Doing"
+    }
   },
   "problem": {
     "title": "Die Herausforderung",
-    "description": "Unternehmen und öffentliche Einrichtungen stehen vor strukturellen Veränderungen.",
+    "description": "Kognitive Roboter werden leistungsfähiger und erschwinglicher. Aber den meisten Unternehmen fehlt das Wissen, um sie richtig einzuschätzen.",
     "challenges": {
-      "labor": {
-        "title": "Fachkräftemangel",
-        "description": "Qualifiziertes Personal wird zunehmend schwer verfügbar"
+      "evaluation": {
+        "title": "Fehlende Bewertungsgrundlage",
+        "description": "Welcher Roboter kann was? Ohne eigene Erfahrungswerte sind Entscheidungen ein Blindflug."
       },
-      "transition": {
-        "title": "Wettbewerbsdruck",
-        "description": "Automatisierung wird zum strategischen Erfolgsfaktor"
+      "access": {
+        "title": "Technologie fühlt sich unerreichbar an",
+        "description": "KI und Robotik wirken wie Themen nur für Großkonzerne -- nicht für den Mittelstand."
       },
-      "costs": {
-        "title": "Hohe Investitionskosten",
-        "description": "Humanoide Roboter erfordern signifikante Kapitalinvestitionen"
-      },
-      "complexity": {
-        "title": "Betriebskomplexität",
-        "description": "Roboter-Flotten erfordern spezialisiertes Know-how"
+      "trust": {
+        "title": "Kein unabhängiges Wissen",
+        "description": "Hersteller verkaufen ihre Lösung. Unabhängige, praxisnahe Daten und neutrale Beratung fehlen."
       }
     }
   },
-  "solution": {
-    "title": "Die Lösung: Robots as a Service",
-    "description": "EmAI ermöglicht humanoide Robotik ohne Kapitalinvestition. Vollständiger Service inklusive.",
-    "benefits": {
-      "accessible": {
-        "title": "Keine Anschaffungskosten",
-        "description": "Servicemodell statt Kapitalinvestition"
+  "services": {
+    "title": "Was wir tun",
+    "subtitle": "Wir machen kognitive Robotik greifbar -- durch Praxis, Daten und Wissen. Roboter sollen Menschen unterstützen, nicht ersetzen.",
+    "items": {
+      "testing": {
+        "title": "Praxis-Tests",
+        "description": "Wir testen kognitive Roboter in realen Industrieumgebungen und bewerten systematisch ihre Fähigkeiten: Laufen, Greifen, Platzieren, Tragen, Montieren. Was funktioniert, was nicht -- und warum."
       },
-      "flexible": {
-        "title": "Flexibel skalierbar",
-        "description": "Von 1 bis 1.000+ Roboter nach Bedarf"
+      "data": {
+        "title": "Datenerhebung",
+        "description": "Jeder Test baut unsere Wissensbasis aus. Leistungsdaten, Fehlerquoten, Energieverbrauch, praktische Grenzen -- wir verwandeln Praxiserfahrung in verwertbare Erkenntnisse. Herstellerunabhängig."
       },
-      "expertise": {
-        "title": "Schnelle Inbetriebnahme",
-        "description": "Einsatzbereit in 2-4 Wochen"
+      "workshops": {
+        "title": "Workshops & Schulung",
+        "description": "Hands-on Workshops für Unternehmen: Wie lernen Roboter? Wie werden KI-Modelle trainiert? Wie beurteilt man, ob Automatisierung für das eigene Geschäft sinnvoll ist?"
       },
-      "supported": {
-        "title": "Rundum-Service",
-        "description": "Wartung, Schulung und Updates inklusive"
+      "consulting": {
+        "title": "Beratung",
+        "description": "Wir helfen Unternehmen einzuschätzen, was heute realistisch ist und was morgen kommt. Strategische Roadmaps, individuelle Bewertungen -- unabhängig und praxisnah."
       }
     }
   },
-  "concept": {
-    "title": "Was ist EmAI?",
-    "subtitle": "Robotik-Management für Unternehmen",
-    "description": "EmAI verbindet humanoide Robotik mit einer zentralen Software-Plattform für Flottenmanagement, Schulung und Wartung.",
-    "model": {
-      "title": "Das Geschäftsmodell",
-      "traditional": "Traditionell: Hohe Investition, Wartungskosten, Veralterung",
-      "raas": "EmAI: Monatliche Gebühr, voller Service, aktuelle Technologie"
-    },
-    "why": {
-      "title": "Warum EmAI?",
-      "reasons": {
-        "research": {
-          "title": "Europäische Qualität",
-          "description": "Entwickelt nach industriellen Qualitätsstandards"
-        },
-        "compact": {
-          "title": "EU-konform",
-          "description": "Vollständige Einhaltung europäischer Vorschriften"
-        },
-        "need": {
-          "title": "Konkreter Bedarf",
-          "description": "Lösungen für den strukturellen Fachkräftemangel"
-        },
-        "ecosystem": {
-          "title": "Zentrale Verwaltung",
-          "description": "Eine Software-Plattform für die komplette Steuerung"
-        }
-      }
-    }
-  },
-  "useCases": {
-    "title": "Anwendungsfälle",
-    "subtitle": "Humanoide Robotik für Ihre Organisation",
-    "industrial": {
-      "title": "Fertigung",
-      "description": "Für produzierende Unternehmen",
-      "cases": {
-        "manufacturing": {
-          "title": "Montage & Produktion",
-          "description": "Produktionslinien, Qualitätskontrolle, Materialhandhabung"
-        },
-        "logistics": {
-          "title": "Interne Logistik",
-          "description": "Materialfluss, Transport, Produktionsversorgung"
-        },
-        "inspection": {
-          "title": "Inspektion & Wartung",
-          "description": "Qualitätsprüfung, Anlagenüberwachung, Sicherheitsinspektionen"
-        }
-      }
-    },
-    "municipal": {
-      "title": "Logistik & Lager",
-      "description": "Für Logistikzentren und Lagerhäuser",
-      "cases": {
-        "cleaning": {
-          "title": "Kommissionierung",
-          "description": "Auftragsbearbeitung, Pick-and-Pack, Bestellabwicklung"
-        },
-        "waste": {
-          "title": "Warenhandhabung",
-          "description": "Lagerung, Bestandsverwaltung, Lagerprozesse"
-        },
-        "infrastructure": {
-          "title": "Versand & Verpackung",
-          "description": "Verpackung, Etikettierung, Versandvorbereitung"
-        }
-      }
-    }
-  },
-  "regional": {
-    "title": "Europäische Technologie",
-    "description": "EmAI basiert auf europäischen Standards: Qualität, Datenschutz und lokaler Service.",
-    "partners": {
-      "dfki": {
-        "title": "EU-Konformität",
-        "description": "Einhaltung aller europäischen Vorschriften und Sicherheitsstandards"
+  "whyEmai": {
+    "title": "Warum EmAI",
+    "subtitle": "Unabhängig. Europäisch. Praxisorientiert.",
+    "items": {
+      "openSource": {
+        "title": "Open-Source KI",
+        "description": "Kein Vendor Lock-in. Wir setzen auf offene Modelle und teilen unser Wissen. Transparenz statt Abhängigkeit."
       },
-      "zema": {
-        "title": "Datensouveränität",
-        "description": "DSGVO-konforme Infrastruktur in Europa"
+      "sovereignty": {
+        "title": "Europäische Souveränität",
+        "description": "Daten bleiben in Europa. DSGVO-konform. Europäische Werte, die wir teilen und leben."
       },
-      "university": {
-        "title": "Lokaler Service",
-        "description": "Persönliche Betreuung vor Ort mit direktem Ansprechpartner"
+      "learning": {
+        "title": "Learning by Doing",
+        "description": "Jeder Einsatz macht uns schlauer und den nächsten einfacher. Wir lernen in der Praxis -- und geben dieses Wissen weiter."
       },
-      "edih": {
-        "title": "EU-Binnenmarkt",
-        "description": "Einheitliche Standards im europäischen Wirtschaftsraum"
+      "humanFirst": {
+        "title": "Mensch im Mittelpunkt",
+        "description": "Roboter füllen Lücken, die der Fachkräftemangel hinterlässt. Sie unterstützen Menschen -- sie ersetzen sie nicht."
       }
-    }
-  },
-  "stats": {
-    "businesses": {
-      "value": "150.000€+",
-      "label": "Einsparpotential pro Roboter"
-    },
-    "jobs": {
-      "value": "2-4",
-      "label": "Wochen bis zur Inbetriebnahme"
-    },
-    "researchers": {
-      "value": "1-1.000+",
-      "label": "Roboter skalierbar"
-    },
-    "area": {
-      "value": "100%",
-      "label": "Service inklusive"
     }
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "questions": {
-      "what": {
-        "q": "Was ist EmAI?",
-        "a": "EmAI bietet Robots as a Service: humanoide Roboter zur Miete mit monatlicher Gebühr inklusive Roboter, Wartung, Updates und Support – ohne Anschaffungskosten. Unsere Software-Plattform steuert alles zentral."
+      "embodiedAi": {
+        "q": "Was ist Embodied AI?",
+        "a": "Embodied AI (EmAI) bedeutet: Künstliche Intelligenz, die in einem physischen Körper agiert -- also kognitive Roboter. Im Gegensatz zu reiner Software-KI interagieren diese Systeme direkt mit der physischen Welt. Wir helfen Unternehmen, diese Technologie zu verstehen und sinnvoll einzusetzen."
       },
-      "why": {
-        "q": "Warum humanoide Roboter?",
-        "a": "Humanoide Roboter arbeiten in bestehenden Umgebungen ohne Umbau, nutzen vorhandene Werkzeuge und können flexibel eingesetzt werden. Sie bieten maximale Flexibilität bei minimaler Anpassung bestehender Prozesse."
+      "cognitiveRobots": {
+        "q": "Was sind kognitive Roboter?",
+        "a": "Kognitive Roboter sind Roboter, die durch KI-Modelle lernen, sich anpassen und in unstrukturierten Umgebungen arbeiten können. Sie können greifen, tragen, montieren und mit Menschen zusammenarbeiten -- und werden durch offene KI-Modelle ständig leistungsfähiger."
       },
-      "cost": {
-        "q": "Wie funktioniert das Kostenmodell?",
-        "a": "Sie zahlen eine monatliche Gebühr basierend auf Anzahl und Einsatzumfang der Roboter. Enthalten sind: Roboter, Wartung, Software-Updates, technischer Support, Versicherung und Schulungen. Die Konditionen werden individuell abgestimmt."
+      "workshops": {
+        "q": "Wie funktionieren die Workshops?",
+        "a": "Unsere Workshops sind praxisorientiert: Teilnehmer erleben kognitive Roboter im Einsatz, verstehen wie KI-Modelle trainiert werden und bewerten, ob Automatisierung für ihr Unternehmen sinnvoll ist. Wir bieten Workshops vor Ort und als virtuelle Formate an."
       },
-      "timeline": {
-        "q": "Wie schnell ist die Inbetriebnahme?",
-        "a": "Nach der Bedarfsanalyse erstellen wir einen individuellen Plan. Die Inbetriebnahme erfolgt typischerweise in 2-4 Wochen – von der Planung über die Installation bis zur Schulung."
+      "dataCollection": {
+        "q": "Welche Daten erhebt EmAI?",
+        "a": "Wir erheben Leistungsdaten aus realen Einsätzen: Erfolgsquoten, Fehlerarten, Energieverbrauch, Zykluszeiten und praktische Grenzen. Diese Daten sind herstellerunabhängig und helfen Unternehmen, fundierte Entscheidungen zu treffen."
       },
-      "jobs": {
-        "q": "Wie wirkt sich Robotik auf Arbeitsplätze aus?",
-        "a": "Roboter füllen Lücken, die durch den Fachkräftemangel entstehen. Sie übernehmen repetitive oder körperlich belastende Aufgaben und ermöglichen es Mitarbeitern, sich auf qualifiziertere Tätigkeiten zu konzentrieren."
+      "openSource": {
+        "q": "Warum Open-Source KI?",
+        "a": "Offene KI-Modelle bieten Transparenz, Unabhängigkeit und Community-getriebene Innovation. Kein Vendor Lock-in, keine proprietären Blackboxes. Unternehmen behalten die Kontrolle über ihre Technologie-Entscheidungen."
       },
-      "target": {
-        "q": "Für welche Organisationen ist EmAI geeignet?",
-        "a": "EmAI richtet sich an Unternehmen und öffentliche Einrichtungen in drei Bereichen: Fertigung, Logistik und Lagerhaltung. Das Servicemodell eignet sich besonders für Organisationen, die ohne Kapitalinvestition automatisieren möchten."
+      "humanAssist": {
+        "q": "Ersetzen Roboter menschliche Arbeitsplätze?",
+        "a": "Nein -- kognitive Roboter füllen Lücken, die durch den Fachkräftemangel entstehen. Sie übernehmen repetitive, körperlich belastende oder gefährliche Aufgaben und ermöglichen es Mitarbeitern, sich auf qualifiziertere und wertschöpfendere Tätigkeiten zu konzentrieren. Der Mensch bleibt im Mittelpunkt."
       },
-      "technology": {
-        "q": "Welche Roboter-Technologie wird eingesetzt?",
-        "a": "Wir setzen humanoide Roboter der neuesten Generation ein, die für die Zusammenarbeit mit Menschen entwickelt wurden. Unsere Software koordiniert den Einsatz, überwacht die Leistung und optimiert kontinuierlich die Abläufe."
+      "consulting": {
+        "q": "Wie sieht eine Beratung aus?",
+        "a": "Wir analysieren Ihre Prozesse, bewerten den Automatisierungsbedarf und erstellen eine realistische Roadmap. Was ist heute möglich? Was kommt in 1-2 Jahren? Wie bereiten Sie Ihr Unternehmen vor? Unabhängig und herstellerneutral."
       },
-      "support": {
-        "q": "Welche Unterstützung ist enthalten?",
-        "a": "Der Service umfasst: Bedarfsanalyse, Installation, Mitarbeiterschulung, laufende Wartung, technischen Support, Updates und Optimierung. Sie haben einen festen Ansprechpartner."
+      "getStarted": {
+        "q": "Wie starte ich mit EmAI?",
+        "a": "Kontaktieren Sie uns für ein unverbindliches Gespräch. Wir klären Ihre Ausgangslage, identifizieren Potentiale und empfehlen nächste Schritte -- ob Workshop, Praxis-Test oder strategische Beratung."
       }
     }
   },
   "contact": {
     "title": "Kontakt aufnehmen",
-    "subtitle": "Sprechen Sie mit uns über Ihre Anforderungen.",
+    "subtitle": "Lassen Sie uns über kognitive Robotik in Ihrem Unternehmen sprechen. Workshop, Beratung oder Praxis-Test -- wir finden den richtigen Einstieg.",
     "form": {
       "name": "Name",
       "namePlaceholder": "Ihr Name",
@@ -217,14 +129,14 @@
       "organizationPlaceholder": "Ihre Organisation",
       "orgType": "Bereich",
       "orgTypes": {
-        "industrial": "Fertigung",
-        "municipal": "Logistik",
-        "research": "Lagerhaltung",
+        "manufacturing": "Fertigung",
+        "logistics": "Logistik",
+        "research": "Forschung",
         "public": "Öffentlicher Sektor",
         "other": "Sonstiges"
       },
       "message": "Nachricht",
-      "messagePlaceholder": "Beschreiben Sie Ihren Anwendungsfall...",
+      "messagePlaceholder": "Beschreiben Sie Ihr Interesse an kognitiver Robotik...",
       "submit": "Anfrage senden",
       "submitting": "Wird gesendet...",
       "success": "Vielen Dank. Wir melden uns in Kürze.",
@@ -240,8 +152,8 @@
   },
   "footer": {
     "philosophy": "Am I? We are.",
-    "tagline": "Humanoide Robotik für Unternehmen und öffentliche Einrichtungen.",
-    "description": "EmAI bietet humanoide Robotik für Fertigung, Logistik und Lagerhaltung.",
+    "tagline": "Kognitive Robotik verstehen und einsetzen.",
+    "description": "EmAI hilft Unternehmen, kognitive Roboter zu verstehen, zu bewerten und produktiv einzusetzen.",
     "links": {
       "company": "Unternehmen",
       "about": "Über uns",
@@ -257,7 +169,7 @@
       "terms": "AGB",
       "imprint": "Impressum"
     },
-    "copyright": "© 2025 EmAI. Alle Rechte vorbehalten.",
+    "copyright": "© 2026 EmAI. Alle Rechte vorbehalten.",
     "madeIn": "Made in Europe"
   },
   "common": {

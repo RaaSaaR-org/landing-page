@@ -14,11 +14,15 @@ export function Header() {
   const [locale, setLocale] = useState<'de' | 'en'>('de');
   const [basePath, setBasePath] = useState('');
 
+  // Anchor links resolved against the localized home page so they also work
+  // from sub-pages like /de/impressum or /de/datenschutz.
+  const homeHref = `${basePath}/${locale}`;
   const navLinks = [
-    { name: t('services'), href: '#services' },
-    { name: t('whyEmai'), href: '#why-emai' },
-    { name: t('faq'), href: '#faq' },
+    { name: t('services'), href: `${homeHref}#services` },
+    { name: t('whyEmai'), href: `${homeHref}#why-emai` },
+    { name: t('faq'), href: `${homeHref}#faq` },
   ];
+  const contactHref = `${homeHref}#contact`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -90,7 +94,7 @@ export function Header() {
             ))}
             <LanguageSwitcher />
             <a
-              href="#contact"
+              href={contactHref}
               onClick={() => trackCTAClick(t('contact'), 'header')}
               className="ml-2 px-6 py-2.5 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-all font-medium shadow-md hover:shadow-orange whitespace-nowrap"
             >
@@ -147,7 +151,7 @@ export function Header() {
                 <LanguageSwitcher />
               </div>
               <a
-                href="#contact"
+                href={contactHref}
                 onClick={() => {
                   trackCTAClick(t('contact'), 'mobile_header');
                   setIsMobileMenuOpen(false);

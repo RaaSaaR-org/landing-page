@@ -6,6 +6,15 @@ import { Header, Footer, Section, Container } from '@/components/layout';
 export default function ImpressumPage() {
   const t = useTranslations('impressum');
 
+  // Optional sections are hidden until the corresponding i18n keys have content.
+  const legalForm = t('company.legalForm');
+  const phone = t('contact.phone');
+  const registerCourt = t('register.court');
+  const registerNumber = t('register.number');
+  const hasRegister = Boolean(registerCourt || registerNumber);
+  const vatNumber = t('vat.number');
+  const hasVat = Boolean(vatNumber);
+
   return (
     <>
       <Header />
@@ -26,7 +35,7 @@ export default function ImpressumPage() {
                   </h2>
                   <div className="text-text-secondary space-y-1">
                     <p>{t('company.name')}</p>
-                    <p>{t('company.legalForm')}</p>
+                    {legalForm && <p>{legalForm}</p>}
                     <p>{t('company.street')}</p>
                     <p>{t('company.city')}</p>
                     <p>{t('company.country')}</p>
@@ -39,7 +48,7 @@ export default function ImpressumPage() {
                     {t('contact.title')}
                   </h2>
                   <div className="text-text-secondary space-y-1">
-                    <p>{t('contact.phone')}</p>
+                    {phone && <p>{phone}</p>}
                     <p>{t('contact.email')}</p>
                   </div>
                 </section>
@@ -53,26 +62,30 @@ export default function ImpressumPage() {
                 </section>
 
                 {/* Register */}
-                <section>
-                  <h2 className="text-xl font-semibold text-text-primary mb-4">
-                    {t('register.title')}
-                  </h2>
-                  <div className="text-text-secondary space-y-1">
-                    <p>{t('register.court')}</p>
-                    <p>{t('register.number')}</p>
-                  </div>
-                </section>
+                {hasRegister && (
+                  <section>
+                    <h2 className="text-xl font-semibold text-text-primary mb-4">
+                      {t('register.title')}
+                    </h2>
+                    <div className="text-text-secondary space-y-1">
+                      {registerCourt && <p>{registerCourt}</p>}
+                      {registerNumber && <p>{registerNumber}</p>}
+                    </div>
+                  </section>
+                )}
 
                 {/* VAT */}
-                <section>
-                  <h2 className="text-xl font-semibold text-text-primary mb-4">
-                    {t('vat.title')}
-                  </h2>
-                  <div className="text-text-secondary space-y-1">
-                    <p>{t('vat.text')}</p>
-                    <p>{t('vat.number')}</p>
-                  </div>
-                </section>
+                {hasVat && (
+                  <section>
+                    <h2 className="text-xl font-semibold text-text-primary mb-4">
+                      {t('vat.title')}
+                    </h2>
+                    <div className="text-text-secondary space-y-1">
+                      <p>{t('vat.text')}</p>
+                      <p>{vatNumber}</p>
+                    </div>
+                  </section>
+                )}
 
                 {/* Responsible for Content */}
                 <section>

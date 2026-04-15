@@ -185,37 +185,37 @@
     "subtitle": "Information according to § 5 DDG (German Digital Services Act)",
     "company": {
       "title": "Provider",
-      "name": "[COMPANY NAME]",
-      "legalForm": "[LEGAL FORM, e.g., GmbH]",
-      "street": "[STREET ADDRESS]",
-      "city": "[POSTAL CODE CITY]",
+      "name": "EmAI Robotics GmbH",
+      "legalForm": "",
+      "street": "Halbergstraße 4",
+      "city": "66121 Saarbrücken",
       "country": "Germany"
     },
     "contact": {
       "title": "Contact",
-      "phone": "Phone: [PHONE]",
-      "email": "Email: [EMAIL]"
+      "phone": "",
+      "email": "Email: info@EmAI.dev"
     },
     "representation": {
       "title": "Authorized Representatives",
-      "text": "Managing Director: [MANAGING DIRECTOR]"
+      "text": "Managing Director: Florian Fromm"
     },
     "register": {
       "title": "Commercial Register",
-      "court": "Registration Court: [REGISTRATION COURT]",
-      "number": "Registration Number: [REGISTRATION NUMBER]"
+      "court": "",
+      "number": ""
     },
     "vat": {
       "title": "VAT ID",
-      "text": "VAT Identification Number according to § 27a of the German VAT Act:",
-      "number": "[VAT ID]"
+      "text": "",
+      "number": ""
     },
     "responsible": {
       "title": "Responsible for Content",
       "subtitle": "according to § 18 para. 2 MStV (German Interstate Media Treaty)",
-      "name": "[NAME]",
-      "street": "[STREET ADDRESS]",
-      "city": "[POSTAL CODE CITY]"
+      "name": "Florian Fromm",
+      "street": "Halbergstraße 4",
+      "city": "66121 Saarbrücken"
     },
     "dispute": {
       "title": "Dispute Resolution",
@@ -286,11 +286,11 @@
       "controller": {
         "title": "Information about the Responsible Party",
         "text": "The responsible party for data processing on this website is:",
-        "company": "[COMPANY NAME]",
-        "street": "[STREET ADDRESS]",
-        "city": "[POSTAL CODE CITY]",
-        "phone": "Phone: [PHONE]",
-        "email": "Email: [EMAIL]",
+        "company": "EmAI Robotics GmbH",
+        "street": "Halbergstraße 4",
+        "city": "66121 Saarbrücken",
+        "phone": "",
+        "email": "Email: info@EmAI.dev",
         "note": "The responsible party is the natural or legal person who alone or jointly with others decides on the purposes and means of processing personal data (e.g., names, email addresses, etc.)."
       },
       "retention": {

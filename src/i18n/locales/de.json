@@ -185,37 +185,37 @@
     "subtitle": "Angaben gemäß § 5 DDG",
     "company": {
       "title": "Anbieter",
-      "name": "[FIRMENNAME]",
-      "legalForm": "[RECHTSFORM, z.B. GmbH]",
-      "street": "[STRASSE HAUSNUMMER]",
-      "city": "[PLZ ORT]",
+      "name": "EmAI Robotics GmbH",
+      "legalForm": "",
+      "street": "Halbergstraße 4",
+      "city": "66121 Saarbrücken",
       "country": "Deutschland"
     },
     "contact": {
       "title": "Kontakt",
-      "phone": "Telefon: [TELEFON]",
-      "email": "E-Mail: [E-MAIL]"
+      "phone": "",
+      "email": "E-Mail: info@EmAI.dev"
     },
     "representation": {
       "title": "Vertretungsberechtigte",
-      "text": "Geschäftsführer: [GESCHÄFTSFÜHRER]"
+      "text": "Geschäftsführer: Florian Fromm"
     },
     "register": {
       "title": "Registereintrag",
-      "court": "Registergericht: [REGISTERGERICHT]",
-      "number": "Registernummer: [HANDELSREGISTERNUMMER]"
+      "court": "",
+      "number": ""
     },
     "vat": {
       "title": "Umsatzsteuer-ID",
-      "text": "Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:",
-      "number": "[UST-IDNR]"
+      "text": "",
+      "number": ""
     },
     "responsible": {
       "title": "Verantwortlich für den Inhalt",
       "subtitle": "gemäß § 18 Abs. 2 MStV",
-      "name": "[NAME]",
-      "street": "[STRASSE HAUSNUMMER]",
-      "city": "[PLZ ORT]"
+      "name": "Florian Fromm",
+      "street": "Halbergstraße 4",
+      "city": "66121 Saarbrücken"
     },
     "dispute": {
       "title": "Streitschlichtung",
@@ -286,11 +286,11 @@
       "controller": {
         "title": "Hinweis zur verantwortlichen Stelle",
         "text": "Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:",
-        "company": "[FIRMENNAME]",
-        "street": "[STRASSE HAUSNUMMER]",
-        "city": "[PLZ ORT]",
-        "phone": "Telefon: [TELEFON]",
-        "email": "E-Mail: [E-MAIL]",
+        "company": "EmAI Robotics GmbH",
+        "street": "Halbergstraße 4",
+        "city": "66121 Saarbrücken",
+        "phone": "",
+        "email": "E-Mail: info@EmAI.dev",
         "note": "Verantwortliche Stelle ist die natürliche oder juristische Person, die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten (z. B. Namen, E-Mail-Adressen o. Ä.) entscheidet."
       },
       "retention": {

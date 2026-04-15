@@ -137,7 +137,7 @@ export default function DatenschutzPage() {
                         <p>{t('general.controller.company')}</p>
                         <p>{t('general.controller.street')}</p>
                         <p>{t('general.controller.city')}</p>
-                        <p>{t('general.controller.phone')}</p>
+                        {t('general.controller.phone') && <p>{t('general.controller.phone')}</p>}
                         <p>{t('general.controller.email')}</p>
                       </div>
                       <p className="text-text-muted text-sm mt-3">{t('general.controller.note')}</p>

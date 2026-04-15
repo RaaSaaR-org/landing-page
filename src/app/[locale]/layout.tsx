@@ -24,16 +24,16 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     metadataBase: new URL(siteUrl),
     title: {
       default: isGerman
-        ? 'EmAI - Kognitive Robotik verstehen und einsetzen | Embodied AI'
-        : 'EmAI - Understand and Deploy Cognitive Robots | Embodied AI',
+        ? 'EmAI - Physical AI Beratung für Unternehmen | Embodied AI'
+        : 'EmAI - Physical AI Consulting for Business | Embodied AI',
       template: '%s | EmAI'
     },
     description: isGerman
-      ? 'EmAI (Embodied AI) hilft Unternehmen, kognitive Roboter zu verstehen, zu bewerten und produktiv einzusetzen. Praxis-Tests, Datenerhebung, Workshops und Beratung -- unabhängig, europäisch, praxisorientiert.'
-      : 'EmAI (Embodied AI) helps companies understand, evaluate, and productively deploy cognitive robots. Real-world testing, data collection, workshops, and consulting -- independent, European, practice-oriented.',
+      ? 'EmAI Robotics hilft Unternehmen, Physical AI erfolgreich einzusetzen -- mit strategischer Beratung, Praxis-Tests, Workshops und neutraler Bewertung. Unabhängig, europäisch, praxisorientiert.'
+      : 'EmAI Robotics helps businesses successfully adopt Physical AI -- through strategic consulting, real-world testing, workshops, and neutral assessment. Independent, European, practice-oriented.',
     keywords: isGerman
-      ? ['Kognitive Robotik', 'Embodied AI', 'Open-Source KI', 'Robotik-Beratung', 'Workshops', 'Industrie 4.0', 'Automatisierung', 'Fertigung', 'Logistik', 'Deutsche Industrie', 'Europäische Souveränität']
-      : ['Cognitive Robotics', 'Embodied AI', 'Open-Source AI', 'Robotics Consulting', 'Workshops', 'Industry 4.0', 'Automation', 'Manufacturing', 'Logistics', 'German Industry', 'European Sovereignty'],
+      ? ['Physical AI', 'Physical AI Beratung', 'Kognitive Robotik', 'Embodied AI', 'Open-Source KI', 'Robotik-Beratung', 'Workshops', 'Industrie 4.0', 'Automatisierung', 'Fertigung', 'Logistik', 'Europäische Souveränität']
+      : ['Physical AI', 'Physical AI Consulting', 'Cognitive Robotics', 'Embodied AI', 'Open-Source AI', 'Robotics Consulting', 'Workshops', 'Industry 4.0', 'Automation', 'Manufacturing', 'Logistics', 'European Sovereignty'],
     authors: [{ name: 'EmAI' }],
     creator: 'EmAI',
     publisher: 'EmAI',
@@ -54,11 +54,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       url: siteUrl,
       siteName: 'EmAI',
       title: isGerman
-        ? 'EmAI - Kognitive Roboter verstehen. Richtig einsetzen.'
-        : 'EmAI - Understand Cognitive Robots. Deploy Them Right.',
+        ? 'EmAI - Physical AI erfolgreich einsetzen.'
+        : 'EmAI - Make Physical AI Work.',
       description: isGerman
-        ? 'Embodied AI für die Industrie. Praxis-Tests, Datenerhebung, Workshops und Beratung für kognitive Robotik.'
-        : 'Embodied AI for industry. Real-world testing, data collection, workshops, and consulting for cognitive robotics.',
+        ? 'Ihr unabhängiger Beratungspartner für Physical AI. Strategie, Praxis-Tests, Workshops und neutrale Bewertung für kognitive Robotik.'
+        : 'Your independent consulting partner for Physical AI. Strategy, real-world testing, workshops, and neutral assessment for cognitive robotics.',
       images: [
         {
           url: '/og-image.jpg',
@@ -71,11 +71,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     twitter: {
       card: 'summary_large_image',
       title: isGerman
-        ? 'EmAI - Kognitive Roboter verstehen. Richtig einsetzen.'
-        : 'EmAI - Understand Cognitive Robots. Deploy Them Right.',
+        ? 'EmAI - Physical AI erfolgreich einsetzen.'
+        : 'EmAI - Make Physical AI Work.',
       description: isGerman
-        ? 'Embodied AI: Praxis-Tests, Workshops und Beratung für kognitive Robotik in der Industrie.'
-        : 'Embodied AI: Real-world testing, workshops, and consulting for cognitive robotics in industry.',
+        ? 'Physical AI Beratung für Unternehmen: Strategie, Praxis-Tests, Workshops und neutrale Bewertung.'
+        : 'Physical AI consulting for businesses: strategy, real-world testing, workshops, and neutral assessment.',
       images: ['/og-image.jpg'],
       creator: '@emai_robotics',
     },
@@ -116,12 +116,20 @@ export default async function LocaleLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'EmAI',
+    name: 'EmAI Robotics GmbH',
+    alternateName: 'EmAI',
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
     description: locale === 'de'
-      ? 'EmAI (Embodied AI) hilft Unternehmen, kognitive Roboter zu verstehen, zu bewerten und einzusetzen -- mit Praxis-Tests, Daten und Workshops.'
-      : 'EmAI (Embodied AI) helps companies understand, evaluate, and deploy cognitive robots -- through real-world testing, data, and workshops.',
+      ? 'EmAI Robotics hilft Unternehmen, Physical AI erfolgreich einzusetzen -- mit strategischer Beratung, Praxis-Tests, Workshops und neutraler Bewertung.'
+      : 'EmAI Robotics helps businesses successfully adopt Physical AI -- through strategic consulting, real-world testing, workshops, and neutral assessment.',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Halbergstraße 4',
+      postalCode: '66121',
+      addressLocality: 'Saarbrücken',
+      addressCountry: 'DE',
+    },
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Inquiries',
@@ -135,6 +143,13 @@ export default async function LocaleLayout({
     service: [
       {
         '@type': 'Service',
+        name: locale === 'de' ? 'Strategische Beratung' : 'Strategic Consulting',
+        description: locale === 'de'
+          ? 'Unabhängige Beratung für den erfolgreichen Einsatz von Physical AI'
+          : 'Independent consulting for the successful adoption of Physical AI',
+      },
+      {
+        '@type': 'Service',
         name: locale === 'de' ? 'Praxis-Tests' : 'Real-World Testing',
         description: locale === 'de'
           ? 'Kognitive Roboter in realen Industrieumgebungen testen und bewerten'
@@ -146,13 +161,6 @@ export default async function LocaleLayout({
         description: locale === 'de'
           ? 'Hands-on Workshops zu kognitiver Robotik und KI für Unternehmen'
           : 'Hands-on workshops on cognitive robotics and AI for companies',
-      },
-      {
-        '@type': 'Service',
-        name: locale === 'de' ? 'Beratung' : 'Consulting',
-        description: locale === 'de'
-          ? 'Strategische Beratung für den Einsatz kognitiver Roboter'
-          : 'Strategic consulting for deploying cognitive robots',
       },
     ],
   };

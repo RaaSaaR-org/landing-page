@@ -402,6 +402,12 @@ input[type="range"]:focus::-moz-range-thumb {
   background-clip: text;
 }
 
+/* Hero scan-line sweep — slow vertical drift for subtle futurism */
+@keyframes scanSweep {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(1000%); }
+}
+
 /* ============================================
    Neural Network Animations (Hero)
    ============================================ */

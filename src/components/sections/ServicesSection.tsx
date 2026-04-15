@@ -26,7 +26,7 @@ const serviceIcons = {
   ),
 };
 
-const serviceKeys = ['testing', 'data', 'workshops', 'consulting'] as const;
+const serviceKeys = ['consulting', 'testing', 'workshops', 'data'] as const;
 
 export function ServicesSection() {
   const t = useTranslations('services');

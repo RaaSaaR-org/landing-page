@@ -1,17 +1,17 @@
 {
   "nav": {
-    "services": "Was wir tun",
+    "services": "Leistungen",
     "whyEmai": "Warum EmAI",
     "faq": "FAQ",
     "contact": "Kontakt"
   },
   "hero": {
-    "badge": "Embodied AI",
-    "title": "Kognitive Roboter verstehen.",
-    "titleAccent": "Richtig einsetzen.",
-    "subtitle": "EmAI hilft Unternehmen, die Fähigkeiten kognitiver Roboter zu bewerten, zu testen und produktiv einzusetzen -- mit offenem Wissen, echten Daten und dem Fokus auf den Menschen.",
-    "cta": "Unsere Leistungen",
-    "ctaSecondary": "Gespräch vereinbaren",
+    "badge": "Physical AI · Strategic Consulting",
+    "title": "EmAI",
+    "titleAccent": "Embodied AI",
+    "subtitle": "Wir helfen Unternehmen, Physical AI erfolgreich einzuführen. Strategische Beratung, Praxis-Wissen und neutrale Bewertung -- damit kognitive Robotik wirklich im Alltag ankommt.",
+    "cta": "Beratung starten",
+    "ctaSecondary": "Unsere Leistungen",
     "pillars": {
       "openSource": "Open-Source KI",
       "european": "Made in Europe",
@@ -19,8 +19,8 @@
     }
   },
   "problem": {
-    "title": "Die Herausforderung",
-    "description": "Kognitive Roboter werden leistungsfähiger und erschwinglicher. Aber den meisten Unternehmen fehlt das Wissen, um sie richtig einzuschätzen.",
+    "title": "Warum Sie einen Partner brauchen",
+    "description": "Physical AI entwickelt sich rasant. Aber wer entscheidet heute über den richtigen Einstieg, ohne selbst im Einsatz zu sein? Genau diese Lücke schließen wir.",
     "challenges": {
       "evaluation": {
         "title": "Fehlende Bewertungsgrundlage",
@@ -37,24 +37,24 @@
     }
   },
   "services": {
-    "title": "Was wir tun",
-    "subtitle": "Wir machen kognitive Robotik greifbar -- durch Praxis, Daten und Wissen. Roboter sollen Menschen unterstützen, nicht ersetzen.",
+    "title": "Wie wir helfen",
+    "subtitle": "Wir begleiten Unternehmen auf dem Weg zu produktiver Physical AI -- mit Strategie, Praxis-Wissen und unabhängiger Beratung. Roboter sollen Menschen unterstützen, nicht ersetzen.",
     "items": {
+      "consulting": {
+        "title": "Strategische Beratung",
+        "description": "Wir analysieren Ihre Prozesse, bewerten Automatisierungspotenziale und erstellen eine realistische Roadmap: Was ist heute möglich? Was kommt in 1-2 Jahren? Unabhängig und herstellerneutral -- damit jede Entscheidung auf echten Praxiswerten steht."
+      },
       "testing": {
         "title": "Praxis-Tests",
         "description": "Wir testen kognitive Roboter in realen Industrieumgebungen und bewerten systematisch ihre Fähigkeiten: Laufen, Greifen, Platzieren, Tragen, Montieren. Was funktioniert, was nicht -- und warum."
-      },
-      "data": {
-        "title": "Datenerhebung",
-        "description": "Jeder Test baut unsere Wissensbasis aus. Leistungsdaten, Fehlerquoten, Energieverbrauch, praktische Grenzen -- wir verwandeln Praxiserfahrung in verwertbare Erkenntnisse. Herstellerunabhängig."
       },
       "workshops": {
         "title": "Workshops & Schulung",
         "description": "Hands-on Workshops für Unternehmen: Wie lernen Roboter? Wie werden KI-Modelle trainiert? Wie beurteilt man, ob Automatisierung für das eigene Geschäft sinnvoll ist?"
       },
-      "consulting": {
-        "title": "Beratung",
-        "description": "Wir helfen Unternehmen einzuschätzen, was heute realistisch ist und was morgen kommt. Strategische Roadmaps, individuelle Bewertungen -- unabhängig und praxisnah."
+      "data": {
+        "title": "Unabhängige Daten",
+        "description": "Jeder Einsatz baut unsere Wissensbasis aus. Leistungsdaten, Fehlerquoten, Energieverbrauch, praktische Grenzen -- wir verwandeln Praxiserfahrung in verwertbare Erkenntnisse. Herstellerunabhängig."
       }
     },
     "learnMore": "Mehr erfahren",
@@ -154,8 +154,8 @@
   },
   "footer": {
     "philosophy": "Am I? We are.",
-    "tagline": "Kognitive Robotik verstehen und einsetzen.",
-    "description": "EmAI hilft Unternehmen, kognitive Roboter zu verstehen, zu bewerten und produktiv einzusetzen.",
+    "tagline": "Physical AI erfolgreich einsetzen. Gemeinsam mit Ihnen.",
+    "description": "EmAI ist Ihr unabhängiger Beratungspartner für Physical AI -- mit Strategie, Workshops und neutraler Bewertung.",
     "links": {
       "company": "Unternehmen",
       "about": "Über uns",

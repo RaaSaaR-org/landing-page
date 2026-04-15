@@ -1,17 +1,17 @@
 {
   "nav": {
-    "services": "What We Do",
+    "services": "Services",
     "whyEmai": "Why EmAI",
     "faq": "FAQ",
     "contact": "Contact"
   },
   "hero": {
-    "badge": "Embodied AI",
-    "title": "Understand Cognitive Robots.",
-    "titleAccent": "Deploy Them Right.",
-    "subtitle": "EmAI helps companies evaluate, test, and productively deploy cognitive robots -- with open knowledge, real data, and a focus on people.",
-    "cta": "Our Services",
-    "ctaSecondary": "Schedule a Call",
+    "badge": "Physical AI · Strategic Consulting",
+    "title": "EmAI",
+    "titleAccent": "Embodied AI",
+    "subtitle": "We help businesses successfully adopt Physical AI. Strategic consulting, hands-on expertise, and neutral assessment -- so cognitive robotics delivers real value in your operations.",
+    "cta": "Start with Consulting",
+    "ctaSecondary": "Our Services",
     "pillars": {
       "openSource": "Open-Source AI",
       "european": "Made in Europe",
@@ -19,8 +19,8 @@
     }
   },
   "problem": {
-    "title": "The Challenge",
-    "description": "Cognitive robots are becoming more capable and affordable. But most companies have no idea how to evaluate them or what they can realistically do today.",
+    "title": "Why You Need a Partner",
+    "description": "Physical AI is evolving fast. But who decides today on the right entry point without hands-on experience? That's exactly the gap we fill.",
     "challenges": {
       "evaluation": {
         "title": "No Evaluation Framework",
@@ -37,24 +37,24 @@
     }
   },
   "services": {
-    "title": "What We Do",
-    "subtitle": "We make cognitive robotics tangible -- through practice, data, and knowledge. Robots should assist people, not replace them.",
+    "title": "How We Help",
+    "subtitle": "We guide companies toward productive Physical AI -- with strategy, hands-on expertise, and independent advice. Robots should assist people, not replace them.",
     "items": {
+      "consulting": {
+        "title": "Strategic Consulting",
+        "description": "We analyze your processes, assess automation potential, and build a realistic roadmap: what's possible today, what's coming in 1-2 years. Independent and vendor-neutral -- so every decision is grounded in real-world experience."
+      },
       "testing": {
         "title": "Real-World Testing",
         "description": "We test cognitive robots in real industrial environments and systematically evaluate their capabilities: walking, picking, placing, carrying, assembling. What works, what doesn't -- and why."
-      },
-      "data": {
-        "title": "Data Collection",
-        "description": "Every test builds our knowledge base. Performance data, error rates, energy consumption, practical limits -- we turn hands-on experience into actionable insights. Vendor-independent."
       },
       "workshops": {
         "title": "Workshops & Training",
         "description": "Hands-on workshops for companies: How do robots learn? How are AI models trained? How do you assess whether automation makes sense for your business?"
       },
-      "consulting": {
-        "title": "Consulting",
-        "description": "We help companies figure out what's realistic today and what's coming tomorrow. Strategic roadmaps, individual assessments -- independent and practice-oriented."
+      "data": {
+        "title": "Independent Data",
+        "description": "Every engagement builds our knowledge base. Performance data, error rates, energy consumption, practical limits -- we turn hands-on experience into actionable insights. Vendor-independent."
       }
     },
     "learnMore": "Learn More",
@@ -154,8 +154,8 @@
   },
   "footer": {
     "philosophy": "Am I? We are.",
-    "tagline": "Understand and deploy cognitive robotics.",
-    "description": "EmAI helps companies understand, evaluate, and productively deploy cognitive robots.",
+    "tagline": "Make Physical AI work. Together with you.",
+    "description": "EmAI is your independent consulting partner for Physical AI -- with strategy, workshops, and neutral assessment.",
     "links": {
       "company": "Company",
       "about": "About Us",

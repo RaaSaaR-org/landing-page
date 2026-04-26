@@ -6,23 +6,31 @@ import { trackCTAClick } from '@/lib/analytics';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Logo } from '@/components/ui/Logo';
+import { Link } from '@/i18n/routing';
+import { NavDropdown, type DropdownItem } from './NavDropdown';
+
+const serviceKeys = ['consulting', 'testing', 'workshops', 'data'] as const;
 
 export function Header() {
-  const t = useTranslations('nav');
+  const tNav = useTranslations('nav');
+  const tServices = useTranslations('services.items');
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [locale, setLocale] = useState<'de' | 'en'>('de');
-  const [basePath, setBasePath] = useState('');
 
-  // Anchor links resolved against the localized home page so they also work
-  // from sub-pages like /de/impressum or /de/datenschutz.
-  const homeHref = `${basePath}/${locale}`;
-  const navLinks = [
-    { name: t('services'), href: `${homeHref}#services` },
-    { name: t('whyEmai'), href: `${homeHref}#why-emai` },
-    { name: t('faq'), href: `${homeHref}#faq` },
+  const serviceItems: DropdownItem[] = [
+    ...serviceKeys.map((key) => ({
+      label: tServices(`${key}.title`),
+      href: `/services/${key}`,
+    })),
+    { label: tNav('servicesOverview'), href: '/#services' },
   ];
-  const contactHref = `${homeHref}#contact`;
+
+  const pageLinks: { name: string; href: string }[] = [
+    { name: tNav('about'), href: '/about' },
+    { name: tNav('useCases'), href: '/use-cases' },
+    { name: tNav('news'), href: '/news' },
+    { name: tNav('faq'), href: '/#faq' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,22 +52,6 @@ export function Header() {
     };
   }, [isMobileMenuOpen]);
 
-  useEffect(() => {
-    const path = window.location.pathname;
-
-    // Detect basePath by finding everything before /en or /de
-    const match = path.match(/^(.*?)(?:\/(?:en|de)(?:\/|$)|$)/);
-    const detectedBasePath = match?.[1] || '';
-    setBasePath(detectedBasePath);
-
-    // Check if path contains /en
-    if (path.includes('/en')) {
-      setLocale('en');
-    } else {
-      setLocale('de');
-    }
-  }, []);
-
   const handleNavClick = (linkName: string) => {
     trackCTAClick(linkName, 'header_navigation');
     setIsMobileMenuOpen(false);
@@ -76,37 +68,43 @@ export function Header() {
       <nav className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
-          <a href={`${basePath}/${locale}`}>
+          <Link href="/" aria-label="EmAI">
             <Logo size={42} showText={true} />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-4 lg:gap-6">
-            {navLinks.map((link) => (
-              <a
+            <NavDropdown
+              label={tNav('services')}
+              items={serviceItems}
+              onItemClick={handleNavClick}
+            />
+            {pageLinks.map((link) => (
+              <Link
                 key={link.name}
                 href={link.href}
                 onClick={() => handleNavClick(link.name)}
                 className="text-text-secondary hover:text-primary-500 font-medium transition-colors whitespace-nowrap"
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
             <LanguageSwitcher />
-            <a
-              href={contactHref}
-              onClick={() => trackCTAClick(t('contact'), 'header')}
+            <Link
+              href="/#contact"
+              onClick={() => trackCTAClick(tNav('contact'), 'header')}
               className="ml-2 px-6 py-2.5 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-all font-medium shadow-md hover:shadow-orange whitespace-nowrap"
             >
-              {t('contact')}
-            </a>
+              {tNav('contact')}
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-text-secondary hover:text-primary-500"
+            className="md:hidden p-2 text-text-secondary hover:text-primary-500 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
             aria-label="Toggle menu"
+            aria-expanded={isMobileMenuOpen}
           >
             <svg
               className="w-6 h-6"
@@ -137,29 +135,35 @@ export function Header() {
             className="md:hidden bg-surface border-t border-border-subtle overflow-hidden"
           >
             <div className="px-4 py-6 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
-              {navLinks.map((link) => (
-                <a
+              <NavDropdown
+                label={tNav('services')}
+                items={serviceItems}
+                mode="accordion"
+                onItemClick={handleNavClick}
+              />
+              {pageLinks.map((link) => (
+                <Link
                   key={link.name}
                   href={link.href}
                   onClick={() => handleNavClick(link.name)}
                   className="block text-text-secondary hover:text-primary-500 font-medium py-2"
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
               <div className="pt-2 pb-4 flex justify-center">
                 <LanguageSwitcher />
               </div>
-              <a
-                href={contactHref}
+              <Link
+                href="/#contact"
                 onClick={() => {
-                  trackCTAClick(t('contact'), 'mobile_header');
+                  trackCTAClick(tNav('contact'), 'mobile_header');
                   setIsMobileMenuOpen(false);
                 }}
                 className="block w-full px-6 py-3 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-colors font-medium text-center"
               >
-                {t('contact')}
-              </a>
+                {tNav('contact')}
+              </Link>
             </div>
           </motion.div>
         )}

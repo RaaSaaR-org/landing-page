@@ -1,0 +1,235 @@
+{
+  "services": {
+    "title": "How We Help",
+    "subtitle": "We guide companies toward productive Physical AI -- with strategy, hands-on expertise, and independent advice. Robots should assist people, not replace them.",
+    "items": {
+      "consulting": {
+        "title": "Strategic Consulting",
+        "description": "We analyze your processes, assess automation potential, and build a realistic roadmap: what's possible today, what's coming in 1-2 years. Independent and vendor-neutral -- so every decision is grounded in real-world experience."
+      },
+      "testing": {
+        "title": "Real-World Testing",
+        "description": "We test cognitive robots in real industrial environments and systematically evaluate their capabilities: walking, picking, placing, carrying, assembling. What works, what doesn't -- and why."
+      },
+      "workshops": {
+        "title": "Workshops & Training",
+        "description": "Hands-on workshops for companies: How do robots learn? How are AI models trained? How do you assess whether automation makes sense for your business?"
+      },
+      "data": {
+        "title": "Independent Data",
+        "description": "Every engagement builds our knowledge base. Performance data, error rates, energy consumption, practical limits -- we turn hands-on experience into actionable insights. Vendor-independent."
+      }
+    },
+    "learnMore": "Learn More",
+    "overview": {
+      "metaTitle": "Services",
+      "metaDescription": "Our services around Physical AI: strategic consulting, real-world testing, workshops, and independent data."
+    },
+    "detail": {
+      "consulting": {
+        "eyebrow": "Consulting",
+        "title": "Strategic Consulting",
+        "subtitle": "An independent roadmap for your Physical AI journey -- without vendor bias, without hype.",
+        "metaDescription": "Strategic consulting for Physical AI: assessment, evaluation matrix, and roadmap. Independent, vendor-neutral, practice-oriented.",
+        "whatItIs": {
+          "title": "What consulting means with us",
+          "body": "We don't deliver a sales deck -- we deliver an assessment. Which tasks in your operation already benefit from cognitive robots today? Which are realistic in 12 to 24 months? Where is waiting smart, where is investing? Our analysis is based on our own real-world tests, not on vendor data sheets."
+        },
+        "howItWorks": {
+          "title": "How we work",
+          "steps": [
+            {
+              "title": "Assessment",
+              "description": "On-site visit or remote workshop: we capture processes, constraints, workforce situation, and existing automation."
+            },
+            {
+              "title": "Potential Analysis",
+              "description": "We evaluate every identified task on technical feasibility, economic leverage, and risk -- in a transparent matrix."
+            },
+            {
+              "title": "Roadmap",
+              "description": "Concrete recommendations with a timeline: what now, what after pilot, what later. Includes vendor selection without lock-in."
+            },
+            {
+              "title": "Hands-on Support",
+              "description": "Optional: we accompany pilot phase and first rollout, so the transition from strategy to operation isn't lost in translation."
+            }
+          ]
+        },
+        "outcomes": {
+          "title": "What you get",
+          "items": [
+            "Written roadmap with prioritized use cases",
+            "Evaluation matrix (feasibility · leverage · risk)",
+            "Vendor overview tailored to your specific tasks",
+            "Investment indication per phase",
+            "Clear recommendation: build, buy, or wait"
+          ]
+        },
+        "faq": {
+          "title": "Common questions about consulting",
+          "questions": {
+            "duration": {
+              "q": "How long does consulting take?",
+              "a": "An initial assessment typically takes two to three weeks, depending on size and complexity. A complete roadmap including evaluation matrix is usually finished after four to six weeks."
+            },
+            "neutrality": {
+              "q": "Are you really vendor-neutral?",
+              "a": "Yes. We don't sell hardware and we don't receive commissions from robotics vendors. Our business model is consulting, testing, and workshops -- not selling devices."
+            },
+            "size": {
+              "q": "Does consulting also pay off for smaller mid-sized companies?",
+              "a": "Especially there. Large corporations have internal innovation teams; mid-sized companies rarely do. We make Physical AI understandable and decidable -- without you needing to build your own robotics team."
+            },
+            "next": {
+              "q": "What happens after the roadmap?",
+              "a": "You decide freely: implement yourself, continue with your existing integrator, or commission us with pilot tests and training. There is no obligation toward EmAI."
+            }
+          }
+        },
+        "cta": {
+          "title": "Ready for an honest assessment?",
+          "body": "Let's check in a no-obligation first conversation where Physical AI really makes sense in your operation -- and where it doesn't.",
+          "primary": "Request Consulting",
+          "secondary": "View Other Services"
+        }
+      },
+      "testing": {
+        "eyebrow": "Testing",
+        "title": "Real-World Testing in Industrial Environments",
+        "subtitle": "We test cognitive robots where they will actually work -- and deliver reproducible data on performance, limits, and risks.",
+        "metaDescription": "Real-world testing of cognitive robots in real environments: systematic evaluation of grasping, placing, carrying, assembling. Reproducible data.",
+        "whatItIs": {
+          "title": "What we test",
+          "body": "Data sheets describe what a robot should do. Real-world tests show what it actually does -- in your lighting, with your materials, at your workstations. We evaluate grasping, placing, carrying, assembling, and human-robot collaboration following a clear protocol."
+        },
+        "howItWorks": {
+          "title": "How we work",
+          "steps": [
+            {
+              "title": "Test Selection",
+              "description": "Together we define tasks, success criteria, and test environment -- either at your site or in our test lab."
+            },
+            {
+              "title": "Hardware Setup",
+              "description": "We bring the robot, integrate it into the test environment, and calibrate to your materials and lighting conditions."
+            },
+            {
+              "title": "Test Execution",
+              "description": "Multiple repetitions per task, with logging of success rate, cycle time, energy consumption, and error types."
+            },
+            {
+              "title": "Evaluation",
+              "description": "You get a test report with reproducible results, strengths/weaknesses profile, and a clear recommendation for or against deployment."
+            }
+          ]
+        },
+        "outcomes": {
+          "title": "What you get",
+          "items": [
+            "Test report with raw data and aggregated metrics",
+            "Success rates per task and variant",
+            "Error typology with frequency and root cause",
+            "Comparison with existing manual processes",
+            "Clear go/no-go recommendation with reasoning"
+          ]
+        },
+        "faq": {
+          "title": "Common questions about testing",
+          "questions": {
+            "where": {
+              "q": "Where do tests take place?",
+              "a": "Both are possible: at your production site (most realistic) or in our test lab (faster start). We recommend a short lab test as preparation and an on-site test as final validation."
+            },
+            "robots": {
+              "q": "Which robots do you test?",
+              "a": "We work with cognitive robots from various vendors -- including SO-101, K-Scale, Unitree, Pollen Robotics, and others. We can also test a specific model from your shortlist."
+            },
+            "duration": {
+              "q": "How long does a test take?",
+              "a": "A single task test takes a few days. A comprehensive evaluation with multiple tasks and multiple robots takes two to four weeks."
+            },
+            "data": {
+              "q": "Who owns the test data?",
+              "a": "Aggregated, anonymized data flows into our knowledge base -- that's part of our model. Specific test reports and process-specific details stay with you."
+            }
+          }
+        },
+        "cta": {
+          "title": "You want to know what really works?",
+          "body": "Let's define a test that fits your task -- honest, reproducible, vendor-independent.",
+          "primary": "Request Test",
+          "secondary": "View Other Services"
+        }
+      },
+      "data": {
+        "eyebrow": "Data",
+        "title": "Independent Data",
+        "subtitle": "Real performance data of cognitive robots -- from real deployments, not from vendor demos.",
+        "metaDescription": "Independent performance data of cognitive robots: success rates, error types, energy consumption, cycle times. From real deployments.",
+        "whatItIs": {
+          "title": "Why independent data matters",
+          "body": "Vendor data sheets show peak values under ideal conditions. Reality looks different. We have systematically collected performance data from every deployment and make it -- aggregated and vendor-independent -- available for your decisions."
+        },
+        "howItWorks": {
+          "title": "How our data is created",
+          "steps": [
+            {
+              "title": "Standardized Tests",
+              "description": "Every deployment follows a clear protocol with defined tasks, repetitions, and measurement points -- so data stays comparable."
+            },
+            {
+              "title": "Structured Logging",
+              "description": "Success rate, cycle time, energy consumption, error types, environmental conditions -- everything is recorded and tagged with metadata."
+            },
+            {
+              "title": "Aggregation & Anonymization",
+              "description": "Data is consolidated across deployments. Customer-specific details stay confidential, the metrics become available anonymized."
+            },
+            {
+              "title": "Delivery",
+              "description": "You receive data tailored to your task -- as a report, data export, or embedded in a consulting engagement."
+            }
+          ]
+        },
+        "outcomes": {
+          "title": "What you get from it",
+          "items": [
+            "Realistic success rates per task type",
+            "Comparison values across multiple vendors",
+            "Error statistics with typical root causes",
+            "Energy and cost metrics per hour of operation",
+            "Solid foundation for internal investment decisions"
+          ]
+        },
+        "faq": {
+          "title": "Common questions about data",
+          "questions": {
+            "scope": {
+              "q": "How extensive is the data?",
+              "a": "We continuously expand the knowledge base. As of today we cover the most important tasks in manufacturing and logistics. Which tasks are relevant for you we clarify before delivery."
+            },
+            "format": {
+              "q": "In what format do I receive data?",
+              "a": "By default as a compact PDF report plus CSV export. On request also embedded in a consulting session, where we put the numbers into context together."
+            },
+            "freshness": {
+              "q": "How current is the data?",
+              "a": "The knowledge base grows with every deployment. We label every data point with its date and the robot model used, so you can judge currency and comparability."
+            },
+            "ownership": {
+              "q": "Who may use the data?",
+              "a": "Provided data may be used freely internally. Sharing with third parties or publication is coordinated in advance. Raw data of your own deployments naturally stays entirely with you."
+            }
+          }
+        },
+        "cta": {
+          "title": "Need numbers instead of promises?",
+          "body": "Tell us which task you want to automate -- and we'll check what data we can deliver.",
+          "primary": "Request Data",
+          "secondary": "View Other Services"
+        }
+      }
+    }
+  }
+}

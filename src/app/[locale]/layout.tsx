@@ -3,8 +3,9 @@ import { Space_Grotesk } from 'next/font/google';
 import "../globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { AnalyticsProvider } from '@/components/providers/AnalyticsProvider';
+import { CookieConsent } from '@/components/CookieConsent';
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
@@ -61,7 +62,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         : 'Your independent consulting partner for Physical AI. Strategy, real-world testing, workshops, and neutral assessment for cognitive robotics.',
       images: [
         {
-          url: '/og-image.jpg',
+          url: '/og-image.png',
           width: 1200,
           height: 630,
           alt: 'EmAI - Embodied AI',
@@ -76,18 +77,22 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       description: isGerman
         ? 'Physical AI Beratung für Unternehmen: Strategie, Praxis-Tests, Workshops und neutrale Bewertung.'
         : 'Physical AI consulting for businesses: strategy, real-world testing, workshops, and neutral assessment.',
-      images: ['/og-image.jpg'],
+      images: ['/og-image.png'],
       creator: '@emai_robotics',
-    },
-    alternates: {
-      canonical: siteUrl,
-      languages: {
-        'de': `${siteUrl}/de`,
-        'en': `${siteUrl}/en`,
-      },
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    },
+    manifest: '/site.webmanifest',
+    icons: {
+      icon: [
+        { url: '/favicon.ico', sizes: 'any' },
+        { url: '/logo.svg', type: 'image/svg+xml' },
+      ],
+      apple: '/logo.svg',
+    },
+    other: {
+      'theme-color': '#141414',
     },
   };
 }
@@ -109,6 +114,9 @@ export default async function LocaleLayout({
   if (!routing.locales.includes(locale as 'de' | 'en')) {
     notFound();
   }
+
+  // Required for next-intl server components and Link locale prefixing under static export
+  setRequestLocale(locale);
 
   // Providing all messages to the client side is the easiest way to get started
   const messages = await getMessages({ locale });
@@ -147,6 +155,7 @@ export default async function LocaleLayout({
         description: locale === 'de'
           ? 'Unabhängige Beratung für den erfolgreichen Einsatz von Physical AI'
           : 'Independent consulting for the successful adoption of Physical AI',
+        url: `${siteUrl}/${locale}/services/consulting`,
       },
       {
         '@type': 'Service',
@@ -154,13 +163,23 @@ export default async function LocaleLayout({
         description: locale === 'de'
           ? 'Kognitive Roboter in realen Industrieumgebungen testen und bewerten'
           : 'Testing and evaluating cognitive robots in real industrial environments',
+        url: `${siteUrl}/${locale}/services/testing`,
       },
       {
         '@type': 'Service',
-        name: 'Workshops',
+        name: locale === 'de' ? 'Workshops & Schulung' : 'Workshops & Training',
         description: locale === 'de'
           ? 'Hands-on Workshops zu kognitiver Robotik und KI für Unternehmen'
           : 'Hands-on workshops on cognitive robotics and AI for companies',
+        url: `${siteUrl}/${locale}/services/workshops`,
+      },
+      {
+        '@type': 'Service',
+        name: locale === 'de' ? 'Unabhängige Daten' : 'Independent Data',
+        description: locale === 'de'
+          ? 'Unabhängige Leistungsdaten kognitiver Roboter aus realen Einsätzen'
+          : 'Independent performance data of cognitive robots from real deployments',
+        url: `${siteUrl}/${locale}/services/data`,
       },
     ],
   };
@@ -174,10 +193,11 @@ export default async function LocaleLayout({
         />
       </head>
       <body className={`${spaceGrotesk.variable} font-sans antialiased bg-base text-text-primary`}>
-        <NextIntlClientProvider messages={messages}>
+        <NextIntlClientProvider locale={locale} messages={messages}>
           <AnalyticsProvider>
             {children}
           </AnalyticsProvider>
+          <CookieConsent />
         </NextIntlClientProvider>
         <Analytics />
       </body>

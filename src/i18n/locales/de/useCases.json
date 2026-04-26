@@ -1,0 +1,39 @@
+{
+  "useCases": {
+    "eyebrow": "Anwendungsfälle",
+    "title": "Anwendungsfälle für kognitive Robotik",
+    "subtitle": "Wo Physical AI heute realistisch Wert schafft -- mit Beispielen aus Fertigung, Logistik und Mittelstand.",
+    "metaDescription": "Konkrete Anwendungsfälle für kognitive Roboter in Fertigung, Logistik und Mittelstand. Probleme, Lösungen und Ergebnisse aus der Praxis.",
+    "intro": "Wir sammeln Anwendungsfälle aus realen Einsätzen und Praxis-Tests. Jeder Fall ist anonymisiert dokumentiert und zeigt, was kognitive Roboter heute leisten -- und wo ihre Grenzen liegen.",
+    "cases": {
+      "manufacturing-assembly": {
+        "industry": "Fertigung",
+        "title": "Variantenreiche Vormontage",
+        "problem": "Ein mittelständischer Maschinenbauer fertigt Klein- und Mittelserien mit häufig wechselnden Varianten. Klassische Roboter mit fester Programmierung lohnen sich nicht. Manuelle Vormontage bindet Fachkräfte für repetitive Schritte.",
+        "solution": "Kognitiver Roboter mit Vision-Language-Action-Modell übernimmt Vormontage-Schritte. Neue Varianten werden per Demonstration angelernt statt programmiert -- Anlernen einer neuen Variante in wenigen Stunden.",
+        "outcome": "Fachkräfte konzentrieren sich auf Endmontage und Qualitätssicherung. Variantenwechsel ohne Engineering-Aufwand. Roboter trägt nicht zu Personalersatz bei, sondern füllt eine Lücke, die der Fachkräftemangel verursacht hat."
+      },
+      "logistics-picking": {
+        "industry": "Logistik",
+        "title": "Kommissionierung gemischter Aufträge",
+        "problem": "Ein E-Commerce-Logistiker hat hohe Auftragsdichte mit gemischten Sortimenten. Klassische Pick-&-Place-Systeme scheitern an der Vielfalt der Artikel -- jede neue Produktreihe braucht Engineering.",
+        "solution": "Kognitive Greifsysteme erkennen Artikel über Bilderkennung und greifen adaptiv -- ohne dass jedes Produkt vorher modelliert werden muss. Mensch-Roboter-Teams arbeiten Schulter an Schulter, der Roboter übernimmt körperlich belastende Wiederholungen."
+        ,
+        "outcome": "Krankenstand sinkt durch Entlastung bei körperlich anspruchsvollen Tätigkeiten. Mitarbeiter übernehmen Qualitätskontrolle und Sondervorgänge. Investitions-Entscheidung basierte auf konkreten Praxis-Test-Daten, nicht auf Hersteller-Versprechen."
+      },
+      "mittelstand-evaluation": {
+        "industry": "Mittelstand",
+        "title": "Bewertung Automatisierungspotenzial",
+        "problem": "Ein Familienbetrieb mit 80 Mitarbeitern überlegt seit Jahren, ob Robotik etwas für sie ist. Jede Anfrage bei Herstellern endet im Verkaufsgespräch -- niemand sagt offen, was nicht funktioniert.",
+        "solution": "Eine vierwöchige Beratung mit Bestandsaufnahme, Bewertungsmatrix und konkreter Roadmap. Drei Aufgaben werden für einen späteren Pilot empfohlen, fünf weitere als 'noch nicht reif' eingestuft -- mit klarer Begründung.",
+        "outcome": "Geschäftsführung kann fundiert entscheiden, statt im Hersteller-Marketing zu ertrinken. Investition wird auf zwei realistische Schritte verteilt statt einmalig zu groß angesetzt."
+      }
+    },
+    "cta": {
+      "title": "Sie haben einen ähnlichen Fall?",
+      "body": "Lassen Sie uns prüfen, ob kognitive Roboter für Ihre konkrete Aufgabe heute schon Sinn ergeben.",
+      "primary": "Anfrage starten",
+      "secondary": "Beratung ansehen"
+    }
+  }
+}

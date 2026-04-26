@@ -1,0 +1,43 @@
+{
+  "about": {
+    "eyebrow": "About",
+    "title": "About EmAI",
+    "subtitle": "Independent consulting partner for Physical AI -- based in Saarbrücken, with European values and a focus on practice.",
+    "metaDescription": "EmAI Robotics: independent consulting partner for Physical AI in Saarbrücken. Mission, team, and values.",
+    "mission": {
+      "title": "Our Mission",
+      "body": "We help companies understand and meaningfully use cognitive robots. Not by selling hardware, but by sharing knowledge. Our benchmark: Physical AI should be just as decidable in mid-sized companies as in corporations. Robots should fill gaps left by labor shortages -- not replace people."
+    },
+    "values": {
+      "title": "What guides us",
+      "items": {
+        "openSource": {
+          "title": "Open-Source AI",
+          "description": "No vendor lock-in. We rely on open models and share our knowledge."
+        },
+        "sovereignty": {
+          "title": "European Sovereignty",
+          "description": "Data stays in Europe. GDPR-compliant. Values we share and live by."
+        },
+        "learning": {
+          "title": "Learn by Doing",
+          "description": "Every deployment makes us smarter and the next one easier."
+        },
+        "humanFirst": {
+          "title": "People First",
+          "description": "Robots assist people -- they do not replace them."
+        }
+      }
+    },
+    "team": {
+      "title": "Who we are",
+      "body": "EmAI Robotics GmbH was founded to make Physical AI accessible for European companies. Our team combines years of experience in AI research, robotics development, and industry consulting. We are independent and finance ourselves exclusively through our consulting, testing, and workshops -- not through hardware sales or vendor commissions."
+    },
+    "cta": {
+      "title": "Let's talk",
+      "body": "Whether you want to start concretely with Physical AI or just need an honest sparring partner -- we take time for a first conversation.",
+      "primary": "Get in Touch",
+      "secondary": "Our Services"
+    }
+  }
+}

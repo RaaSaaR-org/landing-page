@@ -2,6 +2,8 @@
 
 import { useTranslations } from 'next-intl';
 import { Container, Section } from '@/components/layout';
+import { Link } from '@/i18n/routing';
+import { trackCTAClick } from '@/lib/analytics';
 
 const serviceIcons = {
   testing: (
@@ -71,16 +73,17 @@ export function ServicesSection() {
                   {t(`items.${key}.description`)}
                 </p>
 
-                {/* Link to contact */}
-                <a
-                  href="#contact"
+                {/* Link to service detail page */}
+                <Link
+                  href={`/services/${key}`}
+                  onClick={() => trackCTAClick(t('learnMore'), `service_card_${key}`)}
                   className="inline-flex items-center gap-2 text-sm font-medium text-primary-400 hover:text-primary-300 transition-colors"
                 >
-                  <span>{key === 'workshops' ? t('requestWorkshop') : t('learnMore')}</span>
+                  <span>{t('learnMore')}</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
           ))}

@@ -1,0 +1,20 @@
+export type WorkshopPhase = { title: string; description: string };
+export type WorkshopTier = {
+  number: string;
+  category: string;
+  title: string;
+  subline: string;
+  format: string;
+  audience: string;
+  promise: string;
+  phasesTitle: string;
+  phases: WorkshopPhase[];
+  assetsLabel: string;
+  assets: string;
+  outcomeLabel: string;
+  outcome: string;
+};
+export type EngagementStep = { label: string; workshop: string; description: string };
+export type AudienceSegment = { title: string; format: string; description: string };
+export type ItemPair = { title: string; description: string };
+export type PublicSectorItem = { title: string; subtitle: string; description: string };

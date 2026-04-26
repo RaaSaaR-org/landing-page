@@ -42,23 +42,25 @@ export default function LanguageSwitcher() {
     <div className="flex items-center gap-2 bg-surface-elevated rounded-lg p-1 border border-border-subtle">
       <button
         onClick={() => handleLanguageChange('de')}
-        className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
+        className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated ${
           locale === 'de'
             ? 'bg-primary-500 text-white'
             : 'text-text-secondary hover:text-text-primary hover:bg-surface'
         }`}
         aria-label="Switch to German"
+        aria-pressed={locale === 'de'}
       >
         DE
       </button>
       <button
         onClick={() => handleLanguageChange('en')}
-        className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all ${
+        className={`px-3 py-1.5 text-sm font-medium rounded-md transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface-elevated ${
           locale === 'en'
             ? 'bg-primary-500 text-white'
             : 'text-text-secondary hover:text-text-primary hover:bg-surface'
         }`}
         aria-label="Switch to English"
+        aria-pressed={locale === 'en'}
       >
         EN
       </button>

@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# playwright MCP scratch screenshots & logs
+/.playwright-mcp/
+
 # production
 /build
 

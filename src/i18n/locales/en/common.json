@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "services": "Services",
+    "whyEmai": "Why EmAI",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "about": "About",
+    "useCases": "Use Cases",
+    "news": "News",
+    "servicesOverview": "All Services"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "contactUs": "Contact Us",
+    "readMore": "Read More"
+  },
+  "consent": {
+    "title": "Cookies & analytics",
+    "body": "We use essential cookies to make this site work. With your consent, anonymized analytics (Hotjar, Google Analytics) help us improve the site. You can change your choice at any time.",
+    "accept": "Accept",
+    "reject": "Essential only",
+    "privacyLink": "Privacy"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Page not found",
+    "body": "The requested page does not exist or has been moved. One of the destinations below might help.",
+    "homeLabel": "Back to home",
+    "servicesLabel": "View services",
+    "newsLabel": "Latest in news"
+  },
+  "footer": {
+    "philosophy": "Am I? We are.",
+    "tagline": "Make Physical AI work. Together with you.",
+    "description": "EmAI is your independent consulting partner for Physical AI -- with strategy, workshops, and neutral assessment.",
+    "links": {
+      "company": "Company",
+      "about": "About Us",
+      "useCases": "Use Cases",
+      "partners": "Partners",
+      "careers": "Careers",
+      "resources": "Resources",
+      "news": "News",
+      "documentation": "Documentation",
+      "support": "Support",
+      "contact": "Contact",
+      "services": "Services",
+      "legal": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "imprint": "Imprint"
+    },
+    "copyright": "© 2026 EmAI. All rights reserved.",
+    "madeIn": "Made in Europe",
+    "newsletterTitle": "Stay in the loop",
+    "newsletterBody": "Occasional insights from the field -- no marketing emails.",
+    "newsletterCta": "Request via email"
+  }
+}

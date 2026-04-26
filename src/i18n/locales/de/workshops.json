@@ -1,0 +1,219 @@
+{
+  "workshops": {
+    "metaTitle": "Workshops",
+    "metaDescription": "Vier modulare EmAI Workshops für Kognitive Robotik und Embodied AI: Use-Case-Validierung, Robotik-Strategie, Physical AI Deep Dive, Partner Network. Vom Use Case zum produktiven Roboter-Piloten.",
+    "hero": {
+      "eyebrow": "Workshops",
+      "title": "Kognitive Robotik für die Industrie",
+      "subtitle": "Vier Workshops für Strategie, Engineering und Skalierung — von der Use-Case-Validierung zum produktiven Roboter-Piloten.",
+      "tagline": "Embodied AI · Cloud-native · Sim-to-Real"
+    },
+    "tiers": {
+      "title": "Die vier Workshops",
+      "subtitle": "Modular kombinierbar — vom Einstieg über Strategie und Deep Tech bis zur Skalierung über Partner.",
+      "items": [
+        {
+          "number": "01",
+          "category": "Einstieg",
+          "title": "Use-Case- & Autonomie-Validierung",
+          "subline": "Klarheit, bevor Budget fließt.",
+          "format": "1 Tag · bis 8 Personen · vor Ort oder remote",
+          "audience": "Innovationsmanager, Fachabteilungsleiter, Projektleiter",
+          "promise": "Vermeidet das \"Pilot-Purgatory\". Anwendungsfälle werden methodisch nach Business-Impact, Datenverfügbarkeit und realistischer Autonomie-Stufe bewertet — bevor Pilotprojekte zur Sackgasse werden.",
+          "phasesTitle": "Tagesstruktur (4 Phasen)",
+          "phases": [
+            { "title": "Alignment", "description": "Autonomie-Skala 0–5, ODD (Operational Design Domain) und Erwartungshaltung kalibrieren" },
+            { "title": "Use Case Deconstruction", "description": "Aufgaben in \"Gestures\" zerlegen, Autonomie-Stufen zuordnen" },
+            { "title": "Validierung & Risiko-Mapping", "description": "AUCA Blueprint, Sicherheits- und Fallback-Strategie" },
+            { "title": "Roadmap & Wirtschaftlichkeit", "description": "ROI-Berechnung, Implementierungs-Roadmap" }
+          ],
+          "assetsLabel": "Eingesetzte Assets",
+          "assets": "AUCA Blueprint (Autonomous Use Case Alignment) · DDT Breakdown Deck · ODD Environment Audit · Autonomy Readiness Scorecard · Digital Twin Sandbox (optional)",
+          "outcomeLabel": "Ergebnis",
+          "outcome": "Validiertes Lastenheft + priorisierter Backlog mit Business-Cases."
+        },
+        {
+          "number": "02",
+          "category": "Strategie",
+          "title": "Robotik-Strategie Workshop",
+          "subline": "Vom Hype zur Roadmap.",
+          "format": "1–2 Tage · Vorstand & Strategie",
+          "audience": "Geschäftsführung, Werksleitung, Strategie-Planung",
+          "promise": "VLA-Disruption verstehen, Brownfield-Hebel finden, ROI rechnen. Embodied AI auf Vorstandsebene.",
+          "phasesTitle": "Inhaltliche Bausteine",
+          "phases": [
+            { "title": "Moravec'sches Paradoxon", "description": "warum sich der Hebel der Automatisierung gerade umkehrt" },
+            { "title": "Use Case Discovery", "description": "bisher nicht automatisierbare Prozesse neu bewerten" },
+            { "title": "ROI-Modellierung", "description": "Hardware, Cloud, Implementierung gegen den Status quo" },
+            { "title": "Individuelle KI-Roadmap", "description": "12-, 24- und 36-Monats-Horizont mit Meilensteinen" }
+          ],
+          "assetsLabel": "Methodik",
+          "assets": "Design Thinking für Embodied AI · Business Model Canvas für agentische Systeme · Brownfield-Audit der bestehenden Infrastruktur · Hands-on Bewertung mit Live-Beispielen",
+          "outcomeLabel": "Ergebnis",
+          "outcome": "Strategische Roadmap auf Vorstandsebene mit klaren Meilensteinen für 12, 24 und 36 Monate."
+        },
+        {
+          "number": "03",
+          "category": "Deep Tech",
+          "title": "Physical AI Deep Dive",
+          "subline": "Vom Datensatz zum lauffähigen VLA-Modell.",
+          "format": "3–5 Tage · \"Done-with-you\"",
+          "audience": "ML-Engineers, Software-Entwickler, Automatisierungstechniker",
+          "promise": "Drei bis fünf Tage hands-on. Foundation Models auf eure industriellen Aufgaben fine-tunen — vom Datensatz bis zum Sim-to-Real Transfer.",
+          "phasesTitle": "Engineering-Bausteine",
+          "phases": [
+            { "title": "VLA Fine-Tuning", "description": "OpenVLA, Pi-0, RT-X · Tokenisierung von Aktionen" },
+            { "title": "Data Engineering", "description": "Teleoperation, Human-to-Robot Transfer, synthetische Daten" },
+            { "title": "Sim-to-Real Transfer", "description": "NVIDIA Isaac Sim · Millionen Interaktionen vortrainieren" },
+            { "title": "Cloud-to-Edge Deployment", "description": "sichere, latenzarme Inferenz auf Roboter-Controller" }
+          ],
+          "assetsLabel": "Stack",
+          "assets": "PyTorch · ROS 2 · Hugging Face · NVIDIA Isaac Sim/Lab · JupyterHub-Sandbox pro Teilnehmer · vorinstallierte VLA-Modelle und Datensätze",
+          "outcomeLabel": "Ergebnis",
+          "outcome": "Lauffähiges VLA-Modell auf eurem Anwendungsfall, deploybar auf Roboter-Controller."
+        },
+        {
+          "number": "04",
+          "category": "Skalierung",
+          "title": "Partner Network",
+          "subline": "Macht Robotik zu eurem Service.",
+          "format": "Train-the-Trainer · Multiplikatoren-Programm",
+          "audience": "Beratungen, Systemintegratoren, regionale Implementierungspartner",
+          "promise": "Werdet zertifizierte EmAI-Partner. EmAI bleibt das technische Gehirn, Partner liefern Vor-Ort-Integration und Vertrieb.",
+          "phasesTitle": "Drei-Tier-Modell",
+          "phases": [
+            { "title": "Bronze · Referral Partner", "description": "Lead-Vermittlung, Provision auf Netto-Workshop-Umsatz" },
+            { "title": "Silber · Certified Training Partner", "description": "eigenständige Durchführung von Standard-Workshops unter EmAI-Marke, Lizenzgebühr pro Teilnehmer" },
+            { "title": "Gold · Strategic Solutions Partner", "description": "komplexe Implementierungen mit 3rd-Level-Support, Co-Marketing und Cloud-Orchestrierung" }
+          ],
+          "assetsLabel": "Train-the-Trainer-Format",
+          "assets": "Zertifiziertes Curriculum · Cloud-Sandbox · Co-Branding-Material",
+          "outcomeLabel": "Arbeitsteilung",
+          "outcome": "EmAI liefert \"Cognitive Brains\" und Flotten-Orchestrierung — Partner liefern Hardware und Vor-Ort-Integration."
+        }
+      ]
+    },
+    "engagementPath": {
+      "title": "Engagement-Pfad",
+      "intro": "Drei Schritte vom ersten Gespräch zum produktiven Roboter-Piloten — jeder Schritt validiert den nächsten.",
+      "steps": [
+        {
+          "label": "Validierung",
+          "workshop": "Use-Case- & Autonomie-Validierung (Workshop 01)",
+          "description": "Klarheit über Machbarkeit, Autonomie-Stufe, ROI"
+        },
+        {
+          "label": "Pilot",
+          "workshop": "Robotik-Strategie + Physical AI Deep Dive (Workshop 02 + 03)",
+          "description": "Roadmap auf Geschäftsführungs-Ebene, parallel hands-on Prototyp, lauffähiges Modell"
+        },
+        {
+          "label": "Skalierung",
+          "workshop": "Partner Network (Workshop 04)",
+          "description": "Roll-out über zertifizierte Partner"
+        }
+      ],
+      "outcomeLabel": "Wirkung",
+      "outcome": "In 6–12 Monaten vom ersten Use Case zu einem produktiven Roboter-Piloten — ohne den klassischen Pilot-Purgatory."
+    },
+    "methodology": {
+      "title": "Methodik & Workshop-Cloud",
+      "intro": "Alle Workshops nutzen eine personalisierte Cloud-Sandbox pro Teilnehmer (JupyterHub oder VS Code Server) mit vorinstallierten Modellen, Daten und Tools.",
+      "items": [
+        { "title": "Null Setup-Aufwand", "description": "Keine Laptop-Installationen, keine Kompatibilitätsprobleme." },
+        { "title": "Sichere Daten-Bubble", "description": "Sensible Daten verlassen die kontrollierte Umgebung nicht." },
+        { "title": "Synthetische Daten", "description": "Sim-to-Real schließt die Datenlücke industrieller Robotik." },
+        { "title": "Remote-fähig", "description": "Vor Ort oder verteilt, gleiche Qualität, gleiche Tools." },
+        { "title": "Nachhaltigkeit", "description": "Sandbox bleibt nach dem Workshop nutzbar als Basis für Pilotprojekte." }
+      ]
+    },
+    "audiences": {
+      "title": "Zielgruppen",
+      "subtitle": "Drei Segmente, drei Einstiegspfade.",
+      "segments": [
+        {
+          "title": "Industrie",
+          "format": "Strategie + Deep Dive",
+          "description": "Automobilindustrie, Elektrotechnik, Maschinenbau, Konsumgüter. Komplexe Manipulation, Qualitätskontrolle, flexibles Materialhandling."
+        },
+        {
+          "title": "Mittelstand",
+          "format": "Validierung + Partner Network",
+          "description": "Fachkräftemangel als Treiber. Günstiger Einstieg über das Partner-Netzwerk."
+        },
+        {
+          "title": "Öffentlicher Sektor",
+          "format": "Strategie + Deep Dive",
+          "description": "Inspektion, Klinik-Logistik, Stadtbetrieb, Katastrophenschutz. Roboter, wo Personal fehlt."
+        }
+      ]
+    },
+    "publicSector": {
+      "title": "Physical AI für die Verwaltung",
+      "intro": "Physische Aufgaben automatisieren, wo Personal fehlt — vom Straßenmonitoring bis zur Klinik-Logistik.",
+      "items": [
+        {
+          "title": "Infrastruktur",
+          "subtitle": "Straßen, Brücken, Netze",
+          "description": "Autonome Erfassung von Schäden über Computer Vision. Mobile Roboter und Drohnen für Inspektionsfahrten."
+        },
+        {
+          "title": "Liegenschaften",
+          "subtitle": "Gebäudewartung",
+          "description": "Inspektions-Roboter für kommunale Liegenschaften. Sensorik für vorausschauende Instandhaltung."
+        },
+        {
+          "title": "Kliniken",
+          "subtitle": "Klinik-Logistik",
+          "description": "Transport-Roboter für Material und Proben in Unikliniken. Entlastet Pflegekräfte von Botengängen."
+        },
+        {
+          "title": "Smart City",
+          "subtitle": "Stadtbetrieb",
+          "description": "Roboter und Sensorik für Reinigung, Müll, Grünflächen. Daten-getriebene Bewirtschaftung."
+        },
+        {
+          "title": "Versorgung",
+          "subtitle": "Anlagen-Inspektion",
+          "description": "Tunnel, Kläranlagen, Energienetze. Roboter reduzieren Begehungen in Gefahrenbereichen."
+        },
+        {
+          "title": "Katastrophenschutz",
+          "subtitle": "Such & Rettung",
+          "description": "Bodenroboter und Drohnen für Feuerwehr und THW. Einsatz in Trümmern und Gefahrenzonen."
+        }
+      ]
+    },
+    "eastSideFab": {
+      "title": "East Side Fab Verankerung",
+      "intro": "Saarbrücken-Hub für kognitive Robotik. Workshops als integrierter Teil der FabCademy®, mit direktem Zugang zu Industriepartnern und Forschungsinstituten.",
+      "items": [
+        { "title": "Makerspace & Open Space", "description": "Wir bringen die Cloud, das Fab bringt den Raum." },
+        { "title": "FabCademy® Anschluss", "description": "Andocken an bestehende Innovationsprojekte." },
+        { "title": "Pilotpartner-Programm", "description": "Vergünstigte Konditionen gegen Case Studies." },
+        { "title": "Saarland-Sichtbarkeit", "description": "IT.CON, GovTech Campus, regionale Innovations-Events." }
+      ]
+    },
+    "about": {
+      "title": "Über EmAI",
+      "intro": "Spezialisiertes Zwei-Personen-Team mit tiefer Cloud-native- und Embodied-AI-Expertise. Open-Source-DNA, eigene Plattform, anschlussfähig an alle gängigen VLA-Frameworks.",
+      "items": [
+        { "title": "Cloud-native Tiefe", "description": "Kubernetes, Datenpipelines, Edge-Orchestrierung. Produktiv im Einsatz." },
+        { "title": "NeoDEM-Plattform", "description": "Eigenes Fleet-Management für kognitive Roboter." },
+        { "title": "Open-Source-DNA", "description": "SmolVLA, Pi-0, GR00T — wir bauen die Stacks, die wir nutzen." },
+        { "title": "Saarland-verankert", "description": "East Side Fab als Heimat, direkter Zugang zu Industrie und Verwaltung." }
+      ],
+      "differentiatorLabel": "Was uns abhebt",
+      "differentiator": "Tiefe statt Breite. Wir liefern keine Folien — wir liefern lauffähige Systeme.",
+      "antiLabel": "Anti-Positionierung",
+      "anti": "Keine generische KI-Beratung. Spezialisten für die Lücke zwischen Cloud und Roboter, dort wo Vision-Language-Action-Modelle aus Versprechen Produktivität machen."
+    },
+    "cta": {
+      "eyebrow": "Call-to-Action",
+      "title": "Kostenloses 30-Minuten-Erstgespräch",
+      "body": "Wir bewerten den Anwendungsfall und empfehlen das passende Format.",
+      "primary": "Erstgespräch anfragen",
+      "secondary": "Andere Leistungen ansehen"
+    }
+  }
+}

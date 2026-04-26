@@ -1,0 +1,38 @@
+{
+  "useCases": {
+    "eyebrow": "Use Cases",
+    "title": "Use Cases for Cognitive Robotics",
+    "subtitle": "Where Physical AI realistically creates value today -- with examples from manufacturing, logistics, and mid-sized companies.",
+    "metaDescription": "Concrete use cases for cognitive robots in manufacturing, logistics, and mid-sized companies. Problems, solutions, and outcomes from practice.",
+    "intro": "We collect use cases from real deployments and practice tests. Each case is documented anonymously and shows what cognitive robots can achieve today -- and where their limits lie.",
+    "cases": {
+      "manufacturing-assembly": {
+        "industry": "Manufacturing",
+        "title": "Variant-Rich Pre-Assembly",
+        "problem": "A mid-sized machine builder produces small and medium series with frequently changing variants. Classical robots with fixed programming don't pay off. Manual pre-assembly ties up skilled workers for repetitive steps.",
+        "solution": "A cognitive robot with a Vision-Language-Action model takes over pre-assembly steps. New variants are taught by demonstration instead of programming -- onboarding a new variant takes hours instead of weeks.",
+        "outcome": "Skilled workers focus on final assembly and quality assurance. Variant changes happen without engineering effort. The robot doesn't replace people -- it fills a gap caused by the labor shortage."
+      },
+      "logistics-picking": {
+        "industry": "Logistics",
+        "title": "Picking Mixed Orders",
+        "problem": "An e-commerce logistics provider has high order density with mixed assortments. Classical pick-and-place systems fail at item variety -- every new product line requires engineering.",
+        "solution": "Cognitive grasping systems recognize items via image recognition and grasp adaptively -- without each product needing to be modeled in advance. Human-robot teams work shoulder to shoulder; the robot takes over physically demanding repetitions.",
+        "outcome": "Sick leave decreases through relief from physically demanding tasks. Employees take on quality control and special handling. Investment decision was based on concrete practice-test data, not on vendor promises."
+      },
+      "mittelstand-evaluation": {
+        "industry": "Mid-Sized Companies",
+        "title": "Automation Potential Assessment",
+        "problem": "A family business with 80 employees has been considering for years whether robotics is for them. Every inquiry to vendors ends in a sales pitch -- nobody openly says what doesn't work.",
+        "solution": "A four-week consulting engagement with assessment, evaluation matrix, and concrete roadmap. Three tasks are recommended for a later pilot, five others classified as 'not yet ready' -- with clear reasoning.",
+        "outcome": "Management can decide on solid grounds instead of drowning in vendor marketing. Investment is split into two realistic steps instead of being attempted as one too-large move."
+      }
+    },
+    "cta": {
+      "title": "You have a similar case?",
+      "body": "Let's check whether cognitive robots make sense for your specific task today.",
+      "primary": "Start Inquiry",
+      "secondary": "View Consulting"
+    }
+  }
+}

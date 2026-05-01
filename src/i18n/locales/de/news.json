@@ -1,0 +1,20 @@
+{
+  "news": {
+    "eyebrow": "News",
+    "title": "Aktuelles aus EmAI",
+    "subtitle": "Veranstaltungen, Praxis-Berichte, Veröffentlichungen -- direkt aus unserem Alltag.",
+    "metaDescription": "News und aktuelle Berichte von EmAI: Veranstaltungen, Praxis-Tests, Workshops und Erkenntnisse aus realen Einsätzen.",
+    "readMore": "Weiterlesen",
+    "backToList": "Zurück zur Übersicht",
+    "minRead": "Min. Lesezeit",
+    "publishedOn": "Veröffentlicht am",
+    "by": "von",
+    "empty": "Noch keine Beiträge. Schauen Sie bald wieder vorbei.",
+    "cta": {
+      "title": "Sie wollen mit uns sprechen?",
+      "body": "Egal, ob Sie zu einem konkreten Beitrag Fragen haben oder ein eigenes Anliegen besprechen möchten -- wir nehmen uns Zeit.",
+      "primary": "Kontakt aufnehmen",
+      "secondary": "Unsere Leistungen"
+    }
+  }
+}

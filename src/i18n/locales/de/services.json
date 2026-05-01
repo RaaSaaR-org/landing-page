@@ -1,0 +1,235 @@
+{
+  "services": {
+    "title": "Wie wir helfen",
+    "subtitle": "Wir begleiten Unternehmen auf dem Weg zu produktiver Physical AI -- mit Strategie, Praxis-Wissen und unabhängiger Beratung. Roboter sollen Menschen unterstützen, nicht ersetzen.",
+    "items": {
+      "consulting": {
+        "title": "Strategische Beratung",
+        "description": "Wir analysieren Ihre Prozesse, bewerten Automatisierungspotenziale und erstellen eine realistische Roadmap: Was ist heute möglich? Was kommt in 1-2 Jahren? Unabhängig und herstellerneutral -- damit jede Entscheidung auf echten Praxiswerten steht."
+      },
+      "testing": {
+        "title": "Praxis-Tests",
+        "description": "Wir testen kognitive Roboter in realen Industrieumgebungen und bewerten systematisch ihre Fähigkeiten: Laufen, Greifen, Platzieren, Tragen, Montieren. Was funktioniert, was nicht -- und warum."
+      },
+      "workshops": {
+        "title": "Workshops & Schulung",
+        "description": "Hands-on Workshops für Unternehmen: Wie lernen Roboter? Wie werden KI-Modelle trainiert? Wie beurteilt man, ob Automatisierung für das eigene Geschäft sinnvoll ist?"
+      },
+      "data": {
+        "title": "Unabhängige Daten",
+        "description": "Jeder Einsatz baut unsere Wissensbasis aus. Leistungsdaten, Fehlerquoten, Energieverbrauch, praktische Grenzen -- wir verwandeln Praxiserfahrung in verwertbare Erkenntnisse. Herstellerunabhängig."
+      }
+    },
+    "learnMore": "Mehr erfahren",
+    "overview": {
+      "metaTitle": "Leistungen",
+      "metaDescription": "Unsere Leistungen rund um Physical AI: Strategische Beratung, Praxis-Tests, Workshops und unabhängige Daten."
+    },
+    "detail": {
+      "consulting": {
+        "eyebrow": "Beratung",
+        "title": "Strategische Beratung",
+        "subtitle": "Unabhängige Roadmap für Ihren Einstieg in Physical AI -- ohne Hersteller-Bias, ohne Hype.",
+        "metaDescription": "Strategische Beratung für Physical AI: Bestandsaufnahme, Bewertungsmatrix und Roadmap. Unabhängig, herstellerneutral, praxisorientiert.",
+        "whatItIs": {
+          "title": "Was Beratung bei uns bedeutet",
+          "body": "Wir liefern keine Verkaufspräsentation -- wir liefern eine Bewertung. Welche Aufgaben in Ihrem Betrieb profitieren heute schon von kognitiven Robotern? Welche werden in 12 bis 24 Monaten realistisch? Wo lohnt sich Warten, wo lohnt sich Investieren? Unsere Analyse beruht auf eigenen Praxis-Tests, nicht auf Hersteller-Datenblättern."
+        },
+        "howItWorks": {
+          "title": "So gehen wir vor",
+          "steps": [
+            {
+              "title": "Bestandsaufnahme",
+              "description": "Vor-Ort-Termin oder Remote-Workshop: Wir erfassen Prozesse, Rahmenbedingungen, Fachkräfte-Situation und bestehende Automatisierung."
+            },
+            {
+              "title": "Potenzialanalyse",
+              "description": "Wir bewerten jede identifizierte Aufgabe nach technischer Machbarkeit, wirtschaftlichem Hebel und Risiko -- in einer transparenten Matrix."
+            },
+            {
+              "title": "Roadmap",
+              "description": "Konkrete Empfehlungen mit Zeitachse: Was sofort, was nach Pilot, was später. Inklusive Hersteller-Auswahl ohne Vendor Lock-in."
+            },
+            {
+              "title": "Begleitung",
+              "description": "Optional: Wir begleiten Pilot-Phase und ersten Rollout, damit der Übergang von Strategie zu Betrieb nicht in der Übersetzung verloren geht."
+            }
+          ]
+        },
+        "outcomes": {
+          "title": "Was Sie erhalten",
+          "items": [
+            "Schriftliche Roadmap mit priorisierten Anwendungsfällen",
+            "Bewertungsmatrix (Machbarkeit · Hebel · Risiko)",
+            "Hersteller-Übersicht für Ihre konkreten Aufgaben",
+            "Investitions-Indikation pro Phase",
+            "Klare Empfehlung: bauen, kaufen, warten"
+          ]
+        },
+        "faq": {
+          "title": "Häufige Fragen zur Beratung",
+          "questions": {
+            "duration": {
+              "q": "Wie lange dauert eine Beratung?",
+              "a": "Eine erste Bestandsaufnahme dauert typischerweise zwei bis drei Wochen, je nach Größe und Komplexität. Eine vollständige Roadmap inklusive Bewertungsmatrix ist meist nach vier bis sechs Wochen fertig."
+            },
+            "neutrality": {
+              "q": "Sind Sie wirklich herstellerneutral?",
+              "a": "Ja. Wir vertreiben keine Hardware und erhalten keine Provisionen von Robotik-Herstellern. Unser Geschäftsmodell ist Beratung, Tests und Workshops -- nicht der Verkauf von Geräten."
+            },
+            "size": {
+              "q": "Lohnt sich Beratung auch für kleinere Mittelständler?",
+              "a": "Gerade dort. Großkonzerne haben interne Innovations-Teams, der Mittelstand selten. Wir machen Physical AI verständlich und entscheidbar -- ohne dass Sie ein eigenes Robotik-Team aufbauen müssen."
+            },
+            "next": {
+              "q": "Wie geht es nach der Roadmap weiter?",
+              "a": "Sie entscheiden frei: selbst umsetzen, mit Ihrem bestehenden Integrator weitergehen, oder uns mit Pilot-Test und Schulungen beauftragen. Es gibt keine Erfolgs-Verpflichtung gegenüber EmAI."
+            }
+          }
+        },
+        "cta": {
+          "title": "Bereit für eine ehrliche Bewertung?",
+          "body": "Lassen Sie uns in einem unverbindlichen Erstgespräch prüfen, wo Physical AI in Ihrem Betrieb wirklich Sinn ergibt -- und wo nicht.",
+          "primary": "Beratung anfragen",
+          "secondary": "Andere Leistungen ansehen"
+        }
+      },
+      "testing": {
+        "eyebrow": "Praxis-Tests",
+        "title": "Praxis-Tests in realen Industrieumgebungen",
+        "subtitle": "Wir testen kognitive Roboter dort, wo sie später arbeiten sollen -- und liefern reproduzierbare Daten zu Leistung, Grenzen und Risiken.",
+        "metaDescription": "Praxis-Tests kognitiver Roboter in realen Umgebungen: systematische Bewertung von Greifen, Platzieren, Tragen, Montieren. Reproduzierbare Daten.",
+        "whatItIs": {
+          "title": "Was wir testen",
+          "body": "Datenblätter sagen, was ein Roboter können soll. Praxis-Tests zeigen, was er wirklich kann -- in Ihrer Lichtung, mit Ihren Materialien, an Ihren Arbeitsplätzen. Wir bewerten Greifen, Platzieren, Tragen, Montieren und Mensch-Roboter-Kollaboration nach einem klaren Protokoll."
+        },
+        "howItWorks": {
+          "title": "So gehen wir vor",
+          "steps": [
+            {
+              "title": "Test-Auswahl",
+              "description": "Gemeinsam definieren wir Aufgaben, Erfolgskriterien und Prüfumgebung -- entweder bei Ihnen vor Ort oder in unserem Test-Labor."
+            },
+            {
+              "title": "Hardware-Setup",
+              "description": "Wir bringen den Roboter mit, integrieren ihn in die Test-Umgebung und kalibrieren auf Ihre Materialien und Lichtverhältnisse."
+            },
+            {
+              "title": "Test-Durchführung",
+              "description": "Mehrere Wiederholungen pro Aufgabe, mit Logging von Erfolgsquote, Zykluszeit, Energieverbrauch und Fehlertypen."
+            },
+            {
+              "title": "Auswertung",
+              "description": "Sie erhalten einen Test-Bericht mit nachvollziehbaren Ergebnissen, Stärken/Schwächen-Profil und einer klaren Empfehlung für oder gegen den Einsatz."
+            }
+          ]
+        },
+        "outcomes": {
+          "title": "Was Sie erhalten",
+          "items": [
+            "Test-Bericht mit Roh-Daten und ausgewerteten Kennzahlen",
+            "Erfolgsquoten pro Aufgabe und Variante",
+            "Fehler-Typologie mit Häufigkeit und Ursache",
+            "Vergleich zu vorhandenen manuellen Prozessen",
+            "Klare Go/No-Go-Empfehlung mit Begründung"
+          ]
+        },
+        "faq": {
+          "title": "Häufige Fragen zu Praxis-Tests",
+          "questions": {
+            "where": {
+              "q": "Wo finden die Tests statt?",
+              "a": "Beides ist möglich: in Ihrer Produktion (am realistischsten) oder in unserem Test-Labor (schneller startklar). Wir empfehlen einen kurzen Lab-Test als Vorbereitung und einen Vor-Ort-Test als finale Validierung."
+            },
+            "robots": {
+              "q": "Welche Roboter testen Sie?",
+              "a": "Wir arbeiten mit kognitiven Robotern verschiedener Hersteller -- darunter SO-101, K-Scale, Unitree, Pollen Robotics und weitere. Wir können auch ein konkretes Modell aus Ihrer engeren Auswahl testen."
+            },
+            "duration": {
+              "q": "Wie lange dauert ein Test?",
+              "a": "Ein einzelner Aufgaben-Test dauert wenige Tage. Eine umfassende Bewertung mit mehreren Aufgaben und mehreren Robotern braucht zwei bis vier Wochen."
+            },
+            "data": {
+              "q": "Wem gehören die Test-Daten?",
+              "a": "Aggregierte, anonymisierte Daten fließen in unsere Wissensbasis ein -- das ist Teil unseres Modells. Konkrete Test-Berichte und prozess-spezifische Details bleiben bei Ihnen."
+            }
+          }
+        },
+        "cta": {
+          "title": "Sie wollen wissen, was wirklich funktioniert?",
+          "body": "Lassen Sie uns einen passenden Test für Ihre Aufgabe definieren -- ehrlich, reproduzierbar, herstellerunabhängig.",
+          "primary": "Test anfragen",
+          "secondary": "Andere Leistungen ansehen"
+        }
+      },
+      "data": {
+        "eyebrow": "Daten",
+        "title": "Unabhängige Daten",
+        "subtitle": "Reale Leistungsdaten kognitiver Roboter -- aus echten Einsätzen, nicht aus Hersteller-Demos.",
+        "metaDescription": "Unabhängige Leistungsdaten kognitiver Roboter: Erfolgsquoten, Fehlertypen, Energieverbrauch, Zykluszeiten. Aus realen Einsätzen.",
+        "whatItIs": {
+          "title": "Warum unabhängige Daten zählen",
+          "body": "Hersteller-Datenblätter zeigen Spitzenwerte unter Idealbedingungen. Praxis sieht anders aus. Wir sammeln seit jedem Einsatz systematisch Leistungsdaten und stellen Sie -- aggregiert und herstellerunabhängig -- für Ihre Entscheidungen bereit."
+        },
+        "howItWorks": {
+          "title": "So entstehen unsere Daten",
+          "steps": [
+            {
+              "title": "Standardisierte Tests",
+              "description": "Jeder Einsatz folgt einem klaren Protokoll mit definierten Aufgaben, Wiederholungen und Messpunkten -- damit Daten vergleichbar bleiben."
+            },
+            {
+              "title": "Strukturiertes Logging",
+              "description": "Erfolgsquote, Zykluszeit, Energieverbrauch, Fehlertypen, Umgebungsbedingungen -- alles wird erfasst und mit Metadaten versehen."
+            },
+            {
+              "title": "Aggregation & Anonymisierung",
+              "description": "Daten werden über Einsätze hinweg konsolidiert. Kunden-spezifische Details bleiben vertraulich, die Kennzahlen werden anonymisiert verfügbar."
+            },
+            {
+              "title": "Bereitstellung",
+              "description": "Sie erhalten Daten zugeschnitten auf Ihre Aufgabe -- als Bericht, Datenexport oder eingebettet in eine Beratung."
+            }
+          ]
+        },
+        "outcomes": {
+          "title": "Was Sie davon haben",
+          "items": [
+            "Realistische Erfolgsquoten pro Aufgabentyp",
+            "Vergleichswerte über mehrere Hersteller hinweg",
+            "Fehler-Statistiken mit typischen Ursachen",
+            "Energie- und Kostenkennzahlen pro Stunde Einsatz",
+            "Belastbare Grundlage für interne Investitions-Entscheidungen"
+          ]
+        },
+        "faq": {
+          "title": "Häufige Fragen zu Daten",
+          "questions": {
+            "scope": {
+              "q": "Wie umfangreich sind die Daten?",
+              "a": "Wir bauen die Wissensbasis kontinuierlich aus. Stand heute decken wir die wichtigsten Aufgaben in Fertigung und Logistik ab. Welche Aufgaben für Sie relevant sind, klären wir vor der Bereitstellung."
+            },
+            "format": {
+              "q": "In welchem Format erhalte ich Daten?",
+              "a": "Standardmäßig als kompakter PDF-Bericht plus CSV-Export. Auf Wunsch auch eingebettet in einen Beratungs-Termin, in dem wir die Zahlen gemeinsam einordnen."
+            },
+            "freshness": {
+              "q": "Wie aktuell sind die Daten?",
+              "a": "Die Wissensbasis wächst mit jedem Einsatz. Wir kennzeichnen pro Datenpunkt das Datum und das verwendete Robot-Modell, damit Sie Aktualität und Vergleichbarkeit beurteilen können."
+            },
+            "ownership": {
+              "q": "Wer darf die Daten nutzen?",
+              "a": "Bereitgestellte Daten dürfen Sie intern frei verwenden. Weitergabe an Dritte oder Veröffentlichung stimmen wir vorher ab. Roh-Daten Ihrer eigenen Einsätze bleiben selbstverständlich vollständig bei Ihnen."
+            }
+          }
+        },
+        "cta": {
+          "title": "Brauchen Sie Zahlen statt Versprechen?",
+          "body": "Sagen Sie uns, welche Aufgabe Sie automatisieren wollen -- und wir prüfen, welche Daten wir dazu liefern können.",
+          "primary": "Daten anfragen",
+          "secondary": "Andere Leistungen ansehen"
+        }
+      }
+    }
+  }
+}

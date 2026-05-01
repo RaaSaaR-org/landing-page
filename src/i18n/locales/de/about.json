@@ -1,0 +1,43 @@
+{
+  "about": {
+    "eyebrow": "Über uns",
+    "title": "Über EmAI",
+    "subtitle": "Unabhängiger Beratungspartner für Physical AI -- aus Saarbrücken, mit europäischen Werten und Fokus auf Praxis.",
+    "metaDescription": "EmAI Robotics: unabhängiger Beratungspartner für Physical AI in Saarbrücken. Mission, Team und Werte.",
+    "mission": {
+      "title": "Unsere Mission",
+      "body": "Wir helfen Unternehmen, kognitive Roboter zu verstehen und sinnvoll einzusetzen. Nicht durch Verkauf, sondern durch Wissen. Unser Maßstab: Physical AI soll im Mittelstand genauso entscheidbar sein wie in Konzernen. Roboter sollen Lücken schließen, die der Fachkräftemangel hinterlässt -- nicht Menschen ersetzen."
+    },
+    "values": {
+      "title": "Was uns leitet",
+      "items": {
+        "openSource": {
+          "title": "Open-Source KI",
+          "description": "Kein Vendor Lock-in. Wir setzen auf offene Modelle und teilen unser Wissen."
+        },
+        "sovereignty": {
+          "title": "Europäische Souveränität",
+          "description": "Daten bleiben in Europa. DSGVO-konform. Werte, die wir teilen und leben."
+        },
+        "learning": {
+          "title": "Learning by Doing",
+          "description": "Jeder Einsatz macht uns schlauer und den nächsten einfacher."
+        },
+        "humanFirst": {
+          "title": "Mensch im Mittelpunkt",
+          "description": "Roboter unterstützen Menschen -- sie ersetzen sie nicht."
+        }
+      }
+    },
+    "team": {
+      "title": "Wer wir sind",
+      "body": "EmAI Robotics GmbH wurde gegründet, um Physical AI für europäische Unternehmen zugänglich zu machen. Unser Team verbindet langjährige Erfahrung in KI-Forschung, Robotik-Entwicklung und Industrie-Beratung. Wir sind unabhängig und finanzieren uns ausschließlich über unsere Beratung, Tests und Workshops -- nicht über Hardware-Verkauf oder Hersteller-Provisionen."
+    },
+    "cta": {
+      "title": "Lassen Sie uns sprechen",
+      "body": "Egal, ob Sie konkret in Physical AI einsteigen wollen oder nur einen ehrlichen Sparringspartner suchen -- wir nehmen uns Zeit für ein erstes Gespräch.",
+      "primary": "Kontakt aufnehmen",
+      "secondary": "Unsere Leistungen"
+    }
+  }
+}

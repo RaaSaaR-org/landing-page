@@ -1,10 +1,29 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container } from '@/components/layout';
+import { buildAlternates } from '@/lib/seo';
 
-export default function ImpressumPage() {
-  const t = useTranslations('impressum');
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'impressum' });
+  return {
+    title: t('title'),
+    alternates: buildAlternates('/impressum', locale),
+  };
+}
+
+export default async function ImpressumPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'impressum' });
 
   // Optional sections are hidden until the corresponding i18n keys have content.
   const legalForm = t('company.legalForm');

@@ -1,0 +1,12 @@
+{
+  "name": "EmAI",
+  "short_name": "EmAI",
+  "description": "Physical AI consulting for business",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#141414",
+  "theme_color": "#FF6700",
+  "icons": [
+    { "src": "/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

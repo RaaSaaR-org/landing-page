@@ -1,0 +1,60 @@
+{
+  "nav": {
+    "services": "Leistungen",
+    "whyEmai": "Warum EmAI",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "about": "Über uns",
+    "useCases": "Anwendungsfälle",
+    "news": "News",
+    "servicesOverview": "Alle Leistungen"
+  },
+  "common": {
+    "learnMore": "Mehr erfahren",
+    "getStarted": "Jetzt starten",
+    "contactUs": "Kontakt",
+    "readMore": "Weiterlesen"
+  },
+  "consent": {
+    "title": "Cookies & Analyse",
+    "body": "Wir verwenden essenzielle Cookies, damit die Website funktioniert. Mit Ihrer Zustimmung helfen anonymisierte Analyse-Tools (Hotjar, Google Analytics), die Seite zu verbessern. Sie können die Auswahl jederzeit ändern.",
+    "accept": "Akzeptieren",
+    "reject": "Nur essenzielle",
+    "privacyLink": "Datenschutz"
+  },
+  "notFound": {
+    "code": "404",
+    "title": "Seite nicht gefunden",
+    "body": "Die angefragte Seite existiert nicht oder wurde verschoben. Vielleicht hilft eine der folgenden Anlaufstellen.",
+    "homeLabel": "Zur Startseite",
+    "servicesLabel": "Leistungen ansehen",
+    "newsLabel": "Aktuelles im News-Bereich"
+  },
+  "footer": {
+    "philosophy": "Am I? We are.",
+    "tagline": "Physical AI erfolgreich einsetzen. Gemeinsam mit Ihnen.",
+    "description": "EmAI ist Ihr unabhängiger Beratungspartner für Physical AI -- mit Strategie, Workshops und neutraler Bewertung.",
+    "links": {
+      "company": "Unternehmen",
+      "about": "Über uns",
+      "useCases": "Anwendungsfälle",
+      "partners": "Partner",
+      "careers": "Karriere",
+      "resources": "Ressourcen",
+      "news": "News",
+      "documentation": "Dokumentation",
+      "support": "Support",
+      "contact": "Kontakt",
+      "services": "Leistungen",
+      "legal": "Rechtliches",
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "imprint": "Impressum"
+    },
+    "copyright": "© 2026 EmAI. Alle Rechte vorbehalten.",
+    "madeIn": "Made in Europe",
+    "newsletterTitle": "Auf dem Laufenden bleiben",
+    "newsletterBody": "Gelegentliche Einblicke aus der Praxis -- keine Marketing-Mails.",
+    "newsletterCta": "E-Mail anfragen"
+  }
+}

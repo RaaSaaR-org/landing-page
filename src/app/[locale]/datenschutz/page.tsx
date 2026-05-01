@@ -1,10 +1,29 @@
-'use client';
-
-import { useTranslations } from 'next-intl';
+import type { Metadata } from 'next';
+import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container } from '@/components/layout';
+import { buildAlternates } from '@/lib/seo';
 
-export default function DatenschutzPage() {
-  const t = useTranslations('datenschutz');
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'datenschutz' });
+  return {
+    title: t('title'),
+    alternates: buildAlternates('/datenschutz', locale),
+  };
+}
+
+export default async function DatenschutzPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'datenschutz' });
 
   return (
     <>

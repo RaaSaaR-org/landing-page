@@ -70,13 +70,24 @@ export function ServiceDetailLayout({ serviceKey }: ServiceDetailLayoutProps) {
               <p className="text-xl md:text-2xl text-text-secondary leading-relaxed">
                 {t('subtitle')}
               </p>
+              {/* CTA — desktop only; on mobile it lives below the illustration instead */}
+              <Link
+                href="/#contact"
+                onClick={() => trackCTAClick(t('cta.primary'), `service_detail_hero_${serviceKey}`)}
+                className="group hidden md:inline-flex items-center gap-2 mt-8 px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold text-base shadow-[0_0_24px_rgba(255,103,0,0.25)] hover:bg-primary-400 hover:shadow-[0_0_40px_rgba(255,103,0,0.45)] transition-all"
+              >
+                {t('cta.primary')}
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
             </div>
             <div className="flex flex-col justify-center items-center gap-5 mt-4 md:mt-0">
               {serviceIllustrations[serviceKey]}
               <Link
                 href="/#contact"
                 onClick={() => trackCTAClick(t('cta.primary'), `service_detail_hero_${serviceKey}`)}
-                className="group inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold text-sm md:text-base shadow-[0_0_24px_rgba(255,103,0,0.25)] hover:bg-primary-400 hover:shadow-[0_0_40px_rgba(255,103,0,0.45)] transition-all"
+                className="group md:hidden inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold text-sm shadow-[0_0_24px_rgba(255,103,0,0.25)] hover:bg-primary-400 hover:shadow-[0_0_40px_rgba(255,103,0,0.45)] transition-all"
               >
                 {t('cta.primary')}
                 <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

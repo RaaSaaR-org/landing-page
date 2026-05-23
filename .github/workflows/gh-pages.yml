@@ -32,6 +32,11 @@ jobs:
         run: npm ci
 
       - name: Build Next.js app
+        env:
+          # NEXT_PUBLIC_* vars are baked into the bundle at build time. Provided as
+          # a GitHub Secret on the repo; absent secret -> analytics simply stays off.
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: ${{ secrets.NEXT_PUBLIC_GA_MEASUREMENT_ID }}
+          NEXT_PUBLIC_HOTJAR_ID: ${{ secrets.NEXT_PUBLIC_HOTJAR_ID }}
         run: npm run build
 
       - name: Add CNAME for custom domain

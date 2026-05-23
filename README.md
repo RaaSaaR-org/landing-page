@@ -41,11 +41,17 @@ Open [http://localhost:4000](http://localhost:4000)
 
 ## Configuration
 
-Create `.env.local`:
+Copy `.env.example` to `.env.local` and fill in what you need:
 
 ```env
 NEXT_PUBLIC_SITE_URL=https://emai.dev
+NEXT_PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX   # optional — leave blank to keep GA off
+NEXT_PUBLIC_HOTJAR_ID=                        # optional — leave blank to keep Hotjar off
 ```
+
+In production (GitHub Actions → GitHub Pages), the same values are read from repo
+secrets of the same names. Missing secrets simply leave the corresponding tracker
+disabled.
 
 ## Internationalization
 

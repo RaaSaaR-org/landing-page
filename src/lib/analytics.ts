@@ -11,16 +11,25 @@ type CustomEvent = {
 export const initGA = () => {
   if (!GA_MEASUREMENT_ID || typeof window === 'undefined') return;
 
-  const script = document.createElement('script');
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-  script.async = true;
-  document.head.appendChild(script);
-
+  // Set up the dataLayer + gtag stub BEFORE calling gtag(): gtag.js loads async
+  // so without the stub window.gtag is undefined and the first call throws.
   window.dataLayer = window.dataLayer || [];
+  if (typeof window.gtag !== 'function') {
+    window.gtag = function gtag(...args: unknown[]) {
+      window.dataLayer.push(args);
+    } as Window['gtag'];
+  }
+
   window.gtag('js', new Date());
   window.gtag('config', GA_MEASUREMENT_ID, {
     page_path: window.location.pathname,
   });
+
+  // Now load gtag.js — queued calls above replay once it's ready.
+  const script = document.createElement('script');
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+  script.async = true;
+  document.head.appendChild(script);
 };
 
 // Track page view

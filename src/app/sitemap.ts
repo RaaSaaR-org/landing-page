@@ -4,7 +4,7 @@ import { getAllSlugs } from '@/lib/news';
 
 export const dynamic = 'force-static';
 
-const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.de';
+const BASE = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.dev';
 
 const staticRoutes = [
   '',

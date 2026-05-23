@@ -24,7 +24,7 @@ const geistMono = Geist_Mono({
   weight: ['400', '700'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.de';
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.dev';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;

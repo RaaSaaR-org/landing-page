@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.de';
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.dev';
 
 /**
  * Build per-page hreflang alternates for next-intl static export.

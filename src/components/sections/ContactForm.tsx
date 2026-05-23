@@ -10,7 +10,7 @@ const BOOKING_URL = process.env.NEXT_PUBLIC_BOOKING_URL || '';
 export function ContactForm() {
   const t = useTranslations('contact');
 
-  const subjectDe = encodeURIComponent('Anfrage über emai.de');
+  const subjectDe = encodeURIComponent('Anfrage über emai.dev');
   const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${subjectDe}`;
 
   return (

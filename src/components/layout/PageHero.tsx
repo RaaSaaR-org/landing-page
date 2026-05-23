@@ -66,8 +66,8 @@ export function PageHero({ eyebrow, title, subtitle, visual }: PageHeroProps) {
             )}
           </div>
 
-          {/* Right: visual (default = brand halo, override via `visual` prop) */}
-          <div className="hidden md:flex justify-center items-center">
+          {/* Right (md+) / below title (mobile): visual. Default = brand halo, override via `visual` prop. */}
+          <div className="flex justify-center items-center mt-4 md:mt-0">
             {visual ?? <BrandHalo />}
           </div>
         </div>
@@ -82,7 +82,7 @@ export function PageHero({ eyebrow, title, subtitle, visual }: PageHeroProps) {
  */
 function BrandHalo() {
   return (
-    <div className="relative w-56 h-56 lg:w-72 lg:h-72 flex items-center justify-center">
+    <div className="relative w-40 h-40 sm:w-52 sm:h-52 md:w-56 md:h-56 lg:w-72 lg:h-72 flex items-center justify-center">
       {/* Outer rings */}
       <div className="absolute inset-0 rounded-full border border-primary-500/15" />
       <div className="absolute inset-6 rounded-full border border-primary-500/25" />

@@ -71,7 +71,7 @@ export function ServiceDetailLayout({ serviceKey }: ServiceDetailLayoutProps) {
                 {t('subtitle')}
               </p>
             </div>
-            <div className="hidden md:flex justify-center items-center">
+            <div className="flex justify-center items-center mt-4 md:mt-0">
               {serviceIllustrations[serviceKey]}
             </div>
           </div>

@@ -70,6 +70,7 @@ export default async function WorkshopsPage({
           title={t('hero.title')}
           subtitle={t('hero.subtitle')}
           visual={<WorkshopsIllustration />}
+          cta={{ label: t('cta.primary'), href: '/#contact' }}
         />
         <Section background="surface" className="!pt-0 !pb-12">
           <Container>

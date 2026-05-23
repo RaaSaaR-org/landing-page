@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Container, Section } from '@/components/layout';
 import { HazardTape } from '@/components/ui';
+import { Link } from '@/i18n/routing';
 
 interface PageHeroProps {
   eyebrow?: string;
@@ -8,6 +9,8 @@ interface PageHeroProps {
   subtitle?: string;
   /** Optional per-page illustration on the right. Falls back to the brand halo. */
   visual?: React.ReactNode;
+  /** Optional CTA shown directly below the illustration. */
+  cta?: { label: string; href: string };
 }
 
 /**
@@ -22,7 +25,7 @@ interface PageHeroProps {
  * Pages can pass their own `visual` (SVG, illustration, icon set). Default is the
  * EmAI mark in a soft halo — branded but not screaming.
  */
-export function PageHero({ eyebrow, title, subtitle, visual }: PageHeroProps) {
+export function PageHero({ eyebrow, title, subtitle, visual, cta }: PageHeroProps) {
   return (
     <Section background="surface" className="relative overflow-hidden">
       {/* Hazard tape — flush to top, brand eye-catcher */}
@@ -66,9 +69,20 @@ export function PageHero({ eyebrow, title, subtitle, visual }: PageHeroProps) {
             )}
           </div>
 
-          {/* Right (md+) / below title (mobile): visual. Default = brand halo, override via `visual` prop. */}
-          <div className="flex justify-center items-center mt-4 md:mt-0">
+          {/* Right (md+) / below title (mobile): visual + optional CTA stacked beneath it. */}
+          <div className="flex flex-col justify-center items-center gap-5 mt-4 md:mt-0">
             {visual ?? <BrandHalo />}
+            {cta && (
+              <Link
+                href={cta.href}
+                className="group inline-flex items-center gap-2 px-6 py-3 bg-primary-500 text-white rounded-lg font-semibold text-sm md:text-base shadow-[0_0_24px_rgba(255,103,0,0.25)] hover:bg-primary-400 hover:shadow-[0_0_40px_rgba(255,103,0,0.45)] transition-all"
+              >
+                {cta.label}
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            )}
           </div>
         </div>
       </Container>

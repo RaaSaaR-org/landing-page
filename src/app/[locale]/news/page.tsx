@@ -52,6 +52,7 @@ export default async function NewsIndexPage({
           title={t('title')}
           subtitle={t('subtitle')}
           visual={<NewsIllustration />}
+          cta={{ label: t('cta.primary'), href: '/#contact' }}
         />
 
         <Section background="base">

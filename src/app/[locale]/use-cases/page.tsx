@@ -43,6 +43,7 @@ export default async function UseCasesPage({
           title={t('title')}
           subtitle={t('subtitle')}
           visual={<UseCasesIllustration />}
+          cta={{ label: t('cta.primary'), href: '/#contact' }}
         />
 
         {/* Intro */}

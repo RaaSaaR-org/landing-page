@@ -37,7 +37,12 @@ export default async function AboutPage({
     <>
       <Header />
       <main>
-        <PageHero eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        <PageHero
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          subtitle={t('subtitle')}
+          cta={{ label: t('cta.primary'), href: '/#contact' }}
+        />
 
         {/* Mission */}
         <Section background="base">

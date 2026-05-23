@@ -11,12 +11,15 @@ type CustomEvent = {
 export const initGA = () => {
   if (!GA_MEASUREMENT_ID || typeof window === 'undefined') return;
 
-  // Set up the dataLayer + gtag stub BEFORE calling gtag(): gtag.js loads async
-  // so without the stub window.gtag is undefined and the first call throws.
+  // gtag stub: MUST push the native `arguments` object — gtag.js processes
+  // entries via `entry.callee`/Arguments-shape detection and silently ignores
+  // plain Arrays (which is what `(...args) => dataLayer.push(args)` produces).
+  // Using `function(){...}` instead of an arrow keeps `arguments` valid.
   window.dataLayer = window.dataLayer || [];
   if (typeof window.gtag !== 'function') {
-    window.gtag = function gtag(...args: unknown[]) {
-      window.dataLayer.push(args);
+    window.gtag = function gtag() {
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer.push(arguments);
     } as Window['gtag'];
   }
 

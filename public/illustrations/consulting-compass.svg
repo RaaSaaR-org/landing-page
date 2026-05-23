@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Strategic compass">
+  <title>Strategic compass — bearing 042°</title>
+
+  <defs>
+    <!-- Soft orange halo behind the whole instrument -->
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FF6700" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#FF6700" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Needle gradient — gives the orange spike a metallic falloff -->
+    <linearGradient id="needle" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%"   stop-color="#FFA366"/>
+      <stop offset="55%"  stop-color="#FF6700"/>
+      <stop offset="100%" stop-color="#993E00"/>
+    </linearGradient>
+
+    <!-- Reusable tick marks -->
+    <line id="major-tick" x1="200" y1="58"  x2="200" y2="76" stroke="#FF6700" stroke-opacity="0.75" stroke-width="1.4"/>
+    <line id="minor-tick" x1="200" y1="66"  x2="200" y2="76" stroke="#A8A29E" stroke-opacity="0.35" stroke-width="1"/>
+  </defs>
+
+  <!-- Halo wash -->
+  <rect width="400" height="400" fill="url(#halo)"/>
+
+  <!-- Outer brand rings (matches PageHero halo footprint) -->
+  <circle cx="200" cy="200" r="196" fill="none" stroke="#FF6700" stroke-opacity="0.15" stroke-width="1"/>
+  <circle cx="200" cy="200" r="172" fill="none" stroke="#FF6700" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- HUD corner brackets -->
+  <g stroke="#FF6700" stroke-opacity="0.5" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M 20 36 L 20 20 L 36 20"/>
+    <path d="M 364 20 L 380 20 L 380 36"/>
+    <path d="M 380 364 L 380 380 L 364 380"/>
+    <path d="M 36 380 L 20 380 L 20 364"/>
+  </g>
+
+  <!-- Compass outer ring -->
+  <circle cx="200" cy="200" r="142" fill="none" stroke="#FF6700" stroke-opacity="0.55" stroke-width="1.5"/>
+
+  <!-- 12 major ticks (every 30°) -->
+  <g>
+    <use href="#major-tick"/>
+    <use href="#major-tick" transform="rotate(30 200 200)"/>
+    <use href="#major-tick" transform="rotate(60 200 200)"/>
+    <use href="#major-tick" transform="rotate(90 200 200)"/>
+    <use href="#major-tick" transform="rotate(120 200 200)"/>
+    <use href="#major-tick" transform="rotate(150 200 200)"/>
+    <use href="#major-tick" transform="rotate(180 200 200)"/>
+    <use href="#major-tick" transform="rotate(210 200 200)"/>
+    <use href="#major-tick" transform="rotate(240 200 200)"/>
+    <use href="#major-tick" transform="rotate(270 200 200)"/>
+    <use href="#major-tick" transform="rotate(300 200 200)"/>
+    <use href="#major-tick" transform="rotate(330 200 200)"/>
+  </g>
+  <!-- 12 minor ticks (15° offsets) -->
+  <g>
+    <use href="#minor-tick" transform="rotate(15 200 200)"/>
+    <use href="#minor-tick" transform="rotate(45 200 200)"/>
+    <use href="#minor-tick" transform="rotate(75 200 200)"/>
+    <use href="#minor-tick" transform="rotate(105 200 200)"/>
+    <use href="#minor-tick" transform="rotate(135 200 200)"/>
+    <use href="#minor-tick" transform="rotate(165 200 200)"/>
+    <use href="#minor-tick" transform="rotate(195 200 200)"/>
+    <use href="#minor-tick" transform="rotate(225 200 200)"/>
+    <use href="#minor-tick" transform="rotate(255 200 200)"/>
+    <use href="#minor-tick" transform="rotate(285 200 200)"/>
+    <use href="#minor-tick" transform="rotate(315 200 200)"/>
+    <use href="#minor-tick" transform="rotate(345 200 200)"/>
+  </g>
+
+  <!-- Cardinal letters — N highlighted -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700" text-anchor="middle">
+    <text x="200" y="48"  font-size="18" fill="#F5F5F4">N</text>
+    <text x="356" y="207" font-size="13" fill="#A8A29E">E</text>
+    <text x="200" y="364" font-size="13" fill="#A8A29E">S</text>
+    <text x="44"  y="207" font-size="13" fill="#A8A29E">W</text>
+  </g>
+
+  <!-- Inner ring -->
+  <circle cx="200" cy="200" r="96" fill="none" stroke="#2DD4BF" stroke-opacity="0.35" stroke-width="0.9"/>
+  <!-- Dashed "scanning" ring — slow rotation -->
+  <circle cx="200" cy="200" r="120" fill="none" stroke="#2DD4BF" stroke-opacity="0.45" stroke-width="0.8" stroke-dasharray="4 8">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="40s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Crosshair tickmarks just outside the inner ring -->
+  <g stroke="#2DD4BF" stroke-opacity="0.55" stroke-width="0.9">
+    <line x1="200" y1="100" x2="200" y2="108"/>
+    <line x1="200" y1="292" x2="200" y2="300"/>
+    <line x1="100" y1="200" x2="108" y2="200"/>
+    <line x1="292" y1="200" x2="300" y2="200"/>
+  </g>
+
+  <!-- The needle — points at 042° (rotated 42° from north), with subtle wobble -->
+  <g transform="rotate(42 200 200)">
+    <animateTransform attributeName="transform" type="rotate" values="40 200 200; 44 200 200; 40 200 200" dur="6s" repeatCount="indefinite"/>
+    <!-- North spike (active heading) -->
+    <polygon points="200,86 192,200 208,200" fill="url(#needle)"/>
+    <!-- South spike (counter, muted teal) -->
+    <polygon points="200,314 192,200 208,200" fill="#2DD4BF" fill-opacity="0.55"/>
+    <!-- Subtle glow outline on the active spike -->
+    <polygon points="200,86 192,200 208,200" fill="none" stroke="#FFA366" stroke-opacity="0.5" stroke-width="0.8"/>
+  </g>
+
+  <!-- Center hub: layered for depth; inner core pulses -->
+  <circle cx="200" cy="200" r="16" fill="#0B0B0B" stroke="#FF6700" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="9"  fill="#FF6700"/>
+  <circle cx="200" cy="200" r="3"  fill="#2DD4BF">
+    <animate attributeName="r" values="3;4.5;3" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Readout below -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700" text-anchor="middle">
+    <text x="200" y="386" font-size="11" fill="#2DD4BF" letter-spacing="3.5">BEARING · 042°</text>
+  </g>
+</svg>

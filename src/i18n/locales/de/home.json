@@ -7,13 +7,13 @@
     "badge": "Physical AI · Strategic Consulting",
     "title": "EmAI",
     "titleAccent": "Embodied AI",
-    "subtitle": "Wir helfen Unternehmen, Physical AI erfolgreich einzuführen. Strategische Beratung, Praxis-Wissen und neutrale Bewertung -- damit kognitive Robotik wirklich im Alltag ankommt.",
+    "subtitle": "Wir helfen Unternehmen, Physical AI erfolgreich einzuführen. Strategische Beratung, Praxis-Wissen und neutrale Bewertung.",
     "cta": "Beratung starten",
     "ctaSecondary": "Unsere Leistungen",
     "pillars": {
       "openSource": "Open-Source KI",
       "european": "Made in Europe",
-      "learning": "Learning by Doing"
+      "learning": "Praxis-erprobt"
     }
   },
   "problem": {
@@ -47,8 +47,8 @@
         "description": "Daten bleiben in Europa. DSGVO-konform. Europäische Werte, die wir teilen und leben."
       },
       "learning": {
-        "title": "Learning by Doing",
-        "description": "Jeder Einsatz macht uns schlauer und den nächsten einfacher. Wir lernen in der Praxis -- und geben dieses Wissen weiter."
+        "title": "Praxis-erprobt",
+        "description": "Jeder Einsatz vertieft unser Wissen und schärft den nächsten. Erfahrung aus realen Projekten -- direkt in Ihre Roadmap."
       },
       "humanFirst": {
         "title": "Mensch im Mittelpunkt",

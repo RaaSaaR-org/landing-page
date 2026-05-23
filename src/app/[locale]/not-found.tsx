@@ -24,7 +24,7 @@ export default async function LocaleNotFound() {
               <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
                 {t('title')}
               </h1>
-              <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-400 rounded-full mx-auto mb-6" />
+              <div className="w-24 h-1 bg-primary-500 rounded-full mx-auto mb-6" />
               <p className="text-lg text-text-secondary mb-10">{t('body')}</p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

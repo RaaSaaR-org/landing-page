@@ -14,10 +14,12 @@ interface NavDropdownProps {
   items: DropdownItem[];
   /** desktop = click-to-open menu; accordion = inline expand for mobile */
   mode?: 'dropdown' | 'accordion';
+  /** highlight the trigger label when any of the dropdown's items represents the current page */
+  isActive?: boolean;
   onItemClick?: (label: string) => void;
 }
 
-export function NavDropdown({ label, items, mode = 'dropdown', onItemClick }: NavDropdownProps) {
+export function NavDropdown({ label, items, mode = 'dropdown', isActive = false, onItemClick }: NavDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -107,7 +109,11 @@ export function NavDropdown({ label, items, mode = 'dropdown', onItemClick }: Na
           onClick={() => setIsOpen((v) => !v)}
           aria-expanded={isOpen}
           aria-controls={panelId}
-          className="w-full flex items-center justify-between text-text-secondary hover:text-primary-500 font-medium py-2"
+          className={`w-full flex items-center justify-between font-medium py-2 border-l-2 pl-3 ${
+            isActive
+              ? 'text-primary-500 border-primary-500'
+              : 'text-text-secondary border-transparent hover:text-primary-500'
+          }`}
         >
           <span>{label}</span>
           {chevron}
@@ -155,11 +161,17 @@ export function NavDropdown({ label, items, mode = 'dropdown', onItemClick }: Na
         onKeyDown={handleTriggerKey}
         aria-haspopup="menu"
         aria-expanded={isOpen}
+        aria-current={isActive ? 'page' : undefined}
         aria-controls={panelId}
-        className="inline-flex items-center gap-1 text-text-secondary hover:text-primary-500 font-medium transition-colors whitespace-nowrap"
+        className={`relative inline-flex items-center gap-1 font-medium transition-colors whitespace-nowrap pb-1 ${
+          isActive ? 'text-primary-500' : 'text-text-secondary hover:text-primary-500'
+        }`}
       >
         <span>{label}</span>
         {chevron}
+        {isActive && (
+          <span className="absolute left-0 right-4 -bottom-0.5 h-[2px] bg-primary-500 rounded-full" aria-hidden="true" />
+        )}
       </button>
       <AnimatePresence>
         {isOpen && (

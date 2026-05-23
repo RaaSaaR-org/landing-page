@@ -6,16 +6,25 @@ import { trackCTAClick } from '@/lib/analytics';
 import { useTranslations } from 'next-intl';
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 import { Logo } from '@/components/ui/Logo';
-import { Link } from '@/i18n/routing';
+import { Link, usePathname } from '@/i18n/routing';
 import { NavDropdown, type DropdownItem } from './NavDropdown';
+
+/** Active when the current pathname matches the link's route (ignoring hash anchors). */
+function isRouteActive(pathname: string, href: string) {
+  if (href.startsWith('/#') || href.startsWith('#')) return false;
+  if (href === '/') return pathname === '/';
+  return pathname === href || pathname.startsWith(href + '/');
+}
 
 const serviceKeys = ['consulting', 'testing', 'workshops', 'data'] as const;
 
 export function Header() {
   const tNav = useTranslations('nav');
   const tServices = useTranslations('services.items');
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const isServicesActive = pathname.startsWith('/services/');
 
   const serviceItems: DropdownItem[] = [
     ...serviceKeys.map((key) => ({
@@ -77,18 +86,30 @@ export function Header() {
             <NavDropdown
               label={tNav('services')}
               items={serviceItems}
+              isActive={isServicesActive}
               onItemClick={handleNavClick}
             />
-            {pageLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => handleNavClick(link.name)}
-                className="text-text-secondary hover:text-primary-500 font-medium transition-colors whitespace-nowrap"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {pageLinks.map((link) => {
+              const active = isRouteActive(pathname, link.href);
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  onClick={() => handleNavClick(link.name)}
+                  aria-current={active ? 'page' : undefined}
+                  className={`relative font-medium transition-colors whitespace-nowrap pb-1 ${
+                    active
+                      ? 'text-primary-500'
+                      : 'text-text-secondary hover:text-primary-500'
+                  }`}
+                >
+                  {link.name}
+                  {active && (
+                    <span className="absolute left-0 right-0 -bottom-0.5 h-[2px] bg-primary-500 rounded-full" aria-hidden="true" />
+                  )}
+                </Link>
+              );
+            })}
             <LanguageSwitcher />
             <Link
               href="/#contact"
@@ -139,18 +160,27 @@ export function Header() {
                 label={tNav('services')}
                 items={serviceItems}
                 mode="accordion"
+                isActive={isServicesActive}
                 onItemClick={handleNavClick}
               />
-              {pageLinks.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.href}
-                  onClick={() => handleNavClick(link.name)}
-                  className="block text-text-secondary hover:text-primary-500 font-medium py-2"
-                >
-                  {link.name}
-                </Link>
-              ))}
+              {pageLinks.map((link) => {
+                const active = isRouteActive(pathname, link.href);
+                return (
+                  <Link
+                    key={link.name}
+                    href={link.href}
+                    onClick={() => handleNavClick(link.name)}
+                    aria-current={active ? 'page' : undefined}
+                    className={`block font-medium py-2 border-l-2 pl-3 ${
+                      active
+                        ? 'text-primary-500 border-primary-500'
+                        : 'text-text-secondary border-transparent hover:text-primary-500'
+                    }`}
+                  >
+                    {link.name}
+                  </Link>
+                );
+              })}
               <div className="pt-2 pb-4 flex justify-center">
                 <LanguageSwitcher />
               </div>

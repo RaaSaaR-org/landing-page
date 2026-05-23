@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Performance gauge dashboard">
+  <title>Performance gauge — testing dashboard</title>
+
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FF6700" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#FF6700" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="arc-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#993E00"/>
+      <stop offset="60%"  stop-color="#FF6700"/>
+      <stop offset="100%" stop-color="#FFA366"/>
+    </linearGradient>
+    <linearGradient id="needle" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%"   stop-color="#FFA366"/>
+      <stop offset="100%" stop-color="#FF6700"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#halo)"/>
+
+  <!-- Outer brand rings -->
+  <circle cx="200" cy="200" r="196" fill="none" stroke="#FF6700" stroke-opacity="0.15" stroke-width="1"/>
+  <circle cx="200" cy="200" r="172" fill="none" stroke="#FF6700" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- HUD corners -->
+  <g stroke="#FF6700" stroke-opacity="0.5" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M 20 36 L 20 20 L 36 20"/>
+    <path d="M 364 20 L 380 20 L 380 36"/>
+    <path d="M 380 364 L 380 380 L 364 380"/>
+    <path d="M 36 380 L 20 380 L 20 364"/>
+  </g>
+
+  <!-- ============ MAIN GAUGE (top, large) ============ -->
+  <!-- Background arc (semicircle) — muted -->
+  <path d="M 80 200 A 120 120 0 0 1 320 200"
+        stroke="#3D3D3D" stroke-width="3" fill="none"/>
+  <!-- Active arc — 0% to ~84% sweep -->
+  <path d="M 80 200 A 120 120 0 0 1 308 156"
+        stroke="url(#arc-grad)" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <!-- Major tick marks at 6 positions (every 36°) along the semicircle -->
+  <g stroke="#A8A29E" stroke-opacity="0.6" stroke-width="1.2">
+    <line x1="80"  y1="200" x2="68"  y2="200"/>
+    <line x1="98"  y1="129" x2="89"  y2="124"/>
+    <line x1="153" y1="80"  x2="148" y2="71"/>
+    <line x1="200" y1="80"  x2="200" y2="68"/>
+    <line x1="247" y1="80"  x2="252" y2="71"/>
+    <line x1="302" y1="129" x2="311" y2="124"/>
+    <line x1="320" y1="200" x2="332" y2="200"/>
+  </g>
+  <!-- Minor ticks between -->
+  <g stroke="#A8A29E" stroke-opacity="0.3" stroke-width="1">
+    <line x1="91"  y1="166" x2="83"  y2="163"/>
+    <line x1="124" y1="106" x2="118" y2="100"/>
+    <line x1="176" y1="84"  x2="174" y2="74"/>
+    <line x1="224" y1="84"  x2="226" y2="74"/>
+    <line x1="276" y1="106" x2="282" y2="100"/>
+    <line x1="309" y1="166" x2="317" y2="163"/>
+  </g>
+
+  <!-- Numeric scale (0/50/100) -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="9" fill="#78716C" text-anchor="middle">
+    <text x="68"  y="218">00</text>
+    <text x="200" y="58">50</text>
+    <text x="332" y="218">100</text>
+  </g>
+
+  <!-- Needle pointing to ~84% with subtle live wiggle -->
+  <g transform="rotate(-28 200 200)">
+    <animateTransform attributeName="transform" type="rotate" values="-30 200 200; -26 200 200; -30 200 200" dur="5s" repeatCount="indefinite"/>
+    <line x1="200" y1="200" x2="200" y2="88"
+          stroke="url(#needle)" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="200" y1="200" x2="200" y2="220"
+          stroke="#2DD4BF" stroke-opacity="0.45" stroke-width="2"/>
+  </g>
+
+  <!-- Center hub -->
+  <circle cx="200" cy="200" r="11" fill="#0B0B0B" stroke="#FF6700" stroke-width="1.5"/>
+  <circle cx="200" cy="200" r="6"  fill="#FF6700"/>
+  <circle cx="200" cy="200" r="2"  fill="#2DD4BF"/>
+
+  <!-- Primary readout — big number + label -->
+  <g font-family="ui-monospace, Menlo, monospace" text-anchor="middle">
+    <text x="200" y="246" font-weight="700" font-size="22" fill="#F5F5F4">0.84</text>
+    <text x="200" y="262" font-weight="700" font-size="8"  fill="#2DD4BF" letter-spacing="3">SUCCESS RATE</text>
+  </g>
+
+  <!-- ============ SATELLITE METRICS (bottom row) ============ -->
+  <g font-family="ui-monospace, Menlo, monospace" text-anchor="middle">
+    <!-- Left metric -->
+    <g transform="translate(95, 295)">
+      <rect x="-32" y="-12" width="64" height="44" rx="3" fill="#131313" stroke="#3D3D3D" stroke-width="0.8"/>
+      <text x="0" y="2"  font-weight="700" font-size="7"  fill="#78716C" letter-spacing="2">BIAS</text>
+      <text x="0" y="20" font-weight="700" font-size="14" fill="#F5F5F4">±0.06</text>
+    </g>
+    <!-- Right metric -->
+    <g transform="translate(305, 295)">
+      <rect x="-32" y="-12" width="64" height="44" rx="3" fill="#131313" stroke="#3D3D3D" stroke-width="0.8"/>
+      <text x="0" y="2"  font-weight="700" font-size="7"  fill="#78716C" letter-spacing="2">CONF</text>
+      <text x="0" y="20" font-weight="700" font-size="14" fill="#2DD4BF">95%</text>
+    </g>
+  </g>
+
+  <!-- ============ SPARKLINE (very bottom) ============ -->
+  <g>
+    <line x1="138" y1="350" x2="262" y2="350" stroke="#3D3D3D" stroke-width="0.6"/>
+    <polyline points="140,346 156,348 172,342 188,344 204,338 220,340 236,332 252,334 260,330"
+              stroke="#FF6700" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="260" cy="330" r="2.5" fill="#FF6700">
+      <animate attributeName="r" values="2.5;4;2.5" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <!-- Expanding ripple around the sparkline endpoint -->
+    <circle cx="260" cy="330" r="3" fill="none" stroke="#FF6700" stroke-width="0.8">
+      <animate attributeName="r" values="3;10;3" dur="2.4s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.6;0;0.6" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+    <text x="200" y="368" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="7" fill="#78716C" text-anchor="middle" letter-spacing="2.5">N=240 TRIALS · 7d</text>
+  </g>
+</svg>

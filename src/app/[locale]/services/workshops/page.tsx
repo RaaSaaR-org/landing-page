@@ -2,21 +2,17 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container, PageHero } from '@/components/layout';
 import { PageCTA } from '@/components/sections/PageCTA';
+import { WorkshopsIllustration } from '@/components/ui/illustrations/WorkshopsIllustration';
 import { routing } from '@/i18n/routing';
 import { buildAlternates } from '@/lib/seo';
 import { jsonLdScript, serviceBreadcrumb } from '@/lib/jsonld';
 import {
-  AboutPositioning,
   AudienceSegments,
   EngagementPath,
-  PairGrid,
-  PublicSectorGrid,
   SectionHeader,
   WorkshopTierCard,
   type AudienceSegment,
   type EngagementStep,
-  type ItemPair,
-  type PublicSectorItem,
   type WorkshopTier,
 } from '@/components/sections/workshops';
 
@@ -49,11 +45,7 @@ export default async function WorkshopsPage({
 
   const tiers = t.raw('tiers.items') as WorkshopTier[];
   const steps = t.raw('engagementPath.steps') as EngagementStep[];
-  const methodology = t.raw('methodology.items') as ItemPair[];
   const audiences = t.raw('audiences.segments') as AudienceSegment[];
-  const publicSectorItems = t.raw('publicSector.items') as PublicSectorItem[];
-  const eastSideFabItems = t.raw('eastSideFab.items') as ItemPair[];
-  const aboutItems = t.raw('about.items') as ItemPair[];
 
   const audienceLabel = locale === 'de' ? 'Zielgruppe' : 'Audience';
 
@@ -77,6 +69,7 @@ export default async function WorkshopsPage({
           eyebrow={t('hero.eyebrow')}
           title={t('hero.title')}
           subtitle={t('hero.subtitle')}
+          visual={<WorkshopsIllustration />}
         />
         <Section background="surface" className="!pt-0 !pb-12">
           <Container>
@@ -112,57 +105,11 @@ export default async function WorkshopsPage({
           </Container>
         </Section>
 
-        {/* Methodology */}
-        <Section background="base">
-          <Container>
-            <SectionHeader title={t('methodology.title')} subtitle={t('methodology.intro')} />
-            <PairGrid items={methodology} cols="3" />
-          </Container>
-        </Section>
-
         {/* Audiences */}
-        <Section background="surface">
+        <Section background="base">
           <Container>
             <SectionHeader title={t('audiences.title')} subtitle={t('audiences.subtitle')} />
             <AudienceSegments segments={audiences} />
-          </Container>
-        </Section>
-
-        {/* Public Sector */}
-        <Section background="base">
-          <Container>
-            <SectionHeader
-              title={t('publicSector.title')}
-              subtitle={t('publicSector.intro')}
-              align="left"
-            />
-            <PublicSectorGrid items={publicSectorItems} />
-          </Container>
-        </Section>
-
-        {/* East Side Fab */}
-        <Section background="surface">
-          <Container>
-            <SectionHeader
-              title={t('eastSideFab.title')}
-              subtitle={t('eastSideFab.intro')}
-              align="left"
-            />
-            <PairGrid items={eastSideFabItems} cols="2" />
-          </Container>
-        </Section>
-
-        {/* About / positioning */}
-        <Section background="base">
-          <Container>
-            <SectionHeader title={t('about.title')} subtitle={t('about.intro')} align="left" />
-            <AboutPositioning
-              items={aboutItems}
-              differentiatorLabel={t('about.differentiatorLabel')}
-              differentiator={t('about.differentiator')}
-              antiLabel={t('about.antiLabel')}
-              anti={t('about.anti')}
-            />
           </Container>
         </Section>
 

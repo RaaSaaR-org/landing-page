@@ -19,7 +19,7 @@ export function FAQ() {
             <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
               {t('title')}
             </h2>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-400 mx-auto rounded-full" />
+            <div className="w-24 h-1 bg-primary-500 mx-auto rounded-full" />
           </div>
 
           <div className="space-y-4">

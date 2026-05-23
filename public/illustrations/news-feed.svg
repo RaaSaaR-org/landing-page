@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Live article feed">
+  <title>News feed — recent articles with category tags and dates</title>
+
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FF6700" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#FF6700" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Reusable card template — placed via <use> with translate + opacity tweaks -->
+    <g id="card">
+      <!-- Card body -->
+      <rect width="220" height="120" rx="4" fill="#131313" stroke="#3D3D3D" stroke-width="0.9"/>
+      <!-- Orange header strip -->
+      <rect width="220" height="5" fill="#FF6700"/>
+      <!-- Top-right "EmAI" stamp -->
+      <text x="208" y="22" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="7" fill="#FF6700" text-anchor="end" letter-spacing="2">EMAI</text>
+      <!-- Date pill (top-left) -->
+      <rect x="10" y="13" width="44" height="12" rx="1" fill="#2DD4BF" fill-opacity="0.15" stroke="#2DD4BF" stroke-opacity="0.5" stroke-width="0.6"/>
+      <text x="32" y="22" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="6.5" fill="#2DD4BF" text-anchor="middle" letter-spacing="1">22.05.26</text>
+      <!-- Title line -->
+      <rect x="10" y="36" width="130" height="4" rx="0.5" fill="#F5F5F4" opacity="0.85"/>
+      <rect x="10" y="44" width="100" height="4" rx="0.5" fill="#F5F5F4" opacity="0.55"/>
+      <!-- Body lines -->
+      <rect x="10" y="60" width="200" height="2" rx="0.5" fill="#A8A29E" opacity="0.55"/>
+      <rect x="10" y="68" width="190" height="2" rx="0.5" fill="#A8A29E" opacity="0.55"/>
+      <rect x="10" y="76" width="170" height="2" rx="0.5" fill="#A8A29E" opacity="0.55"/>
+      <rect x="10" y="84" width="120" height="2" rx="0.5" fill="#A8A29E" opacity="0.55"/>
+      <!-- Footer: category tag + reading time -->
+      <rect x="10" y="100" width="38" height="10" rx="1" fill="#FF6700" fill-opacity="0.20"/>
+      <text x="29" y="108" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="6" fill="#FF6700" text-anchor="middle" letter-spacing="1.2">PRAXIS</text>
+      <text x="210" y="108" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="6" fill="#78716C" text-anchor="end" letter-spacing="1.2">4 MIN READ</text>
+    </g>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#halo)"/>
+
+  <!-- Outer brand rings -->
+  <circle cx="200" cy="200" r="196" fill="none" stroke="#FF6700" stroke-opacity="0.15" stroke-width="1"/>
+  <circle cx="200" cy="200" r="172" fill="none" stroke="#FF6700" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- HUD corners -->
+  <g stroke="#FF6700" stroke-opacity="0.5" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M 20 36 L 20 20 L 36 20"/>
+    <path d="M 364 20 L 380 20 L 380 36"/>
+    <path d="M 380 364 L 380 380 L 364 380"/>
+    <path d="M 36 380 L 20 380 L 20 364"/>
+  </g>
+
+  <!-- Top status row -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700">
+    <text x="44" y="50" font-size="9" fill="#78716C" letter-spacing="2.5">LIVE FEED</text>
+    <text x="356" y="50" font-size="9" fill="#2DD4BF" text-anchor="end">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/>
+      ● 12 ARTICLES
+    </text>
+  </g>
+
+  <!-- Three stacked cards, offset + rotated for depth -->
+  <use href="#card" transform="translate(70, 240) rotate(-7 110 60)" opacity="0.45"/>
+  <use href="#card" transform="translate(82, 200) rotate(-3 110 60)" opacity="0.72"/>
+  <use href="#card" transform="translate(94, 160) rotate(3 110 60)"/>
+
+  <!-- Scanning line drifts down the top card -->
+  <line x1="100" y1="200" x2="316" y2="190"
+        stroke="#2DD4BF" stroke-width="0.6" stroke-opacity="0.5" stroke-dasharray="2 4">
+    <animate attributeName="y1" values="160;280;160" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="y2" values="150;270;150" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-opacity" values="0;0.7;0" dur="6s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Footer -->
+  <text x="200" y="386" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="10" fill="#2DD4BF" text-anchor="middle" letter-spacing="3.5">PUBLISHED · CONTINUOUSLY</text>
+</svg>

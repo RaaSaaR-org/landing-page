@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container, PageHero } from '@/components/layout';
 import { GlowCard } from '@/components/ui/GlowCard';
 import { PageCTA } from '@/components/sections/PageCTA';
+import { NewsIllustration } from '@/components/ui/illustrations/NewsIllustration';
 import { Link } from '@/i18n/routing';
 import { getAllPosts, type NewsLocale } from '@/lib/news';
 import { routing } from '@/i18n/routing';
@@ -46,7 +47,12 @@ export default async function NewsIndexPage({
     <>
       <Header />
       <main>
-        <PageHero eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        <PageHero
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          subtitle={t('subtitle')}
+          visual={<NewsIllustration />}
+        />
 
         <Section background="base">
           <Container>

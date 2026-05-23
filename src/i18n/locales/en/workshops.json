@@ -116,17 +116,6 @@
       "outcomeLabel": "Impact",
       "outcome": "In 6-12 months from first use case to a productive robot pilot -- without the classic pilot purgatory."
     },
-    "methodology": {
-      "title": "Methodology & Workshop Cloud",
-      "intro": "All workshops use a personalized cloud sandbox per participant (JupyterHub or VS Code Server) with pre-installed models, data, and tools.",
-      "items": [
-        { "title": "Zero setup effort", "description": "No laptop installations, no compatibility issues." },
-        { "title": "Secure data bubble", "description": "Sensitive data does not leave the controlled environment." },
-        { "title": "Synthetic data", "description": "Sim-to-real closes the data gap of industrial robotics." },
-        { "title": "Remote-ready", "description": "On-site or distributed, same quality, same tools." },
-        { "title": "Sustainability", "description": "The sandbox stays usable after the workshop as a base for pilot projects." }
-      ]
-    },
     "audiences": {
       "title": "Audiences",
       "subtitle": "Three segments, three entry paths.",
@@ -147,66 +136,6 @@
           "description": "Inspection, clinic logistics, city operations, disaster response. Robots where staff is missing."
         }
       ]
-    },
-    "publicSector": {
-      "title": "Physical AI for Public Administration",
-      "intro": "Automate physical tasks where staff is missing -- from road monitoring to clinic logistics.",
-      "items": [
-        {
-          "title": "Infrastructure",
-          "subtitle": "Roads, bridges, networks",
-          "description": "Autonomous damage detection via computer vision. Mobile robots and drones for inspection runs."
-        },
-        {
-          "title": "Properties",
-          "subtitle": "Building maintenance",
-          "description": "Inspection robots for municipal properties. Sensor systems for predictive maintenance."
-        },
-        {
-          "title": "Hospitals",
-          "subtitle": "Clinic logistics",
-          "description": "Transport robots for materials and samples in university hospitals. Frees nursing staff from courier runs."
-        },
-        {
-          "title": "Smart City",
-          "subtitle": "City operations",
-          "description": "Robots and sensors for cleaning, waste, green spaces. Data-driven facility management."
-        },
-        {
-          "title": "Utilities",
-          "subtitle": "Facility inspection",
-          "description": "Tunnels, wastewater plants, energy networks. Robots reduce manual inspections in hazardous areas."
-        },
-        {
-          "title": "Disaster Response",
-          "subtitle": "Search & rescue",
-          "description": "Ground robots and drones for fire brigades and emergency services. Deployment in rubble and hazardous zones."
-        }
-      ]
-    },
-    "eastSideFab": {
-      "title": "East Side Fab Anchor",
-      "intro": "Saarbrücken hub for cognitive robotics. Workshops as an integrated part of FabCademy®, with direct access to industry partners and research institutes.",
-      "items": [
-        { "title": "Makerspace & open space", "description": "We bring the cloud, the Fab brings the room." },
-        { "title": "FabCademy® connection", "description": "Plug into existing innovation projects." },
-        { "title": "Pilot partner program", "description": "Discounted conditions in exchange for case studies." },
-        { "title": "Saarland visibility", "description": "IT.CON, GovTech Campus, regional innovation events." }
-      ]
-    },
-    "about": {
-      "title": "About EmAI",
-      "intro": "A specialized two-person team with deep cloud-native and Embodied AI expertise. Open-source DNA, our own platform, compatible with all common VLA frameworks.",
-      "items": [
-        { "title": "Cloud-native depth", "description": "Kubernetes, data pipelines, edge orchestration. In production use." },
-        { "title": "NeoDEM platform", "description": "Our own fleet management for cognitive robots." },
-        { "title": "Open-source DNA", "description": "SmolVLA, Pi-0, GR00T -- we build the stacks we use." },
-        { "title": "Saarland-anchored", "description": "East Side Fab as home, direct access to industry and administration." }
-      ],
-      "differentiatorLabel": "What sets us apart",
-      "differentiator": "Depth over breadth. We don't deliver slides -- we deliver runnable systems.",
-      "antiLabel": "Anti-positioning",
-      "anti": "No generic AI consulting. Specialists for the gap between cloud and robot, where Vision-Language-Action models turn promises into productivity."
     },
     "cta": {
       "eyebrow": "Call to action",

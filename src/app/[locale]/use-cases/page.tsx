@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container, PageHero } from '@/components/layout';
 import { GlowCard } from '@/components/ui/GlowCard';
 import { PageCTA } from '@/components/sections/PageCTA';
+import { UseCasesIllustration } from '@/components/ui/illustrations/UseCasesIllustration';
 import { buildAlternates } from '@/lib/seo';
 import { routing } from '@/i18n/routing';
 
@@ -37,7 +38,12 @@ export default async function UseCasesPage({
     <>
       <Header />
       <main>
-        <PageHero eyebrow={t('eyebrow')} title={t('title')} subtitle={t('subtitle')} />
+        <PageHero
+          eyebrow={t('eyebrow')}
+          title={t('title')}
+          subtitle={t('subtitle')}
+          visual={<UseCasesIllustration />}
+        />
 
         {/* Intro */}
         <Section background="base">

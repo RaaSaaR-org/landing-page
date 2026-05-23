@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Live telemetry across deployments">
+  <title>Multi-stream telemetry — independent performance data</title>
+
+  <defs>
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"  stop-color="#FF6700" stop-opacity="0.18"/>
+      <stop offset="70%" stop-color="#FF6700" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="area-fill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#FF6700" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#FF6700" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="400" height="400" fill="url(#halo)"/>
+
+  <!-- Outer brand rings -->
+  <circle cx="200" cy="200" r="196" fill="none" stroke="#FF6700" stroke-opacity="0.15" stroke-width="1"/>
+  <circle cx="200" cy="200" r="172" fill="none" stroke="#FF6700" stroke-opacity="0.25" stroke-width="1"/>
+
+  <!-- HUD corners -->
+  <g stroke="#FF6700" stroke-opacity="0.5" stroke-width="1.5" fill="none" stroke-linecap="round">
+    <path d="M 20 36 L 20 20 L 36 20"/>
+    <path d="M 364 20 L 380 20 L 380 36"/>
+    <path d="M 380 364 L 380 380 L 364 380"/>
+    <path d="M 36 380 L 20 380 L 20 364"/>
+  </g>
+
+  <!-- ============ CHART AREA ============ -->
+  <!-- Background grid -->
+  <g stroke="#3D3D3D" stroke-width="0.4" opacity="0.6">
+    <line x1="70"  y1="120" x2="350" y2="120"/>
+    <line x1="70"  y1="170" x2="350" y2="170"/>
+    <line x1="70"  y1="220" x2="350" y2="220"/>
+    <line x1="70"  y1="270" x2="350" y2="270"/>
+    <line x1="120" y1="120" x2="120" y2="270"/>
+    <line x1="170" y1="120" x2="170" y2="270"/>
+    <line x1="220" y1="120" x2="220" y2="270"/>
+    <line x1="270" y1="120" x2="270" y2="270"/>
+    <line x1="320" y1="120" x2="320" y2="270"/>
+  </g>
+
+  <!-- Axes -->
+  <line x1="70" y1="270" x2="350" y2="270" stroke="#A8A29E" stroke-width="0.8" opacity="0.8"/>
+  <line x1="70" y1="120" x2="70"  y2="270" stroke="#A8A29E" stroke-width="0.8" opacity="0.8"/>
+
+  <!-- Y-axis labels -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="7" fill="#78716C" text-anchor="end">
+    <text x="62" y="123">1.0</text>
+    <text x="62" y="173">.75</text>
+    <text x="62" y="223">.50</text>
+    <text x="62" y="273">.25</text>
+  </g>
+
+  <!-- X-axis labels (months) -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="7" fill="#78716C" text-anchor="middle">
+    <text x="70"  y="284">JAN</text>
+    <text x="120" y="284">FEB</text>
+    <text x="170" y="284">MAR</text>
+    <text x="220" y="284">APR</text>
+    <text x="270" y="284">MAI</text>
+    <text x="320" y="284">JUN</text>
+  </g>
+
+  <!-- Stream 1 — Primary deployment (orange, with area fill) -->
+  <path d="M 70 220 L 120 195 L 170 180 L 220 155 L 270 140 L 320 125 L 350 130 L 350 270 L 70 270 Z"
+        fill="url(#area-fill)" opacity="0.6"/>
+  <polyline points="70,220 120,195 170,180 220,155 270,140 320,125 350,130"
+            stroke="#FF6700" stroke-width="2" fill="none"
+            stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#FF6700">
+    <circle cx="70"  cy="220" r="2.5"/>
+    <circle cx="120" cy="195" r="2.5"/>
+    <circle cx="170" cy="180" r="2.5"/>
+    <circle cx="220" cy="155" r="2.5"/>
+    <circle cx="270" cy="140" r="2.5"/>
+    <circle cx="320" cy="125" r="2.5"/>
+    <circle cx="350" cy="130" r="3.5"/>
+    <!-- Expanding pulse ring around the latest data point -->
+    <circle cx="350" cy="130" r="6" fill="none" stroke="#FF6700" stroke-width="1" opacity="0.6">
+      <animate attributeName="r" values="6;16;6" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Stream 2 — Secondary deployment (teal) -->
+  <polyline points="70,235 120,225 170,215 220,205 270,195 320,180 350,170"
+            stroke="#2DD4BF" stroke-width="1.5" fill="none"
+            stroke-dasharray="3 3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Stream 3 — Reference baseline (muted) -->
+  <polyline points="70,250 120,248 170,245 220,242 270,238 320,235 350,232"
+            stroke="#A8A29E" stroke-width="1" fill="none" opacity="0.6"
+            stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- ============ HEADER / KPI ============ -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700">
+    <text x="70" y="62" font-size="8" fill="#78716C" letter-spacing="2.5">LIVE TELEMETRY</text>
+    <text x="70" y="92" font-size="28" fill="#F5F5F4">0.87</text>
+    <!-- Delta badge -->
+    <g transform="translate(140, 80)">
+      <rect x="-2" y="-12" width="60" height="18" rx="2" fill="#2DD4BF" fill-opacity="0.18" stroke="#2DD4BF" stroke-width="0.7" stroke-opacity="0.5"/>
+      <text x="28" y="1" font-size="9" fill="#2DD4BF" text-anchor="middle">▲ +18.2%</text>
+    </g>
+    <!-- Right-side tags -->
+    <text x="350" y="62" font-size="8" fill="#78716C" letter-spacing="2.5" text-anchor="end">RUNTIME 142h</text>
+    <text x="350" y="76" font-size="7" fill="#2DD4BF" text-anchor="end">
+      <animate attributeName="opacity" values="1;0.35;1" dur="1.8s" repeatCount="indefinite"/>
+      ● LIVE
+    </text>
+  </g>
+
+  <!-- ============ LEGEND ============ -->
+  <g font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="7" fill="#A8A29E">
+    <g transform="translate(70, 320)">
+      <line x1="0" y1="0" x2="14" y2="0" stroke="#FF6700" stroke-width="2"/>
+      <text x="18" y="3">SITE-01</text>
+    </g>
+    <g transform="translate(140, 320)">
+      <line x1="0" y1="0" x2="14" y2="0" stroke="#2DD4BF" stroke-width="1.5" stroke-dasharray="3 3"/>
+      <text x="18" y="3">SITE-02</text>
+    </g>
+    <g transform="translate(210, 320)">
+      <line x1="0" y1="0" x2="14" y2="0" stroke="#A8A29E" stroke-width="1" opacity="0.6"/>
+      <text x="18" y="3" opacity="0.7">BASELINE</text>
+    </g>
+  </g>
+
+  <!-- Footer label -->
+  <text x="200" y="362" font-family="ui-monospace, Menlo, monospace" font-weight="700" font-size="8" fill="#2DD4BF" text-anchor="middle" letter-spacing="3">DATASET · 6 MO · 3 SITES</text>
+</svg>

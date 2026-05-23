@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from 'next/font/google';
+import { Space_Grotesk, Geist_Mono } from 'next/font/google';
 import "../globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { AnalyticsProvider } from '@/components/providers/AnalyticsProvider';
@@ -13,6 +13,15 @@ const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-space-grotesk',
+});
+
+// Geist Mono — for the brand tag/data type recipes (eyebrows, labels, tech readouts).
+// Pairs with Space Grotesk (display) per the visitenkarten/flyer design system.
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-geist-mono',
+  weight: ['400', '700'],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.de';
@@ -192,7 +201,7 @@ export default async function LocaleLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${spaceGrotesk.variable} font-sans antialiased bg-base text-text-primary`}>
+      <body className={`${spaceGrotesk.variable} ${geistMono.variable} font-sans antialiased bg-base text-text-primary`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <AnalyticsProvider>
             {children}

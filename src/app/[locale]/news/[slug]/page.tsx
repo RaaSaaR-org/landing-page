@@ -126,7 +126,7 @@ export default async function NewsPostPage({
                 <h1 className="text-3xl md:text-5xl font-bold text-text-primary mb-6">
                   {post.title}
                 </h1>
-                <div className="w-24 h-1 bg-gradient-to-r from-primary-500 to-secondary-400 rounded-full mb-6" />
+                <div className="w-24 h-1 bg-primary-500 rounded-full mb-6" />
                 <p className="text-xl text-text-secondary leading-relaxed">{post.excerpt}</p>
               </div>
             </Container>

@@ -116,17 +116,6 @@
       "outcomeLabel": "Wirkung",
       "outcome": "In 6–12 Monaten vom ersten Use Case zu einem produktiven Roboter-Piloten — ohne den klassischen Pilot-Purgatory."
     },
-    "methodology": {
-      "title": "Methodik & Workshop-Cloud",
-      "intro": "Alle Workshops nutzen eine personalisierte Cloud-Sandbox pro Teilnehmer (JupyterHub oder VS Code Server) mit vorinstallierten Modellen, Daten und Tools.",
-      "items": [
-        { "title": "Null Setup-Aufwand", "description": "Keine Laptop-Installationen, keine Kompatibilitätsprobleme." },
-        { "title": "Sichere Daten-Bubble", "description": "Sensible Daten verlassen die kontrollierte Umgebung nicht." },
-        { "title": "Synthetische Daten", "description": "Sim-to-Real schließt die Datenlücke industrieller Robotik." },
-        { "title": "Remote-fähig", "description": "Vor Ort oder verteilt, gleiche Qualität, gleiche Tools." },
-        { "title": "Nachhaltigkeit", "description": "Sandbox bleibt nach dem Workshop nutzbar als Basis für Pilotprojekte." }
-      ]
-    },
     "audiences": {
       "title": "Zielgruppen",
       "subtitle": "Drei Segmente, drei Einstiegspfade.",
@@ -147,66 +136,6 @@
           "description": "Inspektion, Klinik-Logistik, Stadtbetrieb, Katastrophenschutz. Roboter, wo Personal fehlt."
         }
       ]
-    },
-    "publicSector": {
-      "title": "Physical AI für die Verwaltung",
-      "intro": "Physische Aufgaben automatisieren, wo Personal fehlt — vom Straßenmonitoring bis zur Klinik-Logistik.",
-      "items": [
-        {
-          "title": "Infrastruktur",
-          "subtitle": "Straßen, Brücken, Netze",
-          "description": "Autonome Erfassung von Schäden über Computer Vision. Mobile Roboter und Drohnen für Inspektionsfahrten."
-        },
-        {
-          "title": "Liegenschaften",
-          "subtitle": "Gebäudewartung",
-          "description": "Inspektions-Roboter für kommunale Liegenschaften. Sensorik für vorausschauende Instandhaltung."
-        },
-        {
-          "title": "Kliniken",
-          "subtitle": "Klinik-Logistik",
-          "description": "Transport-Roboter für Material und Proben in Unikliniken. Entlastet Pflegekräfte von Botengängen."
-        },
-        {
-          "title": "Smart City",
-          "subtitle": "Stadtbetrieb",
-          "description": "Roboter und Sensorik für Reinigung, Müll, Grünflächen. Daten-getriebene Bewirtschaftung."
-        },
-        {
-          "title": "Versorgung",
-          "subtitle": "Anlagen-Inspektion",
-          "description": "Tunnel, Kläranlagen, Energienetze. Roboter reduzieren Begehungen in Gefahrenbereichen."
-        },
-        {
-          "title": "Katastrophenschutz",
-          "subtitle": "Such & Rettung",
-          "description": "Bodenroboter und Drohnen für Feuerwehr und THW. Einsatz in Trümmern und Gefahrenzonen."
-        }
-      ]
-    },
-    "eastSideFab": {
-      "title": "East Side Fab Verankerung",
-      "intro": "Saarbrücken-Hub für kognitive Robotik. Workshops als integrierter Teil der FabCademy®, mit direktem Zugang zu Industriepartnern und Forschungsinstituten.",
-      "items": [
-        { "title": "Makerspace & Open Space", "description": "Wir bringen die Cloud, das Fab bringt den Raum." },
-        { "title": "FabCademy® Anschluss", "description": "Andocken an bestehende Innovationsprojekte." },
-        { "title": "Pilotpartner-Programm", "description": "Vergünstigte Konditionen gegen Case Studies." },
-        { "title": "Saarland-Sichtbarkeit", "description": "IT.CON, GovTech Campus, regionale Innovations-Events." }
-      ]
-    },
-    "about": {
-      "title": "Über EmAI",
-      "intro": "Spezialisiertes Zwei-Personen-Team mit tiefer Cloud-native- und Embodied-AI-Expertise. Open-Source-DNA, eigene Plattform, anschlussfähig an alle gängigen VLA-Frameworks.",
-      "items": [
-        { "title": "Cloud-native Tiefe", "description": "Kubernetes, Datenpipelines, Edge-Orchestrierung. Produktiv im Einsatz." },
-        { "title": "NeoDEM-Plattform", "description": "Eigenes Fleet-Management für kognitive Roboter." },
-        { "title": "Open-Source-DNA", "description": "SmolVLA, Pi-0, GR00T — wir bauen die Stacks, die wir nutzen." },
-        { "title": "Saarland-verankert", "description": "East Side Fab als Heimat, direkter Zugang zu Industrie und Verwaltung." }
-      ],
-      "differentiatorLabel": "Was uns abhebt",
-      "differentiator": "Tiefe statt Breite. Wir liefern keine Folien — wir liefern lauffähige Systeme.",
-      "antiLabel": "Anti-Positionierung",
-      "anti": "Keine generische KI-Beratung. Spezialisten für die Lücke zwischen Cloud und Roboter, dort wo Vision-Language-Action-Modelle aus Versprechen Produktivität machen."
     },
     "cta": {
       "eyebrow": "Call-to-Action",

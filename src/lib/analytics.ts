@@ -20,6 +20,17 @@ export const initGA = () => {
     } as Window['gtag'];
   }
 
+  // Consent Mode v2: GA4 properties created in 2024+ default to "implicit denied"
+  // for EEA visitors, which silently drops every hit until consent is signalled.
+  // Our cookie banner only calls initGA() after the user accepts, so we explicitly
+  // grant analytics + ad storage here.
+  window.gtag('consent', 'default', {
+    analytics_storage: 'granted',
+    ad_storage: 'granted',
+    ad_user_data: 'granted',
+    ad_personalization: 'granted',
+  });
+
   window.gtag('js', new Date());
   window.gtag('config', GA_MEASUREMENT_ID, {
     page_path: window.location.pathname,

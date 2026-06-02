@@ -56,6 +56,12 @@
       }
     }
   },
+  "membership": {
+    "eyebrow": "New",
+    "title": "Member of the EastSideFab Innovation Community",
+    "body": "As of 1 June 2026, EmAI Robotics GmbH is part of the EastSideFab Innovation Community -- a network where new technologies are tried out together, not just discussed. Practice-oriented, regionally rooted, open to collaboration.",
+    "cta": "Read more in the news section"
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "questions": {

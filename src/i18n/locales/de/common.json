@@ -51,6 +51,9 @@
       "terms": "AGB",
       "imprint": "Impressum"
     },
+    "membership": {
+      "badgeLabel": "Mitglied der EastSideFab Innovation Community"
+    },
     "copyright": "© 2026 EmAI. Alle Rechte vorbehalten.",
     "madeIn": "Made in Europe",
     "newsletterTitle": "Auf dem Laufenden bleiben",

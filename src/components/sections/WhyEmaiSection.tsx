@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Container, Section } from '@/components/layout';
+import { LearningLoop } from '@/components/sections/LearningLoop';
 
 const pillarIcons = {
   openSource: (
@@ -69,6 +70,10 @@ export function WhyEmaiSection() {
           <p className="text-xl text-text-secondary">
             {t('subtitle')}
           </p>
+        </div>
+
+        <div className="relative">
+          <LearningLoop />
         </div>
 
         <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6">

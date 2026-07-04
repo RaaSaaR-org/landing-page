@@ -37,6 +37,13 @@
   "whyEmai": {
     "title": "Why EmAI",
     "subtitle": "Independent. European. Practice-oriented.",
+    "loop": {
+      "caption": "Learning loop: every deployment becomes shared knowledge.",
+      "aria": "Animated learning loop: deployment produces data, data becomes knowledge that improves the next deployment.",
+      "deploy": "Deploy",
+      "data": "Data",
+      "knowledge": "Knowledge"
+    },
     "items": {
       "openSource": {
         "title": "Open-Source AI",

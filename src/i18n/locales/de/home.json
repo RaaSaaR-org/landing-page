@@ -37,6 +37,13 @@
   "whyEmai": {
     "title": "Warum EmAI",
     "subtitle": "Unabhängig. Europäisch. Praxisorientiert.",
+    "loop": {
+      "caption": "Lernschleife: Jeder Einsatz wird zu geteiltem Wissen.",
+      "aria": "Animierte Lernschleife: Einsatz erzeugt Daten, Daten werden zu Wissen, das den nächsten Einsatz verbessert.",
+      "deploy": "Deploy",
+      "data": "Data",
+      "knowledge": "Knowledge"
+    },
     "items": {
       "openSource": {
         "title": "Open-Source KI",

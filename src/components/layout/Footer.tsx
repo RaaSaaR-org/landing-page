@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { Logo } from '@/components/ui/Logo';
+import { MembershipBadge } from '@/components/ui/MembershipBadge';
 import { Link } from '@/i18n/routing';
 
 const serviceKeys = ['consulting', 'testing', 'workshops', 'data'] as const;
@@ -29,9 +30,15 @@ export function Footer() {
             <p className="text-sm text-text-secondary mb-4">
               {t('tagline')}
             </p>
-            <p className="text-xs text-text-muted">
+            <p className="text-xs text-text-muted mb-5">
               {t('description')}
             </p>
+            <div className="flex items-center gap-3">
+              <MembershipBadge size={56} label={t('membership.badgeLabel')} />
+              <span className="text-xs text-text-muted leading-snug max-w-[10rem]">
+                {t('membership.badgeLabel')}
+              </span>
+            </div>
           </div>
 
           {/* Services */}

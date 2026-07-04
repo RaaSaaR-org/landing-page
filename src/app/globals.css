@@ -597,8 +597,10 @@ input[type="range"]:focus::-moz-range-thumb {
 
 .prose-news img {
   border-radius: 0.5rem;
-  max-width: 100%;
+  max-width: min(100%, 24rem);
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .prose-news table {

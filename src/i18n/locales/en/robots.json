@@ -1,0 +1,125 @@
+{
+  "robots": {
+    "meta": {
+      "title": "Discover Robots – Cognitive Robots in 3D",
+      "description": "Explore cognitive robots interactively in 3D – with real technical data on weight, sensors, payload and degrees of freedom. Independently assessed by EmAI."
+    },
+    "hero": {
+      "eyebrow": "Discover robots",
+      "title": "Experience cognitive robots in 3D",
+      "subtitle": "Rotate, zoom and understand: real hardware with real technical data. We bring these robots into real environments — and share what we learn."
+    },
+    "intro": "Before a robot makes sense on your production or logistics floor, you should understand it. Here you'll find a growing selection of cognitive robots — interactive in 3D, with solid technical data and a neutral assessment. Not a sales brochure, but the basis for an informed decision.",
+    "registry": {
+      "eyebrow": "Robot registry",
+      "count": "{shown} of {total} units"
+    },
+    "filter": {
+      "all": "All"
+    },
+    "categories": {
+      "humanoid": "Humanoid",
+      "quadruped": "Quadruped"
+    },
+    "specGroups": {
+      "structure": "Structure",
+      "motion": "Drive & motion",
+      "sensing": "Perception",
+      "power": "Power",
+      "compute": "Compute"
+    },
+    "specLabels": {
+      "height": "Height",
+      "weight": "Weight",
+      "dof": "Degrees of freedom",
+      "payload": "Payload",
+      "standing_payload": "Max. load (static)",
+      "reach": "Reach (arm)",
+      "hand": "Gripper / hand",
+      "speed": "Max. speed",
+      "walk_speed": "Walking speed",
+      "max_speed": "Peak speed",
+      "max_slope": "Max. slope",
+      "climb_height": "Obstacle height",
+      "jump_distance": "Jump distance",
+      "actuator_torque": "Peak torque",
+      "sensors": "Sensors",
+      "battery": "Battery",
+      "runtime": "Runtime",
+      "ip_rating": "Ingress protection",
+      "operating_temp": "Operating temperature",
+      "compute": "Onboard computer"
+    },
+    "specsHeading": "Technical data",
+    "hotspots": {
+      "head-lidar": {
+        "label": "Livox Mid-360 LiDAR",
+        "description": "360° laser scanner for navigation and environment perception."
+      },
+      "depth-cam": {
+        "label": "RealSense D435i depth camera",
+        "description": "Stereo depth imaging for 3D capture and object recognition."
+      },
+      "dex-hand": {
+        "label": "Dex3-1 three-finger hand",
+        "description": "Force-controlled hand with 7 degrees of freedom and 33 tactile sensors per hand."
+      }
+    },
+    "viewer": {
+      "status": "Interactive",
+      "a11y": "Interactive 3D model. Drag to rotate, scroll to zoom.",
+      "hotspots": "Info points",
+      "loading": "Loading model …",
+      "placeholderNote": "Preview model – detailed 3D model coming soon.",
+      "interactionHint": "Drag to rotate · Scroll to zoom",
+      "reducedMotion": "Motion reduced (system setting)."
+    },
+    "card": {
+      "cta": "View datasheet"
+    },
+    "detail": {
+      "backToAll": "All robots",
+      "overview": "Overview",
+      "otherUnits": "More robots in the registry"
+    },
+    "specValues": {
+      "g1-edu": {
+        "sensors": "Livox Mid-360 LiDAR · RealSense D435i · IMU · 4-mic array",
+        "hand": "Dex3-1 · 7 DOF · 33 tactile sensors"
+      },
+      "h1": {
+        "sensors": "Livox Mid-360 3D LiDAR · RealSense D435i · IMU"
+      },
+      "go2": {
+        "sensors": "4D LiDAR L1 · HD wide-angle camera 120° · IMU"
+      },
+      "b2": {
+        "sensors": "3D LiDAR · 2× depth camera · 2× camera"
+      }
+    },
+    "items": {
+      "g1-edu": {
+        "tagline": "Humanoid robot for research and education – with the three-finger Dex3-1 hand for dexterous manipulation.",
+        "description": "The G1 EDU is Unitree's compact humanoid robot for research, teaching and prototyping. With up to 43 degrees of freedom, force-controlled joints and the Dex3-1 three-finger hand, it suits manipulation tasks, imitation learning and dataset collection. EmAI deploys the G1 EDU in real environments and shares what it learns."
+      },
+      "h1": {
+        "tagline": "Dynamic full-body humanoid – holder of the humanoid walking speed record.",
+        "description": "The H1 is a large, dynamic humanoid robot with high power density. With 3D LiDAR and a depth camera for 360° perception, it is built for locomotion, balance and robust whole-body motion."
+      },
+      "go2": {
+        "tagline": "Agile quadruped with 4D LiDAR – ideal for inspection, research and mobile sensing.",
+        "description": "The Go2 is an agile quadruped with 4D LiDAR L1 for seamless environment perception. Compact, fast and capable, it suits inspection, mapping and mobile sensor payloads across industry and research."
+      },
+      "b2": {
+        "tagline": "Industrial quadruped with high payload – for demanding field deployments.",
+        "description": "The B2 is Unitree's industrial quadruped with high payload and range. It handles steps and inclines, carries heavy loads and is built for long missions in harsh environments."
+      }
+    },
+    "cta": {
+      "title": "Which robot fits your use case?",
+      "body": "We test cognitive robots in real environments and independently assess what works for you — with no vendor lock-in.",
+      "primary": "Book a conversation",
+      "secondary": "To consulting"
+    }
+  }
+}

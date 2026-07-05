@@ -1,6 +1,7 @@
 import type { MetadataRoute } from 'next';
 import { routing } from '@/i18n/routing';
 import { getAllSlugs } from '@/lib/news';
+import { robotSlugs } from '@/lib/robots';
 
 export const dynamic = 'force-static';
 
@@ -14,6 +15,7 @@ const staticRoutes = [
   '/services/data',
   '/about',
   '/use-cases',
+  '/robots',
   '/news',
   '/impressum',
   '/datenschutz',
@@ -36,6 +38,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const slug of newsSlugs) {
       entries.push({
         url: `${BASE}/${locale}/news/${slug}`,
+        lastModified,
+        changeFrequency: 'monthly',
+        priority: 0.6,
+      });
+    }
+    for (const slug of robotSlugs) {
+      entries.push({
+        url: `${BASE}/${locale}/robots/${slug}`,
         lastModified,
         changeFrequency: 'monthly',
         priority: 0.6,

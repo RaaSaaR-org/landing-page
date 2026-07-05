@@ -1,7 +1,7 @@
 import { getRequestConfig } from 'next-intl/server';
 import { routing } from './routing';
 
-const namespaces = ['common', 'home', 'services', 'workshops', 'about', 'useCases', 'news', 'legal'] as const;
+const namespaces = ['common', 'home', 'services', 'workshops', 'about', 'useCases', 'news', 'legal', 'robots'] as const;
 
 export default getRequestConfig(async ({ locale }) => {
   // For static export, locale comes from the [locale] segment, not headers

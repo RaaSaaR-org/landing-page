@@ -37,6 +37,7 @@ export function Header() {
   const pageLinks: { name: string; href: string }[] = [
     { name: tNav('about'), href: '/about' },
     { name: tNav('useCases'), href: '/use-cases' },
+    { name: tNav('robots'), href: '/robots' },
     { name: tNav('news'), href: '/news' },
     { name: tNav('faq'), href: '/#faq' },
   ];

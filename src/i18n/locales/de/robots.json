@@ -1,0 +1,125 @@
+{
+  "robots": {
+    "meta": {
+      "title": "Roboter entdecken – Kognitive Roboter in 3D",
+      "description": "Entdecken Sie kognitive Roboter interaktiv in 3D – mit echten technischen Daten zu Gewicht, Sensorik, Traglast und Freiheitsgraden. Unabhängig eingeordnet von EmAI."
+    },
+    "hero": {
+      "eyebrow": "Roboter entdecken",
+      "title": "Kognitive Roboter in 3D erleben",
+      "subtitle": "Drehen, zoomen und verstehen: reale Hardware mit echten technischen Daten. Wir bringen diese Roboter in echte Umgebungen – und teilen, was wir dabei lernen."
+    },
+    "intro": "Bevor ein Roboter in Ihrer Produktion oder Logistik Sinn ergibt, sollten Sie ihn verstehen. Hier finden Sie eine wachsende Auswahl kognitiver Roboter – interaktiv in 3D, mit belastbaren technischen Daten und neutral eingeordnet. Kein Verkaufsprospekt, sondern die Grundlage für eine fundierte Entscheidung.",
+    "registry": {
+      "eyebrow": "Roboter-Register",
+      "count": "{shown} von {total} Einheiten"
+    },
+    "filter": {
+      "all": "Alle"
+    },
+    "categories": {
+      "humanoid": "Humanoid",
+      "quadruped": "Vierbeiner"
+    },
+    "specGroups": {
+      "structure": "Aufbau",
+      "motion": "Antrieb & Bewegung",
+      "sensing": "Wahrnehmung",
+      "power": "Energie",
+      "compute": "Rechenleistung"
+    },
+    "specLabels": {
+      "height": "Höhe",
+      "weight": "Gewicht",
+      "dof": "Freiheitsgrade",
+      "payload": "Traglast",
+      "standing_payload": "Max. Last (statisch)",
+      "reach": "Reichweite (Arm)",
+      "hand": "Greifer / Hand",
+      "speed": "Max. Geschwindigkeit",
+      "walk_speed": "Gehgeschwindigkeit",
+      "max_speed": "Spitzengeschwindigkeit",
+      "max_slope": "Max. Steigung",
+      "climb_height": "Hindernishöhe",
+      "jump_distance": "Sprungweite",
+      "actuator_torque": "Spitzendrehmoment",
+      "sensors": "Sensorik",
+      "battery": "Akku",
+      "runtime": "Laufzeit",
+      "ip_rating": "Schutzart",
+      "operating_temp": "Betriebstemperatur",
+      "compute": "Onboard-Rechner"
+    },
+    "specsHeading": "Technische Daten",
+    "hotspots": {
+      "head-lidar": {
+        "label": "Livox Mid-360 LiDAR",
+        "description": "360°-Laserscanner für Navigation und Umgebungswahrnehmung."
+      },
+      "depth-cam": {
+        "label": "RealSense D435i Tiefenkamera",
+        "description": "Stereo-Tiefenbild zur 3D-Erfassung und Objekterkennung."
+      },
+      "dex-hand": {
+        "label": "Dex3-1 Dreifingerhand",
+        "description": "Kraftgeregelte Hand mit 7 Freiheitsgraden und 33 Tastsensoren pro Hand."
+      }
+    },
+    "viewer": {
+      "status": "Interaktiv",
+      "a11y": "Interaktives 3D-Modell. Ziehen zum Drehen, scrollen zum Zoomen.",
+      "hotspots": "Infopunkte",
+      "loading": "Modell wird geladen …",
+      "placeholderNote": "Vorschau-Modell – detailliertes 3D-Modell folgt.",
+      "interactionHint": "Ziehen zum Drehen · Scrollen zum Zoomen",
+      "reducedMotion": "Animation reduziert (Systemeinstellung)."
+    },
+    "card": {
+      "cta": "Datenblatt ansehen"
+    },
+    "detail": {
+      "backToAll": "Alle Roboter",
+      "overview": "Überblick",
+      "otherUnits": "Weitere Roboter im Register"
+    },
+    "specValues": {
+      "g1-edu": {
+        "sensors": "Livox Mid-360 LiDAR · RealSense D435i · IMU · 4-Mikrofon-Array",
+        "hand": "Dex3-1 · 7 DOF · 33 Tastsensoren"
+      },
+      "h1": {
+        "sensors": "Livox Mid-360 3D-LiDAR · RealSense D435i · IMU"
+      },
+      "go2": {
+        "sensors": "4D-LiDAR L1 · HD-Weitwinkelkamera 120° · IMU"
+      },
+      "b2": {
+        "sensors": "3D-LiDAR · 2× Tiefenkamera · 2× Kamera"
+      }
+    },
+    "items": {
+      "g1-edu": {
+        "tagline": "Kognitiver Roboter in humanoider Bauform für Forschung und Ausbildung – mit dreifingriger Dex3-1-Hand für feinfühlige Manipulation.",
+        "description": "Der G1 EDU ist Unitrees kompakter kognitiver Roboter in humanoider Bauform für Forschung, Lehre und Prototyping. Mit bis zu 43 Freiheitsgraden, kraftgeregelten Gelenken und der Dex3-1-Dreifingerhand eignet er sich für Manipulationsaufgaben, Imitation Learning und den Aufbau von Datensätzen. EmAI setzt den G1 EDU in realen Umgebungen ein und teilt die daraus gewonnenen Erkenntnisse."
+      },
+      "h1": {
+        "tagline": "Dynamischer Ganzkörper-Roboter – hält den Geschwindigkeitsrekord im zweibeinigen Gehen.",
+        "description": "Der H1 ist ein großer, dynamischer kognitiver Roboter in humanoider Bauform mit hoher Leistungsdichte. Mit 3D-LiDAR und Tiefenkamera für 360°-Wahrnehmung ist er auf Fortbewegung, Balance und robuste Ganzkörperbewegung ausgelegt."
+      },
+      "go2": {
+        "tagline": "Wendiger Vierbeiner mit 4D-LiDAR – ideal für Inspektion, Forschung und mobile Sensorik.",
+        "description": "Der Go2 ist ein agiler Vierbeiner mit 4D-LiDAR L1 für lückenlose Umgebungswahrnehmung. Kompakt, schnell und tragfähig eignet er sich für Inspektion, Kartierung und mobile Sensorik-Payloads in Industrie und Forschung."
+      },
+      "b2": {
+        "tagline": "Industrieller Vierbeiner mit hoher Traglast – für anspruchsvolle Einsätze im Feld.",
+        "description": "Der B2 ist Unitrees industrieller Vierbeiner mit hoher Traglast und Reichweite. Er bewältigt Stufen und Steigungen, trägt schwere Nutzlasten und ist auf lange Einsätze in rauen Umgebungen ausgelegt."
+      }
+    },
+    "cta": {
+      "title": "Welcher Roboter passt zu Ihrem Anwendungsfall?",
+      "body": "Wir testen kognitive Roboter in realen Umgebungen und ordnen unabhängig ein, was für Sie funktioniert – ohne Herstellerbindung.",
+      "primary": "Gespräch vereinbaren",
+      "secondary": "Zur Beratung"
+    }
+  }
+}

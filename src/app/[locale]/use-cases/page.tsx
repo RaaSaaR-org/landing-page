@@ -60,9 +60,9 @@ export default async function UseCasesPage({
         {/* Cases */}
         <Section background="surface">
           <Container>
-            <div className="max-w-5xl mx-auto space-y-8">
+            <div className="case-studies space-y-6">
               {caseKeys.map((key) => (
-                <GlowCard key={key} className="!p-8 md:!p-10" hoverEffect={false}>
+                <GlowCard key={key} className="case-study !p-8 md:!p-10" hoverEffect={false}>
                   <span className="font-mono text-xs uppercase tracking-wider text-primary-400">
                     {t(`cases.${key}.industry`)}
                   </span>

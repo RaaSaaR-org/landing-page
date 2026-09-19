@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Container, Section } from '@/components/layout';
 import { LearningLoop } from '@/components/sections/LearningLoop';
+import styles from './HomeSections.module.css';
 
 const pillarIcons = {
   openSource: (
@@ -35,67 +36,23 @@ export function WhyEmaiSection() {
   return (
     <Section id="why-emai" background="surface">
       <Container>
-        {/* Background decorative element */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none overflow-hidden">
-          <svg
-            className="w-[600px] h-[600px] opacity-[0.03]"
-            viewBox="0 0 200 200"
-            fill="none"
-            aria-hidden="true"
-          >
-            <polygon
-              points="100,10 190,60 190,140 100,190 10,140 10,60"
-              stroke="#FF6700"
-              strokeWidth="1.5"
-              strokeDasharray="8 4"
-              className="animate-shield-dash"
-              fill="none"
-            />
-            <polygon
-              points="100,30 170,70 170,130 100,170 30,130 30,70"
-              stroke="#2DD4BF"
-              strokeWidth="0.5"
-              strokeDasharray="6 6"
-              className="animate-shield-dash"
-              style={{ animationDirection: 'reverse' }}
-              fill="none"
-            />
-          </svg>
-        </div>
-
-        <div className="relative max-w-4xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4">
-            {t('title')}
-          </h2>
-          <p className="text-xl text-text-secondary">
-            {t('subtitle')}
-          </p>
-        </div>
-
-        <div className="relative">
-          <LearningLoop />
-        </div>
-
-        <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6">
-          {pillarKeys.map((key) => (
-            <div
-              key={key}
-              className="group glass rounded-xl p-8 corner-brackets hover:shadow-[0_0_40px_rgba(255,103,0,0.1)] hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-500/20 transition-colors">
-                <div className="text-primary-500">
-                  {pillarIcons[key]}
+        <div className={styles.whyLayout}>
+          <div className={styles.whyIntro}>
+            <h2>{t('title')}</h2>
+            <p>{t('subtitle')}</p>
+            <div className={styles.loopFrame}><LearningLoop /></div>
+          </div>
+          <div className={styles.pillars}>
+            {pillarKeys.map((key) => (
+              <div key={key} className={styles.pillar}>
+                <div className={styles.pillarIcon}>{pillarIcons[key]}</div>
+                <div>
+                  <h3>{t(`items.${key}.title`)}</h3>
+                  <p>{t(`items.${key}.description`)}</p>
                 </div>
               </div>
-
-              <h3 className="text-xl font-bold text-text-primary mb-3">
-                {t(`items.${key}.title`)}
-              </h3>
-              <p className="text-text-secondary leading-relaxed">
-                {t(`items.${key}.description`)}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </Container>
     </Section>

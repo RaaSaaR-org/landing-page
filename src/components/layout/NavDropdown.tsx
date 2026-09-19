@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useId, useRef, useState, type KeyboardEvent } from 'react';
+import { useEffect, useRef, useState, type KeyboardEvent } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from '@/i18n/routing';
 
@@ -10,6 +10,8 @@ export type DropdownItem = {
 };
 
 interface NavDropdownProps {
+  /** Unique, stable panel identifier shared by server and client rendering. */
+  panelId: string;
   label: string;
   items: DropdownItem[];
   /** desktop = click-to-open menu; accordion = inline expand for mobile */
@@ -19,13 +21,12 @@ interface NavDropdownProps {
   onItemClick?: (label: string) => void;
 }
 
-export function NavDropdown({ label, items, mode = 'dropdown', isActive = false, onItemClick }: NavDropdownProps) {
+export function NavDropdown({ panelId, label, items, mode = 'dropdown', isActive = false, onItemClick }: NavDropdownProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [focusedIndex, setFocusedIndex] = useState<number>(-1);
   const containerRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const itemRefs = useRef<Array<HTMLAnchorElement | null>>([]);
-  const panelId = useId();
 
   // Close on click outside (dropdown mode only)
   useEffect(() => {

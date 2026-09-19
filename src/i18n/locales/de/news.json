@@ -15,6 +15,21 @@
       "body": "Egal, ob Sie zu einem konkreten Beitrag Fragen haben oder ein eigenes Anliegen besprechen möchten -- wir nehmen uns Zeit.",
       "primary": "Kontakt aufnehmen",
       "secondary": "Unsere Leistungen"
-    }
+    },
+    "index": {
+      "masthead": "Perspektiven aus der Praxis",
+      "title": "Was uns",
+      "titleAccent": "bewegt.",
+      "description": "Neue Verbindungen, gemeinsame Projekte und Einblicke in unsere Arbeit mit Physical AI. Hier teilen wir, was bei EmAI passiert.",
+      "explore": "Die Geschichten entdecken",
+      "latest": "Im Fokus",
+      "more": "Weitere Einblicke"
+    },
+    "contents": "In diesem Artikel",
+    "related": "Mehr von EmAI",
+    "articleLabel": "Aus der Praxis",
+    "updated": "Aktualisiert",
+    "readingTime": "{minutes} Min. Lesezeit",
+    "photoCredit": "Foto"
   }
 }

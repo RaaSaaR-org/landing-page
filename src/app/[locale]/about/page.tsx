@@ -5,10 +5,17 @@ import { GlowCard } from '@/components/ui/GlowCard';
 import { PageCTA } from '@/components/sections/PageCTA';
 import { buildAlternates } from '@/lib/seo';
 import { routing } from '@/i18n/routing';
+import styles from '@/components/layout/EditorialPages.module.css';
 
 type Locale = (typeof routing.locales)[number];
 
 const valueKeys = ['openSource', 'sovereignty', 'learning', 'humanFirst'] as const;
+const valueIcons = [
+  'M8 5L2 12l6 7M16 5l6 7-6 7M14 3l-4 18',
+  'M12 2l9 4v6c0 5-9 10-9 10S3 17 3 12V6l9-4ZM8 12l3 3 5-6',
+  'M3 12a9 9 0 1 0 3-6M3 3v6h6M12 7v5l4 2',
+  'M16 21v-3a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v3M15 3a4 4 0 0 1 0 8M22 21v-3a4 4 0 0 0-3-4M13 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0Z',
+];
 
 export async function generateMetadata({
   params,
@@ -47,11 +54,11 @@ export default async function AboutPage({
         {/* Mission */}
         <Section background="base">
           <Container>
-            <div className="max-w-4xl">
+            <div className="section-intro">
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
                 {t('mission.title')}
               </h2>
-              <p className="text-lg text-text-secondary leading-relaxed">
+              <p className={`text-lg text-text-secondary leading-relaxed ${styles.mission}`}>
                 {t('mission.body')}
               </p>
             </div>
@@ -61,13 +68,17 @@ export default async function AboutPage({
         {/* Values */}
         <Section background="surface">
           <Container>
-            <div className="max-w-5xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-12 text-center">
+            <div className="w-full">
+              <h2 className={styles.valuesTitle}>
                 {t('values.title')}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {valueKeys.map((key) => (
-                  <GlowCard key={key} className="!p-8">
+                {valueKeys.map((key, index) => (
+                  <GlowCard key={key} className="!p-8 md:!p-10">
+                    <div className={styles.valueHeader}>
+                      <span className="value-index">0{index + 1} / EmAI</span>
+                      <svg className={styles.valueIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={valueIcons[index]} /></svg>
+                    </div>
                     <h3 className="text-xl font-semibold text-text-primary mb-3">
                       {t(`values.items.${key}.title`)}
                     </h3>
@@ -84,7 +95,7 @@ export default async function AboutPage({
         {/* Team */}
         <Section background="base">
           <Container>
-            <div className="max-w-4xl">
+            <div className="section-intro">
               <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-6">
                 {t('team.title')}
               </h2>

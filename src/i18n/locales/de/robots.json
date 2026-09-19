@@ -6,13 +6,26 @@
     },
     "hero": {
       "eyebrow": "Roboter entdecken",
-      "title": "Kognitive Roboter in 3D erleben",
-      "subtitle": "Drehen, zoomen und verstehen: reale Hardware mit echten technischen Daten. Wir bringen diese Roboter in echte Umgebungen – und teilen, was wir dabei lernen."
+      "title": "Die nächste",
+      "subtitle": "Von agilen Vierbeinern bis zu feinfühligen Humanoiden. Entdecken Sie die Hardware, die KI in die reale Welt bringt.",
+      "titleAccent": "Generation.",
+      "explore": "Roboter entdecken",
+      "featuredCta": "G1 EDU kennenlernen",
+      "feature1": "Interaktive 3D-Modelle",
+      "feature2": "Unabhängig eingeordnet",
+      "featured": "Im Fokus",
+      "view3d": "In 3D entdecken",
+      "rotate": "Drehen. Zoomen. Verstehen.",
+      "featuredSpecs": "Plattform im Fokus",
+      "scroll": "Zur Kollektion"
     },
-    "intro": "Bevor ein Roboter in Ihrer Produktion oder Logistik Sinn ergibt, sollten Sie ihn verstehen. Hier finden Sie eine wachsende Auswahl kognitiver Roboter – interaktiv in 3D, mit belastbaren technischen Daten und neutral eingeordnet. Kein Verkaufsprospekt, sondern die Grundlage für eine fundierte Entscheidung.",
+    "intro": "Erkunden Sie jede Plattform in 3D, vergleichen Sie technische Eckdaten und entdecken Sie passende Einsatzfelder. Technik, verständlich eingeordnet.",
     "registry": {
       "eyebrow": "Roboter-Register",
-      "count": "{shown} von {total} Einheiten"
+      "count": "{shown} von {total} Einheiten",
+      "title": "Andere Formen.\nNeue Möglichkeiten.",
+      "note": "Der passende Roboter beginnt mit der richtigen Frage. Wir testen, was diese Plattformen in Ihrer Umgebung leisten.",
+      "testing": "Mehr über unsere Tests"
     },
     "filter": {
       "all": "Alle"
@@ -67,12 +80,22 @@
     },
     "viewer": {
       "status": "Interaktiv",
-      "a11y": "Interaktives 3D-Modell. Ziehen zum Drehen, scrollen zum Zoomen.",
+      "a11y": "Interaktive holografische 3D-Darstellung. Ziehen zum Drehen, scrollen zum Zoomen.",
       "hotspots": "Infopunkte",
       "loading": "Modell wird geladen …",
       "placeholderNote": "Vorschau-Modell – detailliertes 3D-Modell folgt.",
       "interactionHint": "Ziehen zum Drehen · Scrollen zum Zoomen",
-      "reducedMotion": "Animation reduziert (Systemeinstellung)."
+      "reducedMotion": "Animation reduziert (Systemeinstellung).",
+      "zoomIn": "Vergrößern",
+      "zoomOut": "Verkleinern",
+      "reset": "Ansicht zurücksetzen",
+      "pause": "Drehung pausieren",
+      "rotate": "Modell drehen",
+      "closeInfo": "Information schließen",
+      "preview": "Bildvorschau",
+      "unavailable": "Die 3D-Ansicht ist nicht verfügbar.",
+      "fallbackHint": "Alle technischen Daten finden Sie weiter unten.",
+      "retry": "3D erneut laden"
     },
     "card": {
       "cta": "Datenblatt ansehen"
@@ -120,6 +143,9 @@
       "body": "Wir testen kognitive Roboter in realen Umgebungen und ordnen unabhängig ein, was für Sie funktioniert – ohne Herstellerbindung.",
       "primary": "Gespräch vereinbaren",
       "secondary": "Zur Beratung"
+    },
+    "visuals": {
+      "posterAlt": "{name} als orangefarbene holografische 3D-Darstellung"
     }
   }
 }

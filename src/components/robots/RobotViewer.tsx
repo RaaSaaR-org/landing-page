@@ -1,438 +1,241 @@
 'use client';
 
-import {
-  Component,
-  Suspense,
-  useEffect,
-  useId,
-  useRef,
-  useState,
-  type ReactNode,
-  type RefObject,
-} from 'react';
-import type { Group } from 'three';
-import { Canvas } from '@react-three/fiber';
-import { Bounds, Center, ContactShadows, Html, OrbitControls, useGLTF } from '@react-three/drei';
+import { Component, Suspense, useEffect, useId, useLayoutEffect, useMemo, useRef, useState, type ReactNode, type RefObject } from 'react';
+import { Box3, Group, Mesh, PerspectiveCamera, Vector3 } from 'three';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Html, OrbitControls, useGLTF } from '@react-three/drei';
+import type { OrbitControls as OrbitControlsInstance } from 'three-stdlib';
 import { useTranslations } from 'next-intl';
-import { categoryAccent, type Hotspot, type RobotCategory } from '@/lib/robots';
+import { type Hotspot, type RobotCategory } from '@/lib/robots';
+import { createBrandedRobot, updateRobotHologram } from '@/lib/robot-branding';
 import { RobotSilhouette } from './RobotSilhouette';
+import styles from './RobotViewer.module.css';
 
 interface RobotViewerProps {
   category: RobotCategory;
-  /** Robot name — used to build the viewer's accessible description. */
   name?: string;
-  /** Class designation stamped into the frame, e.g. `HUM · G1 · EDU`. */
   designation?: string;
-  /** Self-hosted GLB under /public/models. Omit to show a procedural placeholder. */
   modelUrl?: string;
   poster?: string;
   hotspots?: Hotspot[];
   modelScale?: number;
   autoRotate?: boolean;
-  /** Compact chrome: drops the ruler, designation stamp and hint bar for small/hero embeds. */
   compact?: boolean;
   className?: string;
 }
-
-const BODY_COLOR = '#2b2b2b';
+interface ViewerActions { reset: () => void; zoom: (factor: number) => void }
+const BODY_COLOR = '#29343d';
 const ACCENT_COLOR = '#FF6700';
 
-/**
- * Interactive 3D robot viewer framed as a diagnostic viewport — the page's
- * signature element. The 3D scene is wrapped in an instrument HUD: a
- * measurement-tick ruler, corner brackets, a class designation stamp, a status
- * readout, and a one-shot calibration sweep on first reveal. Accent colour is
- * class-coded (humanoid → orange, quadruped → teal), including the rim light.
- *
- * CSP-safe by construction: no remote assets — lighting is manual (no drei
- * <Environment> preset, which fetches an HDR from a CDN that `connect-src
- * 'self'` would block), and GLBs are served same-origin from /public/models.
- *
- * Performance/accessibility, mirroring src/components/ui/LottiePlayer.tsx:
- *   - IntersectionObserver pauses the render loop off-screen (frameloop 'never')
- *   - prefers-reduced-motion disables auto-rotate (frameloop 'demand') + sweep
- *   - the WebGL canvas mounts only in the browser (no SSR of the renderer)
- *   - a visually-hidden description names the model; decorative chrome is hidden
- *     from assistive tech; a failed GLB load degrades to the procedural placeholder
- */
-export function RobotViewer({
-  category,
-  name,
-  designation,
-  modelUrl,
-  poster,
-  hotspots,
-  modelScale = 1,
-  autoRotate = true,
-  compact = false,
-  className = '',
-}: RobotViewerProps) {
+/** Locally lit product stage. Camera fitting uses model geometry only. */
+export function RobotViewer({ category, name, designation, modelUrl, poster, hotspots, modelScale = 1, autoRotate = true, compact = false, className = '' }: RobotViewerProps) {
   const t = useTranslations('robots');
-  const accent = categoryAccent[category];
+  const labelId = useId();
   const wrapRef = useRef<HTMLDivElement>(null);
-  const modelRef = useRef<Group>(null);
+  const actionsRef = useRef<ViewerActions | null>(null);
   const [mounted, setMounted] = useState(false);
   const [inView, setInView] = useState(false);
+  const [hidden, setHidden] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
-  const [booted, setBooted] = useState(false);
-  const [showHotspots, setShowHotspots] = useState(true);
-  const hasHotspots = !!hotspots?.length;
+  const [rotating, setRotating] = useState(autoRotate);
+  const modelKey = modelUrl || category;
+  const [readyModel, setReadyModel] = useState<string | null>(null);
+  const [failedModel, setFailedModel] = useState<string | null>(null);
+  const ready = readyModel === modelKey;
+  const failed = failedModel === modelKey;
+  const setFailed = (value: boolean) => setFailedModel(value ? modelKey : null);
+  const [attempt, setAttempt] = useState(0);
+  const [showHotspots, setShowHotspots] = useState(false);
+  const [selectedHotspot, setSelectedHotspot] = useState<string | null>(null);
+  const active = inView && !hidden;
+  const spin = rotating && !reduceMotion && active && !selectedHotspot;
 
   useEffect(() => {
     setMounted(true);
-    setReduceMotion(window.matchMedia('(prefers-reduced-motion: reduce)').matches);
-  }, []);
+    let unavailable = false;
+    try {
+      const probe = document.createElement('canvas');
+      const context = probe.getContext('webgl2');
+      if (!context) unavailable = true;
+      context?.getExtension('WEBGL_lose_context')?.loseContext();
+    } catch { unavailable = true; }
+    if (unavailable) setFailedModel(modelUrl || category);
+    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const preference = () => setReduceMotion(media.matches);
+    const visibility = () => setHidden(document.hidden);
+    preference();
+    visibility();
+    media.addEventListener('change', preference);
+    document.addEventListener('visibilitychange', visibility);
+    const observer = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { rootMargin: '80px' });
+    if (wrapRef.current) observer.observe(wrapRef.current);
+    return () => { observer.disconnect(); media.removeEventListener('change', preference); document.removeEventListener('visibilitychange', visibility); };
+  }, [modelUrl, category]);
+
+  function retry() {
+    if (modelUrl) useGLTF.clear(modelUrl);
+    setReadyModel(null);
+    setFailed(false);
+    setAttempt(value => value + 1);
+  }
+  function selectHotspot(id: string) {
+    setRotating(false);
+    setSelectedHotspot(current => current === id ? null : id);
+  }
+  const fallback = <Poster category={category} poster={poster} label={t(failed ? 'viewer.unavailable' : 'viewer.loading')} />;
+
+  return (
+    <div ref={wrapRef} className={`robot-viewer ${styles.viewer} ${compact ? styles.compact : ''} ${className}`} role="region" aria-labelledby={labelId}>
+      <p id={labelId} className="sr-only">{name ? `${name}. ` : ''}{t('viewer.a11y')}</p>
+      <div className={styles.backdrop} aria-hidden="true" />
+      <div className={styles.topbar}>
+        <span>{designation || name || 'EmAI Robotics'}</span>
+        <span className={styles.status}><i aria-hidden="true" />{t(failed ? 'viewer.preview' : ready ? 'viewer.status' : 'viewer.loading')}</span>
+      </div>
+      <div className={styles.stage}>
+        {mounted && !failed ? <ViewerErrorBoundary key={attempt} onError={() => setFailed(true)} fallback={fallback}>
+          <Canvas frameloop={!active ? 'never' : spin ? 'always' : 'demand'} camera={{ position: [3, 1.5, 3], fov: 35, near: .01, far: 100 }} dpr={[1, 1.75]} gl={{ alpha: true, antialias: true }} fallback={fallback}>
+            <hemisphereLight args={['#eef3ff', '#343039', 1.3]} />
+            <directionalLight position={[3, 5, 4]} intensity={3.2} color="#fff3e6" />
+            <directionalLight position={[-3, 2, 4]} intensity={1.8} color="#e3ebff" />
+            <directionalLight position={[1, 4, -4]} intensity={3.4} color="#ffffff" />
+            <Suspense fallback={null}>
+              <RobotScene key={modelKey} category={category} modelUrl={modelUrl} modelScale={modelScale} hotspots={showHotspots ? hotspots : undefined} selectedHotspot={selectedHotspot} onSelectHotspot={selectHotspot} spin={spin} actionsRef={actionsRef} onReady={() => setReadyModel(modelKey)} onFailure={() => setFailed(true)} onInteract={() => setRotating(false)} />
+            </Suspense>
+          </Canvas>
+        </ViewerErrorBoundary> : fallback}
+        {!ready && !failed && mounted && <div className={styles.loading} aria-live="polite">{fallback}</div>}
+      </div>
+      {selectedHotspot && showHotspots && <div className={styles.infoPanel} role="status">
+        <div><strong>{t(`hotspots.${selectedHotspot}.label`)}</strong><p>{t(`hotspots.${selectedHotspot}.description`)}</p></div>
+        <button type="button" aria-label={t('viewer.closeInfo')} onClick={() => setSelectedHotspot(null)}>×</button>
+      </div>}
+      <div className={styles.bottomBar}>
+        <p className={styles.hint}>{t(failed ? 'viewer.fallbackHint' : 'viewer.interactionHint')}</p>
+        {failed ? <button className={styles.retry} type="button" onClick={retry}>{t('viewer.retry')}<span aria-hidden="true">↻</span></button> : <div className={styles.controls}>
+          <button type="button" disabled={!ready} aria-label={t('viewer.zoomOut')} title={t('viewer.zoomOut')} onClick={() => actionsRef.current?.zoom(1.16)}><span aria-hidden="true">−</span></button>
+          <button type="button" disabled={!ready} aria-label={t('viewer.zoomIn')} title={t('viewer.zoomIn')} onClick={() => actionsRef.current?.zoom(.86)}><span aria-hidden="true">+</span></button>
+          <button type="button" disabled={!ready} aria-label={t('viewer.reset')} title={t('viewer.reset')} onClick={() => { setRotating(false); setSelectedHotspot(null); actionsRef.current?.reset(); }}><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 7a6 6 0 1 1 0 6M4 3v4h4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg></button>
+          {!reduceMotion && <button type="button" disabled={!ready} aria-label={t(rotating ? 'viewer.pause' : 'viewer.rotate')} title={t(rotating ? 'viewer.pause' : 'viewer.rotate')} aria-pressed={rotating} onClick={() => { setSelectedHotspot(null); setRotating(value => !value); }}><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">{rotating ? <path d="M5 4h3v12H5zm7 0h3v12h-3z" /> : <path d="m6 3 10 7-10 7z" />}</svg></button>}
+          {!!hotspots?.length && !compact && <button type="button" disabled={!ready} className={styles.infoToggle} aria-label={t('viewer.hotspots')} title={t('viewer.hotspots')} aria-pressed={showHotspots} onClick={() => { setShowHotspots(value => !value); setSelectedHotspot(null); }}><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="6.5" stroke="currentColor" strokeWidth="1.4" /><path d="M10 9v5M10 6v1" stroke="currentColor" strokeWidth="1.7" /></svg></button>}
+        </div>}
+      </div>
+    </div>
+  );
+}
+
+class ViewerErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode; onError: () => void }, { failed: boolean }> {
+  state = { failed: false };
+  static getDerivedStateFromError() { return { failed: true }; }
+  componentDidCatch() { this.props.onError(); }
+  render() { return this.state.failed ? this.props.fallback : this.props.children; }
+}
+
+interface SceneProps {
+  category: RobotCategory; modelUrl?: string; modelScale: number; hotspots?: Hotspot[]; selectedHotspot: string | null;
+  spin: boolean; actionsRef: RefObject<ViewerActions | null>; onReady: () => void; onFailure: () => void; onInteract: () => void; onSelectHotspot: (id: string) => void;
+}
+function RobotScene(props: SceneProps) {
+  return props.modelUrl ? <LoadedRobotScene {...props} modelUrl={props.modelUrl} /> : <StudioScene {...props}><PlaceholderRobot category={props.category} /></StudioScene>;
+}
+function LoadedRobotScene(props: SceneProps & { modelUrl: string }) {
+  const { scene } = useGLTF(props.modelUrl);
+  const branded = useMemo(() => createBrandedRobot(scene, props.category), [scene, props.category]);
+  useFrame((_, delta) => { if (props.spin) updateRobotHologram(branded, delta); });
+  useEffect(() => () => { branded.traverse(object => { if (object instanceof Mesh) { object.geometry.dispose(); const materials = Array.isArray(object.material) ? object.material : [object.material]; materials.forEach(material => material.dispose()); } }); }, [branded]);
+  return <StudioScene {...props}><primitive object={branded} dispose={null} /></StudioScene>;
+}
+function StudioScene({ children, modelScale, hotspots, selectedHotspot, spin, actionsRef, onReady, onFailure, onInteract, onSelectHotspot }: SceneProps & { children: ReactNode }) {
+  const t = useTranslations('robots');
+  const modelRef = useRef<Group>(null);
+  const placementRef = useRef<Group>(null);
+  const controlsRef = useRef<OrbitControlsInstance>(null);
+  const { camera, size, invalidate, gl } = useThree();
+  const callbackRef = useRef({ onReady, onFailure, onInteract });
+  callbackRef.current = { onReady, onFailure, onInteract };
+
+  useLayoutEffect(() => {
+    if (!modelRef.current || !placementRef.current || !controlsRef.current || !(camera instanceof PerspectiveCamera)) return;
+    const bounds = new Box3().setFromObject(modelRef.current);
+    const dimensions = bounds.getSize(new Vector3());
+    const center = bounds.getCenter(new Vector3());
+    const placement = placementRef.current;
+    // Reset before measuring so resize doesn't accumulate placement offsets.
+    placement.position.set(0, 0, 0);
+    modelRef.current.updateWorldMatrix(true, true);
+    bounds.setFromObject(modelRef.current).getCenter(center);
+    placement.position.set(-center.x, -bounds.min.y, -center.z);
+    const target = new Vector3(0, dimensions.y * .5, 0);
+    const direction = new Vector3(1, .23, .76).normalize();
+    const aspect = size.width / size.height;
+    const halfFov = camera.fov * Math.PI / 360;
+    const projectedWidth = dimensions.x * .61 + dimensions.z * .80;
+    const projectedHeight = dimensions.y + Math.max(dimensions.x, dimensions.z) * .2;
+    const fitDistance = Math.max(projectedHeight / (2 * Math.tan(halfFov)), projectedWidth / (2 * Math.tan(halfFov) * aspect)) * 1.17;
+    const controls = controlsRef.current;
+    controls.minDistance = fitDistance * .62;
+    controls.maxDistance = fitDistance * 1.9;
+    camera.near = Math.max(.001, fitDistance / 100);
+    camera.far = fitDistance * 30;
+    camera.updateProjectionMatrix();
+    const reset = () => {
+      clearMomentum(controls);
+      camera.position.copy(target).addScaledVector(direction, fitDistance);
+      controls.target.copy(target);
+      controls.update();
+      controls.saveState();
+      invalidate();
+    };
+    actionsRef.current = { reset, zoom: factor => { clearMomentum(controls); const offset = camera.position.clone().sub(controls.target); offset.setLength(Math.min(controls.maxDistance, Math.max(controls.minDistance, offset.length() * factor))); camera.position.copy(controls.target).add(offset); controls.update(); invalidate(); } };
+    reset();
+    callbackRef.current.onReady();
+    return () => { actionsRef.current = null; };
+  }, [camera, size.width, size.height, invalidate, actionsRef, modelScale]);
+
+  useLayoutEffect(() => {
+    if (!spin && controlsRef.current) { clearMomentum(controlsRef.current); invalidate(); }
+  }, [spin, invalidate]);
 
   useEffect(() => {
-    const el = wrapRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver(
-      ([entry]) => {
-        setInView(entry.isIntersecting);
-        if (entry.isIntersecting) setBooted(true);
-      },
-      { threshold: 0.1 }
-    );
-    io.observe(el);
-    return () => io.disconnect();
-  }, [mounted]);
+    const lost = (event: Event) => { event.preventDefault(); callbackRef.current.onFailure(); };
+    gl.domElement.addEventListener('webglcontextlost', lost);
+    return () => gl.domElement.removeEventListener('webglcontextlost', lost);
+  }, [gl]);
 
-  const spin = autoRotate && inView && !reduceMotion;
-  const frameloop = !inView ? 'never' : reduceMotion ? 'demand' : 'always';
-  const sweep = booted && !reduceMotion;
-
-  const a11yLabel = name
-    ? `${name} — ${t(`categories.${category}`)}. ${t('viewer.a11y')}`
-    : t('viewer.a11y');
-
-  return (
-    <div
-      ref={wrapRef}
-      className={`group/viewer relative rounded-xl overflow-hidden bg-gradient-to-br from-surface-elevated to-base border border-border-subtle ${className}`}
-      style={{ boxShadow: `inset 0 0 60px -30px ${accent.hex}` }}
-    >
-      {/* Accessible description of the 3D content (canvas itself is unlabelled). */}
-      <p className="sr-only">{a11yLabel}</p>
-
-      <div aria-hidden="true" className="absolute inset-0 grid-dots opacity-[0.18] pointer-events-none" />
-      {/* Radial backdrop glow — lifts the model off the dark background */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background: `radial-gradient(58% 52% at 50% 44%, ${accent.hex}18, transparent 72%)`,
-        }}
-      />
-
-      {/* Calibration sweep — one-shot scan on first reveal */}
-      {sweep && (
-        <div
-          key="sweep"
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 h-16 z-20 robot-sweep"
-          style={{
-            background: `linear-gradient(to bottom, transparent, ${accent.hex}22 55%, ${accent.hex}66 82%, transparent)`,
-          }}
-        />
-      )}
-
-      {mounted ? (
-        <Canvas
-          frameloop={frameloop}
-          camera={{ position: [2.4, 1.15, 2.35], fov: 38 }}
-          dpr={[1, 2]}
-          gl={{ alpha: true, antialias: true }}
-          className="!absolute inset-0"
-        >
-          <hemisphereLight args={['#ffffff', '#1a120b', 0.75]} />
-          <ambientLight intensity={0.5} />
-          {/* key */}
-          <directionalLight position={[4, 6, 4]} intensity={2} />
-          {/* front fill from the camera side */}
-          <directionalLight position={[2, 3, 5]} intensity={0.7} />
-          {/* cool side fill */}
-          <directionalLight position={[-5, 3, -2]} intensity={0.5} color="#2DD4BF" />
-          {/* white back rim — separates the dark silhouette from the dark bg */}
-          <directionalLight position={[-2, 5, -5]} intensity={1.3} />
-          {/* accent rim */}
-          <pointLight position={[0, 2.2, -4]} intensity={1.3} color={accent.hex} />
-
-          <Suspense fallback={<Loader label={t('viewer.loading')} accentHex={accent.hex} />}>
-            <Bounds fit clip observe margin={1.5}>
-              {/* `bottom` seats the model on y=0 so ContactShadows grounds the feet */}
-              <Center bottom>
-                <group ref={modelRef}>
-                  {modelUrl ? (
-                    <ModelErrorBoundary fallback={<PlaceholderRobot category={category} />}>
-                      <GltfModel url={modelUrl} scale={modelScale} />
-                    </ModelErrorBoundary>
-                  ) : (
-                    <PlaceholderRobot category={category} />
-                  )}
-                </group>
-                {showHotspots &&
-                  hotspots?.map((h) => (
-                    <HotspotMarker key={h.id} hotspot={h} accentHex={accent.hex} occludeRef={modelRef} />
-                  ))}
-              </Center>
-            </Bounds>
-          </Suspense>
-
-          {/* Single cached shadow render — the model & lights are static, only the camera orbits */}
-          <ContactShadows position={[0, 0, 0]} opacity={0.5} scale={6} blur={2.4} far={4} frames={1} />
-          <OrbitControls
-            makeDefault
-            autoRotate={spin}
-            autoRotateSpeed={0.8}
-            enablePan={false}
-            minDistance={1.2}
-            maxDistance={6}
-            minPolarAngle={0.2}
-            maxPolarAngle={Math.PI / 1.9}
-          />
-        </Canvas>
-      ) : (
-        <Loader2D category={category} poster={poster} label={t('viewer.loading')} />
-      )}
-
-      {/* ---- Diagnostic HUD overlay (pointer-events-none so orbit still works) ---- */}
-      {/* Measurement-tick ruler down the left edge — the "instrument" signature */}
-      {!compact && (
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-2.5 top-10 bottom-10 w-2 z-10 opacity-70"
-          style={{
-            backgroundImage: `repeating-linear-gradient(to bottom, ${accent.hex}66 0, ${accent.hex}66 1px, transparent 1px, transparent 11px)`,
-            maskImage: 'linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent)',
-            WebkitMaskImage: 'linear-gradient(to bottom, transparent, #000 15%, #000 85%, transparent)',
-          }}
-        />
-      )}
-
-      {/* Corner brackets — fade/scale in on boot */}
-      <FrameBrackets accentHex={accent.hex} booted={booted} reduceMotion={reduceMotion} />
-
-      {/* Top bar: designation stamp + status readout */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 flex items-start justify-between gap-2 p-3 z-10">
-        {designation && !compact ? (
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-text-secondary bg-base/40 backdrop-blur-sm rounded px-2 py-1">
-            {designation}
-          </span>
-        ) : (
-          <span />
-        )}
-        <span className="inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-text-secondary bg-base/40 backdrop-blur-sm rounded px-2 py-1">
-          <span className="relative flex w-1.5 h-1.5" aria-hidden="true">
-            <span
-              className="absolute inline-flex h-full w-full rounded-full opacity-70 animate-ping"
-              style={{ backgroundColor: accent.hex }}
-            />
-            <span className="relative inline-flex rounded-full w-1.5 h-1.5" style={{ backgroundColor: accent.hex }} />
-          </span>
-          {t('viewer.status')}
-        </span>
-      </div>
-
-      {/* Bottom bar: interaction hint + info-points toggle / placeholder note */}
-      {!compact && (
-        <div className="pointer-events-none absolute inset-x-0 bottom-0 flex items-center justify-between gap-2 p-3 text-[11px] font-mono uppercase tracking-wider z-10">
-          <span className="text-text-secondary">
-            {reduceMotion ? t('viewer.reducedMotion') : t('viewer.interactionHint')}
-          </span>
-          {hasHotspots ? (
-            <button
-              type="button"
-              onClick={() => setShowHotspots((v) => !v)}
-              aria-pressed={showHotspots}
-              className="pointer-events-auto inline-flex items-center gap-1.5 rounded px-2 py-1 font-mono text-[10px] uppercase tracking-[0.14em] border backdrop-blur-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/40"
-              style={
-                showHotspots
-                  ? { color: accent.hex, borderColor: `${accent.hex}66`, backgroundColor: `${accent.hex}14` }
-                  : { color: 'var(--color-text-secondary)', borderColor: 'var(--color-border-subtle)', backgroundColor: 'rgba(20,20,20,0.45)' }
-              }
-            >
-              <EyeIcon off={!showHotspots} />
-              {t('viewer.hotspots')}
-            </button>
-          ) : (
-            !modelUrl && (
-              <span className="text-primary-400 bg-primary-500/10 rounded px-2 py-0.5 backdrop-blur-sm">
-                {t('viewer.placeholderNote')}
-              </span>
-            )
-          )}
-        </div>
-      )}
-    </div>
-  );
+  return <>
+    <group ref={placementRef}>
+      <group ref={modelRef} scale={modelScale}>{children}</group>
+      {hotspots?.map((hotspot, index) => <Html key={hotspot.id} position={hotspot.position} center zIndexRange={[8, 0]}><button className={styles.hotspot} type="button" aria-label={t(`hotspots.${hotspot.id}.label`)} aria-pressed={selectedHotspot === hotspot.id} onClick={() => onSelectHotspot(hotspot.id)} onKeyDown={event => { if (event.key === 'Escape' && selectedHotspot === hotspot.id) onSelectHotspot(hotspot.id); }}>{index + 1}</button></Html>)}
+    </group>
+    <OrbitControls ref={controlsRef} makeDefault autoRotate={spin} autoRotateSpeed={.55} enablePan={false} enableDamping dampingFactor={.08} minPolarAngle={Math.PI * .22} maxPolarAngle={Math.PI * .49} onStart={() => callbackRef.current.onInteract()} />
+  </>;
 }
 
-/** Renders `fallback` (the procedural placeholder) if a GLB fails to load/parse. */
-class ModelErrorBoundary extends Component<
-  { fallback: ReactNode; children: ReactNode },
-  { failed: boolean }
-> {
-  state = { failed: false };
-  static getDerivedStateFromError() {
-    return { failed: true };
-  }
-  render() {
-    return this.state.failed ? this.props.fallback : this.props.children;
-  }
+/** Stop retained OrbitControls deltas without moving the inspected viewpoint. */
+function clearMomentum(controls: OrbitControlsInstance) {
+  const position = controls.object.position.clone();
+  const target = controls.target.clone();
+  const damping = controls.enableDamping;
+  const rotate = controls.autoRotate;
+  controls.autoRotate = false;
+  controls.enableDamping = false;
+  controls.update();
+  controls.object.position.copy(position);
+  controls.target.copy(target);
+  controls.update();
+  controls.enableDamping = damping;
+  controls.autoRotate = rotate;
 }
 
-/** Four HUD corner brackets in the class accent; animate in once on boot. */
-function FrameBrackets({
-  accentHex,
-  booted,
-  reduceMotion,
-}: {
-  accentHex: string;
-  booted: boolean;
-  reduceMotion: boolean;
-}) {
-  const shown = booted || reduceMotion;
-  const base =
-    'pointer-events-none absolute w-5 h-5 z-10 transition-all duration-700 ease-out';
-  const style = { borderColor: accentHex };
-  return (
-    <div aria-hidden="true">
-      <span
-        className={`${base} top-2.5 left-2.5 border-t-2 border-l-2 ${shown ? 'opacity-80 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-1 -translate-y-1'}`}
-        style={style}
-      />
-      <span
-        className={`${base} top-2.5 right-2.5 border-t-2 border-r-2 ${shown ? 'opacity-80 translate-x-0 translate-y-0' : 'opacity-0 translate-x-1 -translate-y-1'}`}
-        style={style}
-      />
-      <span
-        className={`${base} bottom-2.5 left-2.5 border-b-2 border-l-2 ${shown ? 'opacity-80 translate-x-0 translate-y-0' : 'opacity-0 -translate-x-1 translate-y-1'}`}
-        style={style}
-      />
-      <span
-        className={`${base} bottom-2.5 right-2.5 border-b-2 border-r-2 ${shown ? 'opacity-80 translate-x-0 translate-y-0' : 'opacity-0 translate-x-1 translate-y-1'}`}
-        style={style}
-      />
-    </div>
-  );
+function Poster({ category, poster, label }: { category: RobotCategory; poster?: string; label: string }) {
+  return <div className={styles.poster}>
+    {poster ? (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img src={poster} alt="" />
+    ) : <RobotSilhouette category={category} className="w-24 h-24 text-text-muted" />}
+    <span>{label}</span>
+  </div>;
 }
-
-/** Eye / eye-off glyph for the info-points toggle. */
-function EyeIcon({ off }: { off: boolean }) {
-  return (
-    <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} aria-hidden="true">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" />
-      <circle cx="12" cy="12" r="2.6" />
-      {off && <path strokeLinecap="round" d="M4 4l16 16" />}
-    </svg>
-  );
-}
-
-function GltfModel({ url, scale }: { url: string; scale: number }) {
-  const { scene } = useGLTF(url);
-  return <primitive object={scene} scale={scale} />;
-}
-
-/** In-canvas HTML loading label shown while a GLB streams in. */
-function Loader({ label, accentHex }: { label: string; accentHex: string }) {
-  return (
-    <Html center>
-      <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-wider text-text-secondary whitespace-nowrap">
-        <span
-          className="w-3 h-3 rounded-full border-2 border-t-transparent animate-spin"
-          style={{ borderColor: accentHex, borderTopColor: 'transparent' }}
-        />
-        {label}
-      </div>
-    </Html>
-  );
-}
-
-/** Pre-mount / SSR fallback (no WebGL). */
-function Loader2D({
-  category,
-  poster,
-  label,
-}: {
-  category: RobotCategory;
-  poster?: string;
-  label: string;
-}) {
-  return (
-    <div className="absolute inset-0 flex flex-col items-center justify-center gap-3">
-      {poster ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={poster} alt="" className="max-h-[70%] object-contain opacity-80" />
-      ) : (
-        <RobotSilhouette category={category} className="w-24 h-24 text-text-muted/60" />
-      )}
-      <span className="text-[11px] font-mono uppercase tracking-wider text-text-secondary">{label}</span>
-    </div>
-  );
-}
-
-function HotspotMarker({
-  hotspot,
-  accentHex,
-  occludeRef,
-}: {
-  hotspot: Hotspot;
-  accentHex: string;
-  occludeRef?: RefObject<Group | null>;
-}) {
-  const t = useTranslations('robots');
-  const [open, setOpen] = useState(false);
-  const descId = useId();
-
-  return (
-    <Html
-      position={hotspot.position}
-      center
-      zIndexRange={[50, 0]}
-      occlude={occludeRef ? [occludeRef as RefObject<Group>] : undefined}
-    >
-      <div
-        className="relative"
-        onMouseEnter={() => setOpen(true)}
-        onMouseLeave={() => setOpen(false)}
-      >
-        <button
-          type="button"
-          aria-label={t(`hotspots.${hotspot.id}.label`)}
-          aria-describedby={descId}
-          onClick={() => setOpen((v) => !v)}
-          onFocus={() => setOpen(true)}
-          onBlur={() => setOpen(false)}
-          onKeyDown={(e) => {
-            if (e.key === 'Escape') setOpen(false);
-          }}
-          className="block w-3 h-3 rounded-full border-2 border-white/85 transition-transform hover:scale-125 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80"
-          style={{ backgroundColor: accentHex, boxShadow: `0 0 7px 1px ${accentHex}` }}
-        >
-          <span
-            className="absolute -inset-1 rounded-full animate-ping opacity-40"
-            style={{ backgroundColor: accentHex }}
-          />
-        </button>
-        {/* Always in the DOM so aria-describedby resolves for screen readers */}
-        <span id={descId} className="sr-only">
-          {t(`hotspots.${hotspot.id}.description`)}
-        </span>
-        {open && (
-          <div className="absolute left-1/2 bottom-full mb-3 -translate-x-1/2 w-52 rounded-lg bg-surface border border-border-subtle shadow-xl p-3 text-left z-50">
-            <p className="text-xs font-semibold text-text-primary mb-1">
-              {t(`hotspots.${hotspot.id}.label`)}
-            </p>
-            <p className="text-[11px] text-text-secondary leading-snug" aria-hidden="true">
-              {t(`hotspots.${hotspot.id}.description`)}
-            </p>
-          </div>
-        )}
-      </div>
-    </Html>
-  );
-}
-
 function PlaceholderRobot({ category }: { category: RobotCategory }) {
   return category === 'humanoid' ? <HumanoidPlaceholder /> : <QuadrupedPlaceholder />;
 }

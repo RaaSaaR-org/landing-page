@@ -1,0 +1,14 @@
+.steps { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 2rem; }
+.step { position: relative; padding-top: 2rem; border-top: 1px solid #ff853438; }
+.step::before { content: ''; position: absolute; width: 7px; height: 7px; border: 1px solid var(--orange-light); background: var(--surface); border-radius: 50%; top: -4px; left: 0; box-shadow: 0 0 16px #ff670020; }
+.stepNumber { display: block; font-family: var(--font-mono); color: var(--orange-light); font-size: .7rem; letter-spacing: .12em; margin-bottom: 2rem; }
+.step h3 { font-weight: 500; line-height: 1.35; }
+.step p { font-size: .95rem; line-height: 1.85; }
+.outcomes { display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: start; }
+.outcomes h2 { max-width: 16ch; line-height: 1.2; }
+.outcomeList { padding: 2.5rem; border: 1px solid #ffffff18; border-radius: 18px; background: linear-gradient(135deg, #2dd4bf08, transparent 75%), #10161b; }
+.outcomeList li { font-size: 1rem; line-height: 1.7; }
+.outcomeList svg { color: #5eead4; }
+@media (max-width: 1023px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 3rem 2rem; } .outcomes { gap: 2.5rem; } }
+@media (max-width: 767px) { .outcomes { grid-template-columns: 1fr; gap: 2rem; } .outcomeList { padding: 1.5rem; } }
+@media (max-width: 479px) { .steps { grid-template-columns: 1fr; gap: 2rem; } .step { padding-top: 1.5rem; } .stepNumber { margin-bottom: 1rem; } }

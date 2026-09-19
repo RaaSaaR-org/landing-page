@@ -7,6 +7,8 @@ import remarkGfm from 'remark-gfm';
 import remarkRehype from 'remark-rehype';
 import rehypeSanitize, { defaultSchema } from 'rehype-sanitize';
 import rehypeStringify from 'rehype-stringify';
+import type { Root, Element, RootContent } from 'hast';
+import type { VFile } from 'vfile';
 
 import { routing } from '@/i18n/routing';
 
@@ -16,9 +18,11 @@ export type NewsFrontmatter = {
   title: string;
   excerpt: string;
   date: string;
+  updatedDate?: string;
   author?: string;
   tags?: string[];
   metaDescription?: string;
+  image?: { src: string; alt: string; credit: string; creditUrl: string };
 };
 
 export type NewsPostMeta = NewsFrontmatter & {
@@ -27,6 +31,8 @@ export type NewsPostMeta = NewsFrontmatter & {
 
 export type NewsPost = NewsPostMeta & {
   html: string;
+  headings: { id: string; title: string }[];
+  readingMinutes: number;
 };
 
 const NEWS_DIR = path.join(process.cwd(), 'content', 'news');
@@ -68,11 +74,36 @@ export function getAllSlugs(): string[] {
   return complete;
 }
 
+/** Generate safe, stable section links after sanitizing author content. */
+function headingAnchors() {
+  return (tree: Root, file: VFile) => {
+    const headings: NewsPost['headings'] = [];
+    const textContent = (node: RootContent): string => {
+      if (node.type === 'text') return node.value;
+      return 'children' in node ? node.children.map(textContent).join('') : '';
+    };
+    const visit = (node: Root | Element) => {
+      for (const child of node.children) {
+        if (child.type !== 'element') continue;
+        if (child.tagName === 'h2') {
+          const id = `section-${headings.length + 1}`;
+          child.properties.id = id;
+          headings.push({ id, title: textContent(child) });
+        }
+        visit(child);
+      }
+    };
+    visit(tree);
+    file.data.headings = headings;
+  };
+}
+
 const mdProcessor = unified()
   .use(remarkParse)
   .use(remarkGfm)
   .use(remarkRehype)
   .use(rehypeSanitize, defaultSchema)
+  .use(headingAnchors)
   .use(rehypeStringify);
 
 function parseFile(filePath: string, slug: string): NewsPost {
@@ -84,17 +115,23 @@ function parseFile(filePath: string, slug: string): NewsPost {
     throw new Error(`News post ${filePath} is missing required frontmatter (title, excerpt, date).`);
   }
 
-  const html = mdProcessor.processSync(content).toString();
+  const rendered = mdProcessor.processSync(content);
+  const html = rendered.toString();
+  const dateString = (value: string) => typeof value === 'string' ? value : new Date(value).toISOString().slice(0, 10);
 
   return {
     slug,
     title: fm.title,
     excerpt: fm.excerpt,
-    date: typeof fm.date === 'string' ? fm.date : new Date(fm.date as unknown as string).toISOString().slice(0, 10),
+    date: dateString(fm.date),
+    updatedDate: fm.updatedDate ? dateString(fm.updatedDate) : undefined,
     author: fm.author,
     tags: fm.tags,
     metaDescription: fm.metaDescription,
+    image: fm.image,
     html,
+    headings: rendered.data.headings as NewsPost['headings'],
+    readingMinutes: Math.max(1, Math.ceil(content.trim().split(/\s+/).length / 200)),
   };
 }
 

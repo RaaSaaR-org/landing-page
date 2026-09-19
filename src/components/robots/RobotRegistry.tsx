@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { categoryAccent, type Robot, type RobotCategory } from '@/lib/robots';
 import { RobotCard } from './RobotCard';
+import styles from './RobotShowroom.module.css';
 
 type Filter = 'all' | RobotCategory;
 
@@ -77,7 +78,7 @@ export function RobotRegistry({ robots }: { robots: Robot[] }) {
             );
           })}
         </div>
-        <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-text-secondary tabular-nums">
+        <span aria-live="polite" aria-atomic="true" className="font-mono text-[11px] uppercase tracking-[0.14em] text-text-secondary tabular-nums">
           {t('registry.count', { shown: shown.length, total: counts.all })}
         </span>
       </div>
@@ -85,7 +86,7 @@ export function RobotRegistry({ robots }: { robots: Robot[] }) {
       {/* Grid */}
       <div
         key={filter}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 animate-count-up"
+        className={styles.registryGrid}
       >
         {shown.map((robot) => (
           <RobotCard key={robot.slug} robot={robot} />

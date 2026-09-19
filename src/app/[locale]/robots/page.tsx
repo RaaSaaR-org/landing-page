@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container } from '@/components/layout';
-import { HazardTape } from '@/components/ui';
+import styles from '@/components/robots/RobotShowroom.module.css';
 import { PageCTA } from '@/components/sections/PageCTA';
-import { RobotRegistry, RobotViewer, RobotStat, Designation } from '@/components/robots';
-import { robots, designation, pickSpecs } from '@/lib/robots';
+import { RobotRegistry, RobotStat, Designation } from '@/components/robots';
+import { robots, pickSpecs } from '@/lib/robots';
 import { buildAlternates } from '@/lib/seo';
-import { routing } from '@/i18n/routing';
+import { Link, routing } from '@/i18n/routing';
 
 type Locale = (typeof routing.locales)[number];
 
@@ -40,76 +41,81 @@ export default async function RobotsPage({
     <>
       <Header />
       <main>
-        {/* ---- Hero: diagnostic viewport + featured readout ---- */}
-        <Section background="surface" className="relative overflow-hidden">
-          <HazardTape position="absolute-top" height={14} />
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 grid-dots opacity-20" />
-            <div className="absolute top-0 right-0 w-2/3 h-full bg-[radial-gradient(ellipse_at_top_right,rgba(255,103,0,0.10),transparent_60%)]" />
-            <div className="absolute bottom-0 left-0 w-1/3 h-2/3 bg-[radial-gradient(ellipse_at_bottom_left,rgba(45,212,191,0.05),transparent_60%)]" />
-          </div>
-
+        <section className={styles.hero}>
+          <div className={styles.heroGlow} aria-hidden="true" />
           <Container>
-            <div className="relative grid lg:grid-cols-2 gap-12 lg:gap-16 items-center pt-4">
-              {/* Left: headline + featured readout */}
-              <div className="max-w-xl">
-                <span className="font-mono font-bold text-xs uppercase text-primary-400 mb-4 inline-block tracking-[0.16em]">
-                  {t('hero.eyebrow')}
-                </span>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-primary mb-6 leading-[1.05] tracking-tight">
-                  {t('hero.title')}
+            <div className={styles.heroGrid}>
+              <div className={styles.heroCopy}>
+                <span className="eyebrow"><span className="status-dot" />{t('hero.eyebrow')}</span>
+                <h1 className={styles.title}>
+                  {t('hero.title')}<br /><span>{t('hero.titleAccent')}</span>
                 </h1>
-                <div className="w-24 h-1 bg-primary-500 rounded-full mb-8" />
-                <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8">
-                  {t('hero.subtitle')}
-                </p>
-
-                {/* Featured unit readout — wraps onto two rows on narrow screens */}
-                <div className="flex flex-wrap items-stretch gap-x-6 gap-y-4 rounded-xl border border-border-subtle bg-base/40 backdrop-blur-sm px-5 py-4 w-full sm:w-auto">
-                  <div className="flex flex-col justify-center pr-6 sm:border-r border-border-subtle">
-                    <Designation robot={featured} />
-                    <span className="text-sm font-bold text-text-primary mt-1">{featured.name}</span>
-                  </div>
-                  {heroStats.map((spec) => (
-                    <RobotStat
-                      key={spec.id}
-                      size="md"
-                      label={t(`specLabels.${spec.id}`)}
-                      value={spec.value}
-                      unit={spec.unit}
-                    />
-                  ))}
+                <p className={styles.subtitle}>{t('hero.subtitle')}</p>
+                <div className={styles.actions}>
+                  <a href="#registry" className="button-primary">
+                    {t('hero.explore')}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                  <Link href={`/robots/${featured.slug}`} locale={locale as Locale} className={styles.secondaryLink}>
+                    {t('hero.featuredCta')} <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
+                <div className={styles.heroFeatures}>
+                  <span>{t('hero.feature1')}</span><span>{t('hero.feature2')}</span>
                 </div>
               </div>
-
-              {/* Right: featured diagnostic viewport */}
-              <div className="w-full">
-                <RobotViewer
-                  category={featured.category}
-                  name={featured.name}
-                  designation={designation(featured)}
-                  modelUrl={featured.modelUrl}
-                  poster={featured.poster}
-                  hotspots={featured.hotspots}
-                  modelScale={featured.modelScale}
-                  compact
-                  className="aspect-[4/5] sm:aspect-square w-full max-w-lg mx-auto lg:ml-auto"
+              <div className={styles.showcase}>
+                <span className={styles.ghostType} aria-hidden="true">G1</span>
+                <div className={styles.backlight} aria-hidden="true" />
+                <div className={styles.platform} aria-hidden="true" />
+                <div className={styles.ruler} aria-hidden="true" />
+                <Image
+                  src={featured.poster!}
+                  alt={t('visuals.posterAlt', { name: featured.name })}
+                  width={840}
+                  height={1120}
+                  priority
+                  sizes="(max-width: 640px) 86vw, (max-width: 1024px) 65vw, 42vw"
+                  className={styles.robotImage}
                 />
+                <div className={styles.unitLabel}>
+                  <span>{t('hero.featured')}</span>
+                  <strong>{featured.name}</strong>
+                  <Designation robot={featured} />
+                </div>
+                <span className={styles.scaleLabel} aria-hidden="true">1.32 M</span>
+                <Link href={`/robots/${featured.slug}`} locale={locale as Locale} className={styles.modelLink}>
+                  <span className={styles.modelIcon} aria-hidden="true">↻</span>
+                  <span>{t('hero.view3d')}<small>{t('hero.rotate')}</small></span>
+                  <span aria-hidden="true">↗</span>
+                </Link>
               </div>
             </div>
+            <div className={styles.heroBottom}>
+              <div className={styles.featuredName}><span>{t('hero.featuredSpecs')}</span><strong>{featured.name}</strong></div>
+              {heroStats.map((spec) => (
+                <RobotStat key={spec.id} size="md" label={t(`specLabels.${spec.id}`)} value={spec.value} unit={spec.unit} />
+              ))}
+              <a href="#registry" className={styles.scrollLink}>{t('hero.scroll')} <span aria-hidden="true">↓</span></a>
+            </div>
           </Container>
-        </Section>
+        </section>
 
-        {/* ---- Registry ---- */}
-        <Section background="base">
+        <Section background="base" id="registry">
           <Container>
-            <div className="max-w-3xl mb-12">
-              <h2 className="font-mono text-xs uppercase tracking-[0.16em] text-primary-400 mb-3 block">
-                {t('registry.eyebrow')}
-              </h2>
-              <p className="text-lg text-text-secondary leading-relaxed">{t('intro')}</p>
+            <div className={styles.registryIntro}>
+              <div>
+                <span className="eyebrow">{t('registry.eyebrow')}</span>
+                <h2>{t('registry.title')}</h2>
+              </div>
+              <p>{t('intro')}</p>
             </div>
             <RobotRegistry robots={robots} />
+            <div className={styles.discoveryNote}>
+              <span aria-hidden="true">↗</span>
+              <p>{t('registry.note')}</p>
+              <Link href="/services/testing" locale={locale as Locale}>{t('registry.testing')} <span aria-hidden="true">→</span></Link>
+            </div>
           </Container>
         </Section>
 

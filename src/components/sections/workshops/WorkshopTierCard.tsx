@@ -8,7 +8,7 @@ interface WorkshopTierCardProps {
 
 export function WorkshopTierCard({ tier, audienceLabel }: WorkshopTierCardProps) {
   return (
-    <GlowCard className="!p-8 md:!p-12" hoverEffect={false}>
+    <GlowCard className="workshop-card !p-8 md:!p-12" hoverEffect={false}>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-4 space-y-6">
           <div className="flex items-baseline gap-3">
@@ -68,7 +68,7 @@ export function WorkshopTierCard({ tier, audienceLabel }: WorkshopTierCardProps)
             <p className="text-text-secondary leading-relaxed">{tier.assets}</p>
           </div>
 
-          <div className="border-l-4 border-primary-500 pl-5 py-1">
+          <div className="workshop-outcome border-l-2 border-primary-500 pl-5 py-1">
             <h4 className="font-mono text-sm uppercase tracking-wider text-primary-400 mb-1">
               {tier.outcomeLabel}
             </h4>

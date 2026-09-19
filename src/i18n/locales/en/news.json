@@ -15,6 +15,21 @@
       "body": "Whether you have questions about a specific post or want to discuss something of your own -- we make time.",
       "primary": "Get in Touch",
       "secondary": "Our Services"
-    }
+    },
+    "index": {
+      "masthead": "Perspectives from the field",
+      "title": "Ideas",
+      "titleAccent": "in motion.",
+      "description": "New connections, shared projects and insights from our work with physical AI. This is what’s happening at EmAI.",
+      "explore": "Explore the stories",
+      "latest": "In focus",
+      "more": "More perspectives"
+    },
+    "contents": "In this article",
+    "related": "More from EmAI",
+    "articleLabel": "From the field",
+    "updated": "Updated",
+    "readingTime": "{minutes} min read",
+    "photoCredit": "Photo"
   }
 }

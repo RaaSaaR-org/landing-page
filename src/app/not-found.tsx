@@ -5,7 +5,7 @@ export default function RootNotFound() {
     <html lang="de" className="dark">
       <body
         style={{
-          background: '#141414',
+          background: 'radial-gradient(ellipse at center, #ff670014, transparent 60%), #090c0f',
           color: '#F5F5F4',
           fontFamily: 'system-ui, -apple-system, sans-serif',
           minHeight: '100vh',
@@ -43,7 +43,7 @@ export default function RootNotFound() {
               display: 'inline-block',
               padding: '0.875rem 2rem',
               background: '#FF6700',
-              color: '#fff',
+              color: '#101214',
               borderRadius: '0.75rem',
               fontWeight: 600,
               textDecoration: 'none',

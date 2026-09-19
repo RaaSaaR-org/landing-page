@@ -13,10 +13,10 @@ export function Footer() {
   const tNav = useTranslations('nav');
 
   const linkClass = 'text-sm text-text-secondary hover:text-primary-500 transition-colors';
-  const headingClass = 'text-text-primary font-semibold mb-4';
+  const headingClass = 'text-text-primary font-semibold mb-5';
 
   return (
-    <footer className="bg-surface text-text-secondary border-t border-border-subtle">
+    <footer className="site-footer bg-surface text-text-secondary border-t border-border-subtle">
       <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
@@ -75,6 +75,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/robots" className={linkClass}>{tNav('robots')}</Link>
+              </li>
+              <li>
                 <Link href="/news" className={linkClass}>
                   {t('links.news')}
                 </Link>
@@ -112,6 +115,8 @@ export function Footer() {
             </p>
           </div>
         </div>
+
+        <div className="footer-signature" aria-hidden="true">EmAI<span className="text-primary-500/15">.</span></div>
 
         {/* Newsletter mini-CTA */}
         <div className="mt-12 pt-8 border-t border-border-subtle">

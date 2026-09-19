@@ -6,13 +6,13 @@ import { PageCTA } from '@/components/sections/PageCTA';
 import { NewsStoryVisual } from '@/components/visuals/NewsStoryVisual';
 import { Link, routing } from '@/i18n/routing';
 import { getAllPosts, type NewsLocale } from '@/lib/news';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 import styles from './NewsIndex.module.css';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'news' });
-  return { title: t('title'), description: t('metaDescription'), alternates: buildAlternates('/news', locale) };
+  return buildPageMetadata({ locale, path: '/news', title: t('title'), description: t('metaDescription') });
 }
 
 export default async function NewsIndexPage({ params }: { params: Promise<{ locale: string }> }) {

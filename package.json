@@ -6,9 +6,11 @@
     "dev": "next dev --turbopack -p 4000",
     "dev:webpack": "next dev -p 4000",
     "build": "next build",
+    "postbuild": "node scripts/generate-root-redirect.mjs",
     "start": "next start -p 4000",
     "lint": "eslint",
-    "generate-og": "node scripts/generate-og.mjs"
+    "generate-og": "node scripts/generate-og.mjs",
+    "generate-icons": "node scripts/generate-icons.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",

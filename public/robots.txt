@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://emai.de/sitemap.xml
+Sitemap: https://emai.dev/sitemap.xml

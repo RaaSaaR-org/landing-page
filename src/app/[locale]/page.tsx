@@ -8,7 +8,7 @@ import { WhyEmaiSection } from '@/components/sections/WhyEmaiSection';
 import { MembershipSection } from '@/components/sections/MembershipSection';
 import { FAQ } from '@/components/sections/FAQ';
 import { ContactForm } from '@/components/sections/ContactForm';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 import { faqJsonLd, jsonLdScript } from '@/lib/jsonld';
 
 const faqKeys = [
@@ -29,11 +29,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'meta' });
-  return {
+  return buildPageMetadata({
     title: t('title'),
     description: t('description'),
-    alternates: buildAlternates('/', locale),
-  };
+    locale,
+    path: '/',
+  });
 }
 
 export default async function Home({ params }: { params: Promise<{ locale: string }> }) {

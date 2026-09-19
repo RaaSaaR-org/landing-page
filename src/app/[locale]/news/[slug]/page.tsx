@@ -5,7 +5,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container } from '@/components/layout';
 import { Link, routing } from '@/i18n/routing';
 import { getAllSlugs, getAllPosts, getPost, type NewsLocale } from '@/lib/news';
-import { buildAlternates, SITE_URL } from '@/lib/seo';
+import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 import { articleJsonLd, breadcrumbJsonLd, jsonLdScript } from '@/lib/jsonld';
 import { NewsStoryVisual } from '@/components/visuals/NewsStoryVisual';
 import styles from '@/components/layout/NewsArticle.module.css';
@@ -26,28 +26,14 @@ export async function generateMetadata({
   if (!routing.locales.includes(locale as NewsLocale)) return {};
   if (!getAllSlugs().includes(slug)) return {};
   const post = getPost(slug, locale as NewsLocale);
-  return {
+  return buildPageMetadata({
+    locale,
+    path: `/news/${slug}`,
     title: post.title,
     description: post.metaDescription || post.excerpt,
-    alternates: buildAlternates(`/news/${slug}`, locale),
-    openGraph: {
-      type: 'article',
-      title: post.title,
-      description: post.metaDescription || post.excerpt,
-      url: `${SITE_URL}/${locale}/news/${slug}`,
-      siteName: 'EmAI',
-      locale: locale === 'de' ? 'de_DE' : 'en_US',
-      publishedTime: post.date,
-      ...(post.updatedDate ? { modifiedTime: post.updatedDate } : {}),
-      images: [{ url: `${SITE_URL}${post.image?.src || '/og-image.png'}`, alt: post.image?.alt || 'EmAI - Embodied AI' }],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: post.title,
-      description: post.metaDescription || post.excerpt,
-      images: [{ url: `${SITE_URL}${post.image?.src || '/og-image.png'}`, alt: post.image?.alt || 'EmAI - Embodied AI' }],
-    },
-  };
+    image: post.image ? { url: post.image.src, alt: post.image.alt } : undefined,
+    article: { publishedTime: post.date, modifiedTime: post.updatedDate },
+  });
 }
 
 export default async function NewsPostPage({

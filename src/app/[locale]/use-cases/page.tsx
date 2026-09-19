@@ -4,7 +4,7 @@ import { Header, Footer, Section, Container, PageHero } from '@/components/layou
 import { GlowCard } from '@/components/ui/GlowCard';
 import { PageCTA } from '@/components/sections/PageCTA';
 import { UseCasesIllustration } from '@/components/ui/illustrations/UseCasesIllustration';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 import { routing } from '@/i18n/routing';
 
 type Locale = (typeof routing.locales)[number];
@@ -18,11 +18,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'useCases' });
-  return {
+  return buildPageMetadata({
     title: t('title'),
     description: t('metaDescription'),
-    alternates: buildAlternates('/use-cases', locale),
-  };
+    locale,
+    path: '/use-cases',
+  });
 }
 
 export default async function UseCasesPage({

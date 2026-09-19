@@ -1,0 +1,36 @@
+.hero { position: relative; isolation: isolate; overflow: hidden; padding-block: 2.5rem 4.5rem; background: radial-gradient(ellipse at 24% 45%, #43241624, transparent 58%), #090d10!important; }
+.back { display: inline-flex; align-items: center; gap: .65rem; color: #a9b3bb; font-size: .8rem; margin-bottom: 2.1rem; transition: color .2s; }
+.back:hover { color: #ff9b57; }
+.heading { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); align-items: end; gap: 4rem; margin-bottom: 2.3rem; }
+.meta { display: flex; flex-wrap: wrap; align-items: center; gap: .85rem; margin-bottom: .9rem; font-family: var(--font-geist-mono), monospace; font-size: .6rem; letter-spacing: .15em; text-transform: uppercase; color: #8d9da6; }
+.category { display: inline-flex; align-items: center; gap: .5rem; color: #ff9a55; }
+.category::before { content: ''; width: 4px; height: 4px; background: currentColor; border-radius: 50%; }
+.title { font-size: clamp(2.7rem, 4.7vw, 4.6rem); font-weight: 500; line-height: 1.04; letter-spacing: -.06em; color: #f1f3f3; }
+.tagline { font-size: 1rem; line-height: 1.8; color: #a9b3bb; max-width: 34rem; margin: 0; padding-bottom: .25rem; }
+.experience { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); align-items: stretch; gap: 2.5rem; }
+.viewer { width: 100%; min-width: 0; height: 560px; }
+.dossier { align-self: center; padding-block: 1.5rem; min-width: 0; }
+.sectionLabel { font-family: var(--font-geist-mono), monospace; font-size: .62rem; font-weight: 400; letter-spacing: .16em; text-transform: uppercase; color: #99aab3; margin-bottom: 1rem; }
+.description { font-size: .93rem; line-height: 1.95; color: #a9b3bb; margin: 0; }
+.metrics { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding-block: 1.65rem; margin-top: 1.65rem; border-top: 1px solid #33414a; border-bottom: 1px solid #33414a; }
+.metric { min-width: 0; padding-inline: 1rem; }
+.metric:first-child { padding-left: 0; }
+.metric:last-child { padding-right: 0; }
+.metric + .metric { border-left: 1px solid #263038; }
+.metric > div > div:first-child { font-size: .57rem; letter-spacing: .065em; line-height: 1.65; min-height: 2.85em; }
+.metric > div > div:last-child > span:first-child { font-size: clamp(1.65rem, 2.5vw, 2.2rem); color: #f4a56d; }
+.specLink { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 1.3rem .1rem; color: #e1e6e8; font-size: .8rem; transition: color .2s; }
+.specLink:hover { color: #ff9b57; }
+.specLink span:last-child { color: #ff9b57; font-size: 1.1rem; }
+.specSection { scroll-margin-top: 6rem; }
+.specHeader { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; padding-bottom: 1.5rem; margin-bottom: 2rem; border-bottom: 1px solid #263038; }
+.specHeader h2 { font-size: clamp(1.8rem, 3vw, 2.7rem); font-weight: 500; line-height: 1.12; letter-spacing: -.045em; }
+.specList section { border-radius: 16px; background: linear-gradient(145deg, #131b21, #0c1115); }
+.specList dl > div { column-gap: 1rem; }
+.specList dt { min-width: 0; flex-shrink: 1; overflow-wrap: anywhere; }
+.specList dl > div:global(.flex) dd { flex-shrink: 0; max-width: 60%; }
+.relatedHeading { font-size: clamp(1.6rem, 2.5vw, 2.25rem); font-weight: 500; letter-spacing: -.04em; line-height: 1.2; margin-bottom: 2rem; }
+@media (max-width: 1100px) and (min-width: 768px) { .heading { gap: 2rem; } .experience { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 1.75rem; } .viewer { height: 520px; } .description { font-size: .85rem; line-height: 1.85; } .metric { padding-inline: .65rem; } }
+@media (max-width: 767px) { .hero { padding-block: 1.7rem 3rem; } .back { margin-bottom: 1.75rem; font-size: .75rem; } .heading { grid-template-columns: minmax(0, 1fr); gap: 1.1rem; margin-bottom: 1.6rem; } .meta { margin-bottom: .75rem; font-size: .55rem; } .title { font-size: clamp(2.5rem, 10.5vw, 3.6rem); } .tagline { font-size: .92rem; line-height: 1.75; } .experience { grid-template-columns: minmax(0, 1fr); gap: 2rem; } .viewer { height: 420px; } .dossier { padding-block: 0; } .metrics { margin-top: 1.5rem; padding-block: 1.3rem; } .metric { padding-inline: 1rem; } .metric > div > div:first-child { min-height: 0; } .metric > div > div:last-child > span:first-child { font-size: 1.8rem; } .description { font-size: .9rem; line-height: 1.9; } }
+@media (max-width: 359px) { .viewer { height: 400px; } .metric { padding-inline: .7rem; } .metric > div > div:first-child { font-size: .52rem; } }
+@media (prefers-reduced-motion: reduce) { .back, .specLink { transition: none; } }

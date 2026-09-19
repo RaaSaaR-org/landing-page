@@ -58,8 +58,8 @@ export interface Robot {
   /** Optional poster shown as the loading fallback for a real GLB. */
   poster?: string;
   /**
-   * Relative scale applied to the loaded GLB. Note the viewer wraps the model
-   * in <Bounds fit>, which normalises apparent on-screen size — so this only
+   * Relative scale applied to the loaded GLB. The viewer fits the camera to the model
+   * geometry, which normalises apparent on-screen size — so this only
    * shifts the model's scale *relative to its unscaled hotspots*. Leave at 1
    * unless recalibrating hotspot alignment. Not a visual size knob.
    */
@@ -137,7 +137,7 @@ export const robots: Robot[] = [
     code: 'G1 · EDU',
     category: 'humanoid',
     modelUrl: '/models/g1-edu.glb',
-    poster: '/models/posters/g1-edu.png',
+    poster: '/models/posters/g1-edu-hologram.webp',
     featured: true,
     highlightSpecs: ['height', 'weight', 'dof'],
     heroSpecs: ['height', 'weight', 'payload'],
@@ -171,7 +171,7 @@ export const robots: Robot[] = [
     code: 'H1',
     category: 'humanoid',
     modelUrl: '/models/h1.glb',
-    poster: '/models/posters/h1.png',
+    poster: '/models/posters/h1-hologram.webp',
     highlightSpecs: ['height', 'weight', 'speed'],
     heroSpecs: ['height', 'weight', 'speed'],
     specs: [
@@ -194,7 +194,7 @@ export const robots: Robot[] = [
     code: 'GO2',
     category: 'quadruped',
     modelUrl: '/models/go2.glb',
-    poster: '/models/posters/go2.png',
+    poster: '/models/posters/go2-hologram.webp',
     highlightSpecs: ['weight', 'payload', 'speed'],
     heroSpecs: ['weight', 'payload', 'speed'],
     specs: [
@@ -220,7 +220,7 @@ export const robots: Robot[] = [
     code: 'B2',
     category: 'quadruped',
     modelUrl: '/models/b2.glb',
-    poster: '/models/posters/b2.png',
+    poster: '/models/posters/b2-hologram.webp',
     highlightSpecs: ['weight', 'standing_payload', 'speed'],
     heroSpecs: ['weight', 'standing_payload', 'speed'],
     specs: [

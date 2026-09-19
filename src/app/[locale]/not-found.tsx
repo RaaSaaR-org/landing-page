@@ -15,7 +15,7 @@ export default async function LocaleNotFound() {
     <>
       <Header />
       <main>
-        <Section background="surface">
+        <Section background="surface" className="not-found-scene">
           <Container>
             <div className="max-w-3xl mx-auto text-center py-16">
               <p className="font-mono text-7xl md:text-8xl font-bold text-primary-500/40 mb-4">

@@ -46,7 +46,8 @@ export function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -62,6 +63,24 @@ export function Header() {
     };
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+        document.querySelector<HTMLButtonElement>('[aria-controls="mobile-navigation"]')?.focus();
+      }
+    };
+    const desktop = window.matchMedia('(min-width: 1280px)');
+    const closeOnDesktop = () => { if (desktop.matches) setIsMobileMenuOpen(false); };
+    desktop.addEventListener('change', closeOnDesktop);
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      desktop.removeEventListener('change', closeOnDesktop);
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [isMobileMenuOpen]);
+
   const handleNavClick = (linkName: string) => {
     trackCTAClick(linkName, 'header_navigation');
     setIsMobileMenuOpen(false);
@@ -69,22 +88,23 @@ export function Header() {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
+      className={`site-header fixed top-0 left-0 right-0 z-[100] transition-all duration-300 ${
         isScrolled
           ? 'bg-surface shadow-lg border-b border-border-subtle'
           : 'bg-base/98 backdrop-blur-md border-b border-border-subtle'
       }`}
     >
       <nav className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 md:h-20 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" aria-label="EmAI">
             <Logo size={42} showText={true} />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-4 lg:gap-6">
+          <div className="hidden xl:flex items-center gap-5 text-sm">
             <NavDropdown
+              panelId="desktop-services-navigation"
               label={tNav('services')}
               items={serviceItems}
               isActive={isServicesActive}
@@ -115,7 +135,7 @@ export function Header() {
             <Link
               href="/#contact"
               onClick={() => trackCTAClick(tNav('contact'), 'header')}
-              className="ml-2 px-6 py-2.5 bg-primary-500 text-white rounded-lg hover:bg-primary-400 transition-all font-medium shadow-md hover:shadow-orange whitespace-nowrap"
+              className="button-primary ml-2 !px-5 !py-2.5 !min-h-0"
             >
               {tNav('contact')}
             </Link>
@@ -124,8 +144,9 @@ export function Header() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-text-secondary hover:text-primary-500 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
-            aria-label="Toggle menu"
+            className="xl:hidden p-2 text-text-secondary hover:text-primary-500 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+            aria-label={tNav('menu')}
+            aria-controls="mobile-navigation"
             aria-expanded={isMobileMenuOpen}
           >
             <svg
@@ -151,13 +172,15 @@ export function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-surface border-t border-border-subtle overflow-hidden"
+            className="xl:hidden bg-surface border-t border-border-subtle overflow-hidden"
           >
-            <div className="px-4 py-6 space-y-4 max-h-[calc(100vh-4rem)] overflow-y-auto">
+            <div className="px-4 py-6 space-y-4 max-h-[calc(100dvh-5rem)] overflow-y-auto">
               <NavDropdown
+                panelId="mobile-services-navigation"
                 label={tNav('services')}
                 items={serviceItems}
                 mode="accordion"

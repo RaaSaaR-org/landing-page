@@ -7,6 +7,8 @@ export function articleJsonLd(opts: {
   headline: string;
   description: string;
   datePublished: string;
+  dateModified?: string;
+  image?: string;
   inLanguage: string;
   author?: string;
 }): JsonLd {
@@ -17,6 +19,8 @@ export function articleJsonLd(opts: {
     headline: opts.headline,
     description: opts.description,
     datePublished: opts.datePublished,
+    ...(opts.dateModified ? { dateModified: opts.dateModified } : {}),
+    ...(opts.image ? { image: opts.image } : {}),
     inLanguage: opts.inLanguage,
     author: { '@type': 'Organization', name: opts.author || 'EmAI' },
     publisher: {

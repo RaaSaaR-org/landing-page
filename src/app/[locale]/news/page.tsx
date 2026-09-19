@@ -1,133 +1,99 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Header, Footer, Section, Container, PageHero } from '@/components/layout';
-import { GlowCard } from '@/components/ui/GlowCard';
+import { Header, Footer, Container } from '@/components/layout';
 import { PageCTA } from '@/components/sections/PageCTA';
-import { NewsIllustration } from '@/components/ui/illustrations/NewsIllustration';
-import { Link } from '@/i18n/routing';
+import { NewsStoryVisual } from '@/components/visuals/NewsStoryVisual';
+import { Link, routing } from '@/i18n/routing';
 import { getAllPosts, type NewsLocale } from '@/lib/news';
-import { routing } from '@/i18n/routing';
 import { buildAlternates } from '@/lib/seo';
+import styles from './NewsIndex.module.css';
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'news' });
-  return {
-    title: t('title'),
-    description: t('metaDescription'),
-    alternates: buildAlternates('/news', locale),
-  };
+  return { title: t('title'), description: t('metaDescription'), alternates: buildAlternates('/news', locale) };
 }
 
-export default async function NewsIndexPage({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}) {
+export default async function NewsIndexPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
-  if (!routing.locales.includes(locale as NewsLocale)) {
-    return null;
-  }
+  if (!routing.locales.includes(locale as NewsLocale)) return null;
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'news' });
-  const posts = getAllPosts(locale as NewsLocale);
-
-  const dateLocale = locale === 'de' ? 'de-DE' : 'en-US';
-  const dateFormatter = new Intl.DateTimeFormat(dateLocale, {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
+  const [featured, ...otherPosts] = getAllPosts(locale as NewsLocale);
+  const dateFormatter = new Intl.DateTimeFormat(locale === 'de' ? 'de-DE' : 'en-US', {
+    day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC',
   });
 
   return (
     <>
       <Header />
       <main>
-        <PageHero
-          eyebrow={t('eyebrow')}
-          title={t('title')}
-          subtitle={t('subtitle')}
-          visual={<NewsIllustration />}
-          cta={{ label: t('cta.primary'), href: '/#contact' }}
-        />
-
-        <Section background="base">
+        <section className={styles.masthead}>
           <Container>
-            <div className="max-w-4xl mx-auto space-y-6">
-              {posts.length === 0 && (
-                <p className="text-center text-text-muted text-lg py-12">{t('empty')}</p>
-              )}
-              {posts.map((post) => {
-                const date = new Date(post.date);
-                return (
-                  <Link
-                    key={post.slug}
-                    href={`/news/${post.slug}`}
-                    locale={locale as NewsLocale}
-                    className="block group"
-                  >
-                    <GlowCard className="!p-8" hoverEffect={false}>
-                      <div className="flex flex-wrap items-center gap-3 text-xs text-text-muted mb-3 font-mono uppercase tracking-wider">
-                        <time dateTime={date.toISOString()}>{dateFormatter.format(date)}</time>
-                        {post.author && (
-                          <>
-                            <span className="text-primary-500">·</span>
-                            <span>
-                              {t('by')} {post.author}
-                            </span>
-                          </>
-                        )}
-                        {post.tags?.map((tag) => (
-                          <span
-                            key={tag}
-                            className="px-2 py-0.5 rounded bg-primary-500/10 text-primary-400"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3 group-hover:text-primary-400 transition-colors">
-                        {post.title}
-                      </h2>
-                      <p className="text-text-secondary leading-relaxed mb-4">{post.excerpt}</p>
-                      <span className="inline-flex items-center gap-2 text-sm font-medium text-primary-400 group-hover:text-primary-300 transition-colors">
-                        {t('readMore')}
-                        <svg
-                          className="w-4 h-4"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          aria-hidden="true"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M17 8l4 4m0 0l-4 4m4-4H3"
-                          />
-                        </svg>
-                      </span>
-                    </GlowCard>
-                  </Link>
-                );
-              })}
+            <div className={styles.topline}><span>EmAI / {t('eyebrow')}</span><span>{t('index.masthead')}</span></div>
+            <div className={styles.intro}>
+              <h1 className={styles.title}>{t('index.title')}{' '}<br /><span>{t('index.titleAccent')}</span></h1>
+              <div className={styles.introCopy}>
+                <p>{t('index.description')}</p>
+                <a href="#latest" className={styles.jump}>{t('index.explore')}<span aria-hidden="true">↓</span></a>
+              </div>
             </div>
           </Container>
-        </Section>
+        </section>
 
-        <PageCTA
-          locale={locale as NewsLocale}
-          title={t('cta.title')}
-          body={t('cta.body')}
-          primaryHref="/#contact"
-          primaryLabel={t('cta.primary')}
-          secondaryHref="/#services"
-          secondaryLabel={t('cta.secondary')}
-        />
+        <section className={styles.stories} id="latest" aria-label={t('index.latest')}>
+          <Container>
+            {featured ? (
+              <>
+                <p className={styles.sectionLabel}>{t('index.latest')}<span aria-hidden="true" /></p>
+                <article>
+                  <Link href={`/news/${featured.slug}`} locale={locale as NewsLocale} className={styles.featured}>
+                    <div className={styles.featuredCopy}>
+                      <div className={styles.meta}>
+                        <time dateTime={featured.date}>{dateFormatter.format(new Date(featured.date))}</time>
+                        <span>{t('readingTime', { minutes: featured.readingMinutes })}</span>
+                      </div>
+                      <div className={styles.tags}>{featured.tags?.map(tag => <span className={styles.tag} key={tag}>{tag}</span>)}</div>
+                      <h2>{featured.title}</h2>
+                      <p>{featured.excerpt}</p>
+                      <span className={styles.readLink}>{t('readMore')}<span aria-hidden="true">↗</span></span>
+                    </div>
+                    <div className={styles.featuredVisual}>
+                      {featured.image ? (
+                        <Image src={featured.image.src} alt={featured.image.alt} fill sizes="(max-width: 767px) 100vw, 50vw" priority className={styles.featuredImage} />
+                      ) : <NewsStoryVisual variant="launch" />}
+                    </div>
+                  </Link>
+                  {featured.image && <p className={styles.photoCredit}>{t('photoCredit')}: <a href={featured.image.creditUrl} target="_blank" rel="noopener noreferrer">{featured.image.credit}<span aria-hidden="true"> ↗</span></a></p>}
+                </article>
+
+                {otherPosts.length > 0 && <div className={styles.archive}>
+                  <p className={styles.sectionLabel}>{t('index.more')}</p>
+                  {otherPosts.map(post => (
+                    <article key={post.slug}>
+                      <Link href={`/news/${post.slug}`} locale={locale as NewsLocale} className={styles.story}>
+                        <div className={styles.storyVisual}>
+                          {post.image ? <Image src={post.image.src} alt={post.image.alt} width={480} height={440} className={styles.storyImage} /> : <NewsStoryVisual variant="launch" />}
+                        </div>
+                        <div className={styles.storyCopy}>
+                          <div className={styles.meta}><time dateTime={post.date}>{dateFormatter.format(new Date(post.date))}</time><span>{t('readingTime', { minutes: post.readingMinutes })}</span></div>
+                          <h2>{post.title}</h2>
+                          <p>{post.excerpt}</p>
+                          <span>{t('readMore')}</span>
+                        </div>
+                        <span className={styles.readLink} aria-hidden="true"><span>↗</span></span>
+                      </Link>
+                      {post.image && <p className={styles.photoCredit}>{t('photoCredit')}: <a href={post.image.creditUrl} target="_blank" rel="noopener noreferrer">{post.image.credit}<span aria-hidden="true"> ↗</span></a></p>}
+                    </article>
+                  ))}
+                </div>}
+              </>
+            ) : <p className={styles.empty}>{t('empty')}</p>}
+          </Container>
+        </section>
+
+        <PageCTA locale={locale as NewsLocale} title={t('cta.title')} body={t('cta.body')} primaryHref="/#contact" primaryLabel={t('cta.primary')} secondaryHref="/#services" secondaryLabel={t('cta.secondary')} />
       </main>
       <Footer />
     </>

@@ -6,13 +6,26 @@
     },
     "hero": {
       "eyebrow": "Discover robots",
-      "title": "Experience cognitive robots in 3D",
-      "subtitle": "Rotate, zoom and understand: real hardware with real technical data. We bring these robots into real environments — and share what we learn."
+      "title": "Meet the next",
+      "subtitle": "From agile quadrupeds to dexterous humanoids. Explore the hardware bringing physical AI into the real world.",
+      "titleAccent": "generation.",
+      "explore": "Explore the robots",
+      "featuredCta": "Meet the G1 EDU",
+      "feature1": "Interactive 3D models",
+      "feature2": "Independent insight",
+      "featured": "In the spotlight",
+      "view3d": "Explore in 3D",
+      "rotate": "Rotate. Zoom. Understand.",
+      "featuredSpecs": "Featured platform",
+      "scroll": "Discover the collection"
     },
-    "intro": "Before a robot makes sense on your production or logistics floor, you should understand it. Here you'll find a growing selection of cognitive robots — interactive in 3D, with solid technical data and a neutral assessment. Not a sales brochure, but the basis for an informed decision.",
+    "intro": "Explore each platform in 3D, compare key specifications and discover where it fits. Technical detail, clearly explained.",
     "registry": {
       "eyebrow": "Robot registry",
-      "count": "{shown} of {total} units"
+      "count": "{shown} of {total} units",
+      "title": "Different forms.\nNew possibilities.",
+      "note": "The right robot starts with the right question. We test what these platforms can do in your environment.",
+      "testing": "Explore our testing"
     },
     "filter": {
       "all": "All"
@@ -67,12 +80,22 @@
     },
     "viewer": {
       "status": "Interactive",
-      "a11y": "Interactive 3D model. Drag to rotate, scroll to zoom.",
+      "a11y": "Interactive holographic 3D rendering. Drag to rotate, scroll to zoom.",
       "hotspots": "Info points",
       "loading": "Loading model …",
       "placeholderNote": "Preview model – detailed 3D model coming soon.",
       "interactionHint": "Drag to rotate · Scroll to zoom",
-      "reducedMotion": "Motion reduced (system setting)."
+      "reducedMotion": "Motion reduced (system setting).",
+      "zoomIn": "Zoom in",
+      "zoomOut": "Zoom out",
+      "reset": "Reset view",
+      "pause": "Pause rotation",
+      "rotate": "Rotate model",
+      "closeInfo": "Close information",
+      "preview": "Image preview",
+      "unavailable": "The 3D view is unavailable.",
+      "fallbackHint": "You can still explore all specifications below.",
+      "retry": "Try 3D again"
     },
     "card": {
       "cta": "View datasheet"
@@ -120,6 +143,9 @@
       "body": "We test cognitive robots in real environments and independently assess what works for you — with no vendor lock-in.",
       "primary": "Book a conversation",
       "secondary": "To consulting"
+    },
+    "visuals": {
+      "posterAlt": "{name} as an orange holographic 3D rendering"
     }
   }
 }

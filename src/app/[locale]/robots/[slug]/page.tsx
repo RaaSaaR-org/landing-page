@@ -1,4 +1,7 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
+import styles from '@/components/robots/RobotShowroom.module.css';
+import detailStyles from '@/components/robots/RobotDetail.module.css';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container } from '@/components/layout';
@@ -58,30 +61,27 @@ export default async function RobotDetailPage({
     <>
       <Header />
       <main>
-        {/* ---- Hero: viewport + dossier ---- */}
-        <Section background="surface" className="relative overflow-hidden">
-          <div className="absolute inset-0 pointer-events-none">
-            <div
-              className="absolute top-0 right-0 w-2/3 h-full"
-              style={{
-                background: `radial-gradient(ellipse at top right, ${accent.hex}14, transparent 60%)`,
-              }}
-            />
-          </div>
+        <Section background="surface" className={detailStyles.hero}>
           <Container>
-            <Link
-              href="/robots"
-              locale={locale as Locale}
-              className="inline-flex items-center gap-2 text-sm text-text-secondary hover:text-primary-400 transition-colors mb-8"
-            >
+            <Link href="/robots" locale={locale as Locale} className={detailStyles.back}>
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
               </svg>
               {t('detail.backToAll')}
             </Link>
 
-            <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-start">
-              {/* Viewer */}
+            <div className={detailStyles.heading}>
+              <div>
+                <div className={detailStyles.meta}>
+                  <Designation robot={robot} />
+                  <span className={detailStyles.category}>{t(`categories.${robot.category}`)}</span>
+                </div>
+                <h1 className={detailStyles.title}>{robot.name}</h1>
+              </div>
+              <p className={detailStyles.tagline}>{t(`items.${slug}.tagline`)}</p>
+            </div>
+
+            <div className={detailStyles.experience}>
               <RobotViewer
                 category={robot.category}
                 name={robot.name}
@@ -90,34 +90,14 @@ export default async function RobotDetailPage({
                 poster={robot.poster}
                 hotspots={robot.hotspots}
                 modelScale={robot.modelScale}
-                className="aspect-square lg:aspect-[5/4] w-full lg:sticky lg:top-28"
+                className={detailStyles.viewer}
               />
-
-              {/* Dossier */}
-              <div>
-                <div className="flex items-center gap-3 mb-4">
-                  <Designation robot={robot} />
-                  <span
-                    className={`font-mono text-[10px] uppercase tracking-[0.16em] px-2 py-1 rounded ${accent.bg} ${accent.text}`}
-                  >
-                    {t(`categories.${robot.category}`)}
-                  </span>
-                </div>
-                <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 tracking-tight">
-                  {robot.name}
-                </h1>
-                <div
-                  className="w-20 h-1 rounded-full mb-6"
-                  style={{ backgroundColor: accent.hex }}
-                />
-                <p className="text-lg text-text-secondary leading-relaxed mb-8">
-                  {t(`items.${slug}.tagline`)}
-                </p>
-
-                {/* Headline metric strip */}
-                <div className="grid grid-cols-3 divide-x divide-border-subtle rounded-xl border border-border-subtle bg-base/40 backdrop-blur-sm mb-10">
+              <div className={detailStyles.dossier}>
+                <h2 className={detailStyles.sectionLabel}>{t('detail.overview')}</h2>
+                <p className={detailStyles.description}>{t(`items.${slug}.description`)}</p>
+                <div className={detailStyles.metrics}>
                   {heroStats.map((spec) => (
-                    <div key={spec.id} className="px-3 sm:px-5 py-4 min-w-0">
+                    <div key={spec.id} className={detailStyles.metric}>
                       <RobotStat
                         size="lg"
                         label={t(`specLabels.${spec.id}`)}
@@ -128,38 +108,32 @@ export default async function RobotDetailPage({
                     </div>
                   ))}
                 </div>
-
-                {/* Overview */}
-                <div>
-                  <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-text-secondary mb-3">
-                    {t('detail.overview')}
-                  </h2>
-                  <p className="text-text-secondary leading-relaxed">
-                    {t(`items.${slug}.description`)}
-                  </p>
-                </div>
+                <a href="#specifications" className={detailStyles.specLink}>
+                  <span>{t('specsHeading')}</span>
+                  <span aria-hidden="true">↓</span>
+                </a>
               </div>
             </div>
           </Container>
         </Section>
 
         {/* ---- Datasheet ---- */}
-        <Section background="base">
+        <Section background="base" id="specifications" className={detailStyles.specSection}>
           <Container>
-            <div className="flex items-end justify-between gap-4 mb-8 pb-4 border-b border-border-subtle">
-              <h2 className="text-2xl md:text-3xl font-bold text-text-primary tracking-tight">
+            <div className={detailStyles.specHeader}>
+              <h2>
                 {t('specsHeading')}
               </h2>
               <Designation robot={robot} className="whitespace-nowrap" />
             </div>
-            <RobotSpecList robot={robot} />
+            <RobotSpecList robot={robot} className={detailStyles.specList} />
           </Container>
         </Section>
 
         {/* ---- Other units ---- */}
         <Section background="surface">
           <Container>
-            <h2 className="font-mono text-xs uppercase tracking-[0.18em] text-text-secondary mb-6">
+            <h2 className={detailStyles.relatedHeading}>
               {t('detail.otherUnits')}
             </h2>
             <div className="grid sm:grid-cols-3 gap-4">
@@ -171,13 +145,20 @@ export default async function RobotDetailPage({
                     href={`/robots/${r.slug}`}
                     locale={locale as Locale}
                     style={{ ['--rh' as string]: ac.hex }}
-                    className="group relative flex items-center justify-between gap-3 rounded-lg border border-border-subtle bg-base/40 px-4 py-4 transition-all hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-surface focus-visible:ring-[color:var(--rh)]"
+                    className={`${styles.relatedCard} group relative flex items-center justify-between gap-3 rounded-lg border border-border-subtle bg-base/40 px-4 py-4 transition-all hover:-translate-y-0.5 focus-visible:-translate-y-0.5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-surface focus-visible:ring-[color:var(--rh)]`}
                   >
                     <div
                       aria-hidden="true"
                       className="pointer-events-none absolute inset-0 rounded-lg border opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100"
                       style={{ borderColor: `${ac.hex}55` }}
                     />
+                    {r.poster && <Image
+                      src={r.poster}
+                      alt=""
+                      width={130}
+                      height={150}
+                      className={styles.relatedImage}
+                    />}
                     <div>
                       <Designation robot={r} className="block mb-1" />
                       <span className="text-sm font-semibold text-text-primary">{r.name}</span>

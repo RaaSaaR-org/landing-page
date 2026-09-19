@@ -1,0 +1,35 @@
+.scene { position: relative; width: 100%; max-width: 530px; aspect-ratio: 1 / 1.05; margin-inline: auto; isolation: isolate; perspective: 1000px; color: var(--orbit-color, #ff8534); }
+.bloom { position: absolute; inset: 14% 9%; z-index: -1; background: radial-gradient(ellipse, color-mix(in srgb, currentColor 17%, transparent), transparent 68%); filter: blur(24px); }
+.field { position: absolute; inset: -7% -10%; width: 120%; height: 114%; stroke: currentColor; stroke-width: .65; opacity: .25; mask-image: linear-gradient(transparent, #000 24%, #000 70%, transparent); }
+.field .signal, .field .signalDelayed { stroke-width: 1.8; stroke-dasharray: 35 750; animation: signal 10s linear infinite; }
+.field .signalDelayed { animation-delay: -5s; }
+.assembly { position: absolute; inset: 15% 14% 20%; transform-style: preserve-3d; transform: rotateX(10deg) rotateY(-19deg) rotateZ(7deg); animation: drift 9s ease-in-out infinite; }
+.backPlane, .middlePlane, .frontPlane { position: absolute; inset: 0; border: 1px solid color-mix(in srgb, currentColor 29%, transparent); border-radius: 12px; }
+.backPlane { transform: translate3d(-40px, 34px, -60px); background: linear-gradient(140deg, color-mix(in srgb, currentColor 9%, transparent), transparent 55%); opacity: .35; }
+.middlePlane { transform: translate3d(-21px, 18px, -30px); opacity: .65; background: linear-gradient(130deg, #17202855, #0a0e1288); }
+.frontPlane { background: linear-gradient(140deg, #192026da, #0c1015ee 72%); box-shadow: 0 22px 65px #0007, inset 0 0 55px color-mix(in srgb, currentColor 4%, transparent); }
+.frontPlane::before { content: ''; position: absolute; left: 12%; right: 12%; top: -1px; height: 1px; background: linear-gradient(90deg, transparent, currentColor, transparent); box-shadow: 0 0 16px currentColor; }
+.planeGrid { position: absolute; inset: 0; opacity: .055; background-image: linear-gradient(currentColor 1px, transparent 1px), linear-gradient(90deg, currentColor 1px, transparent 1px); background-size: 27px 27px; mask-image: radial-gradient(ellipse, #000, transparent 75%); }
+.planeMark { position: absolute; top: 20px; left: 23px; color: #a7b4bd; font-size: 11px; font-weight: 600; letter-spacing: -.04em; }
+.planeCross { position: absolute; top: 15px; right: 22px; font: 20px monospace; opacity: .6; }
+.artwork { position: absolute; inset: 13% 9% 12%; display: flex; align-items: center; justify-content: center; transform: translateZ(30px); filter: drop-shadow(0 10px 20px #0007); }
+.artwork > div { width: 100%; height: 100%; }
+.artwork > img { max-width: 58%; height: auto; }
+.planeFooter { position: absolute; bottom: 20px; left: 23px; right: 23px; display: flex; gap: 4px; align-items: center; }
+.planeFooter span { width: 3px; height: 3px; background: currentColor; opacity: .8; }
+.planeFooter span:last-child { width: 35px; height: 1px; margin-left: auto; opacity: .4; }
+.cornerTop, .cornerBottom { position: absolute; width: 17px; height: 17px; opacity: .75; }
+.cornerTop { top: -1px; left: -1px; border-top: 1px solid; border-left: 1px solid; border-radius: 12px 0 0; }
+.cornerBottom { bottom: -1px; right: -1px; border-bottom: 1px solid; border-right: 1px solid; border-radius: 0 0 12px; }
+.caption { position: absolute; bottom: 5%; left: 15%; right: 8%; display: flex; align-items: center; gap: 12px; font-family: var(--font-mono), monospace; font-size: 9px; color: #9ca9b3; letter-spacing: .14em; text-transform: uppercase; }
+.caption span:last-child { margin-left: auto; font-size: 17px; color: currentColor; }
+.captionLine { flex-shrink: 0; width: 26px; height: 1px; background: currentColor; }
+.brand .frontPlane { border-radius: 50%; }
+.brand .backPlane, .brand .middlePlane { border-radius: 50%; }
+.brand .planeMark, .brand .planeCross, .brand .cornerTop, .brand .cornerBottom, .brand .planeFooter { display: none; }
+.brand .artwork { inset: 17%; }
+.brand .artwork > img { max-width: 73%; filter: drop-shadow(0 0 35px #ff853433); }
+@keyframes signal { to { stroke-dashoffset: -785; } }
+@keyframes drift { 0%, 100% { transform: rotateX(10deg) rotateY(-19deg) rotateZ(7deg) translateY(0); } 50% { transform: rotateX(6deg) rotateY(-14deg) rotateZ(5deg) translateY(-9px); } }
+@media (max-width: 767px) { .scene { max-width: 350px; aspect-ratio: 1.12; } .assembly { inset: 10% 17% 16%; } .caption { bottom: 0; font-size: 8px; left: 15%; right: 9%; } .backPlane { transform: translate3d(-27px, 25px, -60px); } .middlePlane { transform: translate3d(-14px, 12px, -30px); } }
+@media (prefers-reduced-motion: reduce) { .assembly, .field .signal, .field .signalDelayed { animation: none; } }

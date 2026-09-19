@@ -40,7 +40,7 @@ export default async function ImpressumPage({
       <main>
         <Section id="impressum" background="base">
           <Container>
-            <div className="py-16 lg:py-24">
+            <div className="legal-page py-8 lg:py-12">
               <h1 className="text-3xl lg:text-4xl font-bold text-text-primary mb-2">
                 {t('title')}
               </h1>

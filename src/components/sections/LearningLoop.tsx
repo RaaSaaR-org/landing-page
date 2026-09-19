@@ -33,7 +33,7 @@ export function LearningLoop() {
           </span>
         ))}
       </div>
-      <p className="mt-5 text-sm font-mono tracking-wide text-text-tertiary text-center">
+      <p className="mt-5 text-sm font-mono tracking-wide text-text-muted text-center">
         {t('caption')}
       </p>
     </div>

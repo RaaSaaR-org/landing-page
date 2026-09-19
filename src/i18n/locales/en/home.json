@@ -4,17 +4,23 @@
     "description": "EmAI Robotics helps businesses successfully adopt Physical AI -- through strategic consulting, real-world testing, workshops, and neutral assessment. Independent, European, practice-oriented."
   },
   "hero": {
-    "badge": "Physical AI · Strategic Consulting",
+    "opening": "From possibility to practice.",
     "title": "EmAI",
     "titleAccent": "Embodied AI",
-    "subtitle": "We help businesses successfully adopt Physical AI. Strategic consulting, hands-on expertise, and neutral assessment.",
+    "subtitle": "We help businesses successfully adopt <highlight>Physical AI</highlight>. Strategic consulting, hands-on expertise, and neutral assessment.",
     "cta": "Start with Consulting",
     "ctaSecondary": "Our Services",
     "pillars": {
       "openSource": "Open-Source AI",
       "european": "Made in Europe",
       "learning": "Field-Tested"
-    }
+    },
+    "headline": "Intelligence.",
+    "headlineAccent": "In the real world.",
+    "discover": "Explore what’s possible",
+    "independent": "Independent by design",
+    "pauseAnimation": "Pause animation",
+    "playAnimation": "Play animation"
   },
   "problem": {
     "title": "Why You Need a Partner",

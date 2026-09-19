@@ -1,0 +1,43 @@
+.viewer { position: relative; overflow: hidden; isolation: isolate; background: #080c0f; border: 1px solid #4a382d; border-radius: 20px; min-height: 320px; }
+.backdrop { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse at 50% 44%, #a2481218, transparent 62%), linear-gradient(180deg, #0d1216, #070b0e); }
+.backdrop::before { content: ''; position: absolute; inset: 45px 0 68px; background-image: linear-gradient(#e69e5110 1px, transparent 1px), linear-gradient(90deg, #e69e5110 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at 50% 45%, #000 10%, transparent 72%); opacity: .55; }
+.backdrop::after { content: ''; position: absolute; top: 0; left: 14%; right: 14%; height: 1px; background: linear-gradient(90deg, transparent, #ff934a88, transparent); box-shadow: 0 0 20px #ff762344; }
+.topbar { pointer-events: none; position: absolute; inset: 0 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 19px 22px; z-index: 10; font: 9px var(--font-geist-mono),monospace; letter-spacing: .13em; text-transform: uppercase; color: #98a5ae; }
+.status { display: flex; align-items: center; gap: 7px; white-space: nowrap; }
+.status i { width: 4px; height: 4px; border-radius: 1px; background: #ffa25e; box-shadow: 0 0 9px #ff812e55; }
+.stage { position: absolute; inset: 45px 0 72px; }
+.stage canvas { touch-action: none; outline: none; }
+.loading { position: absolute; inset: 0; pointer-events: none; background: #080d11e6; }
+.poster { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 10px 20px; }
+.poster img { object-fit: contain; height: calc(100% - 40px); width: 85%; max-height: 88%; }
+.poster span { color: #a7b2ba; font-size: 11px; text-align: center; }
+.bottomBar { position: absolute; inset: auto 0 0; min-height: 68px; padding: 13px 18px; display: flex; align-items: center; justify-content: space-between; gap: .65rem; z-index: 10; background: linear-gradient(0deg,#0a0f12,#0a0f12f5); border-top: 1px solid #f29c5314; }
+.hint { color: #86969f; font-size: 10px; line-height: 1.6; max-width: 12rem; }
+.controls { display: flex; gap: 5px; flex-shrink: 0; }
+.controls button, .retry { display: grid; place-items: center; width: 36px; height: 36px; background: #131a1f; border: 1px solid #384047; border-radius: 8px; color: #b5bfc6; cursor: pointer; transition: color .2s,border-color .2s,background .2s; }
+.controls button:hover, .retry:hover { color: #ffe0c7; background: #ff853413; border-color: #9b613b; }
+.controls button[aria-pressed=true] { color: #ff9a55; background: #ff7a2412; border-color: #ff7a244d; }
+.controls button:disabled { opacity: .35; cursor: default; }
+.controls button:focus-visible, .hotspot:focus-visible, .retry:focus-visible, .infoPanel button:focus-visible { outline: 2px solid #ffa064; outline-offset: 3px; }
+.controls svg { width: 16px; height: 16px; }
+.controls button > span { font-size: 21px; line-height: 1; }
+.retry { display: flex; justify-content: center; gap: 10px; width: auto; padding-inline: 12px; font-size: 11px; }
+.hotspot { display: grid; place-items: center; width: 28px; height: 28px; color: #ffc494; background: #17110cf0; border: 1px solid #ff9a59; box-shadow: 0 0 15px #ff7a242f; border-radius: 50%; font-size: 10px; font-weight: 700; cursor: pointer; }
+.hotspot[aria-pressed=true] { background: #ff9a55; color: #101417; border-color: #ffd5b7; }
+.infoPanel { position: absolute; bottom: 83px; left: 18px; right: 18px; max-width: 340px; display: flex; align-items: flex-start; gap: 12px; z-index: 12; padding: 15px; border: 1px solid #ff8a3e55; border-radius: 10px; background: #0d1418f5; backdrop-filter: blur(15px); box-shadow: 0 8px 28px #0004; }
+.infoPanel strong { font-size: 12px; font-weight: 600; color: #f1f3f3; }
+.infoPanel p { margin-top: 5px; font-size: 11px; line-height: 1.6; color: #acbac2; }
+.infoPanel button { border: 0; background: transparent; color: #b5bfc6; font-size: 23px; line-height: 1; cursor: pointer; padding: 0 2px; }
+.compact .hint { display: none; }
+.compact .bottomBar { justify-content: center; }
+@media (max-width: 600px) {
+ .topbar { padding: 17px 16px; font-size: 8px; gap: .5rem; }
+ .bottomBar { padding: 12px; flex-wrap: wrap; justify-content: center; gap: 8px; }
+ .hint { max-width: none; text-align: center; flex-basis: 100%; font-size: 9px; }
+ .stage { bottom: 94px; }
+ .controls { gap: 8px; }
+ .controls button { width: 44px; height: 44px; }
+ .infoPanel { bottom: 105px; left: 12px; right: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) { .controls button, .retry { transition: none; } }

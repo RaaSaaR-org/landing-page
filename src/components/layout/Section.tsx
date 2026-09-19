@@ -19,7 +19,7 @@ export function Section({ children, className = '', id, background = 'base' }: S
   return (
     <section
       id={id}
-      className={`py-16 md:py-20 lg:py-24 ${backgroundClasses[background]} ${className}`}
+      className={`site-section relative py-16 md:py-24 lg:py-28 ${backgroundClasses[background]} ${className}`}
     >
       {children}
     </section>

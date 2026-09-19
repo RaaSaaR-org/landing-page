@@ -8,6 +8,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import { buildPageMetadata, SITE_URL } from '@/lib/seo';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -24,13 +25,23 @@ const geistMono = Geist_Mono({
   weight: ['400', '700'],
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.dev';
+const siteUrl = SITE_URL;
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const isGerman = locale === 'de';
 
   return {
+    ...buildPageMetadata({
+      locale,
+      path: '/',
+      title: isGerman
+        ? 'EmAI - Physical AI erfolgreich einsetzen.'
+        : 'EmAI - Make Physical AI Work.',
+      description: isGerman
+        ? 'Ihr unabhängiger Beratungspartner für Physical AI. Strategie, Praxis-Tests, Workshops und neutrale Bewertung für kognitive Robotik.'
+        : 'Your independent consulting partner for Physical AI. Strategy, real-world testing, workshops, and neutral assessment for cognitive robotics.',
+    }),
     metadataBase: new URL(siteUrl),
     title: {
       default: isGerman
@@ -58,50 +69,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
         'max-snippet': -1,
       },
     },
-    openGraph: {
-      type: 'website',
-      locale: isGerman ? 'de_DE' : 'en_US',
-      url: siteUrl,
-      siteName: 'EmAI',
-      title: isGerman
-        ? 'EmAI - Physical AI erfolgreich einsetzen.'
-        : 'EmAI - Make Physical AI Work.',
-      description: isGerman
-        ? 'Ihr unabhängiger Beratungspartner für Physical AI. Strategie, Praxis-Tests, Workshops und neutrale Bewertung für kognitive Robotik.'
-        : 'Your independent consulting partner for Physical AI. Strategy, real-world testing, workshops, and neutral assessment for cognitive robotics.',
-      images: [
-        {
-          url: '/og-image.png',
-          width: 1200,
-          height: 630,
-          alt: 'EmAI - Embodied AI',
-        },
-      ],
-    },
-    twitter: {
-      card: 'summary_large_image',
-      title: isGerman
-        ? 'EmAI - Physical AI erfolgreich einsetzen.'
-        : 'EmAI - Make Physical AI Work.',
-      description: isGerman
-        ? 'Physical AI Beratung für Unternehmen: Strategie, Praxis-Tests, Workshops und neutrale Bewertung.'
-        : 'Physical AI consulting for businesses: strategy, real-world testing, workshops, and neutral assessment.',
-      images: ['/og-image.png'],
-      creator: '@emai_robotics',
-    },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
     },
     manifest: '/site.webmanifest',
     icons: {
       icon: [
-        { url: '/favicon.ico', sizes: 'any' },
-        { url: '/logo.svg', type: 'image/svg+xml' },
+        { url: '/brand/emai-icon-32-v2.png', type: 'image/png', sizes: '32x32' },
+        { url: '/brand/emai-icon-v2.svg', type: 'image/svg+xml', sizes: 'any' },
       ],
-      apple: '/logo.svg',
+      apple: { url: '/brand/emai-apple-touch-v2.png', type: 'image/png', sizes: '180x180' },
     },
     other: {
-      'theme-color': '#141414',
+      'theme-color': '#090c0f',
     },
   };
 }

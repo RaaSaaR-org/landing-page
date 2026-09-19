@@ -4,7 +4,7 @@ import { Header, Footer, Section, Container, PageHero } from '@/components/layou
 import { PageCTA } from '@/components/sections/PageCTA';
 import { WorkshopsIllustration } from '@/components/ui/illustrations/WorkshopsIllustration';
 import { routing } from '@/i18n/routing';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 import { jsonLdScript, serviceBreadcrumb } from '@/lib/jsonld';
 import {
   AudienceSegments,
@@ -25,11 +25,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'workshops' });
-  return {
+  return buildPageMetadata({
     title: t('metaTitle'),
     description: t('metaDescription'),
-    alternates: buildAlternates('/services/workshops', locale),
-  };
+    locale,
+    path: '/services/workshops',
+  });
 }
 
 export default async function WorkshopsPage({

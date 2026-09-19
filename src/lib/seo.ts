@@ -1,7 +1,69 @@
 import type { Metadata } from 'next';
 import { routing } from '@/i18n/routing';
 
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.dev';
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || 'https://emai.dev').replace(/\/+$/, '');
+
+type ShareImage = {
+  url: string;
+  alt: string;
+  width?: number;
+  height?: number;
+};
+
+export function getShareImage(locale: string): ShareImage {
+  const language = locale === 'en' ? 'en' : 'de';
+  return {
+    url: `${SITE_URL}/og/emai-share-${language}-v2.png`,
+    width: 1200,
+    height: 630,
+    alt: language === 'de'
+      ? 'EmAI – Intelligenz. In der realen Welt.'
+      : 'EmAI – Intelligence. In the real world.',
+  };
+}
+
+/** Complete social metadata per route: Next replaces nested metadata rather than merging it. */
+export function buildPageMetadata({
+  locale,
+  path,
+  title,
+  description,
+  image,
+  article,
+}: {
+  locale: string;
+  path: string;
+  title: string;
+  description: string;
+  image?: ShareImage;
+  article?: { publishedTime: string; modifiedTime?: string };
+}): Metadata {
+  const shareImage = image
+    ? { ...image, url: new URL(image.url, `${SITE_URL}/`).href }
+    : getShareImage(locale);
+  return {
+    title,
+    description,
+    alternates: buildAlternates(path, locale),
+    openGraph: {
+      ...(article ? { type: 'article' as const, ...article } : { type: 'website' as const }),
+      title,
+      description,
+      url: `${SITE_URL}/${locale}${normalize(path)}`,
+      siteName: 'EmAI',
+      locale: locale === 'de' ? 'de_DE' : 'en_US',
+      alternateLocale: locale === 'de' ? 'en_US' : 'de_DE',
+      images: [shareImage],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [shareImage],
+      creator: '@emai_robotics',
+    },
+  };
+}
 
 /**
  * Build per-page hreflang alternates for next-intl static export.

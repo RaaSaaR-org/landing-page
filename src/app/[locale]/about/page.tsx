@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container, PageHero } from '@/components/layout';
 import { GlowCard } from '@/components/ui/GlowCard';
 import { PageCTA } from '@/components/sections/PageCTA';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 import { routing } from '@/i18n/routing';
 import styles from '@/components/layout/EditorialPages.module.css';
 
@@ -24,11 +24,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'about' });
-  return {
+  return buildPageMetadata({
     title: t('title'),
     description: t('metaDescription'),
-    alternates: buildAlternates('/about', locale),
-  };
+    locale,
+    path: '/about',
+  });
 }
 
 export default async function AboutPage({

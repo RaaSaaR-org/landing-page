@@ -6,7 +6,7 @@ import styles from '@/components/robots/RobotShowroom.module.css';
 import { PageCTA } from '@/components/sections/PageCTA';
 import { RobotRegistry, RobotStat, Designation } from '@/components/robots';
 import { robots, pickSpecs } from '@/lib/robots';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 import { Link, routing } from '@/i18n/routing';
 
 type Locale = (typeof routing.locales)[number];
@@ -20,11 +20,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'robots' });
-  return {
+  return buildPageMetadata({
     title: t('meta.title'),
     description: t('meta.description'),
-    alternates: buildAlternates('/robots', locale),
-  };
+    locale,
+    path: '/robots',
+  });
 }
 
 export default async function RobotsPage({

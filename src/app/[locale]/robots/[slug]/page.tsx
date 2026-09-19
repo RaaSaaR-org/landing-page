@@ -16,7 +16,7 @@ import {
   robots,
   robotSlugs,
 } from '@/lib/robots';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 
 type Locale = (typeof routing.locales)[number];
 
@@ -35,11 +35,12 @@ export async function generateMetadata({
   const robot = getRobot(slug);
   if (!robot) return {};
   const t = await getTranslations({ locale, namespace: 'robots' });
-  return {
+  return buildPageMetadata({
     title: `${robot.name} – ${t('hero.eyebrow')}`,
     description: t(`items.${slug}.tagline`),
-    alternates: buildAlternates(`/robots/${slug}`, locale),
-  };
+    locale,
+    path: `/robots/${slug}`,
+  });
 }
 
 export default async function RobotDetailPage({

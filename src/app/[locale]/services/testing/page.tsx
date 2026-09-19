@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer } from '@/components/layout';
 import { ServiceDetailLayout } from '@/components/sections/ServiceDetailLayout';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 import { jsonLdScript, serviceBreadcrumb } from '@/lib/jsonld';
 
 export async function generateMetadata({
@@ -12,11 +12,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'services.detail.testing' });
-  return {
+  return buildPageMetadata({
     title: t('title'),
     description: t('metaDescription'),
-    alternates: buildAlternates('/services/testing', locale),
-  };
+    locale,
+    path: '/services/testing',
+  });
 }
 
 export default async function TestingPage({

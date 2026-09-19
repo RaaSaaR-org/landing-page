@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer, Section, Container } from '@/components/layout';
-import { buildAlternates } from '@/lib/seo';
+import { buildPageMetadata } from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -10,10 +10,12 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'datenschutz' });
-  return {
+  return buildPageMetadata({
     title: t('title'),
-    alternates: buildAlternates('/datenschutz', locale),
-  };
+    description: t('intro.general.text'),
+    locale,
+    path: '/datenschutz',
+  });
 }
 
 export default async function DatenschutzPage({

@@ -4,9 +4,11 @@
   "description": "Physical AI consulting for business",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#141414",
-  "theme_color": "#FF6700",
+  "background_color": "#090c0f",
+  "theme_color": "#090c0f",
   "icons": [
-    { "src": "/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+    { "src": "/brand/emai-icon-192-v2.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/brand/emai-icon-512-v2.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/brand/emai-icon-v2.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
   ]
 }

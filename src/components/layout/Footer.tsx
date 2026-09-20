@@ -75,6 +75,9 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/projects" className={linkClass}>{tNav('projects')}</Link>
+              </li>
+              <li>
                 <Link href="/robots" className={linkClass}>{tNav('robots')}</Link>
               </li>
               <li>

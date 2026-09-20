@@ -75,6 +75,12 @@
     "body": "Seit dem 1. Juni 2026 ist die EmAI Robotics GmbH Teil der EastSideFab Innovation Community -- einem Netzwerk, in dem neue Technologien gemeinsam ausprobiert statt nur diskutiert werden. Praxisnah, regional verankert, offen für Zusammenarbeit.",
     "cta": "Mehr dazu im News-Bereich"
   },
+  "supporter": {
+    "eyebrow": "Mit Unterstützung von",
+    "title": "Danke, SQUILD.",
+    "body": "SQUILD unterstützt uns mit Infrastruktur für unsere Plattform NeoDEM und KI-Services, auf denen unsere Agenten mit Qwen3.8 auf NVIDIA DGX Spark laufen. Vielen Dank, dass ihr diese Arbeit möglich macht.",
+    "cta": "Die Leistungen von SQUILD entdecken"
+  },
   "faq": {
     "title": "Häufig gestellte Fragen",
     "questions": {

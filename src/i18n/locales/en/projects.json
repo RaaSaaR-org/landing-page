@@ -1,0 +1,64 @@
+{
+  "projects": {
+    "title": "Public Projects",
+    "eyebrow": "From idea to application",
+    "subtitle": "From robots that learn to agents that research, build, and support our team. Explore our work in Physical AI and agentic systems.",
+    "metaDescription": "EmAI’s public projects: NeoDEM, HNNA, Modular World Model, Agentic Researcher, and Agentic Company. Robotics, research, and AI agents working together.",
+    "navigationLabel": "Explore our public projects",
+    "focusLabel": "The focus",
+    "approachLabel": "Our approach",
+    "items": {
+      "neodem": {
+        "name": "NeoDEM",
+        "category": "Physical AI platform",
+        "headline": "One platform for the robot’s entire learning loop.",
+        "description": "NeoDEM connects the work around intelligent robots: collecting demonstrations, training models, deploying skills, evaluating results, and managing operations. It brings data, models, and robots together so experience from a deployment can feed the next round of learning.",
+        "focus": "A connected workflow from the first demonstration to day-to-day robot operations, with model versions, telemetry, and traceable records in one place.",
+        "approach": "A modular platform that connects different models and robot systems. We develop and evaluate its capabilities in simulation and on real hardware.",
+        "tags": ["Robot data", "Training & deployment", "Fleet operations"]
+      },
+      "hnna": {
+        "name": "HNNA",
+        "category": "Innovation project",
+        "headline": "Humans Need Not Apply.",
+        "description": "Which tasks can cognitive robots take on in a real industrial environment? HNNA turns that question into practical experiments. Together with partners in the <eastsidefab>EastSideFab community</eastsidefab>, we explore humanoid robots for handling, assembly, and assistance.",
+        "focus": "Find out where robots can support people, what they need to learn, and where today’s systems reach their limits.",
+        "approach": "<emai>EmAI</emai> leads the project, <zema>ZeMA</zema> contributes implementation and programming, and <thyssenkrupp>thyssenkrupp Automotive Body Solutions</thyssenkrupp> and <villeroy>Villeroy & Boch</villeroy> bring the application perspective.",
+        "tags": ["Humanoid robotics", "Industrial tasks", "Practical evaluation"],
+        "linkLabel": "More about HNNA"
+      },
+      "world-model": {
+        "name": "Modular World Model",
+        "category": "Robotics research",
+        "headline": "A foundation for robots that understand what comes next.",
+        "description": "A robot needs to connect what it sees with what its actions might change. Our Modular World Model project explores that connection: how a model of the environment could help a robot anticipate outcomes and plan its next step.",
+        "focus": "Investigate how perception, prediction, and action can work together to help robots handle unfamiliar situations.",
+        "approach": "Develop an architecture with interchangeable components that can be tested independently. The aim is to compare ideas, learn from robot experience, and evaluate whether predictions improve decisions.",
+        "tags": ["World modelling", "Prediction & planning", "Modular architecture"]
+      },
+      "agentic-researcher": {
+        "name": "Agentic Researcher",
+        "category": "AI for robotics research",
+        "headline": "From a research question to an experiment with evidence.",
+        "description": "Agentic Researcher is a persistent research agent for robotics. It proposes testable hypotheses, selects data and training approaches, and coordinates experiments through our existing infrastructure. Its goal is to turn each result into evidence that informs the next experiment.",
+        "focus": "Connect ideas, datasets, training runs, and evaluation in a traceable research workflow for robot learning and world models.",
+        "approach": "The agent records its reasoning, experiment setup, and results in NeoDEM. We are developing the workflow step by step, with a completed training pilot and simulation evaluation still in development.",
+        "tags": ["Research agents", "Experiment design", "Evidence & evaluation"]
+      },
+      "agentic-company": {
+        "name": "Agentic Company",
+        "category": "Agents in everyday work",
+        "headline": "A team of agents, working alongside our people.",
+        "description": "Agentic Company explores how specialised AI agents can become part of everyday company work. An agentic engineering team supports our projects, a marketing agent helps communicate our work, and every team member has a personal AI assistant.",
+        "focus": "Bring support directly into the work: building and testing software, preparing marketing content, and helping each person organise tasks, research, and follow-ups.",
+        "approach": "Give agents clear roles and shared project context, while people set direction and review results. We use our own company as the place to learn how these teams can collaborate effectively.",
+        "tags": ["Engineering team", "Marketing agent", "Personal assistants"]
+      }
+    },
+    "cta": {
+      "title": "See something that interests you?",
+      "body": "If one of our projects sparks your curiosity, we’d love to hear from you. Let’s explore what we could do together.",
+      "primary": "Contact us"
+    }
+  }
+}

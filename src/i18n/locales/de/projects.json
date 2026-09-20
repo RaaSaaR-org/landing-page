@@ -1,0 +1,64 @@
+{
+  "projects": {
+    "title": "Öffentliche Projekte",
+    "eyebrow": "Von der Idee in die Anwendung",
+    "subtitle": "Von lernenden Robotern bis zu Agenten, die forschen, entwickeln und unser Team unterstützen. Einblicke in unsere Arbeit an Physical AI und agentischen Systemen.",
+    "metaDescription": "Unsere öffentlichen Projekte: NeoDEM, HNNA, Modular World Model, Agentic Researcher und Agentic Company. Robotik, Forschung und KI-Agenten im Zusammenspiel.",
+    "navigationLabel": "Unsere öffentlichen Projekte entdecken",
+    "focusLabel": "Im Fokus",
+    "approachLabel": "Unser Ansatz",
+    "items": {
+      "neodem": {
+        "name": "NeoDEM",
+        "category": "Physical-AI-Plattform",
+        "headline": "Eine Plattform für den gesamten Lernkreislauf eines Roboters.",
+        "description": "NeoDEM verbindet die Arbeit rund um intelligente Roboter: Demonstrationen erfassen, Modelle trainieren, Fähigkeiten ausrollen, Ergebnisse bewerten und den Betrieb steuern. Die Plattform bringt Daten, Modelle und Roboter zusammen, damit Erfahrungen aus dem Einsatz in den nächsten Lernzyklus einfließen können.",
+        "focus": "Ein durchgängiger Ablauf von der ersten Demonstration bis zum täglichen Roboterbetrieb – mit Modellversionen, Telemetrie und nachvollziehbarer Dokumentation an einem Ort.",
+        "approach": "Eine modulare Plattform, die unterschiedliche Modelle und Robotersysteme verbindet. Wir entwickeln und prüfen ihre Fähigkeiten in der Simulation und auf realer Hardware.",
+        "tags": ["Roboterdaten", "Training & Deployment", "Flottenbetrieb"]
+      },
+      "hnna": {
+        "name": "HNNA",
+        "category": "Innovationsprojekt",
+        "headline": "Humans Need Not Apply.",
+        "description": "Welche Aufgaben können kognitive Roboter in einer realen Industrieumgebung übernehmen? HNNA macht aus dieser Frage praktische Versuche. Gemeinsam mit Partnern der <eastsidefab>EastSideFab-Community</eastsidefab> untersuchen wir humanoide Roboter für Handhabung, Montage und Assistenz.",
+        "focus": "Herausfinden, wo Roboter Menschen unterstützen können, was sie dafür lernen müssen und wo heutige Systeme an ihre Grenzen stoßen.",
+        "approach": "<emai>EmAI</emai> leitet das Projekt, <zema>ZeMA</zema> übernimmt Umsetzung und Programmierung. <thyssenkrupp>thyssenkrupp Automotive Body Solutions</thyssenkrupp> und <villeroy>Villeroy & Boch</villeroy> bringen die Anwendungsperspektive ein.",
+        "tags": ["Humanoide Robotik", "Industrielle Aufgaben", "Praktische Evaluation"],
+        "linkLabel": "Mehr über HNNA"
+      },
+      "world-model": {
+        "name": "Modular World Model",
+        "category": "Robotikforschung",
+        "headline": "Eine Grundlage für Roboter, die vorausdenken.",
+        "description": "Ein Roboter muss verbinden, was er wahrnimmt und was seine Handlungen verändern könnten. Unser Projekt Modular World Model erforscht diesen Zusammenhang: Wie kann ein Modell der Umgebung einem Roboter helfen, Auswirkungen abzuschätzen und den nächsten Schritt zu planen?",
+        "focus": "Untersuchen, wie Wahrnehmung, Vorhersage und Handlung zusammenspielen können, damit Roboter mit unbekannten Situationen besser umgehen.",
+        "approach": "Eine Architektur mit austauschbaren Bausteinen entwickeln, die sich einzeln prüfen lassen. Ziel ist es, Ansätze zu vergleichen, aus Robotererfahrungen zu lernen und zu bewerten, ob Vorhersagen zu besseren Entscheidungen führen.",
+        "tags": ["Weltmodelle", "Vorhersage & Planung", "Modulare Architektur"]
+      },
+      "agentic-researcher": {
+        "name": "Agentic Researcher",
+        "category": "KI für Robotikforschung",
+        "headline": "Von der Forschungsfrage zum Experiment mit Belegen.",
+        "description": "Agentic Researcher ist ein Forschungsagent für Robotik, der über einzelne Experimente hinaus arbeitet. Er schlägt überprüfbare Hypothesen vor, wählt Daten und Trainingsansätze aus und koordiniert Experimente über unsere bestehende Infrastruktur. Ziel ist es, aus jedem Ergebnis Erkenntnisse für das nächste Experiment zu gewinnen.",
+        "focus": "Ideen, Datensätze, Trainingsläufe und Evaluation zu einem nachvollziehbaren Forschungsablauf für lernende Roboter und Weltmodelle verbinden.",
+        "approach": "Der Agent dokumentiert seine Überlegungen, Versuchsaufbauten und Ergebnisse in NeoDEM. Wir entwickeln den Ablauf Schritt für Schritt: Ein Trainingspilot ist abgeschlossen, die Evaluation in der Simulation ist noch in Entwicklung.",
+        "tags": ["Forschungsagenten", "Versuchsplanung", "Evidenz & Evaluation"]
+      },
+      "agentic-company": {
+        "name": "Agentic Company",
+        "category": "Agenten im Arbeitsalltag",
+        "headline": "Ein Team aus Agenten an unserer Seite.",
+        "description": "Agentic Company untersucht, wie spezialisierte KI-Agenten Teil des Unternehmensalltags werden können. Ein agentisches Engineering-Team unterstützt unsere Projekte, ein Marketing-Agent hilft, unsere Arbeit zu kommunizieren, und jedes Teammitglied hat einen persönlichen KI-Assistenten.",
+        "focus": "Unterstützung direkt in die Arbeit bringen: Software entwickeln und testen, Marketinginhalte vorbereiten und bei Aufgaben, Recherchen und der Nachverfolgung offener Themen helfen.",
+        "approach": "Agenten erhalten klare Rollen und gemeinsamen Projektkontext. Menschen geben die Richtung vor und prüfen die Ergebnisse. Im eigenen Unternehmen erproben wir, wie diese Teams wirksam zusammenarbeiten können.",
+        "tags": ["Engineering-Team", "Marketing-Agent", "Persönliche Assistenten"]
+      }
+    },
+    "cta": {
+      "title": "Ist etwas Interessantes für Sie dabei?",
+      "body": "Wenn eines unserer Projekte Ihre Neugier weckt, freuen wir uns auf den Austausch. Lassen Sie uns entdecken, was wir gemeinsam umsetzen können.",
+      "primary": "Kontakt aufnehmen"
+    }
+  }
+}

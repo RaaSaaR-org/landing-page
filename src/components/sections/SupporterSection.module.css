@@ -1,0 +1,16 @@
+.section { padding-block: 2.5rem; background: var(--surface); border-block: 1px solid var(--border-subtle); }
+.content { display: grid; grid-template-columns: minmax(0, .65fr) minmax(0, 1.35fr); align-items: center; gap: 3rem; }
+.eyebrow { color: var(--text-muted); font-family: var(--font-mono), monospace; font-size: .7rem; text-transform: uppercase; letter-spacing: .12em; margin-bottom: .75rem; }
+.name { display: inline-flex; align-items: center; gap: 1.25rem; font-size: 2.3rem; font-weight: 600; letter-spacing: -.045em; color: var(--text-primary); }
+.name span { color: var(--orange-light); font-size: 1.25rem; font-weight: 400; }
+.copy { border-left: 1px solid var(--border-subtle); padding-left: 3rem; }
+.copy h2 { font-size: 1.25rem; font-weight: 500; letter-spacing: -.025em; margin-bottom: .6rem; }
+.copy p { color: var(--text-secondary); font-size: .95rem; line-height: 1.8; max-width: 44rem; }
+.link { display: inline-flex; align-items: center; gap: .75rem; margin-top: 1rem; font-size: .875rem; color: var(--orange-light); }
+.name:hover, .link:hover { color: var(--orange-lighter); }
+.link:hover { text-decoration: underline; text-underline-offset: 4px; }
+.name:focus-visible, .link:focus-visible { outline: 2px solid var(--orange-light); outline-offset: 5px; border-radius: 2px; }
+@media (max-width: 767px) {
+  .content { grid-template-columns: 1fr; gap: 1.5rem; }
+  .copy { border-left: 0; border-top: 1px solid var(--border-subtle); padding: 1.5rem 0 0; }
+}

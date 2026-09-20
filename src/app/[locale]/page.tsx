@@ -6,6 +6,7 @@ import { ProblemSection } from '@/components/sections/ProblemSection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { WhyEmaiSection } from '@/components/sections/WhyEmaiSection';
 import { MembershipSection } from '@/components/sections/MembershipSection';
+import { SupporterSection } from '@/components/sections/SupporterSection';
 import { FAQ } from '@/components/sections/FAQ';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { buildPageMetadata } from '@/lib/seo';
@@ -59,6 +60,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
         <ServicesSection />
         <WhyEmaiSection />
         <MembershipSection />
+        <SupporterSection locale={locale} />
         <FAQ />
         <ContactForm />
       </main>

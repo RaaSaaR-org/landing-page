@@ -6,6 +6,7 @@
       "title": "Anbieter",
       "name": "EmAI Robotics GmbH",
       "legalForm": "",
+      "seat": "Sitz der Gesellschaft: St. Ingbert",
       "street": "Halbergstraße 4",
       "city": "66121 Saarbrücken",
       "country": "Deutschland"
@@ -22,7 +23,7 @@
     "register": {
       "title": "Registereintrag",
       "court": "",
-      "number": ""
+      "number": "HRB 112327"
     },
     "vat": {
       "title": "Umsatzsteuer-ID",

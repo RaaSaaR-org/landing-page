@@ -29,6 +29,7 @@ export default async function ImpressumPage({
 
   // Optional sections are hidden until the corresponding i18n keys have content.
   const legalForm = t('company.legalForm');
+  const companySeat = t('company.seat');
   const phone = t('contact.phone');
   const registerCourt = t('register.court');
   const registerNumber = t('register.number');
@@ -57,6 +58,7 @@ export default async function ImpressumPage({
                   <div className="text-text-secondary space-y-1">
                     <p>{t('company.name')}</p>
                     {legalForm && <p>{legalForm}</p>}
+                    {companySeat && <p>{companySeat}</p>}
                     <p>{t('company.street')}</p>
                     <p>{t('company.city')}</p>
                     <p>{t('company.country')}</p>

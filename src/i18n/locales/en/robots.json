@@ -122,12 +122,12 @@
     },
     "items": {
       "g1-edu": {
-        "tagline": "Humanoid robot for research and education – with the three-finger Dex3-1 hand for dexterous manipulation.",
-        "description": "The G1 EDU is Unitree's compact humanoid robot for research, teaching and prototyping. With up to 43 degrees of freedom, force-controlled joints and the Dex3-1 three-finger hand, it suits manipulation tasks, imitation learning and dataset collection. EmAI deploys the G1 EDU in real environments and shares what it learns."
+        "tagline": "Cognitive robot in humanoid form for research and education – with the three-finger Dex3-1 hand for dexterous manipulation.",
+        "description": "The G1 EDU is Unitree's compact cognitive robot in humanoid form for research, teaching and prototyping. With up to 43 degrees of freedom, force-controlled joints and the Dex3-1 three-finger hand, it suits manipulation tasks, imitation learning and dataset collection. EmAI deploys the G1 EDU in real environments and shares what it learns."
       },
       "h1": {
-        "tagline": "Dynamic full-body humanoid – holder of the humanoid walking speed record.",
-        "description": "The H1 is a large, dynamic humanoid robot with high power density. With 3D LiDAR and a depth camera for 360° perception, it is built for locomotion, balance and robust whole-body motion."
+        "tagline": "Dynamic full-body robot – holder of the bipedal walking speed record.",
+        "description": "The H1 is a large, dynamic cognitive robot in humanoid form with high power density. With 3D LiDAR and a depth camera for 360° perception, it is built for locomotion, balance and robust whole-body motion."
       },
       "go2": {
         "tagline": "Agile quadruped with 4D LiDAR – ideal for inspection, research and mobile sensing.",

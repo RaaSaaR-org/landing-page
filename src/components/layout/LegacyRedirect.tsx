@@ -4,7 +4,6 @@ import { SITE_URL } from '@/lib/seo';
 /** Static export has no server redirects, so moved pages point crawlers and visitors at their new URL. */
 export function legacyRedirectMetadata(target: string): Metadata {
   return {
-    robots: { index: false, follow: true },
     alternates: { canonical: `${SITE_URL}${target}` },
   };
 }

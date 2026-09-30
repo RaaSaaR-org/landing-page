@@ -27,19 +27,19 @@
         "fundamentals": {
           "title": "Fundamentals",
           "description": "Physical AI in eight chapters: how robots learn, what foundation models can do, and what matters for safety and evaluation.",
-          "stat": "{count} chapters",
+          "stat": "{count, plural, one {# chapter} other {# chapters}}",
           "cta": "Read the chapters"
         },
         "robots": {
           "title": "Robots",
           "description": "Current platforms in interactive 3D -- with technical data on sensing, payload, and degrees of freedom, independently assessed.",
-          "stat": "{count} platforms in 3D",
+          "stat": "{count, plural, one {# platform} other {# platforms}} in 3D",
           "cta": "Open the registry"
         },
         "glossary": {
           "title": "Glossary",
           "description": "From actuator to cycle time: the key terms around Physical AI, briefly explained and linked to the fundamentals.",
-          "stat": "{count} terms",
+          "stat": "{count, plural, one {# term} other {# terms}}",
           "cta": "Look up terms"
         }
       },
@@ -88,7 +88,7 @@
       "eyebrow": "Knowledge · Fundamentals",
       "title": "Physical AI in eight chapters.",
       "subtitle": "A compact introduction for management, operations, and IT: how cognitive robots learn, what they can do today, and what matters for safety and evaluation.",
-      "chapterCount": "{count} chapters",
+      "chapterCount": "{count, plural, one {# chapter} other {# chapters}}",
       "readingTime": "approx. {minutes} min read",
       "tocLabel": "Chapters",
       "progressLabel": "Reading progress",
@@ -239,7 +239,7 @@
       "searchPlaceholder": "Search a term, e.g. VLA or teleoperation",
       "clear": "Clear search",
       "lettersLabel": "Jump to initial letter",
-      "count": "{count} terms",
+      "count": "{count, plural, one {# term} other {# terms}}",
       "empty": "No term found. Something missing? Let us know -- we keep extending the glossary.",
       "chapterLink": "Chapter {number}: {title}",
       "cta": {

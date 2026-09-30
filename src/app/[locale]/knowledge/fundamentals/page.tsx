@@ -6,7 +6,7 @@ import { KnowledgeNav } from '@/components/knowledge/KnowledgeNav';
 import { KnowledgeHero } from '@/components/knowledge/KnowledgeHero';
 import { ChapterToc } from '@/components/knowledge/ChapterToc';
 import styles from '@/components/knowledge/Knowledge.module.css';
-import { chapters, readingMinutes, relatedLinks } from '@/lib/knowledge';
+import { chapterNumber, chapters, readingMinutes, relatedLinks } from '@/lib/knowledge';
 import { buildPageMetadata } from '@/lib/seo';
 import { Link, routing } from '@/i18n/routing';
 
@@ -33,9 +33,9 @@ export default async function FundamentalsPage({ params }: { params: Promise<{ l
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: 'knowledge' });
 
-  const content = chapters.map((chapter, index) => ({
+  const content = chapters.map((chapter) => ({
     ...chapter,
-    number: String(index + 1).padStart(2, '0'),
+    number: chapterNumber(chapter.key),
     title: t(`fundamentals.chapters.${chapter.key}.title`),
     lead: t(`fundamentals.chapters.${chapter.key}.lead`),
     body: t.raw(`fundamentals.chapters.${chapter.key}.body`) as string[],

@@ -12,19 +12,8 @@ import { FAQ } from '@/components/sections/FAQ';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { buildPageMetadata } from '@/lib/seo';
 import { faqJsonLd, jsonLdScript } from '@/lib/jsonld';
+import { faqKeys } from '@/lib/faq';
 
-const faqKeys = [
-  'embodiedAi',
-  'cognitiveRobots',
-  'workshops',
-  'dataCollection',
-  'openSource',
-  'sovereignty',
-  'security',
-  'humanAssist',
-  'consulting',
-  'getStarted',
-];
 
 export async function generateMetadata({
   params,

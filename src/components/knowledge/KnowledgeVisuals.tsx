@@ -1,10 +1,7 @@
+import { polar, twoDigit } from '@/lib/format';
 import styles from './Knowledge.module.css';
 
 const C = { x: 230, y: 210 };
-const polar = (cx: number, cy: number, r: number, deg: number) => {
-  const a = (deg * Math.PI) / 180;
-  return [+(cx + r * Math.cos(a)).toFixed(1), +(cy + r * Math.sin(a)).toFixed(1)] as const;
-};
 
 interface KnowledgeGraphProps {
   aria: string;
@@ -87,7 +84,7 @@ export function AreaDiagram({ variant }: { variant: 'fundamentals' | 'robots' | 
         {[70, 88, 62, 96, 78, 90, 66, 84].map((h, i) => (
           <g key={i}>
             <rect x={44 + i * 30} y={108 - h} width="22" height={h} rx="4" stroke="currentColor" opacity={i === 2 ? 1 : .35} fill={i === 2 ? 'currentColor' : 'none'} fillOpacity=".12" />
-            <text x={55 + i * 30} y="102" textAnchor="middle" className={styles.areaTiny} opacity={i === 2 ? 1 : .6}>{String(i + 1).padStart(2, '0')}</text>
+            <text x={55 + i * 30} y="102" textAnchor="middle" className={styles.areaTiny} opacity={i === 2 ? 1 : .6}>{twoDigit(i + 1)}</text>
           </g>
         ))}
         <path d="M36 110H290" stroke="currentColor" opacity=".3" />

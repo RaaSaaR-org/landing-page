@@ -8,6 +8,8 @@
  * page, so chapters can deep-link to `/knowledge/glossary#<id>`.
  */
 
+import { twoDigit } from './format';
+
 export const relatedLinks = {
   robots: '/knowledge/robots',
   glossary: '/knowledge/glossary',
@@ -41,6 +43,11 @@ export const chapters: readonly Chapter[] = [
 
 /** Questions on the hub page, each answered by the chapter it is keyed by. */
 export const startQuestions = ['classic-vs-cognitive', 'learning', 'data', 'safety-security', 'evaluation'] as const;
+
+/** Display number of a chapter, e.g. "03". */
+export function chapterNumber(key: string) {
+  return twoDigit(chapters.findIndex((chapter) => chapter.key === key) + 1);
+}
 
 /** The chapter that introduces a glossary term, if any. */
 export function chapterForTerm(termId: string) {

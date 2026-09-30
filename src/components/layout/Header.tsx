@@ -27,7 +27,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isServicesActive = pathname.startsWith('/services/');
-  const isKnowledgeActive = pathname === '/knowledge' || pathname.startsWith('/knowledge/');
+  const isKnowledgeActive = isRouteActive(pathname, '/knowledge');
 
   const serviceItems: DropdownItem[] = [
     ...serviceKeys.map((key) => ({

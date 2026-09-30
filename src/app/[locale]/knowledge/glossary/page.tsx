@@ -5,7 +5,7 @@ import { PageCTA } from '@/components/sections/PageCTA';
 import { KnowledgeNav } from '@/components/knowledge/KnowledgeNav';
 import { KnowledgeHero } from '@/components/knowledge/KnowledgeHero';
 import { Glossary, type GlossaryTerm } from '@/components/knowledge/Glossary';
-import { chapterForTerm, chapters } from '@/lib/knowledge';
+import { chapterForTerm, chapterNumber } from '@/lib/knowledge';
 import { buildPageMetadata } from '@/lib/seo';
 import { routing } from '@/i18n/routing';
 
@@ -43,7 +43,7 @@ export default async function GlossaryPage({ params }: { params: Promise<{ local
         letter: term.normalize('NFD').charAt(0).toUpperCase(),
         chapter: chapter && {
           key: chapter.key,
-          number: String(chapters.indexOf(chapter) + 1).padStart(2, '0'),
+          number: chapterNumber(chapter.key),
           title: t(`fundamentals.chapters.${chapter.key}.title`),
         },
       };

@@ -33,13 +33,13 @@
         "robots": {
           "title": "Roboter",
           "description": "Aktuelle Plattformen interaktiv in 3D -- mit technischen Daten zu Sensorik, Traglast und Freiheitsgraden, unabhängig eingeordnet.",
-          "stat": "{count} Plattformen in 3D",
+          "stat": "{count, plural, one {# Plattform} other {# Plattformen}} in 3D",
           "cta": "Registry öffnen"
         },
         "glossary": {
           "title": "Glossar",
           "description": "Von Aktor bis Zykluszeit: die wichtigsten Begriffe rund um Physical AI, kurz erklärt und mit den Grundlagen verknüpft.",
-          "stat": "{count} Begriffe",
+          "stat": "{count, plural, one {# Begriff} other {# Begriffe}}",
           "cta": "Begriffe nachschlagen"
         }
       },
@@ -239,7 +239,7 @@
       "searchPlaceholder": "Begriff suchen, z. B. VLA oder Teleoperation",
       "clear": "Suche zurücksetzen",
       "lettersLabel": "Nach Anfangsbuchstabe springen",
-      "count": "{count} Begriffe",
+      "count": "{count, plural, one {# Begriff} other {# Begriffe}}",
       "empty": "Kein Begriff gefunden. Fehlt etwas? Schreiben Sie uns -- wir ergänzen das Glossar laufend.",
       "chapterLink": "Kapitel {number}: {title}",
       "cta": {

@@ -1,8 +1,7 @@
-'use client';
-
 import { useTranslations } from 'next-intl';
 import { Container, Section } from '@/components/layout';
-import { trackCTAClick } from '@/lib/analytics';
+import { TrackedAnchor } from '@/components/ui/TrackedAnchor';
+import { polar as polarAt, twoDigit } from '@/lib/format';
 import styles from './SovereigntySection.module.css';
 
 const icon = (d: string) => (
@@ -26,10 +25,7 @@ const groups = [
 ] as const;
 
 const C = 210;
-const polar = (r: number, deg: number) => {
-  const a = (deg * Math.PI) / 180;
-  return [+(C + r * Math.cos(a)).toFixed(1), +(C + r * Math.sin(a)).toFixed(1)] as const;
-};
+const polar = (r: number, deg: number) => polarAt(C, C, r, deg);
 
 /** Three nested protection zones: data and models stay inside, outbound flow stops at the boundary. */
 function SovereigntyPerimeter() {
@@ -124,14 +120,14 @@ export function SovereigntySection() {
           <div className={styles.checklistIntro}>
             <h3>{t('checklist.title')}</h3>
             <p>{t('checklist.note')}</p>
-            <a href="#contact" onClick={() => trackCTAClick(t('checklist.cta'), 'sovereignty')} className="button-primary">
+            <TrackedAnchor href="#contact" label={t('checklist.cta')} location="sovereignty" className="button-primary">
               {t('checklist.cta')}<span aria-hidden="true">↗</span>
-            </a>
+            </TrackedAnchor>
           </div>
           <ol className={styles.questions}>
             {questions.map((question, index) => (
               <li key={index}>
-                <span className={styles.questionIndex} aria-hidden="true">0{index + 1}</span>
+                <span className={styles.questionIndex} aria-hidden="true">{twoDigit(index + 1)}</span>
                 <span>{question}</span>
               </li>
             ))}

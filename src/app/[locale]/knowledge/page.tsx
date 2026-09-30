@@ -6,7 +6,8 @@ import { KnowledgeNav } from '@/components/knowledge/KnowledgeNav';
 import { KnowledgeHero } from '@/components/knowledge/KnowledgeHero';
 import { KnowledgeGraph, AreaDiagram } from '@/components/knowledge/KnowledgeVisuals';
 import styles from '@/components/knowledge/Knowledge.module.css';
-import { chapters, startQuestions } from '@/lib/knowledge';
+import { chapterNumber, chapters, startQuestions } from '@/lib/knowledge';
+import { twoDigit } from '@/lib/format';
 import { robots } from '@/lib/robots';
 import { buildPageMetadata } from '@/lib/seo';
 import { Link, routing } from '@/i18n/routing';
@@ -41,7 +42,6 @@ export default async function KnowledgePage({ params }: { params: Promise<{ loca
     robots: robots.length,
     glossary: Object.keys(t.raw('glossary.terms') as Record<string, unknown>).length,
   };
-  const chapterNumber = (key: string) => String(chapters.findIndex((c) => c.key === key) + 1).padStart(2, '0');
 
   return (
     <>
@@ -75,7 +75,7 @@ export default async function KnowledgePage({ params }: { params: Promise<{ loca
               {areaKeys.map((key, index) => (
                 <Link key={key} href={`/knowledge/${key}`} className={`${styles.area} ${key === 'robots' ? styles.areaTeal : ''}`}>
                   <div className={styles.areaTop}>
-                    <span>0{index + 1} /</span>
+                    <span>{twoDigit(index + 1)} /</span>
                     <span className={styles.areaStat}>{t(`hub.areas.${key}.stat`, { count: counts[key] })}</span>
                   </div>
                   <AreaDiagram variant={key} />

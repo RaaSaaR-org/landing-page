@@ -5,11 +5,11 @@
     "items": {
       "consulting": {
         "title": "Strategische Beratung",
-        "description": "Wir analysieren Ihre Prozesse, bewerten Automatisierungspotenziale und erstellen eine realistische Roadmap: Was ist heute möglich? Was kommt in 1-2 Jahren? Unabhängig und herstellerneutral -- damit jede Entscheidung auf echten Praxiswerten steht."
+        "description": "Wir analysieren Ihre Prozesse, bewerten Automatisierungspotenziale und erstellen eine realistische Roadmap: Was ist heute möglich? Was kommt in 1-2 Jahren? Inklusive Sicherheits- und Souveränitätsbewertung -- unabhängig und herstellerneutral."
       },
       "testing": {
         "title": "Praxis-Tests",
-        "description": "Wir testen kognitive Roboter in realen Industrieumgebungen und bewerten systematisch ihre Fähigkeiten: Laufen, Greifen, Platzieren, Tragen, Montieren. Was funktioniert, was nicht -- und warum."
+        "description": "Wir testen kognitive Roboter in realen Industrieumgebungen und bewerten systematisch ihre Fähigkeiten: Laufen, Greifen, Platzieren, Tragen, Montieren. Dazu gehört auch, wohin Daten fließen und wie sich das System im Fehlerfall verhält."
       },
       "workshops": {
         "title": "Workshops & Schulung",

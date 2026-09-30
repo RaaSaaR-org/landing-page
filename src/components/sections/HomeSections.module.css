@@ -26,6 +26,11 @@
 .whyLayout { position: relative; display: grid; grid-template-columns: .85fr 1fr; gap: 7rem; }
 .whyIntro h2 { font-size: clamp(2.5rem, 4vw, 3.5rem); letter-spacing: -.05em; line-height: 1.1; margin-bottom: 1.25rem; font-weight: 500; }
 .whyIntro > p { color: var(--text-secondary); font-size: 1.2rem; line-height: 1.7; margin-bottom: 2.5rem; }
+.whyLink { display: inline-flex; align-items: center; gap: .75rem; margin: -1.25rem 0 2.5rem; color: var(--orange-light); font-size: .9rem; }
+.whyLink span { transition: transform 250ms; }
+.whyLink:hover span { transform: translateX(4px); }
+.whyLink:focus-visible { outline: 2px solid var(--orange-light); outline-offset: 4px; border-radius: 2px; }
+@media (max-width: 767px) { .whyLink { margin: -.5rem 0 1.5rem; } }
 .loopFrame { padding: 1.5rem 1rem 0; border: 1px solid #ffffff10; border-radius: 18px; background: radial-gradient(ellipse at center, #ff67000a, transparent 70%); }
 .loopFrame > div { margin-bottom: 2rem; }
 .pillars { display: grid; align-content: start; }

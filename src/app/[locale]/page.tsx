@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer } from '@/components/layout';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { ProblemSection } from '@/components/sections/ProblemSection';
+import { SovereigntySection } from '@/components/sections/SovereigntySection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { WhyEmaiSection } from '@/components/sections/WhyEmaiSection';
 import { MembershipSection } from '@/components/sections/MembershipSection';
@@ -11,17 +12,8 @@ import { FAQ } from '@/components/sections/FAQ';
 import { ContactForm } from '@/components/sections/ContactForm';
 import { buildPageMetadata } from '@/lib/seo';
 import { faqJsonLd, jsonLdScript } from '@/lib/jsonld';
+import { faqKeys } from '@/lib/faq';
 
-const faqKeys = [
-  'embodiedAi',
-  'cognitiveRobots',
-  'workshops',
-  'dataCollection',
-  'openSource',
-  'humanAssist',
-  'consulting',
-  'getStarted',
-];
 
 export async function generateMetadata({
   params,
@@ -57,6 +49,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <main>
         <HeroSection />
         <ProblemSection />
+        <SovereigntySection />
         <ServicesSection />
         <WhyEmaiSection />
         <MembershipSection />

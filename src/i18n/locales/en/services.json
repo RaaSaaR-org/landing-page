@@ -5,11 +5,11 @@
     "items": {
       "consulting": {
         "title": "Strategic Consulting",
-        "description": "We analyze your processes, assess automation potential, and build a realistic roadmap: what's possible today, what's coming in 1-2 years. Independent and vendor-neutral -- so every decision is grounded in real-world experience."
+        "description": "We analyze your processes, assess automation potential, and build a realistic roadmap: What is possible today? What is coming in 1-2 years? Including a security and sovereignty assessment -- independent and vendor-neutral."
       },
       "testing": {
         "title": "Real-World Testing",
-        "description": "We test cognitive robots in real industrial environments and systematically evaluate their capabilities: walking, picking, placing, carrying, assembling. What works, what doesn't -- and why."
+        "description": "We test cognitive robots in real industrial environments and systematically assess their capabilities: walking, grasping, placing, carrying, assembling. That includes where data flows and how the system behaves when something fails."
       },
       "workshops": {
         "title": "Workshops & Training",

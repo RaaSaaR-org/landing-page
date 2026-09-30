@@ -126,7 +126,7 @@
         "description": "Der G1 EDU ist Unitrees kompakter kognitiver Roboter in humanoider Bauform für Forschung, Lehre und Prototyping. Mit bis zu 43 Freiheitsgraden, kraftgeregelten Gelenken und der Dex3-1-Dreifingerhand eignet er sich für Manipulationsaufgaben, Imitation Learning und den Aufbau von Datensätzen. EmAI setzt den G1 EDU in realen Umgebungen ein und teilt die daraus gewonnenen Erkenntnisse."
       },
       "h1": {
-        "tagline": "Dynamischer Ganzkörper-Roboter – hält den Geschwindigkeitsrekord im zweibeinigen Gehen.",
+        "tagline": "Dynamischer Ganzkörper-Roboter – einer der schnellsten Roboter seiner Größe in menschenähnlicher Gestalt.",
         "description": "Der H1 ist ein großer, dynamischer kognitiver Roboter in humanoider Bauform mit hoher Leistungsdichte. Mit 3D-LiDAR und Tiefenkamera für 360°-Wahrnehmung ist er auf Fortbewegung, Balance und robuste Ganzkörperbewegung ausgelegt."
       },
       "go2": {

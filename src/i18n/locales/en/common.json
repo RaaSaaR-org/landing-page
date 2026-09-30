@@ -6,8 +6,9 @@
     "contact": "Contact",
     "about": "About",
     "useCases": "Use Cases",
-    "projects": "Public Projects",
-    "robots": "Robots",
+    "projects": "Projects",
+    "knowledge": "Knowledge",
+    "knowledgeOverview": "Knowledge overview",
     "news": "News",
     "servicesOverview": "All Services",
     "menu": "Toggle navigation"
@@ -35,8 +36,8 @@
   },
   "footer": {
     "philosophy": "Am I? We are.",
-    "tagline": "Make Physical AI work. Together with you.",
-    "description": "EmAI is your independent consulting partner for Physical AI -- with strategy, workshops, and neutral assessment.",
+    "tagline": "Deploy Physical AI with sovereignty. Together with you.",
+    "description": "EmAI is your independent consulting partner for sovereign and secure Physical AI -- with strategy, workshops, and neutral assessment.",
     "links": {
       "company": "Company",
       "about": "About Us",

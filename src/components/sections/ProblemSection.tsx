@@ -16,7 +16,7 @@ export function ProblemSection() {
             <p>{t('description')}</p>
           </div>
           <div className={styles.problemList}>
-            {(['evaluation', 'access', 'trust'] as const).map((key, index) => (
+            {(['evaluation', 'access', 'trust', 'dependency'] as const).map((key, index) => (
               <div key={key} className={styles.challenge}>
                 <span className={styles.challengeIndex} aria-hidden="true">0{index + 1}</span>
                 <div>

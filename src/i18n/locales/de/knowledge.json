@@ -1,0 +1,293 @@
+{
+  "knowledge": {
+    "nav": {
+      "label": "Wissen",
+      "overview": "Übersicht",
+      "fundamentals": "Grundlagen",
+      "robots": "Roboter",
+      "glossary": "Glossar"
+    },
+    "hub": {
+      "meta": {
+        "title": "Wissen – Physical AI verständlich erklärt",
+        "description": "Der EmAI-Wissensbereich: Grundlagen zu Physical AI und kognitiven Robotern, eine interaktive Roboter-Registry in 3D und ein Glossar der wichtigsten Begriffe. Herstellerneutral und praxisnah."
+      },
+      "eyebrow": "Wissensbereich",
+      "title": "Physical AI",
+      "titleAccent": "verstehen.",
+      "subtitle": "Was wir in Tests, Workshops und Projekten lernen, teilen wir hier: Grundlagen, Roboter-Hardware und die wichtigsten Begriffe. Herstellerneutral, verständlich und ohne Hype.",
+      "cta": "Mit den Grundlagen starten",
+      "ctaSecondary": "Glossar öffnen",
+      "art": {
+        "aria": "Schaubild: Der Wissensbereich verbindet Grundlagen, Roboter und Glossar."
+      },
+      "areasEyebrow": "Bereiche",
+      "areasTitle": "Drei Wege ins Thema",
+      "areas": {
+        "fundamentals": {
+          "title": "Grundlagen",
+          "description": "Physical AI in acht Kapiteln: wie Roboter lernen, was Foundation-Modelle leisten und worauf es bei Sicherheit und Bewertung ankommt.",
+          "stat": "{count} Kapitel",
+          "cta": "Kapitel lesen"
+        },
+        "robots": {
+          "title": "Roboter",
+          "description": "Aktuelle Plattformen interaktiv in 3D -- mit technischen Daten zu Sensorik, Traglast und Freiheitsgraden, unabhängig eingeordnet.",
+          "stat": "{count, plural, one {# Plattform} other {# Plattformen}} in 3D",
+          "cta": "Registry öffnen"
+        },
+        "glossary": {
+          "title": "Glossar",
+          "description": "Von Aktor bis Zykluszeit: die wichtigsten Begriffe rund um Physical AI, kurz erklärt und mit den Grundlagen verknüpft.",
+          "stat": "{count, plural, one {# Begriff} other {# Begriffe}}",
+          "cta": "Begriffe nachschlagen"
+        }
+      },
+      "questions": {
+        "eyebrow": "Einstieg",
+        "title": "Wo anfangen?",
+        "subtitle": "Typische Fragen aus unseren Workshops -- und in welchem Kapitel Sie die Antwort finden.",
+        "chapterLabel": "Kapitel {number}",
+        "items": {
+          "classic-vs-cognitive": "Brauche ich einen kognitiven Roboter oder reicht klassische Automatisierung?",
+          "learning": "Wie bringt man einem Roboter eine neue Aufgabe bei?",
+          "data": "Welche Daten brauche ich -- und wem gehören sie?",
+          "safety-security": "Wie sicher ist ein Roboter neben meinen Mitarbeitenden?",
+          "evaluation": "Woran erkenne ich, ob sich ein Pilot lohnt?"
+        }
+      },
+      "principles": {
+        "title": "Wie wir Wissen teilen",
+        "items": {
+          "tested": {
+            "title": "Selbst getestet",
+            "text": "Was wir schreiben, stützt sich auf eigene Tests, Workshops und Projekte -- nicht auf Pressemitteilungen."
+          },
+          "neutral": {
+            "title": "Herstellerneutral",
+            "text": "Wir sind an keinen Hersteller gebunden. Datenblätter ordnen wir ein, statt sie zu übernehmen."
+          },
+          "open": {
+            "title": "Offen geteilt",
+            "text": "Grundlagenwissen gehört nicht hinter eine Bezahlschranke. Wir teilen es frei und aktualisieren es, wenn sich das Feld bewegt."
+          }
+        }
+      },
+      "cta2": {
+        "title": "Wissen vertiefen -- gemeinsam mit Ihrem Team",
+        "body": "In unseren Workshops erleben Sie kognitive Roboter live, trainieren eine Aufgabe selbst und bewerten, was für Ihr Unternehmen sinnvoll ist.",
+        "primary": "Workshop anfragen",
+        "secondary": "Workshops ansehen"
+      }
+    },
+    "fundamentals": {
+      "meta": {
+        "title": "Grundlagen – Physical AI in acht Kapiteln",
+        "description": "Ein kompakter Einstieg in Physical AI: wie kognitive Roboter lernen, was Vision-Language-Action-Modelle leisten, warum Daten der Engpass sind und wie man Sicherheit und Nutzen bewertet."
+      },
+      "eyebrow": "Wissen · Grundlagen",
+      "title": "Physical AI in acht Kapiteln.",
+      "subtitle": "Ein kompakter Einstieg für Geschäftsführung, Produktion und IT: wie kognitive Roboter lernen, was sie heute können und worauf es bei Sicherheit und Bewertung ankommt.",
+      "chapterCount": "{count} Kapitel",
+      "readingTime": "ca. {minutes} Min. Lesezeit",
+      "tocLabel": "Kapitel",
+      "progressLabel": "Lesefortschritt",
+      "takeaway": "Kurz gesagt",
+      "termsLabel": "Im Glossar",
+      "relatedLabel": "Weiterlesen",
+      "nextLabel": "Nächstes Kapitel",
+      "related": {
+        "robots": "Roboter in 3D entdecken",
+        "glossary": "Zum Glossar",
+        "sovereignty": "Unser Souveränitäts-Ansatz",
+        "testing": "Praxis-Tests",
+        "consulting": "Strategische Beratung",
+        "data": "Unabhängige Daten",
+        "workshops": "Workshops & Schulung",
+        "worldModel": "Projekt: Modular World Model"
+      },
+      "chapters": {
+        "physical-ai": {
+          "title": "Was ist Physical AI?",
+          "lead": "Künstliche Intelligenz, die nicht nur Texte oder Bilder verarbeitet, sondern in der physischen Welt handelt.",
+          "body": [
+            "Physical AI -- oft auch Embodied AI genannt -- bezeichnet KI-Systeme mit einem Körper: Roboter, die ihre Umgebung über Kameras und Sensoren wahrnehmen, daraus Entscheidungen ableiten und über Motoren und Greifer handeln. Wir sprechen von kognitiven Robotern.",
+            "Der entscheidende Unterschied zur klassischen Robotik: Das Verhalten wird nicht mehr Zeile für Zeile programmiert, sondern zu großen Teilen aus Daten gelernt. Dadurch können Roboter mit Varianz umgehen -- mit Teilen, die jedes Mal etwas anders liegen, mit wechselnden Aufgaben und mit Umgebungen, die nicht für Roboter gebaut wurden.",
+            "Technisch läuft dabei ständig derselbe Kreislauf ab: wahrnehmen, entscheiden, handeln -- und am Ergebnis prüfen, ob die Handlung funktioniert hat. Je schneller und robuster dieser Kreislauf, desto nützlicher der Roboter."
+          ],
+          "points": [
+            { "title": "Wahrnehmen", "text": "Kameras, Tiefensensoren, LiDAR und Kraftsensoren liefern ein Bild der Umgebung." },
+            { "title": "Entscheiden", "text": "Ein KI-Modell leitet aus Wahrnehmung und Auftrag die nächste Bewegung ab." },
+            { "title": "Handeln", "text": "Motoren, Gelenke und Greifer setzen die Entscheidung um -- oft viele Male pro Sekunde." }
+          ],
+          "takeaway": "Physical AI ist KI mit Körper. Sie lernt Verhalten aus Daten, statt es fest programmiert zu bekommen -- und kann deshalb mit Varianz umgehen."
+        },
+        "classic-vs-cognitive": {
+          "title": "Klassische Automatisierung oder kognitiver Roboter?",
+          "lead": "Kein Entweder-oder: Beide Ansätze haben ihre Stärken -- entscheidend ist die Aufgabe.",
+          "body": [
+            "Klassische Industrieroboter sind unschlagbar, wenn Abläufe hochvolumig, immer gleich und gut strukturiert sind: Schweißen, Lackieren, Palettieren in festen Mustern. Sie sind präzise, schnell und über Jahrzehnte erprobt -- aber jede Änderung kostet Programmier- und Umrüstaufwand.",
+            "Kognitive Roboter spielen ihre Stärken dort aus, wo Varianz den Alltag bestimmt: wechselnde Teile, kleine Losgrößen, unstrukturierte Umgebungen und Aufgaben, die bisher nur Menschen erledigen konnten. Dafür sind sie heute meist langsamer und weniger vorhersagbar als klassische Anlagen.",
+            "In der Praxis ergänzen sich beide. Die richtige Frage lautet nicht „Welcher Roboter ist besser?“, sondern „Wie viel Varianz steckt in dieser Aufgabe -- und was kostet sie uns heute?“"
+          ],
+          "points": [
+            { "title": "Klassisch: programmiert", "text": "Fest definierte Bewegungen, hohe Präzision und Geschwindigkeit, hoher Aufwand bei jeder Änderung." },
+            { "title": "Kognitiv: gelernt", "text": "Aus Demonstrationen und Daten gelernt, tolerant gegenüber Varianz, heute noch langsamer und weniger vorhersagbar." }
+          ],
+          "takeaway": "Hohe Stückzahl und wenig Varianz: klassische Automatisierung. Viel Varianz, kleine Losgrößen und Lücken durch Fachkräftemangel: Hier werden kognitive Roboter interessant."
+        },
+        "learning": {
+          "title": "Wie Roboter lernen",
+          "lead": "Vormachen, üben, übertragen: die wichtigsten Lernwege kognitiver Roboter.",
+          "body": [
+            "Viele praktische Fortschritte der letzten Jahre kommen aus dem Imitation Learning: Ein Mensch steuert den Roboter per Teleoperation durch eine Aufgabe, der Roboter zeichnet dabei auf, was er sieht und wie er sich bewegt. Aus vielen solcher Demonstrationen lernt ein Modell -- die sogenannte Policy --, die Aufgabe selbst auszuführen.",
+            "Beim Reinforcement Learning probiert der Roboter selbst aus und wird für Erfolg belohnt. Weil das in der realen Welt langsam und riskant wäre, geschieht es meist in der Simulation. Die Kunst liegt dann im Sim-to-Real-Transfer: Das Gelernte muss auch mit echter Reibung, echtem Licht und echtem Sensorrauschen funktionieren. Besonders erfolgreich ist dieser Weg bisher bei Fortbewegung und Balance.",
+            "Wie viele Demonstrationen eine Aufgabe braucht, hängt stark von ihr ab -- und davon, ob ein vortrainiertes Modell als Ausgangspunkt dient. Mit einem Foundation-Modell genügen für eine eng umrissene Aufgabe oft deutlich weniger Beispiele als beim Training von Grund auf."
+          ],
+          "points": [
+            { "title": "Imitation Learning", "text": "Lernen aus menschlichen Demonstrationen, meist per Teleoperation aufgezeichnet." },
+            { "title": "Reinforcement Learning", "text": "Lernen durch Ausprobieren und Belohnung, meist in der Simulation." },
+            { "title": "Fine-Tuning", "text": "Ein vortrainiertes Modell wird mit wenigen, gezielten Daten an eine konkrete Aufgabe angepasst." }
+          ],
+          "takeaway": "Roboter lernen heute vor allem durch Vormachen und durch Üben in der Simulation. Die Qualität der Demonstrationen entscheidet maßgeblich über den Erfolg."
+        },
+        "foundation-models": {
+          "title": "Foundation-Modelle für Roboter",
+          "lead": "Was große Sprachmodelle für Text sind, werden Vision-Language-Action-Modelle für Roboter.",
+          "body": [
+            "Vision-Language-Action-Modelle (VLA) verbinden drei Dinge: Sie sehen (Kamerabilder), verstehen Sprache (den Auftrag, etwa „Leg das blaue Teil in die Kiste“) und geben Aktionen aus (Gelenkbewegungen oder Greiferbefehle). Vortrainiert werden sie auf großen Datensätzen aus vielen Robotern und Aufgaben, danach werden sie für den konkreten Einsatz feinjustiert.",
+            "Neben geschlossenen Modellen gibt es eine wachsende Zahl offener Modelle, deren Gewichte frei verfügbar sind -- etwa OpenVLA, π0 oder SmolVLA. Für Unternehmen heißt das: Modelle lassen sich prüfen, anpassen und auf eigener Hardware betreiben. Genau darauf setzen wir.",
+            "Ein zweiter Forschungsstrang sind Weltmodelle: Modelle, die vorhersagen, wie sich die Umgebung durch eine Handlung verändert. Sie sollen Robotern helfen, vorauszuplanen und mit unbekannten Situationen umzugehen."
+          ],
+          "points": [],
+          "takeaway": "VLA-Modelle machen Roboter vielseitiger: ein Modell, viele Aufgaben, Aufträge in natürlicher Sprache. Offene Modelle sichern dabei Kontrolle und Austauschbarkeit."
+        },
+        "data": {
+          "title": "Daten: der eigentliche Engpass",
+          "lead": "Für Sprachmodelle gibt es das Internet. Für Roboter gibt es keine vergleichbare Datenquelle.",
+          "body": [
+            "Roboterdaten müssen erzeugt werden: durch Teleoperation, in der Simulation oder im laufenden Betrieb. Offene Sammlungen wie Open X-Embodiment oder die Datensätze der LeRobot-Community helfen beim Vortraining -- für die eigene Aufgabe braucht es aber fast immer eigene Daten aus der eigenen Umgebung.",
+            "Dabei zählt Qualität mehr als Menge: saubere, konsistente Demonstrationen, gut abgedeckte Varianten und dokumentierte Fehlerfälle. Ebenso wichtig sind Daten aus dem Betrieb -- Erfolgsquoten, Eingriffe, Abbrüche --, denn erst sie zeigen, wo ein Modell nachtrainiert werden muss.",
+            "Weil diese Daten Ihre Prozesse, Ihre Produkte und oft auch Ihre Mitarbeitenden zeigen, sind sie ein Wettbewerbsfaktor. Wo sie gespeichert und verarbeitet werden und wer sie nutzen darf, sollte vor dem ersten Pilot geklärt sein."
+          ],
+          "points": [],
+          "takeaway": "Wer Roboter produktiv nutzen will, braucht eigene, gute Daten -- und die Hoheit darüber. Die Datenstrategie ist Teil der Robotik-Strategie."
+        },
+        "hardware": {
+          "title": "Hardware und Bauformen",
+          "lead": "Die beste KI nützt wenig, wenn der Körper nicht zur Aufgabe passt.",
+          "body": [
+            "Kognitive Roboter gibt es in vielen Bauformen. Jede bringt eigene Stärken und Grenzen mit -- und nicht jede Aufgabe braucht Beine.",
+            "Entscheidend sind neben der Bauform die Freiheitsgrade, die Traglast, die Sensorik -- von Tiefenkameras über LiDAR bis zu Kraft- und Tastsensoren -- sowie die Rechenleistung an Bord. Bei mobilen Systemen kommt die Akkulaufzeit hinzu, die im Dauerbetrieb oft der limitierende Faktor ist.",
+            "Datenblätter zeigen Bestwerte unter Idealbedingungen. Was ein System in Ihrer Umgebung leistet, zeigt erst ein Test."
+          ],
+          "points": [
+            { "title": "Arme & Cobots", "text": "Stationär, präzise, bewährt -- ideal für feste Arbeitsplätze." },
+            { "title": "Mobile Manipulatoren", "text": "Ein Arm auf einer fahrbaren Basis -- für Aufgaben an wechselnden Orten." },
+            { "title": "Vierbeiner", "text": "Robust und geländegängig -- für Inspektion und Transport auf unebenem Boden." },
+            { "title": "Zweibeiner", "text": "Menschenähnliche Gestalt für Umgebungen, die für Menschen gebaut sind. Technisch am anspruchsvollsten." }
+          ],
+          "takeaway": "Wählen Sie die Bauform nach der Aufgabe, nicht nach der Demo. Laufzeit, Traglast und Sensorik entscheiden im Alltag."
+        },
+        "safety-security": {
+          "title": "Sicherheit und Souveränität",
+          "lead": "Ein Roboter, der mit Menschen arbeitet und am Netzwerk hängt, braucht zwei Arten von Sicherheit -- und klare Kontrolle.",
+          "body": [
+            "Funktionale Sicherheit schützt Menschen im Arbeitsbereich. Grundlage ist eine Risikobeurteilung; für Industrie- und kollaborierende Roboter geben Normen wie ISO 10218 und ISO/TS 15066 den Rahmen vor, etwa für Kraft- und Geschwindigkeitsbegrenzung. Bei lernenden Systemen kommt eine neue Frage hinzu: Was passiert, wenn das Modell falsch liegt? Die Antwort sind Schutzfunktionen, die unabhängig von der KI greifen.",
+            "Cybersecurity schützt den Roboter und Ihr Netz. Ein kognitiver Roboter ist ein vernetzter Computer mit Kameras und Mikrofonen -- er gehört wie jedes andere Gerät in ein OT-Sicherheitskonzept: Netzsegmentierung, Zugriffsrechte, geprüfte Updates, Protokollierung.",
+            "Souveränität schließlich bedeutet, dass Sie die Kontrolle über Daten, Modelle und Updates behalten. Auch der regulatorische Rahmen wächst: Die neue EU-Maschinenverordnung gilt ab Januar 2027, dazu kommen der EU AI Act und der Cyber Resilience Act."
+          ],
+          "points": [
+            { "title": "Safety", "text": "Schützt Menschen: Risikobeurteilung, Kraftbegrenzung, Not-Halt, Fallback." },
+            { "title": "Security", "text": "Schützt Systeme: Segmentierung, Zugriffskontrolle, signierte Updates." },
+            { "title": "Souveränität", "text": "Sichert Kontrolle: Daten, Modelle und Betrieb in Ihrer Hand." }
+          ],
+          "takeaway": "Safety schützt Menschen, Security schützt Systeme, Souveränität sichert Kontrolle. Alle drei gehören vor dem Pilot auf die Checkliste."
+        },
+        "evaluation": {
+          "title": "Bewerten und einführen",
+          "lead": "Eine überzeugende Demo ist kein Business Case. Messwerte aus der eigenen Umgebung sind es.",
+          "body": [
+            "Bewerten Sie kognitive Roboter mit denselben Maßstäben wie jeden anderen Prozess: Wie oft gelingt die Aufgabe? Wie lange dauert sie? Wie oft muss ein Mensch eingreifen? Und was kostet das Ganze über die Laufzeit -- inklusive Integration, Wartung und Datenaufbereitung?",
+            "Bewährt hat sich ein schrittweises Vorgehen: Aufgabe auswählen, Ausgangswerte messen, einen klar begrenzten Pilot mit vorher festgelegten Erfolgskriterien fahren -- und erst dann über den Rollout entscheiden. So wird aus Neugier eine belastbare Entscheidung."
+          ],
+          "points": [
+            { "title": "Erfolgsquote", "text": "Anteil der Durchläufe, die ohne menschliche Hilfe gelingen." },
+            { "title": "Zykluszeit", "text": "Dauer pro Durchlauf -- im Vergleich zum heutigen Prozess." },
+            { "title": "Eingriffe pro Stunde", "text": "Wie oft ein Mensch helfen oder korrigieren muss." },
+            { "title": "Gesamtkosten", "text": "Anschaffung, Integration, Energie, Wartung und Daten über die Laufzeit." }
+          ],
+          "takeaway": "Erst messen, dann entscheiden: mit klaren Kriterien, einem begrenzten Pilot und ehrlichen Zahlen aus Ihrer Umgebung."
+        }
+      },
+      "cta": {
+        "title": "Grundlagen verstanden? Dann wird es konkret.",
+        "body": "Wir übertragen dieses Wissen auf Ihre Prozesse: im Workshop mit Ihrem Team oder in einer herstellerneutralen Bewertung.",
+        "primary": "Gespräch vereinbaren",
+        "secondary": "Workshops ansehen"
+      }
+    },
+    "glossary": {
+      "meta": {
+        "title": "Glossar – Physical AI von A bis Z",
+        "description": "Die wichtigsten Begriffe rund um Physical AI und kognitive Roboter, kurz und verständlich erklärt: von VLA-Modell und Teleoperation bis Zykluszeit und Datensouveränität."
+      },
+      "eyebrow": "Wissen · Glossar",
+      "title": "Physical AI von A bis Z.",
+      "subtitle": "Die wichtigsten Begriffe rund um kognitive Roboter -- kurz, verständlich und mit Verweis auf das passende Grundlagen-Kapitel.",
+      "searchLabel": "Begriffe durchsuchen",
+      "searchPlaceholder": "Begriff suchen, z. B. VLA oder Teleoperation",
+      "clear": "Suche zurücksetzen",
+      "lettersLabel": "Nach Anfangsbuchstabe springen",
+      "count": "{count, plural, one {# Begriff} other {# Begriffe}}",
+      "empty": "Kein Begriff gefunden. Fehlt etwas? Schreiben Sie uns -- wir ergänzen das Glossar laufend.",
+      "chapterLink": "Kapitel {number}: {title}",
+      "cta": {
+        "title": "Ein Begriff fehlt?",
+        "body": "Das Glossar wächst mit unseren Projekten. Sagen Sie uns, welche Begriffe Ihnen im Alltag begegnen.",
+        "primary": "Begriff vorschlagen",
+        "secondary": "Zu den Grundlagen"
+      },
+      "terms": {
+        "physical-ai": { "term": "Physical AI", "definition": "KI-Systeme, die über einen Körper in der physischen Welt wahrnehmen und handeln -- etwa kognitive Roboter." },
+        "embodied-ai": { "term": "Embodied AI", "definition": "Verwandter Begriff für Physical AI, der betont, dass Intelligenz an einen Körper gebunden ist. Namensgeber von EmAI." },
+        "cognitive-robot": { "term": "Kognitiver Roboter", "definition": "Roboter, der mithilfe von KI-Modellen wahrnimmt, lernt und sich an wechselnde Situationen anpasst, statt nur fest programmierte Abläufe abzuspielen." },
+        "actuator": { "term": "Aktor", "definition": "Bauteil, das Energie in Bewegung umsetzt -- etwa ein Elektromotor im Gelenk eines Roboters." },
+        "cobot": { "term": "Cobot", "definition": "Kollaborierender Roboter, der dafür ausgelegt ist, ohne trennende Schutzzäune mit Menschen zusammenzuarbeiten." },
+        "policy": { "term": "Policy", "definition": "Das gelernte Steuerungsmodell eines Roboters: Es bildet die aktuelle Wahrnehmung auf die nächste Aktion ab." },
+        "cycle-time": { "term": "Zykluszeit", "definition": "Zeit, die für einen vollständigen Arbeitsablauf benötigt wird -- zentrale Vergleichsgröße zwischen Mensch, klassischer Anlage und Roboter." },
+        "imitation-learning": { "term": "Imitation Learning", "definition": "Lernen durch Nachahmung: Ein Modell lernt eine Aufgabe aus menschlichen Demonstrationen." },
+        "teleoperation": { "term": "Teleoperation", "definition": "Fernsteuerung eines Roboters durch einen Menschen, etwa per VR-Brille oder Steuerarm. Wichtigste Quelle für Trainingsdaten." },
+        "demonstration": { "term": "Demonstration", "definition": "Aufgezeichneter Durchlauf einer Aufgabe mit Sensordaten und Bewegungen -- die Trainingseinheit beim Imitation Learning." },
+        "reinforcement-learning": { "term": "Reinforcement Learning", "definition": "Lernen durch Versuch und Belohnung: Der Roboter probiert Aktionen aus und verstärkt, was zum Ziel führt." },
+        "sim-to-real": { "term": "Sim-to-Real", "definition": "Übertragung von Verhalten, das in der Simulation gelernt wurde, auf den realen Roboter." },
+        "fine-tuning": { "term": "Fine-Tuning", "definition": "Anpassung eines vortrainierten Modells an eine konkrete Aufgabe mit vergleichsweise wenigen eigenen Daten." },
+        "foundation-model": { "term": "Foundation-Modell", "definition": "Großes, breit vortrainiertes KI-Modell, das als Ausgangspunkt für viele konkrete Aufgaben dient." },
+        "vla": { "term": "VLA-Modell", "definition": "Vision-Language-Action-Modell: verarbeitet Kamerabilder und Sprachbefehle und gibt direkt Roboteraktionen aus." },
+        "open-weight": { "term": "Open-Weight-Modell", "definition": "KI-Modell, dessen trainierte Gewichte frei verfügbar sind. Es lässt sich prüfen, anpassen und selbst betreiben." },
+        "world-model": { "term": "Weltmodell", "definition": "Modell, das vorhersagt, wie sich die Umgebung durch eine Handlung verändert -- Grundlage für vorausschauendes Planen." },
+        "inference": { "term": "Inferenz", "definition": "Die Anwendung eines trainierten Modells im Betrieb -- beim Roboter oft viele Male pro Sekunde." },
+        "digital-twin": { "term": "Digitaler Zwilling", "definition": "Virtuelles Abbild einer Anlage oder Umgebung, in dem sich Abläufe simulieren, testen und Trainingsdaten erzeugen lassen." },
+        "data-sovereignty": { "term": "Datensouveränität", "definition": "Die Fähigkeit, selbst zu bestimmen, wo eigene Daten gespeichert und verarbeitet werden, wer sie nutzt und wofür." },
+        "edge-computing": { "term": "Edge Computing", "definition": "Datenverarbeitung direkt am Roboter oder im eigenen Werk statt in einer entfernten Cloud." },
+        "dof": { "term": "Freiheitsgrade (DoF)", "definition": "Anzahl der unabhängigen Bewegungsmöglichkeiten eines Roboters. Ein typischer Industriearm hat sechs, ein Zweibeiner oft mehr als zwanzig." },
+        "end-effector": { "term": "Endeffektor", "definition": "Das Werkzeug am Ende des Arms: Greifer, Sauger, Roboterhand oder Spezialwerkzeug." },
+        "mobile-manipulator": { "term": "Mobiler Manipulator", "definition": "Roboterarm auf einer fahrbaren Plattform, der Aufgaben an wechselnden Orten erledigen kann." },
+        "lidar": { "term": "LiDAR", "definition": "Sensor, der die Umgebung per Laser abtastet und daraus eine 3D-Punktwolke erzeugt." },
+        "depth-camera": { "term": "Tiefenkamera", "definition": "Kamera, die zu jedem Bildpunkt auch die Entfernung misst, etwa per Stereo-Verfahren oder Infrarot-Muster." },
+        "tactile-sensing": { "term": "Taktile Sensorik", "definition": "Sensoren an Fingern oder Greifern, die Berührung und Druck erfassen und so feinfühliges Greifen ermöglichen." },
+        "force-torque": { "term": "Kraft-Momenten-Sensor", "definition": "Misst Kräfte und Drehmomente, meist am Handgelenk -- wichtig für Montage und sichere Zusammenarbeit." },
+        "slam": { "term": "SLAM", "definition": "Simultaneous Localization and Mapping: Der Roboter erstellt eine Karte seiner Umgebung und bestimmt gleichzeitig seine Position darin." },
+        "ros2": { "term": "ROS 2", "definition": "Robot Operating System: verbreitetes Open-Source-Framework mit Werkzeugen und Bibliotheken für Robotik-Software." },
+        "risk-assessment": { "term": "Risikobeurteilung", "definition": "Systematische Analyse der Gefährdungen einer Maschine und der Maßnahmen dagegen. Pflicht vor jeder Inbetriebnahme." },
+        "functional-safety": { "term": "Funktionale Sicherheit", "definition": "Schutzfunktionen, die Gefahren für Menschen zuverlässig verhindern -- etwa Not-Halt, Geschwindigkeits- und Kraftbegrenzung." },
+        "ot-security": { "term": "OT-Security", "definition": "IT-Sicherheit für Produktionsanlagen (Operational Technology): Schutz von Maschinen und Steuerungen vor Angriffen." },
+        "vendor-lock-in": { "term": "Vendor Lock-in", "definition": "Abhängigkeit von einem Anbieter, dessen Technik sich nur mit hohem Aufwand ersetzen lässt." },
+        "human-in-the-loop": { "term": "Human-in-the-Loop", "definition": "Betriebsmodell, bei dem ein Mensch Entscheidungen des Roboters überwacht, freigibt oder bei Bedarf übernimmt." },
+        "success-rate": { "term": "Erfolgsquote", "definition": "Anteil der Durchläufe, in denen ein Roboter eine Aufgabe ohne menschliche Hilfe erfüllt." },
+        "intervention": { "term": "Intervention", "definition": "Eingriff eines Menschen, um einen Roboter zu korrigieren oder einen Fehler zu beheben. Wichtige Kennzahl für die Reife eines Systems." },
+        "tco": { "term": "Total Cost of Ownership (TCO)", "definition": "Gesamtkosten über die Nutzungsdauer: Anschaffung, Integration, Energie, Wartung, Schulung und Datenaufbereitung." }
+      }
+    }
+  }
+}

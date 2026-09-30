@@ -1,0 +1,293 @@
+{
+  "knowledge": {
+    "nav": {
+      "label": "Knowledge",
+      "overview": "Overview",
+      "fundamentals": "Fundamentals",
+      "robots": "Robots",
+      "glossary": "Glossary"
+    },
+    "hub": {
+      "meta": {
+        "title": "Knowledge – Physical AI Explained",
+        "description": "The EmAI knowledge hub: fundamentals of Physical AI and cognitive robots, an interactive 3D robot registry, and a glossary of key terms. Vendor-neutral and practice-oriented."
+      },
+      "eyebrow": "Knowledge Hub",
+      "title": "Understanding",
+      "titleAccent": "Physical AI.",
+      "subtitle": "What we learn in testing, workshops, and projects, we share here: fundamentals, robot hardware, and the key terms. Vendor-neutral, clear, and free of hype.",
+      "cta": "Start with the fundamentals",
+      "ctaSecondary": "Open the glossary",
+      "art": {
+        "aria": "Diagram: the knowledge hub connects fundamentals, robots, and the glossary."
+      },
+      "areasEyebrow": "Areas",
+      "areasTitle": "Three ways into the topic",
+      "areas": {
+        "fundamentals": {
+          "title": "Fundamentals",
+          "description": "Physical AI in eight chapters: how robots learn, what foundation models can do, and what matters for safety and evaluation.",
+          "stat": "{count, plural, one {# chapter} other {# chapters}}",
+          "cta": "Read the chapters"
+        },
+        "robots": {
+          "title": "Robots",
+          "description": "Current platforms in interactive 3D -- with technical data on sensing, payload, and degrees of freedom, independently assessed.",
+          "stat": "{count, plural, one {# platform} other {# platforms}} in 3D",
+          "cta": "Open the registry"
+        },
+        "glossary": {
+          "title": "Glossary",
+          "description": "From actuator to cycle time: the key terms around Physical AI, briefly explained and linked to the fundamentals.",
+          "stat": "{count, plural, one {# term} other {# terms}}",
+          "cta": "Look up terms"
+        }
+      },
+      "questions": {
+        "eyebrow": "Getting started",
+        "title": "Where to begin?",
+        "subtitle": "Typical questions from our workshops -- and the chapter that answers them.",
+        "chapterLabel": "Chapter {number}",
+        "items": {
+          "classic-vs-cognitive": "Do I need a cognitive robot, or is classic automation enough?",
+          "learning": "How do you teach a robot a new task?",
+          "data": "What data do I need -- and who owns it?",
+          "safety-security": "How safe is a robot working next to my people?",
+          "evaluation": "How do I know whether a pilot is worth it?"
+        }
+      },
+      "principles": {
+        "title": "How we share knowledge",
+        "items": {
+          "tested": {
+            "title": "Tested ourselves",
+            "text": "What we write is based on our own testing, workshops, and projects -- not on press releases."
+          },
+          "neutral": {
+            "title": "Vendor-neutral",
+            "text": "We are not tied to any manufacturer. We put datasheets into context instead of copying them."
+          },
+          "open": {
+            "title": "Openly shared",
+            "text": "Foundational knowledge does not belong behind a paywall. We share it freely and update it as the field moves."
+          }
+        }
+      },
+      "cta2": {
+        "title": "Go deeper -- together with your team",
+        "body": "In our workshops you see cognitive robots live, train a task yourself, and assess what makes sense for your business.",
+        "primary": "Request a workshop",
+        "secondary": "View workshops"
+      }
+    },
+    "fundamentals": {
+      "meta": {
+        "title": "Fundamentals – Physical AI in Eight Chapters",
+        "description": "A compact introduction to Physical AI: how cognitive robots learn, what vision-language-action models can do, why data is the bottleneck, and how to assess safety and value."
+      },
+      "eyebrow": "Knowledge · Fundamentals",
+      "title": "Physical AI in eight chapters.",
+      "subtitle": "A compact introduction for management, operations, and IT: how cognitive robots learn, what they can do today, and what matters for safety and evaluation.",
+      "chapterCount": "{count, plural, one {# chapter} other {# chapters}}",
+      "readingTime": "approx. {minutes} min read",
+      "tocLabel": "Chapters",
+      "progressLabel": "Reading progress",
+      "takeaway": "In short",
+      "termsLabel": "In the glossary",
+      "relatedLabel": "Read more",
+      "nextLabel": "Next chapter",
+      "related": {
+        "robots": "Explore robots in 3D",
+        "glossary": "Go to the glossary",
+        "sovereignty": "Our sovereignty approach",
+        "testing": "Real-world testing",
+        "consulting": "Strategic consulting",
+        "data": "Independent data",
+        "workshops": "Workshops & training",
+        "worldModel": "Project: Modular World Model"
+      },
+      "chapters": {
+        "physical-ai": {
+          "title": "What is Physical AI?",
+          "lead": "Artificial intelligence that does not just process text or images, but acts in the physical world.",
+          "body": [
+            "Physical AI -- often called embodied AI -- refers to AI systems with a body: robots that perceive their surroundings through cameras and sensors, derive decisions from that, and act through motors and grippers. We call them cognitive robots.",
+            "The key difference from classic robotics: behavior is no longer programmed line by line, but largely learned from data. That lets robots handle variation -- parts that sit slightly differently every time, changing tasks, and environments that were never built for robots.",
+            "Technically, the same loop runs continuously: perceive, decide, act -- and check the result to see whether the action worked. The faster and more robust that loop, the more useful the robot."
+          ],
+          "points": [
+            { "title": "Perceive", "text": "Cameras, depth sensors, LiDAR, and force sensors build a picture of the surroundings." },
+            { "title": "Decide", "text": "An AI model derives the next movement from perception and the task at hand." },
+            { "title": "Act", "text": "Motors, joints, and grippers carry out the decision -- often many times per second." }
+          ],
+          "takeaway": "Physical AI is AI with a body. It learns behavior from data instead of having it hard-coded -- which is why it can cope with variation."
+        },
+        "classic-vs-cognitive": {
+          "title": "Classic automation or cognitive robot?",
+          "lead": "Not either-or: both approaches have their strengths -- the task decides.",
+          "body": [
+            "Classic industrial robots are unbeatable when processes are high-volume, always identical, and well structured: welding, painting, palletizing in fixed patterns. They are precise, fast, and proven over decades -- but every change costs programming and retooling effort.",
+            "Cognitive robots play to their strengths where variation is part of daily work: changing parts, small batch sizes, unstructured environments, and tasks that only people could do so far. In return, they are usually slower and less predictable than classic systems today.",
+            "In practice, the two complement each other. The right question is not “Which robot is better?” but “How much variation is in this task -- and what does it cost us today?”"
+          ],
+          "points": [
+            { "title": "Classic: programmed", "text": "Fixed movements, high precision and speed, high effort for every change." },
+            { "title": "Cognitive: learned", "text": "Learned from demonstrations and data, tolerant of variation, still slower and less predictable today." }
+          ],
+          "takeaway": "High volume and little variation: classic automation. Lots of variation, small batches, and gaps from labor shortages: that is where cognitive robots become interesting."
+        },
+        "learning": {
+          "title": "How robots learn",
+          "lead": "Show, practice, transfer: the main ways cognitive robots learn.",
+          "body": [
+            "Much of the practical progress in recent years comes from imitation learning: a person guides the robot through a task via teleoperation while the robot records what it sees and how it moves. From many such demonstrations, a model -- the so-called policy -- learns to perform the task on its own.",
+            "In reinforcement learning, the robot tries things itself and is rewarded for success. Because that would be slow and risky in the real world, it mostly happens in simulation. The art then lies in sim-to-real transfer: what was learned must also work with real friction, real lighting, and real sensor noise. So far this approach has been especially successful for locomotion and balance.",
+            "How many demonstrations a task needs depends heavily on the task -- and on whether a pre-trained model serves as a starting point. Starting from a foundation model, a narrowly defined task often needs far fewer examples than training from scratch."
+          ],
+          "points": [
+            { "title": "Imitation learning", "text": "Learning from human demonstrations, usually recorded via teleoperation." },
+            { "title": "Reinforcement learning", "text": "Learning by trial and reward, mostly in simulation." },
+            { "title": "Fine-tuning", "text": "A pre-trained model is adapted to a specific task with a small amount of targeted data." }
+          ],
+          "takeaway": "Today, robots mainly learn by being shown and by practicing in simulation. The quality of the demonstrations largely determines success."
+        },
+        "foundation-models": {
+          "title": "Foundation models for robots",
+          "lead": "What large language models are for text, vision-language-action models are becoming for robots.",
+          "body": [
+            "Vision-language-action models (VLAs) combine three things: they see (camera images), understand language (the instruction, such as “Put the blue part in the box”), and output actions (joint movements or gripper commands). They are pre-trained on large datasets from many robots and tasks, then fine-tuned for the specific deployment.",
+            "Alongside closed models, there is a growing number of open models whose weights are freely available -- such as OpenVLA, π0, or SmolVLA. For businesses, that means models can be inspected, adapted, and run on your own hardware. That is exactly what we rely on.",
+            "A second line of research is world models: models that predict how the environment changes as a result of an action. They are meant to help robots plan ahead and cope with unfamiliar situations."
+          ],
+          "points": [],
+          "takeaway": "VLA models make robots more versatile: one model, many tasks, instructions in natural language. Open models keep you in control and able to switch."
+        },
+        "data": {
+          "title": "Data: the real bottleneck",
+          "lead": "Language models have the internet. Robots have no comparable source of data.",
+          "body": [
+            "Robot data has to be generated: through teleoperation, in simulation, or during operation. Open collections such as Open X-Embodiment or the datasets of the LeRobot community help with pre-training -- but your own task almost always needs your own data from your own environment.",
+            "Quality matters more than quantity: clean, consistent demonstrations, well-covered variations, and documented failure cases. Operational data is just as important -- success rates, interventions, aborted runs -- because only that shows where a model needs retraining.",
+            "Because this data shows your processes, your products, and often your people, it is a competitive asset. Where it is stored and processed, and who may use it, should be settled before the first pilot."
+          ],
+          "points": [],
+          "takeaway": "Using robots productively requires good data of your own -- and control over it. Your data strategy is part of your robotics strategy."
+        },
+        "hardware": {
+          "title": "Hardware and form factors",
+          "lead": "The best AI is of little use if the body does not fit the task.",
+          "body": [
+            "Cognitive robots come in many form factors. Each has its own strengths and limits -- and not every task needs legs.",
+            "Beyond the form factor, what matters are the degrees of freedom, payload, sensing -- from depth cameras and LiDAR to force and tactile sensors -- and the compute on board. For mobile systems, battery life comes on top, and in continuous operation it is often the limiting factor.",
+            "Datasheets show best-case values under ideal conditions. Only a test shows what a system delivers in your environment."
+          ],
+          "points": [
+            { "title": "Arms & cobots", "text": "Stationary, precise, proven -- ideal for fixed workstations." },
+            { "title": "Mobile manipulators", "text": "An arm on a wheeled base -- for tasks in changing locations." },
+            { "title": "Quadrupeds", "text": "Robust and rough-terrain capable -- for inspection and transport on uneven ground." },
+            { "title": "Bipeds", "text": "Human-like form for environments built for people. The most demanding technically." }
+          ],
+          "takeaway": "Choose the form factor for the task, not for the demo. Runtime, payload, and sensing decide in daily operation."
+        },
+        "safety-security": {
+          "title": "Safety, security, and sovereignty",
+          "lead": "A robot that works with people and sits on your network needs two kinds of protection -- and clear control.",
+          "body": [
+            "Functional safety protects people in the work area. It starts with a risk assessment; for industrial and collaborative robots, standards such as ISO 10218 and ISO/TS 15066 set the framework, for example for force and speed limits. Learning systems add a new question: what happens when the model is wrong? The answer is protective functions that act independently of the AI.",
+            "Cybersecurity protects the robot and your network. A cognitive robot is a networked computer with cameras and microphones -- like any other device, it belongs in an OT security concept: network segmentation, access rights, reviewed updates, audit logging.",
+            "Sovereignty, finally, means you stay in control of data, models, and updates. The regulatory framework is growing, too: the new EU Machinery Regulation applies from January 2027, alongside the EU AI Act and the Cyber Resilience Act."
+          ],
+          "points": [
+            { "title": "Safety", "text": "Protects people: risk assessment, force limits, emergency stop, fallback." },
+            { "title": "Security", "text": "Protects systems: segmentation, access control, signed updates." },
+            { "title": "Sovereignty", "text": "Keeps control: data, models, and operations in your hands." }
+          ],
+          "takeaway": "Safety protects people, security protects systems, sovereignty keeps control. All three belong on the checklist before the pilot."
+        },
+        "evaluation": {
+          "title": "Evaluate and adopt",
+          "lead": "A convincing demo is not a business case. Measurements from your own environment are.",
+          "body": [
+            "Assess cognitive robots by the same standards as any other process: How often does the task succeed? How long does it take? How often does a person have to step in? And what does it all cost over its lifetime -- including integration, maintenance, and data preparation?",
+            "A step-by-step approach has proven itself: choose a task, measure the baseline, run a clearly scoped pilot with success criteria defined up front -- and only then decide on a rollout. That turns curiosity into a sound decision."
+          ],
+          "points": [
+            { "title": "Success rate", "text": "Share of runs that succeed without human help." },
+            { "title": "Cycle time", "text": "Time per run -- compared with today’s process." },
+            { "title": "Interventions per hour", "text": "How often a person has to help or correct." },
+            { "title": "Total cost", "text": "Purchase, integration, energy, maintenance, and data over the lifetime." }
+          ],
+          "takeaway": "Measure first, then decide: with clear criteria, a scoped pilot, and honest numbers from your environment."
+        }
+      },
+      "cta": {
+        "title": "Got the fundamentals? Then let’s get specific.",
+        "body": "We apply this knowledge to your processes: in a workshop with your team or in a vendor-neutral assessment.",
+        "primary": "Schedule a call",
+        "secondary": "View workshops"
+      }
+    },
+    "glossary": {
+      "meta": {
+        "title": "Glossary – Physical AI from A to Z",
+        "description": "The key terms around Physical AI and cognitive robots, briefly and clearly explained: from VLA model and teleoperation to cycle time and data sovereignty."
+      },
+      "eyebrow": "Knowledge · Glossary",
+      "title": "Physical AI from A to Z.",
+      "subtitle": "The key terms around cognitive robots -- short, clear, and linked to the matching chapter in the fundamentals.",
+      "searchLabel": "Search terms",
+      "searchPlaceholder": "Search a term, e.g. VLA or teleoperation",
+      "clear": "Clear search",
+      "lettersLabel": "Jump to initial letter",
+      "count": "{count, plural, one {# term} other {# terms}}",
+      "empty": "No term found. Something missing? Let us know -- we keep extending the glossary.",
+      "chapterLink": "Chapter {number}: {title}",
+      "cta": {
+        "title": "Missing a term?",
+        "body": "The glossary grows with our projects. Tell us which terms you come across in your daily work.",
+        "primary": "Suggest a term",
+        "secondary": "Go to the fundamentals"
+      },
+      "terms": {
+        "physical-ai": { "term": "Physical AI", "definition": "AI systems that perceive and act in the physical world through a body -- such as cognitive robots." },
+        "embodied-ai": { "term": "Embodied AI", "definition": "Related term for Physical AI that emphasizes intelligence being tied to a body. The origin of the name EmAI." },
+        "cognitive-robot": { "term": "Cognitive robot", "definition": "A robot that uses AI models to perceive, learn, and adapt to changing situations instead of only replaying hard-coded routines." },
+        "actuator": { "term": "Actuator", "definition": "A component that turns energy into motion -- for example, an electric motor in a robot joint." },
+        "cobot": { "term": "Cobot", "definition": "A collaborative robot designed to work alongside people without separating safety fences." },
+        "policy": { "term": "Policy", "definition": "A robot’s learned control model: it maps current perception to the next action." },
+        "cycle-time": { "term": "Cycle time", "definition": "The time needed for one complete work sequence -- a key benchmark between people, classic systems, and robots." },
+        "imitation-learning": { "term": "Imitation learning", "definition": "Learning by imitation: a model learns a task from human demonstrations." },
+        "teleoperation": { "term": "Teleoperation", "definition": "Remote control of a robot by a person, for example via VR headset or a leader arm. The main source of training data." },
+        "demonstration": { "term": "Demonstration", "definition": "A recorded run of a task with sensor data and movements -- the unit of training in imitation learning." },
+        "reinforcement-learning": { "term": "Reinforcement learning", "definition": "Learning by trial and reward: the robot tries actions and reinforces what leads to the goal." },
+        "sim-to-real": { "term": "Sim-to-real", "definition": "Transferring behavior learned in simulation to the real robot." },
+        "fine-tuning": { "term": "Fine-tuning", "definition": "Adapting a pre-trained model to a specific task with comparatively little data of your own." },
+        "foundation-model": { "term": "Foundation model", "definition": "A large, broadly pre-trained AI model that serves as the starting point for many specific tasks." },
+        "vla": { "term": "VLA model", "definition": "Vision-language-action model: processes camera images and language instructions and outputs robot actions directly." },
+        "open-weight": { "term": "Open-weight model", "definition": "An AI model whose trained weights are freely available. It can be inspected, adapted, and run yourself." },
+        "world-model": { "term": "World model", "definition": "A model that predicts how the environment changes as a result of an action -- the basis for planning ahead." },
+        "inference": { "term": "Inference", "definition": "Running a trained model in operation -- on a robot, often many times per second." },
+        "digital-twin": { "term": "Digital twin", "definition": "A virtual replica of a facility or environment in which processes can be simulated, tested, and used to generate training data." },
+        "data-sovereignty": { "term": "Data sovereignty", "definition": "The ability to decide where your data is stored and processed, who uses it, and for what." },
+        "edge-computing": { "term": "Edge computing", "definition": "Processing data directly on the robot or in your own plant instead of in a remote cloud." },
+        "dof": { "term": "Degrees of freedom (DoF)", "definition": "The number of independent ways a robot can move. A typical industrial arm has six; a biped often more than twenty." },
+        "end-effector": { "term": "End effector", "definition": "The tool at the end of the arm: gripper, suction cup, robotic hand, or special tool." },
+        "mobile-manipulator": { "term": "Mobile manipulator", "definition": "A robot arm on a wheeled platform that can carry out tasks in changing locations." },
+        "lidar": { "term": "LiDAR", "definition": "A sensor that scans the surroundings with lasers and produces a 3D point cloud." },
+        "depth-camera": { "term": "Depth camera", "definition": "A camera that also measures distance for every pixel, for example via stereo vision or infrared patterns." },
+        "tactile-sensing": { "term": "Tactile sensing", "definition": "Sensors on fingers or grippers that detect touch and pressure, enabling delicate grasping." },
+        "force-torque": { "term": "Force-torque sensor", "definition": "Measures forces and torques, usually at the wrist -- important for assembly and safe collaboration." },
+        "slam": { "term": "SLAM", "definition": "Simultaneous localization and mapping: the robot builds a map of its surroundings while determining its position in it." },
+        "ros2": { "term": "ROS 2", "definition": "Robot Operating System: a widely used open-source framework with tools and libraries for robotics software." },
+        "risk-assessment": { "term": "Risk assessment", "definition": "A systematic analysis of a machine’s hazards and the measures against them. Mandatory before commissioning." },
+        "functional-safety": { "term": "Functional safety", "definition": "Protective functions that reliably prevent hazards to people -- such as emergency stop and speed and force limits." },
+        "ot-security": { "term": "OT security", "definition": "IT security for production systems (operational technology): protecting machines and controllers against attacks." },
+        "vendor-lock-in": { "term": "Vendor lock-in", "definition": "Dependency on a supplier whose technology can only be replaced at great effort." },
+        "human-in-the-loop": { "term": "Human-in-the-loop", "definition": "An operating model in which a person monitors, approves, or takes over the robot’s decisions when needed." },
+        "success-rate": { "term": "Success rate", "definition": "The share of runs in which a robot completes a task without human help." },
+        "intervention": { "term": "Intervention", "definition": "A person stepping in to correct a robot or fix an error. A key indicator of a system’s maturity." },
+        "tco": { "term": "Total cost of ownership (TCO)", "definition": "Total cost over the service life: purchase, integration, energy, maintenance, training, and data preparation." }
+      }
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
   "projects": {
-    "title": "Öffentliche Projekte",
+    "title": "Projekte",
     "eyebrow": "Von der Idee in die Anwendung",
     "subtitle": "Von lernenden Robotern bis zu Agenten, die forschen, entwickeln und unser Team unterstützen. Einblicke in unsere Arbeit an Physical AI und agentischen Systemen.",
-    "metaDescription": "Unsere öffentlichen Projekte: NeoDEM, HNNA, Modular World Model, Agentic Researcher und Agentic Company. Robotik, Forschung und KI-Agenten im Zusammenspiel.",
-    "navigationLabel": "Unsere öffentlichen Projekte entdecken",
+    "metaDescription": "Unsere Projekte: NeoDEM, HNNA, Modular World Model, Agentic Researcher und Agentic Company. Robotik, Forschung und KI-Agenten im Zusammenspiel.",
+    "navigationLabel": "Unsere Projekte entdecken",
     "focusLabel": "Im Fokus",
     "approachLabel": "Unser Ansatz",
     "items": {

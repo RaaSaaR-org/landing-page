@@ -16,7 +16,10 @@ const staticRoutes = [
   '/about',
   '/use-cases',
   '/projects',
-  '/robots',
+  '/knowledge',
+  '/knowledge/fundamentals',
+  '/knowledge/robots',
+  '/knowledge/glossary',
   '/news',
   '/impressum',
   '/datenschutz',
@@ -46,7 +49,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     for (const slug of robotSlugs) {
       entries.push({
-        url: `${BASE}/${locale}/robots/${slug}`,
+        url: `${BASE}/${locale}/knowledge/robots/${slug}`,
         lastModified,
         changeFrequency: 'monthly',
         priority: 0.6,

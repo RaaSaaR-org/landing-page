@@ -1,10 +1,10 @@
 {
   "projects": {
-    "title": "Public Projects",
+    "title": "Projects",
     "eyebrow": "From idea to application",
     "subtitle": "From robots that learn to agents that research, build, and support our team. Explore our work in Physical AI and agentic systems.",
-    "metaDescription": "EmAI’s public projects: NeoDEM, HNNA, Modular World Model, Agentic Researcher, and Agentic Company. Robotics, research, and AI agents working together.",
-    "navigationLabel": "Explore our public projects",
+    "metaDescription": "EmAI’s projects: NeoDEM, HNNA, Modular World Model, Agentic Researcher, and Agentic Company. Robotics, research, and AI agents working together.",
+    "navigationLabel": "Explore our projects",
     "focusLabel": "The focus",
     "approachLabel": "Our approach",
     "items": {

@@ -36,25 +36,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       locale,
       path: '/',
       title: isGerman
-        ? 'EmAI - Physical AI erfolgreich einsetzen.'
-        : 'EmAI - Make Physical AI Work.',
+        ? 'EmAI - Souveräne Physical AI.'
+        : 'EmAI - Sovereign Physical AI.',
       description: isGerman
-        ? 'Ihr unabhängiger Beratungspartner für Physical AI. Strategie, Praxis-Tests, Workshops und neutrale Bewertung für kognitive Robotik.'
-        : 'Your independent consulting partner for Physical AI. Strategy, real-world testing, workshops, and neutral assessment for cognitive robotics.',
+        ? 'Ihr unabhängiger Beratungspartner für souveräne und sichere Physical AI. Offene Modelle, europäische Datenhaltung, Praxis-Tests und neutrale Bewertung für kognitive Robotik.'
+        : 'Your independent consulting partner for sovereign and secure Physical AI. Open models, European data residency, real-world testing, and neutral assessment for cognitive robotics.',
     }),
     metadataBase: new URL(siteUrl),
     title: {
       default: isGerman
-        ? 'EmAI - Physical AI Beratung für Unternehmen | Embodied AI'
-        : 'EmAI - Physical AI Consulting for Business | Embodied AI',
+        ? 'EmAI - Souveräne Physical AI für Unternehmen | Embodied AI'
+        : 'EmAI - Sovereign Physical AI for Business | Embodied AI',
       template: '%s | EmAI'
     },
     description: isGerman
-      ? 'EmAI Robotics hilft Unternehmen, Physical AI erfolgreich einzusetzen -- mit strategischer Beratung, Praxis-Tests, Workshops und neutraler Bewertung. Unabhängig, europäisch, praxisorientiert.'
-      : 'EmAI Robotics helps businesses successfully adopt Physical AI -- through strategic consulting, real-world testing, workshops, and neutral assessment. Independent, European, practice-oriented.',
+      ? 'EmAI Robotics hilft Unternehmen, Physical AI souverän und sicher einzusetzen -- mit strategischer Beratung, Praxis-Tests, Workshops und neutraler Bewertung. Unabhängig, europäisch, praxisorientiert.'
+      : 'EmAI Robotics helps businesses adopt Physical AI with sovereignty and security -- through strategic consulting, real-world testing, workshops, and neutral assessment. Independent, European, practice-oriented.',
     keywords: isGerman
-      ? ['Physical AI', 'Physical AI Beratung', 'Kognitive Robotik', 'Embodied AI', 'Open-Source KI', 'Robotik-Beratung', 'Workshops', 'Industrie 4.0', 'Automatisierung', 'Fertigung', 'Logistik', 'Europäische Souveränität']
-      : ['Physical AI', 'Physical AI Consulting', 'Cognitive Robotics', 'Embodied AI', 'Open-Source AI', 'Robotics Consulting', 'Workshops', 'Industry 4.0', 'Automation', 'Manufacturing', 'Logistics', 'European Sovereignty'],
+      ? ['Souveräne Physical AI', 'Physical AI', 'Physical AI Beratung', 'Kognitive Robotik', 'Embodied AI', 'Open-Source KI', 'Robotik-Beratung', 'Workshops', 'Industrie 4.0', 'Automatisierung', 'Fertigung', 'Logistik', 'Europäische Souveränität', 'Digitale Souveränität', 'Robotik Sicherheit', 'OT-Security']
+      : ['Sovereign Physical AI', 'Physical AI', 'Physical AI Consulting', 'Cognitive Robotics', 'Embodied AI', 'Open-Source AI', 'Robotics Consulting', 'Workshops', 'Industry 4.0', 'Automation', 'Manufacturing', 'Logistics', 'European Sovereignty', 'Digital Sovereignty', 'Robot Security', 'OT Security'],
     authors: [{ name: 'EmAI' }],
     creator: 'EmAI',
     publisher: 'EmAI',
@@ -118,8 +118,8 @@ export default async function LocaleLayout({
     url: siteUrl,
     logo: `${siteUrl}/logo.svg`,
     description: locale === 'de'
-      ? 'EmAI Robotics hilft Unternehmen, Physical AI erfolgreich einzusetzen -- mit strategischer Beratung, Praxis-Tests, Workshops und neutraler Bewertung.'
-      : 'EmAI Robotics helps businesses successfully adopt Physical AI -- through strategic consulting, real-world testing, workshops, and neutral assessment.',
+      ? 'EmAI Robotics hilft Unternehmen, Physical AI souverän und sicher einzusetzen -- mit strategischer Beratung, Praxis-Tests, Workshops und neutraler Bewertung.'
+      : 'EmAI Robotics helps businesses adopt Physical AI with sovereignty and security -- through strategic consulting, real-world testing, workshops, and neutral assessment.',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Halbergstraße 4',

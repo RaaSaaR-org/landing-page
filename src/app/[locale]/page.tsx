@@ -3,6 +3,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Header, Footer } from '@/components/layout';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { ProblemSection } from '@/components/sections/ProblemSection';
+import { SovereigntySection } from '@/components/sections/SovereigntySection';
 import { ServicesSection } from '@/components/sections/ServicesSection';
 import { WhyEmaiSection } from '@/components/sections/WhyEmaiSection';
 import { MembershipSection } from '@/components/sections/MembershipSection';
@@ -18,6 +19,8 @@ const faqKeys = [
   'workshops',
   'dataCollection',
   'openSource',
+  'sovereignty',
+  'security',
   'humanAssist',
   'consulting',
   'getStarted',
@@ -57,6 +60,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
       <main>
         <HeroSection />
         <ProblemSection />
+        <SovereigntySection />
         <ServicesSection />
         <WhyEmaiSection />
         <MembershipSection />

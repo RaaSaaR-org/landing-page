@@ -1,23 +1,17 @@
 {
   "meta": {
-    "title": "EmAI – Physical AI Beratung für Unternehmen",
-    "description": "EmAI Robotics hilft Unternehmen, Physical AI erfolgreich einzusetzen -- mit strategischer Beratung, Praxis-Tests, Workshops und neutraler Bewertung. Unabhängig, europäisch, praxisorientiert."
+    "title": "EmAI – Souveräne Physical AI für Unternehmen",
+    "description": "EmAI Robotics hilft Unternehmen, Physical AI souverän und sicher einzusetzen -- mit offenen Modellen, europäischer Datenhaltung, Praxis-Tests, Workshops und neutraler Bewertung. Unabhängig, europäisch, praxisorientiert."
   },
   "hero": {
-    "opening": "Von der Idee in die Praxis.",
     "title": "EmAI",
     "titleAccent": "Embodied AI",
-    "subtitle": "Wir helfen Unternehmen, <highlight>Physical AI</highlight> erfolgreich einzuführen. Strategische Beratung, Praxis-Wissen und neutrale Bewertung.",
+    "subtitle": "Wir helfen Unternehmen, <highlight>souveräne Physical AI</highlight> sicher einzuführen: <highlight>praxiserprobt</highlight> und <highlight>Open-Source</highlight>. Ohne Vendor Lock-in.",
     "cta": "Beratung starten",
-    "ctaSecondary": "Unsere Leistungen",
-    "pillars": {
-      "openSource": "Open-Source KI",
-      "european": "Made in Europe",
-      "learning": "Praxis-erprobt"
-    },
+    "ctaSecondary": "Warum Souveränität",
     "headline": "Intelligenz.",
-    "headlineAccent": "In der realen Welt.",
-    "discover": "Möglichkeiten entdecken",
+    "headlineAccent": "Unter Ihrer Kontrolle.",
+    "discover": "Warum Souveränität zählt",
     "independent": "Unabhängig. Aus Überzeugung.",
     "pauseAnimation": "Animation pausieren",
     "playAnimation": "Animation abspielen"
@@ -37,12 +31,77 @@
       "trust": {
         "title": "Kein unabhängiges Wissen",
         "description": "Hersteller verkaufen ihre Lösung. Unabhängige, praxisnahe Daten und neutrale Beratung fehlen."
+      },
+      "dependency": {
+        "title": "Abhängigkeit als Sicherheitsrisiko",
+        "description": "Viele Roboter senden Kamera- und Sensordaten an Clouds außerhalb Europas und erhalten Updates, die niemand prüft. Wer Modelle und Daten kontrolliert, kontrolliert den Roboter."
       }
+    }
+  },
+  "sovereignty": {
+    "eyebrow": "Sovereign Physical AI",
+    "title": "Ihre Roboter. Ihre Daten.",
+    "titleAccent": "Ihre Kontrolle.",
+    "intro": "Ein kognitiver Roboter ist ein vernetzter Computer mit Kameras, Mikrofonen und Aktoren -- mitten in Ihrer Halle, neben Ihren Mitarbeitenden. Wer seine Modelle, Daten und Updates kontrolliert, kontrolliert den Roboter. Deshalb denken wir Physical AI von Anfang an souverän und sicher.",
+    "diagram": {
+      "aria": "Schaubild: Daten und Modelle bleiben innerhalb von drei Schutzzonen -- am Roboter, in Ihrem Werk und in Europa. Unkontrollierter Datenabfluss nach außen wird blockiert.",
+      "edge": "Roboter & Edge",
+      "plant": "Ihr Werk",
+      "europe": "Europa"
+    },
+    "groups": {
+      "sovereign": "Souveränität",
+      "secure": "Sicherheit"
+    },
+    "layers": {
+      "data": {
+        "label": "Daten",
+        "title": "Datenhoheit",
+        "description": "Kamera-, Sensor- und Prozessdaten bleiben in Ihrem Werk oder in europäischen Rechenzentren. DSGVO-konform und ohne Abfluss in Drittstaaten -- Sie entscheiden, was geteilt wird."
+      },
+      "models": {
+        "label": "Modelle",
+        "title": "Offene Modelle",
+        "description": "Open-Weight-Modelle, die Sie prüfen, anpassen und selbst betreiben können. Keine Blackbox, deren Verhalten sich über Nacht per Cloud-Update ändert."
+      },
+      "compute": {
+        "label": "Betrieb",
+        "title": "Edge & On-Premise",
+        "description": "Inferenz direkt am Roboter oder auf eigener Hardware in Ihrem Netz. Kritische Abläufe hängen nicht an einer Internetverbindung oder an der Preispolitik eines Anbieters."
+      },
+      "security": {
+        "label": "Cybersecurity",
+        "title": "Security by Design",
+        "description": "Netzsegmentierung, signierte Updates, Rechte- und Zugriffskonzepte, Protokollierung. Wir prüfen Roboter wie jedes andere Gerät in Ihrem OT-Netz -- bevor sie in die Halle kommen."
+      },
+      "safety": {
+        "label": "Safety",
+        "title": "Schutz für Menschen",
+        "description": "Mensch-Roboter-Kollaboration braucht klare Schutzkonzepte: Risikobeurteilung, Geschwindigkeits- und Kraftbegrenzung, Not-Halt und Fallback-Strategien für den Fall, dass die KI irrt."
+      },
+      "compliance": {
+        "label": "Regulierung",
+        "title": "EU-Regeln im Blick",
+        "description": "EU AI Act, Maschinenverordnung, Cyber Resilience Act und NIS2: Wir übersetzen die Anforderungen in konkrete technische Prüfpunkte für Ihr Projekt."
+      }
+    },
+    "checklist": {
+      "title": "Fünf Fragen, bevor ein Roboter in Ihr Netz kommt",
+      "items": [
+        "Wo werden Kamera- und Sensordaten verarbeitet und gespeichert?",
+        "Arbeitet der Roboter auch ohne Cloud-Verbindung weiter?",
+        "Wer darf Updates einspielen -- und können Sie diese vorher prüfen?",
+        "Können Sie das KI-Modell wechseln oder selbst betreiben?",
+        "Wie werden Menschen im Arbeitsbereich geschützt, wenn die KI falsch liegt?"
+      ],
+      "note": "Wenn eine Antwort unklar bleibt, ist das ein Befund. Wir helfen, ihn einzuordnen.",
+      "cta": "Souveränität & Sicherheit besprechen"
     }
   },
   "whyEmai": {
     "title": "Warum EmAI",
-    "subtitle": "Unabhängig. Europäisch. Praxisorientiert.",
+    "subtitle": "Unabhängig. Souverän. Praxisorientiert.",
+    "aboutLink": "Mehr über uns",
     "loop": {
       "caption": "Lernschleife: Jeder Einsatz wird zu geteiltem Wissen.",
       "aria": "Animierte Lernschleife: Einsatz erzeugt Daten, Daten werden zu Wissen, das den nächsten Einsatz verbessert.",
@@ -56,8 +115,8 @@
         "description": "Kein Vendor Lock-in. Wir setzen auf offene Modelle und teilen unser Wissen. Transparenz statt Abhängigkeit."
       },
       "sovereignty": {
-        "title": "Europäische Souveränität",
-        "description": "Daten bleiben in Europa. DSGVO-konform. Europäische Werte, die wir teilen und leben."
+        "title": "Europäisch & unabhängig",
+        "description": "An keinen Hersteller gebunden, in Europa verwurzelt. Unsere Empfehlungen beruhen auf eigenen Tests -- nicht auf Datenblättern oder Provisionen."
       },
       "learning": {
         "title": "Praxis-erprobt",
@@ -78,7 +137,7 @@
   "supporter": {
     "eyebrow": "Mit Unterstützung von",
     "title": "Danke, SQUILD.",
-    "body": "SQUILD unterstützt uns mit Infrastruktur für unsere Plattform NeoDEM und KI-Services, auf denen unsere Agenten mit Qwen3.8 auf NVIDIA DGX Spark laufen. Vielen Dank, dass ihr diese Arbeit möglich macht.",
+    "body": "SQUILD unterstützt uns mit Infrastruktur für unsere Plattform NeoDEM und mit KI-Services: Unsere Agenten arbeiten mit Qwen3.8 auf NVIDIA DGX Spark -- und laufen damit vollständig in Europa. Vielen Dank, dass ihr diese Arbeit möglich macht.",
     "cta": "Die Leistungen von SQUILD entdecken"
   },
   "faq": {
@@ -103,6 +162,14 @@
       "openSource": {
         "q": "Warum Open-Source KI?",
         "a": "Offene KI-Modelle bieten Transparenz, Unabhängigkeit und Community-getriebene Innovation. Kein Vendor Lock-in, keine proprietären Blackboxes. Unternehmen behalten die Kontrolle über ihre Technologie-Entscheidungen."
+      },
+      "sovereignty": {
+        "q": "Was bedeutet souveräne Physical AI?",
+        "a": "Souveräne Physical AI heißt: Sie behalten die Kontrolle über die Daten, Modelle und Updates Ihrer Roboter. Daten bleiben im Werk oder in Europa, Modelle sind offen und austauschbar, und der Betrieb hängt nicht von einem einzelnen Anbieter oder einer Cloud außerhalb Europas ab. So bleiben Sie handlungsfähig -- technisch, rechtlich und wirtschaftlich."
+      },
+      "security": {
+        "q": "Wie sicher sind kognitive Roboter?",
+        "a": "Das hängt von der Architektur ab -- und genau die prüfen wir. Wir unterscheiden zwei Ebenen: Cybersecurity (Netzsegmentierung, Zugriffskontrolle, signierte Updates, Protokollierung) und funktionale Sicherheit für Menschen im Arbeitsbereich (Risikobeurteilung, Kraft- und Geschwindigkeitsbegrenzung, Not-Halt, Fallback-Strategien). Beide Ebenen gehören in die Bewertung, bevor ein Roboter produktiv geht."
       },
       "humanAssist": {
         "q": "Ersetzen Roboter menschliche Arbeitsplätze?",

@@ -1,23 +1,17 @@
 {
   "meta": {
-    "title": "EmAI – Physical AI Consulting for Business",
-    "description": "EmAI Robotics helps businesses successfully adopt Physical AI -- through strategic consulting, real-world testing, workshops, and neutral assessment. Independent, European, practice-oriented."
+    "title": "EmAI – Sovereign Physical AI for Business",
+    "description": "EmAI Robotics helps businesses deploy Physical AI with sovereignty and security -- through open models, European data residency, real-world testing, workshops, and neutral assessment. Independent, European, practice-oriented."
   },
   "hero": {
-    "opening": "From possibility to practice.",
     "title": "EmAI",
     "titleAccent": "Embodied AI",
-    "subtitle": "We help businesses successfully adopt <highlight>Physical AI</highlight>. Strategic consulting, hands-on expertise, and neutral assessment.",
+    "subtitle": "We help businesses adopt <highlight>sovereign Physical AI</highlight> securely: <highlight>field-tested</highlight> and <highlight>open-source</highlight>. No vendor lock-in.",
     "cta": "Start with Consulting",
-    "ctaSecondary": "Our Services",
-    "pillars": {
-      "openSource": "Open-Source AI",
-      "european": "Made in Europe",
-      "learning": "Field-Tested"
-    },
+    "ctaSecondary": "Why Sovereignty",
     "headline": "Intelligence.",
-    "headlineAccent": "In the real world.",
-    "discover": "Explore what’s possible",
+    "headlineAccent": "Under your control.",
+    "discover": "Why sovereignty matters",
     "independent": "Independent by design",
     "pauseAnimation": "Pause animation",
     "playAnimation": "Play animation"
@@ -37,12 +31,77 @@
       "trust": {
         "title": "No Independent Knowledge",
         "description": "Manufacturers sell their own solutions. Independent, hands-on data and neutral advice are missing."
+      },
+      "dependency": {
+        "title": "Dependency as a Security Risk",
+        "description": "Many robots send camera and sensor data to clouds outside Europe and receive updates nobody reviews. Whoever controls the models and data controls the robot."
       }
+    }
+  },
+  "sovereignty": {
+    "eyebrow": "Sovereign Physical AI",
+    "title": "Your robots. Your data.",
+    "titleAccent": "Your control.",
+    "intro": "A cognitive robot is a networked computer with cameras, microphones, and actuators -- right on your shop floor, next to your people. Whoever controls its models, data, and updates controls the robot. That is why we design Physical AI for sovereignty and security from day one.",
+    "diagram": {
+      "aria": "Diagram: data and models stay within three protection zones -- on the robot, in your plant, and in Europe. Uncontrolled outbound data flow is blocked.",
+      "edge": "Robot & Edge",
+      "plant": "Your plant",
+      "europe": "Europe"
+    },
+    "groups": {
+      "sovereign": "Sovereignty",
+      "secure": "Security"
+    },
+    "layers": {
+      "data": {
+        "label": "Data",
+        "title": "Data Sovereignty",
+        "description": "Camera, sensor, and process data stay in your plant or in European data centers. GDPR-compliant, no outflow to third countries -- you decide what gets shared."
+      },
+      "models": {
+        "label": "Models",
+        "title": "Open Models",
+        "description": "Open-weight models you can inspect, adapt, and run yourself. No black box whose behavior changes overnight through a cloud update."
+      },
+      "compute": {
+        "label": "Operations",
+        "title": "Edge & On-Premise",
+        "description": "Inference on the robot or on your own hardware inside your network. Critical operations do not depend on an internet connection or on a vendor’s pricing policy."
+      },
+      "security": {
+        "label": "Cybersecurity",
+        "title": "Security by Design",
+        "description": "Network segmentation, signed updates, access and permission concepts, audit logging. We assess robots like any other device on your OT network -- before they enter the shop floor."
+      },
+      "safety": {
+        "label": "Safety",
+        "title": "Protecting People",
+        "description": "Human-robot collaboration needs clear safety concepts: risk assessment, speed and force limits, emergency stop, and fallback strategies for when the AI gets it wrong."
+      },
+      "compliance": {
+        "label": "Regulation",
+        "title": "EU Rules in View",
+        "description": "EU AI Act, Machinery Regulation, Cyber Resilience Act, and NIS2: we translate the requirements into concrete technical checkpoints for your project."
+      }
+    },
+    "checklist": {
+      "title": "Five questions before a robot joins your network",
+      "items": [
+        "Where are camera and sensor data processed and stored?",
+        "Does the robot keep working without a cloud connection?",
+        "Who can install updates -- and can you review them first?",
+        "Can you switch the AI model or run it yourself?",
+        "How are people in the work area protected when the AI is wrong?"
+      ],
+      "note": "If an answer stays vague, that is a finding. We help you put it in context.",
+      "cta": "Discuss sovereignty & security"
     }
   },
   "whyEmai": {
     "title": "Why EmAI",
-    "subtitle": "Independent. European. Practice-oriented.",
+    "subtitle": "Independent. Sovereign. Practice-oriented.",
+    "aboutLink": "More about us",
     "loop": {
       "caption": "Learning loop: every deployment becomes shared knowledge.",
       "aria": "Animated learning loop: deployment produces data, data becomes knowledge that improves the next deployment.",
@@ -56,8 +115,8 @@
         "description": "No vendor lock-in. We rely on open models and share our knowledge. Transparency over dependency."
       },
       "sovereignty": {
-        "title": "European Sovereignty",
-        "description": "Data stays in Europe. GDPR-compliant. European values that we share and live by."
+        "title": "European & Independent",
+        "description": "Not tied to any manufacturer, rooted in Europe. Our recommendations are based on our own testing -- not on datasheets or commissions."
       },
       "learning": {
         "title": "Field-Tested",
@@ -78,7 +137,7 @@
   "supporter": {
     "eyebrow": "With support from",
     "title": "Thank you, SQUILD.",
-    "body": "SQUILD supports us with infrastructure for our NeoDEM platform and AI services that power our agents with Qwen3.8 on NVIDIA DGX Spark. Thank you for making this work possible.",
+    "body": "SQUILD supports us with infrastructure for our NeoDEM platform and with AI services: our agents run on Qwen3.8 on NVIDIA DGX Spark -- which means they run entirely in Europe. Thank you for making this work possible.",
     "cta": "Explore SQUILD’s services"
   },
   "faq": {
@@ -103,6 +162,14 @@
       "openSource": {
         "q": "Why open-source AI?",
         "a": "Open AI models provide transparency, independence, and community-driven innovation. No vendor lock-in, no proprietary black boxes. Companies keep control over their technology decisions."
+      },
+      "sovereignty": {
+        "q": "What does sovereign Physical AI mean?",
+        "a": "Sovereign Physical AI means you stay in control of your robots’ data, models, and updates. Data stays in your plant or in Europe, models are open and replaceable, and operations do not depend on a single vendor or on a cloud outside Europe. That keeps you able to act -- technically, legally, and economically."
+      },
+      "security": {
+        "q": "How secure are cognitive robots?",
+        "a": "That depends on the architecture -- which is exactly what we assess. We look at two levels: cybersecurity (network segmentation, access control, signed updates, audit logging) and functional safety for people in the work area (risk assessment, force and speed limits, emergency stop, fallback strategies). Both belong in the evaluation before a robot goes into production."
       },
       "humanAssist": {
         "q": "Do robots replace human jobs?",

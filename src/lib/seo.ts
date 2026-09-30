@@ -13,12 +13,12 @@ type ShareImage = {
 export function getShareImage(locale: string): ShareImage {
   const language = locale === 'en' ? 'en' : 'de';
   return {
-    url: `${SITE_URL}/og/emai-share-${language}-v2.png`,
+    url: `${SITE_URL}/og/emai-share-${language}-v3.png`,
     width: 1200,
     height: 630,
     alt: language === 'de'
-      ? 'EmAI – Intelligenz. In der realen Welt.'
-      : 'EmAI – Intelligence. In the real world.',
+      ? 'EmAI – Intelligenz. Unter Ihrer Kontrolle.'
+      : 'EmAI – Intelligence. Under your control.',
   };
 }
 

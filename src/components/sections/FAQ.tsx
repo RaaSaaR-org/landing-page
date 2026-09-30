@@ -6,7 +6,7 @@ import { Container, Section } from '@/components/layout';
 import { useTranslations } from 'next-intl';
 import styles from './HomeSections.module.css';
 
-const faqKeys = ['embodiedAi', 'cognitiveRobots', 'workshops', 'dataCollection', 'openSource', 'humanAssist', 'consulting', 'getStarted'];
+const faqKeys = ['embodiedAi', 'cognitiveRobots', 'workshops', 'dataCollection', 'openSource', 'sovereignty', 'security', 'humanAssist', 'consulting', 'getStarted'];
 
 export function FAQ() {
   const t = useTranslations('faq');

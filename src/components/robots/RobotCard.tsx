@@ -32,7 +32,7 @@ export function RobotCard({ robot }: RobotCardProps) {
 
   return (
     <Link
-      href={`/robots/${robot.slug}`}
+      href={`/knowledge/robots/${robot.slug}`}
       className={`${styles.card} group block h-full rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-base focus-visible:ring-[color:var(--rh)]`}
       style={{ ['--rh' as string]: brandAccent }}
     >

@@ -17,14 +17,17 @@ function isRouteActive(pathname: string, href: string) {
 }
 
 const serviceKeys = ['consulting', 'testing', 'workshops', 'data'] as const;
+const knowledgeKeys = ['fundamentals', 'robots', 'glossary'] as const;
 
 export function Header() {
   const tNav = useTranslations('nav');
   const tServices = useTranslations('services.items');
+  const tKnowledge = useTranslations('knowledge.nav');
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const isServicesActive = pathname.startsWith('/services/');
+  const isKnowledgeActive = pathname === '/knowledge' || pathname.startsWith('/knowledge/');
 
   const serviceItems: DropdownItem[] = [
     ...serviceKeys.map((key) => ({
@@ -34,13 +37,19 @@ export function Header() {
     { label: tNav('servicesOverview'), href: '/#services' },
   ];
 
+  const knowledgeItems: DropdownItem[] = [
+    ...knowledgeKeys.map((key) => ({
+      label: tKnowledge(key),
+      href: `/knowledge/${key}`,
+    })),
+    { label: tNav('faq'), href: '/#faq' },
+    { label: tNav('knowledgeOverview'), href: '/knowledge' },
+  ];
+
   const pageLinks: { name: string; href: string }[] = [
-    { name: tNav('about'), href: '/about' },
     { name: tNav('useCases'), href: '/use-cases' },
     { name: tNav('projects'), href: '/projects' },
-    { name: tNav('robots'), href: '/robots' },
     { name: tNav('news'), href: '/news' },
-    { name: tNav('faq'), href: '/#faq' },
   ];
 
   useEffect(() => {
@@ -132,6 +141,13 @@ export function Header() {
                 </Link>
               );
             })}
+            <NavDropdown
+              panelId="desktop-knowledge-navigation"
+              label={tNav('knowledge')}
+              items={knowledgeItems}
+              isActive={isKnowledgeActive}
+              onItemClick={handleNavClick}
+            />
             <LanguageSwitcher />
             <Link
               href="/#contact"
@@ -206,6 +222,14 @@ export function Header() {
                   </Link>
                 );
               })}
+              <NavDropdown
+                panelId="mobile-knowledge-navigation"
+                label={tNav('knowledge')}
+                items={knowledgeItems}
+                mode="accordion"
+                isActive={isKnowledgeActive}
+                onItemClick={handleNavClick}
+              />
               <div className="pt-2 pb-4 flex justify-center">
                 <LanguageSwitcher />
               </div>

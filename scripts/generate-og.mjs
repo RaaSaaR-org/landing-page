@@ -45,8 +45,8 @@ async function loadFont() {
 
 const node = (type, style, children, extra = {}) => ({ type, props: { style, children, ...extra } });
 const copy = {
-  de: { lines: ['Intelligenz.', 'In der', 'realen Welt.'], description: ['Physical AI für Unternehmen.', 'Beratung. Praxis. Perspektive.'], footer: 'Unabhängig. Europäisch.' },
-  en: { lines: ['Intelligence.', 'In the', 'real world.'], description: ['Physical AI for business.', 'Strategy. Practice. Perspective.'], footer: 'Independent. European.' },
+  de: { lines: ['Intelligenz.', 'Unter Ihrer', 'Kontrolle.'], description: ['Souveräne Physical AI für Unternehmen.', 'Offen. Sicher. Praxiserprobt.'], footer: 'Souverän. Unabhängig. Europäisch.' },
+  en: { lines: ['Intelligence.', 'Under your', 'control.'], description: ['Sovereign Physical AI for business.', 'Open. Secure. Field-tested.'], footer: 'Sovereign. Independent. European.' },
 };
 
 function card(locale, logo, brain) {
@@ -91,7 +91,7 @@ async function main() {
       width: 1200, height: 630, fonts: [{ name: 'Space Grotesk', data: font, weight: 700, style: 'normal' }],
     });
     const png = new Resvg(svg).render().asPng();
-    const output = join(OUT, `emai-share-${locale}-v2.png`);
+    const output = join(OUT, `emai-share-${locale}-v3.png`);
     await writeFile(output, png);
     if (locale === 'de') await writeFile(join(ROOT, 'public', 'og-image.png'), png);
     console.log(`Wrote ${output} — 1200×630, ${(png.length / 1024).toFixed(0)} KB`);

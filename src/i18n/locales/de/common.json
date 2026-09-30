@@ -6,8 +6,9 @@
     "contact": "Kontakt",
     "about": "Über uns",
     "useCases": "Anwendungsfälle",
-    "projects": "Öffentliche Projekte",
-    "robots": "Roboter",
+    "projects": "Projekte",
+    "knowledge": "Wissen",
+    "knowledgeOverview": "Wissensbereich im Überblick",
     "news": "News",
     "servicesOverview": "Alle Leistungen",
     "menu": "Navigation öffnen oder schließen"
@@ -35,8 +36,8 @@
   },
   "footer": {
     "philosophy": "Am I? We are.",
-    "tagline": "Physical AI erfolgreich einsetzen. Gemeinsam mit Ihnen.",
-    "description": "EmAI ist Ihr unabhängiger Beratungspartner für Physical AI -- mit Strategie, Workshops und neutraler Bewertung.",
+    "tagline": "Physical AI souverän einsetzen. Gemeinsam mit Ihnen.",
+    "description": "EmAI ist Ihr unabhängiger Beratungspartner für souveräne und sichere Physical AI -- mit Strategie, Workshops und neutraler Bewertung.",
     "links": {
       "company": "Unternehmen",
       "about": "Über uns",

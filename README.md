@@ -15,6 +15,7 @@ EmAI (Embodied AI) helps companies understand and use cognitive robots powered b
 - **Services** - Real-world testing, data collection, workshops, consulting
 - **Why EmAI** - Open-source AI, European sovereignty, human-first approach
 - **FAQ** - Answers to questions about cognitive robotics and our services
+- **Knowledge hub** (`/knowledge`) - Fundamentals in eight chapters, the 3D robot registry, and a searchable glossary
 - **Contact** - Inquiry capture for workshops, consulting, and testing
 
 ## Tech Stack
